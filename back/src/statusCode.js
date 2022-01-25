@@ -1,0 +1,21 @@
+'use strict'
+
+/**
+ * @typedef {'DRAFT' | 'UNSIGNED' | 'SIGNED' | 'SENT' | 'APPROVED' | 'REJECTED' | 'CANCELLED' | 'TERMINATED'} StatusCode
+ */
+
+/** @type {Array<StatusCode>} */
+const [DRAFT, UNSIGNED, SIGNED, SENT, APPROVED, REJECTED, CANCELLED, TERMINATED] = [
+	'DRAFT', 'UNSIGNED', 'SIGNED', 'SENT', 'APPROVED', 'REJECTED', 'CANCELLED', 'TERMINATED'
+]
+
+module.exports = {
+	DRAFT,
+	UNSIGNED,
+	SIGNED,
+	SENT,
+	APPROVED,
+	REJECTED,
+	CANCELLED,
+	TERMINATED,
+}
