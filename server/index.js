@@ -24,7 +24,7 @@ app.get("/api", (req, res) => {
     
 });
 
-app.get("/test", (req, res) => {
+app.get("/nodejs/test", (req, res) => {
     console.log(req.url);
     console.log(process.env.NODE_ENV);
     
@@ -63,7 +63,7 @@ app.get("/test", (req, res) => {
     
 });
 
-app.get("/discount-offer", (req, res) => {
+app.get("/nodejs/discount-offer", (req, res) => {
     console.log(req.url);
     
     let rawdata = fs.readFileSync(process.env.DISCOUNT_COUPON_TEMPLATE);
