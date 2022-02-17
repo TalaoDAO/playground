@@ -60,8 +60,6 @@ app.get("/test", (req, res) => {
 		res.json({ message: error });
 	});
     
-
-    res.json({ message: "Hello World from server!" });
     
 });
 
