@@ -15,7 +15,7 @@ function Home() {
 
 
   React.useEffect(() => {
-    fetch("/api")
+    fetch("http://localhost:9000/api")
       .then((res) =>  res.json())
       .then((data) => setData(data.message));
   }, []);
@@ -27,6 +27,7 @@ function Home() {
           <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
             <div className="col-md-10 p-lg-10 mx-auto my-10">
               <h1 className="display-4 fw-normal">Playground Wallet</h1>
+              <h2 className="display-4 fw-normal">{process.env.NODE_SERVER+"/api"}</h2>
               <p className="lead fw-normal">Start a decentralized world journey</p>
             </div>
           </div>
