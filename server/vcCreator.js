@@ -1,6 +1,5 @@
 const util = require('util');
 const { randomUUID } = require('crypto');
-const mydidkit = require("./mydidkit.js");
 
 
 exports.createOffer = async function (privateKey,template, values,callback) {
