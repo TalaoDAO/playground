@@ -16,10 +16,11 @@ exports.createOffer = async function (privateKey,template, values,callback) {
             offer.credentialPreview.credentialSubject.id='ACME Corporation';
             offer.credentialPreview.id='urn:uuid:'+randomUUID()
 
-            var did=null;
-            await mydidkit.getdid(process.env.DEFAULT_JWK, function(result){
+            var did="did:ethr:0xd6008c16068c40c05a5574525db31053ae8b3ba7";
+            //TODO: fix this when didkit is working
+            /*await mydidkit.getdid(process.env.DEFAULT_JWK, function(result){
                 did=result;
-            });
+            });*/
             offer.credentialPreview.issuer=did;
             offer.credentialPreview.credentialSubject.id=did;
             offer.credentialPreview.issuanceDate=(new Date()).toISOString();
