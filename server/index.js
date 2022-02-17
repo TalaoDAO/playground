@@ -4,7 +4,6 @@ const express = require("express");
 const cors = require('cors');
 const { User } = require("./models");
 const util = require('util');
-const mydidkit = require("./mydidkit.js");
 const vcCreator = require("./vcCreator.js");
 const fs = require('fs');
 
@@ -33,24 +32,6 @@ app.get("/test", (req, res) => {
     .then(c => {
         console.log(c);
     });*/
-    /*(async() =>{
-
-        try {
-            await User.findOne()
-            .then( res => {
-                console.log(res.toJSON());
-        
-            });
-    
-        } catch (error) {
-            console.error(error)
-        }
-
-        
-    })().catch((error)=>{
-		console.log(`async error: ${util.inspect(error, {depth: null})}`);
-		callback("")
-	});;*/
 
 
     /*console.log(process.env.DEFAULT_JWK);
@@ -59,7 +40,25 @@ app.get("/test", (req, res) => {
     })*/
 
     
+    (async() =>{
 
+        try {
+            await User.findOne()
+            .then( user => {
+                res.json(user.toJSON());
+        
+            });
+    
+        } catch (error) {
+            console.error(error)
+            res.json({ message: error });
+        }
+
+        
+    })().catch((error)=>{
+		console.log(`async error: ${util.inspect(error, {depth: null})}`);
+		res.json({ message: error });
+	});
     
 
     res.json({ message: "Hello World from server!" });
