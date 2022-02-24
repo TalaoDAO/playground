@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/TalaoDAO/playground#readme",
   "dependencies": {
+    "@spruceid/didkit-wasm-node": "^0.1.7-rc0",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",
     "dotenv": "^16.0.0",
