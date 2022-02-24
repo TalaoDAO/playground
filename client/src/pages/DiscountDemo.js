@@ -8,13 +8,15 @@ import {
   Container, Button, Row, Col, Card, Image
 } from 'react-bootstrap';
 
+const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
+
 function DiscountDemo() {
   const [data, setData] = React.useState(null);
 
 
 
   React.useEffect(() => {
-    fetch("http://localhost:9000/api")
+    fetch(REACT_APP_NODE_LOCAL+"/api")
       .then((res) =>  res.json())
       .then((data) => setData(data.message));
   }, []);
@@ -25,7 +27,7 @@ function DiscountDemo() {
         <Container className="px-0">
           <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-transparent">
             <div className="col-md-10 p-lg-10 mx-auto my-10">
-              <h1 className="display-4 fw-normal">Get a discount coupon</h1>
+              <h1 className="display-4 fw-normal">Get a discount coupon</h1> {REACT_APP_NODE_LOCAL}
             </div>
           </div>
 

@@ -16,11 +16,13 @@ import {
 import UseCases from "../components/UseCases";
 import ManageStrip from "../components/ManageStrip";
 
+const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
+
 function Employer() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch("http://localhost:9000/api")
+    fetch(REACT_APP_NODE_LOCAL+"/api")
       .then((res) =>  res.json())
       .then((data) => setData(data.message));
   }, []);
