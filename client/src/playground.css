@@ -1,5 +1,5 @@
 :root {
-  --turquoise-blue: #09a0c9;
+  --turquoise-blue: #bbdfe9;
   --dusk: #5b6483;
   --golden-yellow: #efcd26;
   --azure: #20b0e3;
@@ -67,6 +67,12 @@ img.Background-cubes---hero {
 
   .img-fit {
     object-fit: contain;
+  }
+  .img-scale {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
   }
 
   .img-separator {
@@ -292,14 +298,7 @@ img.Background-cubes---hero {
     margin-bottom: -75px;
   }
   
-  
-    
-  @media only screen and (min-width: 1024px) {
- 
-    
-  
-  
-  }
+
 
   .icon-use-case {
     max-height: 45.8px;
@@ -311,6 +310,7 @@ img.Background-cubes---hero {
     max-height: 262.8px;
     object-fit: contain;
   }
+
 
   .bg-playground {
     background-color: var(--dark-blue-grey);
@@ -339,3 +339,42 @@ img.Background-cubes---hero {
   .btn-demo {
     height: 50px;
   }
+
+  .manage-image {
+    
+    max-height: 546px;
+    object-fit: contain;
+  }
+
+  
+
+
+  
+  @media only screen  and (max-width: 1024px) {
+    .light-blue-div {  
+      height: auto;
+      
+      background-color: var(--turquoise-blue);
+    }
+  
+    .light-blue-image {
+      width:100%;
+      object-fit: contain;
+    }
+  
+  }
+  
+    
+  @media only screen and (min-width: 1024px) {
+    .light-blue-div {  
+      height: 546px;
+      background-color: var(--turquoise-blue);
+    }
+  
+  .light-blue-image {
+    max-height: 500px;
+    margin-right: -500px;
+    object-fit: contain;
+  }
+  }
+

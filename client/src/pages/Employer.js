@@ -52,7 +52,7 @@ function Employer() {
   
   return (
     <div className="Employer">
-      <main className="my-5 py-5">
+      <main >
         <Container className="px-0">
           <Row className="p-3 bg-playground text-white align-content-center">
             <Col xs={12} md={12} lg={{ span: 8, offset: 2 }} className="justify-content-center">

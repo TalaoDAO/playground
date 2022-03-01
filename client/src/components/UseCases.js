@@ -1,13 +1,4 @@
 import React from 'react';
-import uc01 from '../images/use-cases-01.png';
-import uc01i from '../images/use-cases-01-icon.png';
-import uc02 from '../images/use-cases-02.png';
-import uc02i from '../images/use-cases-02-icon.png';
-import uc03 from '../images/use-cases-03.png';
-import uc03i from '../images/use-cases-03-icon.png';
-import uc04 from '../images/use-cases-04.png';
-import uc04i from '../images/use-cases-04-icon.png';
-
 
 import dipi01 from '../pages/img/icon-diploma-use-case.png';
 import dipi02 from '../pages/img/icon-diploma-use-case@2x.png';

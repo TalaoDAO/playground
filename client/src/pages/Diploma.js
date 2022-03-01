@@ -51,8 +51,8 @@ function Diploma() {
 
   return (
     <div className="Diploma">
-      <main className="my-5 py-5">
-        <Container className="px-0">
+      <main >
+        <Container >
           <Row className="p-3 bg-playground text-white align-content-center">
             <Col xs={12} md={12} lg={{ span: 8, offset: 2 }} className="justify-content-center">
 

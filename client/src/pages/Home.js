@@ -1,5 +1,4 @@
 import React from "react";
-import logo from "../logo.svg";
 import "../App.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -9,7 +8,7 @@ import {
 import UseCases from "../components/UseCases";
 import ManageStrip from "../components/ManageStrip";
 import PassActivation from "../components/PassActivation";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
 
 
 import bch01 from './img/background-cubes-hero.png';
@@ -50,7 +49,7 @@ function Home() {
 
   return (
     <div className="Home">
-      <main className="my-5 py-5">
+      <main >
         <Container >
           <div className="position-relative p-3 p-md-5 m-md-3 align-items-center justify-content-center text-center Background-cubes---hero" >
 
@@ -124,12 +123,12 @@ function Home() {
             <Row>
               <Col xs={12} md={12} lg={{ span: 4, offset: 2 }}>
                 <Image src={agn01} srcSet={`${agn02} 2x, ${agn03} 3x`} className="links-icon" fluid></Image>
-                <span className="links-dark"> How to generate your account?</span>
+                <Link to="/generate" className="links-dark"> How to generate your account?</Link>
               </Col>
               <Col xs={12} md={12} lg={{ span: 4 }}>
 
                 <Image src={are01} srcSet={`${are02} 2x, ${are03} 3x`} className="links-icon" fluid></Image>
-                <span className="links-dark"> How to recover your account?</span>
+                <Link to="/generate" className="links-dark"> How to recover your account?</Link>
               </Col>
             </Row>
 

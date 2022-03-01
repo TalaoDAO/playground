@@ -45,7 +45,7 @@ function Activation() {
 
   return (
     <div className="Activation">
-      <main className="my-5 py-5">
+      <main >
         <Container>
           <Row className="position-relative p-3 p-md-5 m-md-3 bg-playground text-white  align-content-center">
             <Col xs={12} md={12} lg={{ span: 6, offset: 3 }} className="justify-content-center">
