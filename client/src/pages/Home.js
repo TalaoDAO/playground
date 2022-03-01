@@ -36,18 +36,6 @@ import agn03 from './img/icon-how-to-generate-account@3x.png';
 import are01 from './img/icon-how-to-recover-account.png';
 import are02 from './img/icon-how-to-recover-account@2x.png';
 import are03 from './img/icon-how-to-recover-account@3x.png';
-import gys01 from './img/Green + yellow cube -  separation.png';
-import gys02 from './img/Green + yellow cube -  separation@2x.png';
-import gys03 from './img/Green + yellow cube -  separation@3x.png';
-import pow01 from './img/icon-btn-learn-more-pass-activation.png';
-import pow02 from './img/icon-btn-learn-more-pass-activation@2x.png';
-import pow03 from './img/icon-btn-learn-more-pass-activation@3x.png';
-import aps01 from './img/Wallet - Activation pass section.png';
-import aps02 from './img/Wallet - Activation pass section@2x.png';
-import aps03 from './img/Wallet - Activation pass section@3x.png';
-import ycs01 from './img/Yellow cube small - separation.png';
-import ycs02 from './img/Yellow cube small - separation@2x.png';
-import ycs03 from './img/Yellow cube small - separation@3x.png';
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 

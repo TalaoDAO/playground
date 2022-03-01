@@ -10,7 +10,7 @@ function setSessionToken(userToken) {
 
 function getSessionToken() {
   let tokenString = sessionStorage.getItem('token');
-  if(typeof tokenString !== "undefined" && tokenString !== null){
+  if(typeof tokenString !== "undefined" && tokenString !== null && tokenString!==undefined && tokenString!=="undefined"){
     console.log(tokenString);
     
     const userToken = tokenString?JSON.parse(tokenString):null;
@@ -25,6 +25,7 @@ const PrivateRoute = ({ children }) => {
 
   React.useEffect(() => {
     sessionStorage.setItem('token', JSON.stringify(token));
+    
   }, [token]);
 
 
