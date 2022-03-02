@@ -10,10 +10,11 @@ class VoucherGenerator extends VerifiedCredentialsGenerator{
 
     async getFieldsMap(){
         return {
-            'discountPercentage.value' : 'credentialPreview.credentialSubject.discountPrecentage.value',
-            'discountDeadline' : 'credentialPreview.credentialSubject.discountDeadline',
+            'offer.value' : 'credentialPreview.credentialSubject.offer.value',
+            'offer.currency' : 'credentialPreview.credentialSubject.offer.value',
             'issuedBy.logo' : 'credentialPreview.credentialSubject.issuedBy.logo',
-            'issuedBy.name' : 'credentialPreview.credentialSubject.issuedBy.name'
+            'issuedBy.name' : 'credentialPreview.credentialSubject.issuedBy.name',
+            'identifier' : 'credentialPreview.credentialSubject.identifier'
         };
     }
 }

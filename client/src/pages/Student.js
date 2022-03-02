@@ -67,7 +67,7 @@ function Student() {
               </Row>
               <Row>
                 <Col className="justify-content-center p-5">
-                  <Button variant="btn btn-info btn-lg ">Start Demo</Button>
+                  <Button href="/university" variant="btn btn-info btn-lg ">Start Demo</Button>
                 </Col>
               </Row>
               <Row className="p-5">
