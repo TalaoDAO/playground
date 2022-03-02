@@ -65,7 +65,7 @@ function Employer() {
               
               <Row>
                 <Col className="justify-content-center p-4">
-                  <Button variant="btn btn-info btn-lg ">Start Demo</Button>
+                  <Button href="/company" variant="btn btn-info btn-lg ">Start Demo</Button>
                 </Col>
               </Row>
               <Row className="p-5">
@@ -195,7 +195,7 @@ function Employer() {
 
           <Row>
             <Col xs={12} md={12} lg={{ span: 6, offset: 3 }}>
-              <Button variant="btn btn-info btn-lg btn-demo">Start Demo</Button>
+              <Button href="/company" variant="btn btn-info btn-lg btn-demo">Start Demo</Button>
             </Col>
           </Row>
           <Row>

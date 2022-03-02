@@ -12,6 +12,10 @@ import DiscountDemo from '../pages/DiscountDemo';
 import PrivateRoute from "./PrivateRoute";
 import Generate from '../pages/Generate';
 import Recover from '../pages/Recover';
+import University from '../pages/University';
+import UniversityAccount from '../pages/UniversityAccount';
+import EmployerHome from '../pages/EmployerHome';
+import EmployerAccount from '../pages/EmployerAccount';
 
 const Main = () => {
 
@@ -27,6 +31,10 @@ const Main = () => {
         <Route exact path='/manage' element={<Manage/>}></Route>
         <Route exact path='/generate' element={<Generate/>}></Route>
         <Route exact path='/recover' element={<Recover/>}></Route>
+        <Route exact path='/university' element={<PrivateRoute><University/></PrivateRoute>}></Route>
+        <Route exact path='/uni-account' element={<PrivateRoute><UniversityAccount/></PrivateRoute>}></Route>
+        <Route exact path='/company' element={<PrivateRoute><EmployerHome/></PrivateRoute>}></Route>
+        <Route exact path='/com-account' element={<PrivateRoute><EmployerAccount/></PrivateRoute>}></Route>
         <Route exact path='/discount-demo' element={<PrivateRoute><DiscountDemo/></PrivateRoute>}></Route>
     </Routes>
   );

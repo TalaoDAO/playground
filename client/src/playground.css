@@ -1,8 +1,8 @@
 :root {
-  --turquoise-blue: #bbdfe9;
+  --turquoise-blue: #eaf2ff  ;
   --dusk: #5b6483;
   --golden-yellow: #efcd26;
-  --azure: #20b0e3;
+  --azure: #3367b1;
   --dark-blue-grey: #161f3d;
 }
 
@@ -376,5 +376,13 @@ img.Background-cubes---hero {
     margin-right: -500px;
     object-fit: contain;
   }
+
+  .azure-container {
+    background-color: var(--azure);
   }
+
+  .turquoise-container {
+    background-color: var(--turquoise-blue);
+  }
+}
 

@@ -37,6 +37,7 @@ import {
 } from 'react-bootstrap';
 import UseCases from "../components/UseCases";
 import ManageStrip from "../components/ManageStrip";
+import { Link } from 'react-router-dom';
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -69,7 +70,7 @@ function Diploma() {
               </Row>
               <Row>
                 <Col className="justify-content-center p-5">
-                  <Button variant="btn btn-info btn-lg ">Start Demo</Button>
+                  <Button href="/university" variant="btn btn-info btn-lg ">Start Demo</Button>
                 </Col>
               </Row>
               <Row className="p-5">
@@ -195,7 +196,7 @@ function Diploma() {
 
           <Row>
             <Col xs={12} md={12} lg={{ span: 6, offset: 3 }}>
-              <Button variant="btn btn-info btn-lg btn-demo">Start Demo</Button>
+              <Link to="/university" variant="btn btn-info btn-lg ">Start Demo</Link>
             </Col>
           </Row>
           <Row>
