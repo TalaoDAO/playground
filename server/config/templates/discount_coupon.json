@@ -1,102 +1,97 @@
 {
-    "credentialPreview": {
-        "@context": [
-            "https://www.w3.org/2018/credentials/v1",
-            "https://w3id.org/vc-revocation-list-2020/v1",
-            {
-                "name": "https://schema.org/name",
-                "description": "https://schema.org/description",
-                "DiscountCoupon": {
-                    "@context": {
-                        "@protected": true,
-                        "@version": 1.1,
-                        "id": "@id",
-                        "issuedBy": {
-                            "@context": {
-                                "@protected": true,
-                                "@version": 1.1,
-                                "logo": {
-                                    "@id": "schema:logo",
-                                    "@type": "@id"
-                                },
-                                "name": "schema:name",
-                                "schema": "https://schema.org/"
-                            },
-                            "@id": "schema:issuedBy"
-                        },
-                        "discountDeadline": "schema:endDate",
-                        "schema": "https://schema.org/",
-                        "discountPrecentage": {
-                            "@context": {
-                                "@protected": true,
-                                "@version": 1.1,
-                                "schema": "https://schema.org/",
-                                "type": "schema:Percentage",
-                                "value": "schema:value"
-                            },
-                            "@id": "https://github.com/TalaoDAO/TrustMyData-proto/blob/main/vocab#percentage"
-                        },
-                        "type": "@type"
-                    },
-                    "@id": "https://github.com/TalaoDAO/TrustMyData-proto/blob/main/vocab#DiscountCoupon"
-                }
-            }
-        ],
-        "id": "",
-        "type": [
-            "VerifiableCredential",
-            "DiscountCoupon"
-        ],
-        "credentialSubject": {
-            "id": "",
-            "discountPrecentage": {
-                "value": ""
-            },
-            "discountDeadline": "",
-            "issuedBy": {
-                "logo": "",
-                "name": ""
-            },
-            "type": "DiscountCoupon"
-        },
-        "issuer": "",
-        "issuanceDate": "",
-        "credentialSchema": {
-            "id": "https://...../tsr-vid/residentcard.jsonld",
-            "type": "JsonSchemaValidator2021"
-        },
-        "name": [
-            {
-                "@language": "en",
-                "@value": "Discount Coupon"
-            },
-            {
-                "@language": "de",
-                "@value": "Discount Coupon"
-            },
-            {
-                "@language": "fr",
-                "@value": "Discount Coupon"
-            }
-        ],
-        "description": [
-            {
-                "@language": "en",
-                "@value": "This is a discount coupon for products or services."
-            },
-            {
-                "@language": "de",
-                "@value": "This is a discount coupon for products or services."
-            },
-            {
-                "@language": "fr",
-                "@value": "This is a discount coupon for products or services."
-            }
-        ]
-    },
-    "display": {
-        "backgroundColor": "ffffff"
-    },
-    "expires": "",
-    "type": "CredentialOffer"
+	"credentialPreview": {
+		"@context": [
+			"https://www.w3.org/2018/credentials/v1",
+			{
+				"name": "https://schema.org/name",
+				"description": "https://schema.org/description",
+				"Voucher": {
+					"@id": "https://github.com/TalaoDAO/context/blob/main/README.md#phonepass",
+					"@context": {
+						"@version": 1.1,
+						"@protected": true,
+						"schema": "https://schema.org/",
+						"id": "@id",
+						"type": "@type",
+						"identifier": "schema:identifier",
+						"offer": {
+							"@id": "schema:offer",
+							"@context": {
+								"@version": 1.1,
+								"@protected": true,
+								"value": "schema:value",
+								"currency": "schema:currency"
+							}
+						},
+						"issuedBy": {
+							"@id": "schema:issuedBy",
+							"@context": {
+								"@version": 1.1,
+								"@protected": true,
+								"address": "schema:address",
+								"logo": {
+									"@id": "schema:image",
+									"@type": "@id"
+								},
+								"name": "schema:name"
+							}
+						}
+					}
+				}
+			}
+		],
+		"id": "urn:uuid:8930fe9c-0e22-11ec-9ef1-f37fc4c00c40",
+		"type": [
+			"VerifiableCredential",
+			"Voucher"
+		],
+		"issuer": "",
+		"name": [
+			{
+				"@value": "$100 off Tezotopia blocks",
+				"@language": "en"
+			},
+			{
+				"@value": "$100 off Tezotopia blocks",
+				"@language": "de"
+			},
+			{
+				"@value": "$100 off Tezotopia blocks",
+				"@language": "fr"
+			}
+		],
+		"description": [
+			{
+				"@language": "en",
+				"@value": "Get a $100 discount on your first Tezotop Block ! "
+			},
+			{
+				"@language": "de",
+				"@value": "Get a $100 discount on your first Tezotop Block ! "
+			},
+			{
+				"@language": "fr",
+				"@value": "Get a $100 discount on your first Tezotop Block ! "
+			}
+		],
+		"issuanceDate": "",
+		"expirationDate": "2022-09-15T19:55:00Z",
+		"credentialSubject": {
+			"type": "Voucher",
+			"identifier": "",
+			"offer": {
+				"value": "",
+				"currency": ""
+			},
+			"issuedBy": {
+				"logo": "",
+				"name": ""
+			}
+		}
+	},
+	"display": {
+		"backgroundColor": "ffffff"
+	},
+	"expires": "",
+	"type": "CredentialOffer"
 }
