@@ -1,0 +1,380 @@
+:root {
+  --turquoise-blue: #bbdfe9;
+  --dusk: #5b6483;
+  --golden-yellow: #efcd26;
+  --azure: #20b0e3;
+  --dark-blue-grey: #161f3d;
+}
+
+img.Background-cubes---hero {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  div.Background-cubes---hero{
+    width: 100%;
+    object-fit: contain;
+    background-color: var(--dark-blue-grey);
+  }
+
+  .Title-TAGH1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 58px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.83;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .Description-TAGUI_L {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--turquoise-blue);
+  }
+
+  .Title-TAGH2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.52;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .Title-TAGH3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: normal;
+    text-align: left;
+    color: #fff;
+  }
+
+  .img-fit {
+    object-fit: contain;
+  }
+  .img-scale {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .img-separator {
+
+    margin-bottom: -150px;
+    
+    object-fit: contain;
+  }
+.after-separator {
+  margin-top: 150px;
+}
+ 
+
+@media only screen and (max-width: 1024px) {
+  .img-phone {
+    object-fit: contain;
+  }
+
+  .img-banner {
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+  
+@media only screen and (min-width: 1024px) {
+  /* For desktop: */
+  .img-phone {
+
+    margin-bottom: -350px;
+    object-fit: contain;
+  }
+
+
+  .img-banner {
+    width: 100%;
+    position:absolute;
+    left:0px;
+    top: 0px;
+    
+  }
+
+}
+
+  .Title-TAGH1-dark {
+    max-height: 64px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 45px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.42;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--dark-blue-grey);
+  }
+
+  .Description-TAGUI_L-dark {
+    max-height: 107px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.56;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--dark-blue-grey);
+  }
+
+  
+  .Title-TAGH2-dark {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 23px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.52;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--dark-blue-grey);
+  }
+
+  .btn-google-play {
+    max-width: 266px;
+    max-height: 102.9px;
+    object-fit: contain;
+  }
+
+  .btn-mac-app-store {
+    max-width: 250.2px;
+    max-height: 75.2px;
+    padding-top: 14px;
+    object-fit: contain;
+  }
+
+  .Image-phone---download-app {
+    max-width: 427.5px;
+    max-height: 609px;
+    object-fit: contain;
+  }
+
+  .links-icon {
+    object-fit: contain;
+  }
+
+  .links-dark {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 5.89;
+    letter-spacing: normal;
+    text-align: center;
+    text-decoration: underline;
+    color: var(--dark-blue-grey);
+  }
+
+  .seperation-stripe {
+    width: 100%;
+    object-fit: contain;
+
+  }
+
+  
+  @media only screen  and (max-width: 512px) {
+    .seperation-stripe {
+      margin-bottom: -30px;
+  
+    }
+  
+  }
+  
+  @media only screen and (min-width: 512px) and (max-width: 1024px) {
+    .seperation-stripe {
+      margin-bottom: -60px;
+  
+    }
+  
+  }
+  
+    
+  @media only screen and (min-width: 1024px) {
+    .seperation-stripe {
+      margin-bottom: -120px;
+  
+    }
+  
+  }
+
+  .Trac-141 {
+    width: 100%;
+    background-color: var(--dark-blue-grey);
+  }
+
+  .Trac-141-row {
+    width: 100%;
+    height: 590.3px;
+    background-color: var(--dark-blue-grey);
+  }
+
+
+  .Title-yellow {
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.1;
+      letter-spacing: normal;
+      text-align: left;
+      color: var(--golden-yellow);
+
+  }
+
+  .btn-learn-more {
+    width: 202px;
+    height: 72px;
+    padding: 17px;
+    border-radius: 10px;
+    border: solid 4px #fff;
+  }
+
+  .white-label {
+      height: 22px;
+      padding-right: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      font-size: 16px;
+      font-weight: bold;
+      font-stretch: normal;
+      font-style: normal;
+      line-height: 1.38;
+      letter-spacing: normal;
+      text-align: left;
+      color: #fff;
+  }
+
+ .icon-btn-learn-more {
+    width: 28px;
+    height: 18px;
+    padding-left: 10px;
+    object-fit: contain;
+  }
+
+  .Wallet---Activation-pass-section {
+    width: 100%;
+    height: 307.2px;
+    object-fit: contain;
+  }
+
+  .separator-bottom {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-top: -75px;
+  }
+  
+  .separator-top {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: -75px;
+  }
+  
+
+
+  .icon-use-case {
+    max-height: 45.8px;
+    object-fit: contain;
+  }
+
+  .download-use-case {
+    
+    max-height: 262.8px;
+    object-fit: contain;
+  }
+
+
+  .bg-playground {
+    background-color: var(--dark-blue-grey);
+  }
+
+  .tall-element {
+      width: 100%;
+      height: 500px;
+  }
+
+  .step-image-desktop {
+    max-height: 270px;
+    object-fit: contain;
+  }
+
+  
+  .step-image-mobile {  
+    max-height: 270px;
+    object-fit: contain;
+  }
+
+  .btn-demo-hr {
+    margin-top:-25px;
+  }
+
+  .btn-demo {
+    height: 50px;
+  }
+
+  .manage-image {
+    
+    max-height: 546px;
+    object-fit: contain;
+  }
+
+  
+
+
+  
+  @media only screen  and (max-width: 1024px) {
+    .light-blue-div {  
+      height: auto;
+      
+      background-color: var(--turquoise-blue);
+    }
+  
+    .light-blue-image {
+      width:100%;
+      object-fit: contain;
+    }
+  
+  }
+  
+    
+  @media only screen and (min-width: 1024px) {
+    .light-blue-div {  
+      height: 546px;
+      background-color: var(--turquoise-blue);
+    }
+  
+  .light-blue-image {
+    max-height: 500px;
+    margin-right: -500px;
+    object-fit: contain;
+  }
+  }
+

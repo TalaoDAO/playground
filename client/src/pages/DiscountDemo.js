@@ -8,68 +8,72 @@ import {
   Container, Button, Row, Col, Card, Image
 } from 'react-bootstrap';
 
+
+import news_lt from './img/news-left-top.png';
+import news_rt from './img/news-right-top.png';
+import news_l from './img/news-left.png';
+import news_rb from './img/news-right-bottom.png';
+import news_dis from './img/news-discount.png';
+
+
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
 function DiscountDemo() {
-  const [data, setData] = React.useState(null);
+  const [qr, setQr] = React.useState(null);
 
 
 
   React.useEffect(() => {
-    fetch(REACT_APP_NODE_LOCAL+"/api")
-      .then((res) =>  res.json())
-      .then((data) => setData(data.message));
+    fetch(REACT_APP_NODE_LOCAL + "/api/qr-url")
+      .then((res) => res.json())
+      .then((qr) => setQr(qr.url));
   }, []);
-  
+
   return (
     <div className="DiscountDemo">
-      <main className="my-5 py-5">
-        <Container className="px-0">
-          <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-transparent">
-            <div className="col-md-10 p-lg-10 mx-auto my-10">
-              <h1 className="display-4 fw-normal">Get a discount coupon</h1> {REACT_APP_NODE_LOCAL}
-            </div>
-          </div>
-
-          <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-            <div className="col-md-10 p-lg-10 mx-auto my-10">
-                <Row><h4 className="display-4 fw-normal">Breaking News</h4></Row>
-                
-                <Row>
-                    <Col xs md lg={{span:6, offset: 3}}>
-                    <Card className="xs">
-                        <Card.Header className="bg-white"><h2>NFT</h2></Card.Header>
-                        <Card.Body>
-                            <Row>
-                                <Col>
-                                    <h4>Hope and see</h4>
-                                </Col>
-
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <Image src={ddemo01} fluid></Image>
-                                </Col>
-
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <QRCode value="http://localhost:3001/discount-offer" />
-                                </Col>
-
-                            </Row>
-                            
-                        </Card.Body>
-                    </Card>
-                    </Col>
-                </Row>
-              
-
-            </div>
-        </div>
+      <main >
+        <Container>
 
 
-          <p>{!data ? "Loading..." : data}</p>
+          <Row>
+            <Col xs={8} md={8} lg={8} style={{ textAlign: "right" }}>
+              <Image src={news_lt} className="img-fit" fluid></Image>
+
+            </Col>
+            <Col style={{ textAlign: "right" }}>
+              <Image src={news_rt} className="img-fit" fluid></Image>
+
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} md={12} lg={8} style={{ textAlign: "left" }}>
+              <Image src={news_l} className="img-scale" fluid></Image>
+
+            </Col>
+            <Col xs={12} md={12} lg={4} style={{ textAlign: "right" }}>
+              <Row className="p-5" style={{ borderColor: "var(--dark-blue-grey)" }}>
+                <Col xs={{ span: 6, offset: 3 }} md={{ span: 6, offset: 3 }} lg={{ span: 6, offset: 0 }} style={{ textAlign: "center" }}>
+
+                  <Image src={news_dis} className="img-scale" fluid></Image>
+                </Col>
+
+                <Col xs={12} md={12} lg={6} style={{ textAlign: "center" }}>
+                  <QRCode value={REACT_APP_QR_URL + "/discount-offer"} size={128} />
+                </Col>
+              </Row>
+              <Row>
+                <Col xs={12} md={12} lg={12} style={{ textAlign: "center" }}>
+                  <Image src={news_rb} className="img-scale"></Image>
+                </Col>
+              </Row>
+
+
+            </Col>
+
+          </Row>
+
+
+          <p>{!qr ? "Loading..." : qr}</p>
         </Container>
 
       </main>

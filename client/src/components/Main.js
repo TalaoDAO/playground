@@ -9,8 +9,12 @@ import Employer from '../pages/Employer';
 import Discount from '../pages/Discount';
 import Manage from '../pages/Manage';
 import DiscountDemo from '../pages/DiscountDemo';
+import PrivateRoute from "./PrivateRoute";
+import Generate from '../pages/Generate';
+import Recover from '../pages/Recover';
 
 const Main = () => {
+
   return (
     <Routes> {/* The Routes decides which component to show based on the current URL.*/}
         <Route exact path='/' element={<Home/>}></Route>
@@ -21,7 +25,9 @@ const Main = () => {
         <Route exact path='/employer' element={<Employer/>}></Route>
         <Route exact path='/discount' element={<Discount/>}></Route>
         <Route exact path='/manage' element={<Manage/>}></Route>
-        <Route exact path='/discount-demo' element={<DiscountDemo/>}></Route>
+        <Route exact path='/generate' element={<Generate/>}></Route>
+        <Route exact path='/recover' element={<Recover/>}></Route>
+        <Route exact path='/discount-demo' element={<PrivateRoute><DiscountDemo/></PrivateRoute>}></Route>
     </Routes>
   );
 }

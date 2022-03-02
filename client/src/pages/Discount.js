@@ -11,6 +11,15 @@ import {
 import UseCases from "../components/UseCases";
 import ManageStrip from "../components/ManageStrip";
 
+import step051 from '../pages/img/Image-discount-coupon-scan-qrcode.png';
+import step052 from '../pages/img/Image-discount-coupon-scan-qrcode@2x.png';
+import step053 from '../pages/img/Image-discount-coupon-scan-qrcode@3x.png';
+
+
+import step061 from '../pages/img/Image-employer-certificate-accept-certificate-wallet.png';
+import step062 from '../pages/img/Image-employer-certificate-accept-certificate-wallet@2x.png';
+import step063 from '../pages/img/Image-employer-certificate-accept-certificate-wallet@3x.png';
+
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
 function Discount() {
@@ -24,112 +33,91 @@ function Discount() {
   
   return (
     <div className="Discount">
-      <main className="my-5 py-5">
+      <main>
         <Container className="px-0">
-            <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-light">
-            <div className="col-md-10 p-lg-10 mx-auto my-10">
-                <Row><h1 className="display-4 fw-normal">Get a discount coupon</h1></Row>
+          <Row className="p-3 bg-playground text-white tall-element align-content-center">
+            <Col xs={12} md={12} lg={{ span: 8, offset: 2 }} className="justify-content-center">
+
               <Row>
-              <p className="lead fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
+                <Col>
+                  <span className="Title-TAGH1 text-center p-3">Get a discount coupon</span>
+                </Col>
               </Row>
+              
               <Row>
-                  <Col>
-                <Button variant="dark" href="/discount-demo">Start Demo</Button>
-              </Col>
+                <Col className="justify-content-center p-4">
+                  <Button variant="btn btn-info btn-lg " href="/discount-demo">Start Demo</Button>
+                </Col>
               </Row>
-              <Row style={{padding:20}}>
-                  <Col>
-                    <Button variant="outline-dark" href="#description">How does it work?</Button>
+              <Row className="p-5">
+                <Col>
+                  <Button variant="outline-light " href="#description">How does it work?</Button>
                 </Col>
               </Row>
 
-            </div>
-            
-          </div>
+            </Col>
+          </Row>
+
 
           <div id="description" className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-white">
-                <div className="col-md-10 p-lg-10 mx-auto my-10">
-                    <Row><h1 className="display-4 fw-normal">From your desktop</h1></Row>
-                    <Row>
-                        <Col xs md lg= {{ span: 6, offset: 3 }}>
-                            <hr style={{backgroundColor:"black",height:"2px"}}/>
-                        </Col>
-                    </Row>
-                
-                </div>
-              
-              <Row className="position-relative overflow-hidden p-2 p-md-4 m-md-2">
-                  <Col xs md lg={{span:6}}>
-                      <Row >
-                          <Col className="text-end" xs md lg={{span:3}}>
-                            <h1 className="text-muted">1.</h1>
-                          </Col>
-                          <Col className="text-start">
-                                <h2> Read an article on the Breaking news</h2>
-                          </Col>
-                      </Row>
-                      <Row>
-                          <Col >
-                            <Image src={discount01} fluid></Image>
-                          </Col>
-                      </Row>
-                  </Col>
-                  <Col xs md lg={{span:6}}>
-                    <Row>
-                          <Col className="text-end" xs md lg={{span:3}}>
-                            <h1 className="text-muted">2.</h1>
-                          </Col>
-                          <Col className="text-start">
-                                <h2> Scan the QR Code of the discount coupon</h2>
-                          </Col>
-                      </Row>
-                      <Row>
-                          <Col className="p-lg-10">
-                            <Image src={discount02} fluid></Image>
-                          </Col>
-                      </Row>
-                  </Col>
-              </Row>
 
-              <Row className="position-relative overflow-hidden p-2 p-md-4 m-md-2">
-                  <Col xs md lg={{span:6, offset:3}}>
-                      <Row >
-                            <Col className="text-end" xs md lg={{span:3}}>
-                                <h1 className="text-muted">3.</h1>
-                            </Col>
-                            <Col className="text-start">
-                                    <h2> Accept the new certificate in your wallet</h2>
-                            </Col>
-                          
-                      </Row>
-                      <Row>
-                          <Col >
-                            <Image src={discount03} fluid></Image>
-                          </Col>
-                      </Row>
+            <Row><Col><span className="Title-TAGH1-dark text-center p-3">From your desktop</span></Col></Row>
+            
+            
+            
+            <Row className="position-relative overflow-hidden p-2 p-md-4 m-md-2">
+              <Col xs={12} md={12} lg={{ span: 6 }}>
+                <Row >
+                  <Col className="text-end" xs={3} md={3} lg={{ span: 3 }}>
+                    <h1 className="text-muted">1.</h1>
+                  </Col>
+                  <Col className="text-start">
+                    <span className="Title-TAGH2-dark"> Scan the QR Code</span>
+                  </Col>
+
+                </Row>
+                <Row>
+                  <Col >
+                    <Image src={step051} srcSet={`${step052} 2x, ${step053} 3x`} className="step-image-desktop" fluid></Image>
                   </Col>
                 </Row>
-                  
+              </Col>
+              <Col xs={12} md={12} lg={{ span: 6 }}>
+                <Row>
+                  <Col className="text-end" xs={3} md={3} lg={{ span: 3 }}>
+                    <h1 className="text-muted">2.</h1>
+                  </Col>
+                  <Col className="text-start">
+                    <span className="Title-TAGH2-dark"> Accept your certificate</span>
+                  </Col>
+
+                </Row>
+                <Row>
+                  <Col className="p-lg-10">
+                    <Image src={step061} srcSet={`${step062} 2x, ${step063} 3x`} className="step-image-mobile" fluid></Image>
+                  </Col>
+                </Row>
+              </Col>
+            </Row>
           </div>
 
+          <Row>
+            <Col xs={12} md={12} lg={{ span: 6, offset: 3 }}>
+              <Button variant="btn btn-info btn-lg btn-demo" href="/discount-demo">Start Demo</Button>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12} md={12} lg={{ span: 10, offset: 1 }}>
+              <hr className="btn-info btn-demo-hr" />
+            </Col>
+          </Row>
 
-            <Row>
-                <Col xs md lg={{span:6,offset:3}}>
-                    <Button variant="dark" href="/discount-demo">Start Demo</Button>
-                </Col>
-            </Row>
-            <Row>
-                <Col xs md lg={{span:10,offset:1}}>
-                    <hr/>
-                </Col>
-            </Row>
 
-
-          <UseCases/>
-          <ManageStrip/>
+          <UseCases />
+          <ManageStrip />
 
           <p>{!data ? "Loading..." : data}</p>
-        
+
         </Container>
       </main>
     </div>

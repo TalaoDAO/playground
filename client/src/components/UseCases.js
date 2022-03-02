@@ -1,127 +1,169 @@
 import React from 'react';
-import uc01 from '../images/use-cases-01.png';
-import uc01i from '../images/use-cases-01-icon.png';
-import uc02 from '../images/use-cases-02.png';
-import uc02i from '../images/use-cases-02-icon.png';
-import uc03 from '../images/use-cases-03.png';
-import uc03i from '../images/use-cases-03-icon.png';
-import uc04 from '../images/use-cases-04.png';
-import uc04i from '../images/use-cases-04-icon.png';
+
+import dipi01 from '../pages/img/icon-diploma-use-case.png';
+import dipi02 from '../pages/img/icon-diploma-use-case@2x.png';
+import dipi03 from '../pages/img/icon-diploma-use-case@3x.png';
+import dipd01 from '../pages/img/image-download-a-diploma.png';
+import dipd02 from '../pages/img/image-download-a-diploma@2x.png';
+import dipd03 from '../pages/img/image-download-a-diploma@3x.png';
+
+import stci01 from '../pages/img/icon-student-card-use-case.png';
+import stci02 from '../pages/img/icon-student-card-use-case@2x.png';
+import stci03 from '../pages/img/icon-student-card-use-case@3x.png';
+import stcd01 from '../pages/img/image-download-a-diploma.png';
+import stcd02 from '../pages/img/image-download-a-diploma@2x.png';
+import stcd03 from '../pages/img/image-download-a-diploma@3x.png';
+
+import eci01 from '../pages/img/icon-employer-certificate-use-case.png';
+import eci02 from '../pages/img/icon-employer-certificate-use-case@2x.png';
+import eci03 from '../pages/img/icon-employer-certificate-use-case@3x.png';
+import ecd01 from '../pages/img/image-employer-certificate-use-case.png';
+import ecd02 from '../pages/img/image-employer-certificate-use-case@2x.png';
+import ecd03 from '../pages/img/image-employer-certificate-use-case@3x.png';
+
+import disi01 from '../pages/img/icon-discount-coupon-use-case.png';
+import disi02 from '../pages/img/icon-discount-coupon-use-case@2x.png';
+import disi03 from '../pages/img/icon-discount-coupon-use-case@3x.png';
+import disd01 from '../pages/img/Image-discount-coupon-use-case.png';
+import disd02 from '../pages/img/Image-discount-coupon-use-case@2x.png';
+import disd03 from '../pages/img/Image-discount-coupon-use-case@3x.png';
 
 import {
-  Container,Image, Card, Row, Col
+    Container, Image, Card, Row, Col
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
 const UseCases = () => (
-    <div className="UseCases">
+    <div className="UseCases p-5">
         <Container>
-            <div className="col-md-8 p-lg-8 mx-auto my-8">
-                    <Row>
-                        <h1 className="display-4 fw-normal">Use Cases</h1>
-                    </Row>
-                    <Row>
-                        <p className="lead fw-normal">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. </p>
-                    </Row>   
+
+            <div className="position-relative overflow-hidden align-items-center justify-content-center text-center">
+                <Row>
+                    <Col xs md lg={{ span: 4, offset: 4 }}>
+                        <Row>
+                            <span className="Title-TAGH1-dark">Use Cases</span>
+
+                        </Row>
+                        <Row>
+                            <span className="Description-TAGUI_L-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</span>
+                        </Row>
+                    </Col>
+
+                </Row>
             </div>
-            <Row className="p-4">
-                <Col xs md lg= {{ span: 4, offset: 2 }}>
-                    <Card >
-                        <Card.Header className="bg-white"><Image src={uc01i} height={30}></Image></Card.Header>
-                        <Card.Body>
-                            <Row>
-                                <Col>
-                                    <h4>Download a diploma</h4>
-                                </Col>
+            <div className="position-relative overflow-hidden align-items-center justify-content-center text-center">
+                <Row className="p-5">
+                    <Col xs={12} md={12} lg={{ span: 5, offset: 1 }}>
+                        <Card className='border-0'>
+                            <Card.Header className="bg-white border-0">
 
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <Image src={uc01} fluid></Image>
-                                </Col>
+                                <Image src={dipi01} srcSet={`${dipi02} 2x, ${dipi03} 3x`} className="icon-use-case" fluid></Image>
+                            </Card.Header>
+                            <Card.Body className='border-0'>
+                                <Row>
+                                    <Col>
+                                        <span className="Description-TAGUI_L-dark">Download a diploma</span>
+                                    </Col>
 
-                            </Row>
-                            
-                        </Card.Body>
-                        <Card.Footer className="bg-white">
-                            <Link to="/diploma" className="text-dark fs-6 text">LEARN MORE</Link>
-                        </Card.Footer>
-                    </Card>
-                </Col>
-                <Col xs md lg= {{ span: 4 }}>
-                    <Card >
-                        <Card.Header className="bg-white"><Image src={uc02i} height={30}></Image></Card.Header>
-                        <Card.Body>
-                            <Row>
-                                <Col>
-                                    <h4>Download your student card</h4>
-                                </Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <Image src={dipd01} srcSet={`${dipd02} 2x, ${dipd03} 3x`} className="download-use-case" fluid></Image>
+                                    </Col>
 
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <Image src={uc02} fluid></Image>
-                                </Col>
+                                </Row>
 
-                            </Row>
-                            
-                        </Card.Body>
-                        <Card.Footer className="bg-white">
-                            <Link to="/student" className="text-dark fs-6 text">LEARN MORE</Link>
-                        </Card.Footer>
-                    </Card>
-                </Col>
-            </Row>
-            <Row className="p-4">
-                <Col xs md lg= {{ span: 4, offset: 2 }}>
-                    <Card >
-                        <Card.Header className="bg-white"><Image src={uc03i} height={30}></Image></Card.Header>
-                        <Card.Body>
-                            <Row>
-                                <Col>
-                                    <h4>Request an employer certificate</h4>
-                                </Col>
+                            </Card.Body>
+                            <Card.Footer className="bg-white border-0">
+                                <Link to="/diploma" className="links-dark fs-6">LEARN MORE</Link>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                    <Col xs={12} md={12} lg={{ span: 5 }}>
+                        <Card className='border-0'>
+                            <Card.Header className="bg-white border-0">
 
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <Image src={uc03} fluid></Image>
-                                </Col>
+                                <Image src={stci01} srcSet={`${stci02} 2x, ${stci03} 3x`} className="icon-use-case" fluid></Image>
+                            </Card.Header>
+                            <Card.Body className='border-0'>
+                                <Row>
+                                    <Col>
+                                        <span className="Description-TAGUI_L-dark">Download your student card</span>
+                                    </Col>
 
-                            </Row>
-                            
-                        </Card.Body>
-                        <Card.Footer className="bg-white">
-                            <Link to="/employer" className="text-dark fs-6 text">LEARN MORE</Link>
-                        </Card.Footer>
-                    </Card>
-                </Col>
-                <Col xs md lg= {{ span: 4 }}>
-                    <Card >
-                        <Card.Header className="bg-white"><Image src={uc04i} height={30}></Image></Card.Header>
-                        <Card.Body>
-                            <Row>
-                                <Col>
-                                    <h4>Use discount coupon</h4>
-                                </Col>
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <Image src={stcd01} srcSet={`${stcd02} 2x, ${stcd03} 3x`} className="download-use-case" fluid></Image>
+                                    </Col>
 
-                            </Row>
-                            <Row>
-                                <Col>
-                                    <Image src={uc04} fluid></Image>
-                                </Col>
+                                </Row>
 
-                            </Row>
-                            
-                        </Card.Body>
-                        <Card.Footer className="bg-white">
-                            <Link to="/discount" className="text-dark fs-6 text">LEARN MORE</Link>
-                        </Card.Footer>
-                    </Card>
-                </Col>
-            </Row>
-    
+                            </Card.Body>
+                            <Card.Footer className="bg-white border-0">
+                                <Link to="/student" className="links-dark fs-6">LEARN MORE</Link>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                </Row>
+                <Row className="p-4">
+                    <Col xs={12} md={12} lg={{ span: 5, offset: 1 }}>
+                        <Card className='border-0' >
+                            <Card.Header className="bg-white border-0">
+                                
+                                <Image src={eci01} srcSet={`${eci02} 2x, ${eci03} 3x`} className="icon-use-case" fluid></Image>    
+                            </Card.Header>
+                            <Card.Body className='border-0'>
+                                <Row>
+                                    <Col>
+                                        <span className="Description-TAGUI_L-dark">Request an employer certificate</span>
+                                    </Col>
+
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <Image src={ecd01} srcSet={`${ecd02} 2x, ${ecd03} 3x`} className="download-use-case" fluid></Image>  
+                                    </Col>
+
+                                </Row>
+
+                            </Card.Body>
+                            <Card.Footer className="bg-white border-0">
+                                <Link to="/employer" className="links-dark fs-6">LEARN MORE</Link>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                    <Col xs={12} md={12} lg={{ span: 5 }}>
+                        <Card  className='border-0'>
+                            <Card.Header className="bg-white border-0">
+                                
+                            <Image src={disi01} srcSet={`${disi02} 2x, ${disi03} 3x`} className="icon-use-case" fluid></Image> 
+                                </Card.Header>
+                            <Card.Body className='border-0'>
+                                <Row>
+                                    <Col>
+                                    <span className="Description-TAGUI_L-dark">Use discount coupon</span>
+                                    </Col>
+
+                                </Row>
+                                <Row>
+                                    <Col>
+                                        <Image src={disd01} srcSet={`${disd02} 2x, ${disd03} 3x`} className="download-use-case" fluid></Image> 
+                                    </Col>
+
+                                </Row>
+
+                            </Card.Body>
+                            <Card.Footer className="bg-white border-0">
+                                <Link to="/discount" className="links-dark fs-6">LEARN MORE</Link>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                </Row>
+            </div>
+
+
         </Container>
 
     </div>
