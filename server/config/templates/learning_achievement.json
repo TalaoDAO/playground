@@ -1,0 +1,91 @@
+{
+	"credentialPreview": {
+		"@context": [
+			"https://www.w3.org/2018/credentials/v1",
+			{
+				"name": "https://schema.org/name",
+				"description": "https://schema.org/description",
+				"LearningAchievement": {
+					"@id": "https://github.com/TalaoDAO/context",
+					"@context": {
+						"@version": 1.1,
+						"@protected": true,
+						"schema": "https://schema.org/",
+						"id": "@id",
+						"type": "@type",
+						"familyName": "schema:familyName",
+						"givenName": "schema:givenName",
+						"birthDate": "schema:birthDate",
+						"email": "schema:email",
+						"hasCredential": {
+							"@id": "https://hnc-path-to-facilities-management-definition",
+							"@context": {
+								"@version": 1.1,
+								"@protected": true,
+								"title": "schema:title",
+								"description": "schema:description",
+								"inDefinedTermSet": "schema:inDefinedTermSet"
+							}
+						},
+						"issuedBy": {
+							"@id": "schema:issuedBy",
+							"@context": {
+								"@version": 1.1,
+								"@protected": true,
+								"logo": {
+									"@id": "schema:image",
+									"@type": "@id"
+								},
+								"name": "schema:name",
+								"address": "schema:address"
+							}
+						}
+					}
+				}
+			}
+		],
+		"id": "",
+		"type": [
+			"VerifiableCredential",
+			"LearningAchievement"
+		],
+		"issuer": "",
+		"issuanceDate": "",
+		"name": [
+			{
+				"@language": "fr",
+				"@value": "Diplome"
+			}
+		],
+		"description": [
+			{
+				"@language": "fr",
+				"@value": "Diplome, qualification, etc...reconnu par l'état"
+			}
+		],
+		"credentialSubject": {
+			"type": "LearningAchievement",
+			"id": "",
+			"familyName": "",
+			"givenName": "",
+			"birthDate": "",
+			"hasCredential": {
+				"title": "",
+				"description": ""
+			},
+			"issuedBy": {
+				"name": "",
+				"address": "",
+				"logo": ""
+			}
+		},
+		"evidence": {
+			"id": "https://example.edu/tobedefined",
+			"type": [
+				"DocumentVerification"
+			]
+		}
+	},
+	"expires": "",
+	"type": "CredentialOffer"
+}
