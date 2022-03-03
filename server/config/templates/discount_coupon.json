@@ -75,7 +75,6 @@
 			}
 		],
 		"issuanceDate": "",
-		"expirationDate": "",
 		"credentialSubject": {
 			"type": "Voucher",
 			"identifier": "",
