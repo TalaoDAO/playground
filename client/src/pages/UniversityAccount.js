@@ -100,7 +100,7 @@ function UniversityAccount() {
                                             </Card.Header>
                                             <Card.Body>
                                                 <Row>
-                                                    <Col className="align-items-center justify-content-center text-center">
+                                                    <Col className="p-2align-items-center justify-content-center text-center">
                                                         <Button variant="primary" onClick={handleShowDiploma}>Diploma</Button>
                                                         <Modal show={showDiploma} onHide={handleCloseDiploma} className="align-items-center justify-content-center text-center">
                                                             <Modal.Header closeButton>
@@ -116,7 +116,7 @@ function UniversityAccount() {
 
                                                 </Row>
                                                 <Row>
-                                                    <Col className="p-4">
+                                                    <Col className="p-2">
                                                         <Button variant="primary" onClick={handleShowStudent}>Student Card</Button>
                                                         <Modal show={showStudent} onHide={handleCloseStudent} className="align-items-center justify-content-center text-center">
                                                             <Modal.Header closeButton>
@@ -131,7 +131,7 @@ function UniversityAccount() {
 
                                                 </Row>
                                                 <Row>
-                                                    <Col className="p-4">
+                                                    <Col className="p-2">
                                                         <Button className="btn" disabled>Inventore Veritatis</Button>
                                                     </Col>
 
