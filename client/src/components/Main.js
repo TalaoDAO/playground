@@ -31,11 +31,11 @@ const Main = () => {
         <Route exact path='/manage' element={<Manage/>}></Route>
         <Route exact path='/generate' element={<Generate/>}></Route>
         <Route exact path='/recover' element={<Recover/>}></Route>
-        <Route exact path='/university' element={<PrivateRoute><University/></PrivateRoute>}></Route>
-        <Route exact path='/uni-account' element={<PrivateRoute><UniversityAccount/></PrivateRoute>}></Route>
-        <Route exact path='/company' element={<PrivateRoute><EmployerHome/></PrivateRoute>}></Route>
-        <Route exact path='/com-account' element={<PrivateRoute><EmployerAccount/></PrivateRoute>}></Route>
-        <Route exact path='/discount-demo' element={<PrivateRoute><DiscountDemo/></PrivateRoute>}></Route>
+        <Route exact path='/university' element={<University/>}></Route>
+        <Route exact path='/uni-account' element={<UniversityAccount/>}></Route>
+        <Route exact path='/company' element={<EmployerHome/>}></Route>
+        <Route exact path='/com-account' element={<EmployerAccount/>}></Route>
+        <Route exact path='/discount-demo' element={<DiscountDemo/>}></Route>
     </Routes>
   );
 }
