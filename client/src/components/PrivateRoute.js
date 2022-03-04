@@ -23,6 +23,11 @@ const PrivateRoute = ({ children }) => {
 
   const [token, setToken] = React.useState(getSessionToken());
 
+  React.useEffect(() => {
+    sessionStorage.setItem('token', JSON.stringify(token));
+    
+  }, [token]);
+
 
   if(!token) {
     return <Login setToken={setToken} />

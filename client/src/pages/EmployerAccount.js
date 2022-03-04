@@ -11,12 +11,7 @@ import {
 import com_logo from './img/employer/company-logo.png';
 import com_left from './img/employer/company-left.png';
 import com_tools from './img/employer/company-tools.png';
-import com_account from './img/employer/company-account.png';
 
-import uni_logo from './img/university/university-logo.png';
-import acc_tools from './img/university/account-tools.png';
-import acc_left from './img/university/account-left.png';
-import acc_down from './img/university/account-down.png';
 import { Link } from 'react-router-dom';
 import QRCode from "react-qr-code";
 

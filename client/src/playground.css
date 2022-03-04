@@ -384,5 +384,29 @@ img.Background-cubes---hero {
   .turquoise-container {
     background-color: var(--turquoise-blue);
   }
+
+  
+  .col-fixed {
+    height: 306px;
+    
+  }
+
+  .col-fixed-2 {
+    height: 712px;
+    
+  }
+
+  .img-stack {
+    width: 35vw;
+    height: 35vh;
+    
+  }
+
+  .btn-over {
+    position:relative;
+    margin-top: 100px;
+    
+  }
+
 }
 
