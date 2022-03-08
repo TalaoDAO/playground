@@ -11,16 +11,6 @@ const StudentGenerator = require("../vc/student-generator");
 const EmailGenerator = require("../vc/email-generator");
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, prettyPrint } = format;
-const cors = require('cors');
-
-const express = require("express");
-
-require('dotenv').config()
-
-const app = express();
-app.use(express.json()) ;
-app.use(express.urlencoded({extended: true}));
-app.use(cors())
 
 const logger =  createLogger({
     level: 'debug',
