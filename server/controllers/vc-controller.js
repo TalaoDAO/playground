@@ -9,11 +9,37 @@ const LearningGenerator = require("../vc/learning-generator");
 const EmploymentGenerator = require("../vc/employment-generator");
 const StudentGenerator = require("../vc/student-generator");
 const EmailGenerator = require("../vc/email-generator");
+const { createLogger, format, transports } = require('winston');
+const { combine, timestamp, label, prettyPrint } = format;
+const cors = require('cors');
+
+const express = require("express");
 
 require('dotenv').config()
 
+const app = express();
+app.use(express.json()) ;
+app.use(express.urlencoded({extended: true}));
+app.use(cors())
+
+const logger =  createLogger({
+    level: 'debug',
+    format: combine(
+        timestamp(),
+        prettyPrint()
+    ),
+    transports: [
+      //
+      // - Write all logs with importance level of `error` or less to `error.log`
+      // - Write all logs with importance level of `info` or less to `combined.log`
+      //
+      new transports.File({ filename: 'error.log', level: 'error'}),
+      new transports.File({ filename: 'combined.log'}),
+    ],
+  });
+
 exports.discount_offer_get = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
     (async() =>{
         try {
             let rawdata = fs.readFileSync(process.env.DISCOUNT_COUPON_TEMPLATE);
@@ -21,7 +47,7 @@ exports.discount_offer_get = function(req, res) {
             let voucherGenerator = new VoucherGenerator();
             let values={'offer.value':100,'offer.currency':'USD','issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ','issuedBy.name':'Tezotopia','identifier':0123456};
             await voucherGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            console.log(JSON.stringify(offer));
+            logger.debug(JSON.stringify(offer));
             res.json(offer);
         } catch (error) {
             console.error(error)
@@ -33,11 +59,12 @@ exports.discount_offer_get = function(req, res) {
 }
 
 exports.discount_offer_post = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
+    logger.debug(req.body);
     (async() =>{
         try {
             
-            console.log(req.body);
+            logger.debug(req.body);
 
             
 
@@ -50,7 +77,7 @@ exports.discount_offer_post = function(req, res) {
             await voucherGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
             let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
 
-            console.log(signed);
+            logger.debug(signed);
 
             res.json(signed);
         } catch (error) {
@@ -63,7 +90,7 @@ exports.discount_offer_post = function(req, res) {
 }
 
 exports.learning_get = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
     (async() =>{
         try {
             let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
@@ -80,7 +107,7 @@ exports.learning_get = function(req, res) {
                 'birthDate':"2001-03-01"
             };
             await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            console.log(JSON.stringify(offer));
+            logger.debug(JSON.stringify(offer));
             res.json(offer);
         } catch (error) {
             console.error(error)
@@ -92,10 +119,11 @@ exports.learning_get = function(req, res) {
 }
 
 exports.learning_post = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
+    logger.debug(req.body);
     (async() =>{
         try {
-            console.log(req.body);
+            logger.debug(req.body);
             let senderId=req.body['subject_id'];
 
             let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
@@ -113,7 +141,7 @@ exports.learning_post = function(req, res) {
             };
             await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
             let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
-            console.log(signed);
+            logger.debug(signed);
             res.json(signed);
         } catch (error) {
             console.error(error)
@@ -126,7 +154,7 @@ exports.learning_post = function(req, res) {
 
 
 exports.employment_get = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
     (async() =>{
         try {
             let rawdata = fs.readFileSync(process.env.EMPLOYMENT_TEMPLATE);
@@ -144,7 +172,7 @@ exports.employment_get = function(req, res) {
                 'jobTitle':'Engineer'
             };
             await employmentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            console.log(JSON.stringify(offer));
+            logger.debug(JSON.stringify(offer));
             res.json(offer);
         } catch (error) {
             console.error(error)
@@ -156,10 +184,11 @@ exports.employment_get = function(req, res) {
 }
 
 exports.employment_post = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
+    logger.debug(req.body);
     (async() =>{
         try {
-            console.log(req.body);
+            logger.debug(req.body);
             let senderId=req.body['subject_id'];
 
             let rawdata = fs.readFileSync(process.env.EMPLOYMENT_TEMPLATE);
@@ -178,7 +207,7 @@ exports.employment_post = function(req, res) {
             };
             await employmentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
             let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
-            console.log(signed);
+            logger.debug(signed);
             res.json(signed);
         } catch (error) {
             console.error(error)
@@ -191,7 +220,7 @@ exports.employment_post = function(req, res) {
 
 
 exports.student_get = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
     (async() =>{
         try {
             let rawdata = fs.readFileSync(process.env.STUDENT_TEMPLATE);
@@ -209,7 +238,7 @@ exports.student_get = function(req, res) {
                 'issuedBy.directorName':'Nicolas Muller'
             };
             await studentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            console.log(JSON.stringify(offer));
+            logger.debug(JSON.stringify(offer));
             res.json(offer);
         } catch (error) {
             console.error(error)
@@ -221,10 +250,11 @@ exports.student_get = function(req, res) {
 }
 
 exports.student_post = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
+    logger.debug(req.body);
     (async() =>{
         try {
-            console.log(req.body);
+            logger.debug(req.body);
             let senderId=req.body['subject_id'];
 
             let rawdata = fs.readFileSync(process.env.STUDENT_TEMPLATE);
@@ -242,9 +272,9 @@ exports.student_post = function(req, res) {
                 'issuedBy.directorName':'Nicolas Muller'
             };
             await studentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            console.log(offer);
+            logger.debug(offer);
             let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
-            console.log(signed);
+            logger.debug(signed);
             res.json(signed);
         } catch (error) {
             console.trace(error)
@@ -257,7 +287,7 @@ exports.student_post = function(req, res) {
 
 
 exports.email_get = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
     (async() =>{
         try {
             let rawdata = fs.readFileSync(process.env.EMAIL_TEMPLATE);
@@ -269,7 +299,7 @@ exports.email_get = function(req, res) {
                 'issuedBy.name':'Talao'
             };
             await emailGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            console.log(JSON.stringify(offer));
+            logger.debug(JSON.stringify(offer));
             res.json(offer);
         } catch (error) {
             console.error(error)
@@ -281,10 +311,11 @@ exports.email_get = function(req, res) {
 }
 
 exports.email_post = function(req, res) {
-    console.log(req.url);
+    logger.debug(req.url);
+    logger.debug(req.body);
     (async() =>{
         try {
-            console.log(req.body);
+            logger.debug(req.body);
             let senderId=req.body['subject_id'];
 
             let rawdata = fs.readFileSync(process.env.EMAIL_TEMPLATE);
@@ -297,7 +328,7 @@ exports.email_post = function(req, res) {
             };
             await emailGenerator.generate(process.env.DEFAULT_JWK,offer,values);
             let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
-            console.log(signed);
+            logger.debug(signed);
             res.json(signed);
         } catch (error) {
             console.error(error)
@@ -312,8 +343,8 @@ exports.email_post = function(req, res) {
 // Display list of all Authors.
 exports.test = function(req, res) {
 
-    console.log(req.url);
-    console.log(process.env.NODE_ENV);
+    logger.debug(req.url);
+    logger.debug(process.env.NODE_ENV);
 
     (async() =>{
  
@@ -330,7 +361,7 @@ exports.test = function(req, res) {
 
         
     })().catch((error)=>{
-		console.log(`async error: ${util.inspect(error, {depth: null})}`);
+		logger.debug(`async error: ${util.inspect(error, {depth: null})}`);
 		res.json({ message: error });
 	});
     

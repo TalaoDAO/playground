@@ -87,10 +87,7 @@ function EmployerAccount() {
                             <Row>
                                     <Col className="p-3" >
                                         <Card className=''>
-                                            <Card.Header className="bg-white">
 
-                                                Documents
-                                            </Card.Header>
                                             <Card.Body>
                                                 <Row>
                                                     <Col className="p-2 align-items-center justify-content-center text-center">
