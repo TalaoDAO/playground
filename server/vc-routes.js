@@ -5,6 +5,7 @@ const multer  = require('multer')
 
 var vc_controller = require('./controllers/vc-controller.js');
 
+const userService = require("./services/user-service");
 
 var router = express.Router();
 const app = express();
@@ -24,6 +25,31 @@ router.get("/student", vc_controller.student_get);
 router.post("/student", upload.none(), vc_controller.student_post);
 router.get("/email/:uuid", vc_controller.email_get);
 router.post("/email/:uuid", upload.none(), vc_controller.email_post);
+
+
+router.get("/user/:email", (req, res) => {
+
+    (async () => {
+  
+        try{
+            let user = await userService.getUser(req.params.email);
+
+            if(user){
+
+                res.json(user.toJSON());
+                return;
+            }else{
+                res.json({ message: 'User does not exist' });
+                return;
+            }
+        } catch (error) {
+            logger.error(error);
+            res.json({ message: error });
+        }
+  
+  })();
+});
+  
 
 
 module.exports = router

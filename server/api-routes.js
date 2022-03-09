@@ -30,23 +30,6 @@ router.get("/", (req, res) => {
 
 });
 
-router.get("/user/:email", (req, res) => {
-
-  (async () => {
-
-    let user = await userService.getUser(req.params.email);
-    res.json(user.toJSON());
-
-
-
-  })().catch((error) => {
-    logger.debug(`async error: ${util.inspect(error, { depth: null })}`);
-    res.json({ message: error });
-  });
-
-
-});
-
 router.get("/qr-url", (req, res) => {
   logger.debug(req.url);
 
