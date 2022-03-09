@@ -93,15 +93,15 @@ exports.learning_get = async function(req, res) {
         
         let values=await requestService.getDiplomaValues(req.params.uuid);
         
-        logger.debug(values)
         if(values){
-            logger.debug("VALUES:"+JSON.stringify(values))
             await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values);
             logger.debug(JSON.stringify(offer));
             res.json(offer);
+            return;
         }else{
             console.error("Request not found.")
             res.json({ message: "Request not found." });
+            return;
         }
         
     } catch (error) {
@@ -117,23 +117,22 @@ exports.learning_post = async function(req, res) {
     logger.debug(req.body);
     logger.debug(req.params.uuid);
     try {
-        logger.debug(req.body);
         let senderId=req.body['subject_id'];
 
         let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
         let offer=await JSON.parse(rawdata);
         let learningGenerator = await new LearningGenerator();
         let values=await requestService.getDiplomaValues(req.params.uuid);
-        logger.debug(values)
-        if(valuesl){
-            logger.debug("VALUES:"+JSON.stringify(values))
+        if(values){
             await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
             let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
             logger.debug(signed);
             res.json(signed);
+            return;
         }else{
             console.error("Request not found.")
             res.json({ message: "Request not found." });
+            return;
         }
 
         
@@ -283,19 +282,27 @@ exports.student_post = function(req, res) {
 
 exports.email_get = function(req, res) {
     logger.debug(req.url);
+    logger.debug(req.body);
+    logger.debug(req.params.uuid);
     (async() =>{
         try {
             let rawdata = fs.readFileSync(process.env.EMAIL_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let emailGenerator = new EmailGenerator();
-            let values={
-                'email':'john@doe.com',
-                'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmNwbEEupT7jR2zmrA87FsN4hUS8eXnCxM8DsL9RXc25cu',
-                'issuedBy.name':'Talao'
-            };
-            await emailGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            logger.debug(JSON.stringify(offer));
-            res.json(offer);
+            
+            let values=await requestService.getEmailValues(req.params.uuid);
+            if(values){
+                await emailGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                logger.debug(JSON.stringify(offer));
+                res.json(offer);
+                return;
+            }else{
+                console.error("Request not found.")
+                res.json({ message: "Request not found." });
+                return;
+            }
+    
+            
         } catch (error) {
             console.error(error)
             res.json({ message: error });
@@ -308,6 +315,7 @@ exports.email_get = function(req, res) {
 exports.email_post = function(req, res) {
     logger.debug(req.url);
     logger.debug(req.body);
+    logger.debug(req.params.uuid);
     (async() =>{
         try {
             logger.debug(req.body);
@@ -316,15 +324,20 @@ exports.email_post = function(req, res) {
             let rawdata = fs.readFileSync(process.env.EMAIL_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let emailGenerator = new EmailGenerator();
-            let values={
-                'email':'john@doe.com',
-                'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmNwbEEupT7jR2zmrA87FsN4hUS8eXnCxM8DsL9RXc25cu',
-                'issuedBy.name':'Talao'
-            };
-            await emailGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
-            logger.debug(signed);
-            res.json(signed);
+            let values=await requestService.getEmailValues(req.params.uuid);
+            if(values){
+                await emailGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
+                logger.debug(signed);
+                res.json(signed);
+                return;
+            }else{
+                console.error("Request not found.")
+                res.json({ message: "Request not found." });
+                return;
+            }
+    
+           
         } catch (error) {
             console.error(error)
             res.json({ message: error });

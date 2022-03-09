@@ -22,8 +22,8 @@ router.get("/employment", vc_controller.employment_get);
 router.post("/employment", upload.none(), vc_controller.employment_post);
 router.get("/student", vc_controller.student_get);
 router.post("/student", upload.none(), vc_controller.student_post);
-router.get("/email", vc_controller.email_get);
-router.post("/email", upload.none(), vc_controller.email_post);
+router.get("/email/:uuid", vc_controller.email_get);
+router.post("/email/:uuid", upload.none(), vc_controller.email_post);
 
 
 module.exports = router

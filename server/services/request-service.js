@@ -1,5 +1,7 @@
 const { User, UserRequest } = require("../models");
 const crypto = require('crypto');
+const userService = require("./user-service");
+
 
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, prettyPrint, errors } = format;
@@ -55,7 +57,6 @@ exports.getDiplomaValues = async function (uuid) {
     if (!request) {
        return null;
     } 
-    logger.debug(request)
     return {
         familyName: request.data.familyName,
         givenName: request.data.givenName,
@@ -65,6 +66,21 @@ exports.getDiplomaValues = async function (uuid) {
         'hasCredential.title': request.data.credentialTitle,
         'hasCredential.description': request.data.credentialDescription,
         'birthDate': request.data.birthDate
+
+    };
+}
+
+exports.getEmailValues = async function (uuid) {
+    let user = await userService.getUserByChallenge(uuid);
+
+    if (!user) {
+       return null;
+    } 
+    logger.debug(JSON.stringify(user))
+    return {
+        email: user.email,
+        'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmNwbEEupT7jR2zmrA87FsN4hUS8eXnCxM8DsL9RXc25cu',
+        'issuedBy.name':'Talao'
 
     };
 }

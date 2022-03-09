@@ -56,6 +56,7 @@ router.post('/create-diploma', (req, res) => {
       res.send({
         url: uuid + '?issuer=did%3Aethr%3A0xee09654eedaa79429f8d216fa51a129db0f72250'
       });
+      return;
     } catch (error) {
       logger.error(error);
       res.send({
@@ -79,28 +80,36 @@ router.post('/create-user', (req, res) => {
         res.send({
           error: "Email not provided"
         });
+        return;
       }
 
-      let existing = await userService.getUser(email)
-      if (existing) {
-        logger.error("User already exists");
+      let user = await userService.getUser(email)
+      if(user && user.active){
+          logger.error("User already exists");
+          res.send({
+            active:1,
+            challenge:user.challenge,
+            error: "User already exists"
+          });
+          return;
+    
+      }else{
+        if (!user) {
+          user = await userService.createUser(email, req.body.givenName, req.body.familyName);
+          logger.debug('generated user id=' + user.id)
+        }
         res.send({
-          error: "User already exists"
+          user_id: user.id
         });
+        return;
       }
-      let newUser = await userService.createUser(email, req.body.givenName, req.body.familyName);
-
-
-      logger.debug('generated user id=' + newUser.id)
-
-      res.send({
-        user_id: newUser.id
-      });
+      
     } catch (error) {
       logger.error(error);
       res.send({
         error: error.message
       });
+      return;
     }
 
   })();
@@ -118,6 +127,7 @@ router.post('/validate-user', (req, res) => {
         res.send({
           error: "Email not provided"
         });
+        return;
       }
 
       let existing = await userService.getUser(email)
@@ -126,14 +136,16 @@ router.post('/validate-user', (req, res) => {
         res.send({
           error: "User does not exist"
         });
+        return;
       }
       let userFound = await userService.validateUser(email,req.body.code);
 
       if (!userFound) {
-        logger.error("User does not exist or code is false.");
+        logger.error("User does not exist or code doesn't match.");
         res.send({
-          error: "User does not exist or code is false."
+          error: "User does not exist or code doesn't match."
         });
+        return;
       }
 
       userFound.active=true;
@@ -142,8 +154,10 @@ router.post('/validate-user', (req, res) => {
       logger.debug('activated user id=' + userFound.id)
 
       res.send({
-        user_id: userFound.id
+        user_id: userFound.id,
+        challenge: userFound.challenge
       });
+      return;
     } catch (error) {
       logger.error(error);
       res.send({

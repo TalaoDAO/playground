@@ -1,5 +1,6 @@
 const { User, UserRequest } = require("../models");
 var nodemailer = require('nodemailer');
+const crypto = require('crypto');
 
 const db=require("../db");
 
@@ -35,8 +36,18 @@ exports.getUser = async function (email) {
     return user;
 }
 
+exports.getUserByChallenge = async function (challenge) {
+
+    let user = await User.findOne({
+        where: { challenge: challenge, active: true },
+    });
+    return user;
+}
+
 exports.createUser = async function (email, givenName, familyName) {
     let val = await Math.floor(1000 + Math.random() * 9000);
+    let uuid = await crypto.randomUUID();
+
     logger.debug("code="+val);
     let sequelize=await db.getConnection();
     const t = await sequelize.transaction();
@@ -44,7 +55,8 @@ exports.createUser = async function (email, givenName, familyName) {
         let user = await User.create({
             email: email,
             name: givenName + ' ' + familyName,
-            code: parseInt(val)
+            code: parseInt(val),
+            challenge: 'url:uuid:'+uuid
         }, { transaction: t });
         await sendCode(user);
         await t.commit();
@@ -93,5 +105,7 @@ exports.validateUser = async function (email, code) {
     let user = await User.findOne({
         where: { email: email, code: code }
     });
+
+
     return user;
 }

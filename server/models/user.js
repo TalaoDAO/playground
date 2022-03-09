@@ -23,7 +23,8 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false
     },
     code: DataTypes.INTEGER,
-    active: DataTypes.BOOLEAN
+    active: DataTypes.BOOLEAN,
+    challenge: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'User',

@@ -39,6 +39,7 @@ class ActivationForm extends React.Component {
             familyName: 'Doe',
             email:'',
             code:'',
+            challenge:'',
             phase: 0
         };
 
@@ -57,7 +58,9 @@ class ActivationForm extends React.Component {
         event.preventDefault();
         const res = await submitUser(this.state);
 
-        if(res.error){
+        if(res.active){
+            this.setState({ phase:2, challenge:res.challenge});
+        }else if(res.error){
             alert('Error while submitting user data: '+res.error);
         }else if(res.user_id){
             this.setState({ phase:1});
@@ -76,7 +79,7 @@ class ActivationForm extends React.Component {
         if(res.error){
             alert('Error while validating user: '+res.error);
         }else if(res.user_id){
-            this.setState({ phase:2});
+            this.setState({ phase:2, challenge:res.challenge});
         }else{
             alert('Something went wrong while validating the user, please try again later');
         }
@@ -138,8 +141,7 @@ class ActivationForm extends React.Component {
         }else if(this.state.phase==2){
             return (
                 <div id="user-form">
-                    Success!!
-                    
+                    <QRCode value={REACT_APP_QR_URL + "/email/" + this.state.challenge} size={128} />
                 </div>
                 );
             }else{
