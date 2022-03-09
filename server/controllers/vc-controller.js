@@ -90,19 +90,16 @@ exports.learning_get = function(req, res) {
             let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let learningGenerator = new LearningGenerator();
-            let values={
-                'familyName':'Doe',
-                'givenName':'Jane',
-                'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
-                'issuedBy.name':'University',
-                'issuedBy.address':'Athens',
-                'hasCredential.title':"Diploma",
-                'hasCredential.description':"Higher Education Diploma",
-                'birthDate':"2001-03-01"
-            };
-            await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            logger.debug(JSON.stringify(offer));
-            res.json(offer);
+           
+            let values=await requestService.getDiplomaValues(req.params.uuid);
+            if(values){
+                await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                logger.debug(JSON.stringify(offer));
+                res.json(offer);
+            }else{
+                throw new Error('Request not found'); 
+            }
+            
         } catch (error) {
             console.error(error)
             res.json({ message: error });
@@ -124,20 +121,17 @@ exports.learning_post = function(req, res) {
             let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let learningGenerator = new LearningGenerator();
-            let values={
-                'familyName':'Doe',
-                'givenName':'Jane',
-                'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
-                'issuedBy.name':'University',
-                'issuedBy.address':'Athens',
-                'hasCredential.title':"Diploma",
-                'hasCredential.description':"Higher Education Diploma",
-                'birthDate':"2001-03-01"
-            };
-            await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
-            let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
-            logger.debug(signed);
-            res.json(signed);
+            let values=await requestService.getDiplomaValues(req.params.uuid);
+            if(values){
+                await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
+                let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
+                logger.debug(signed);
+                res.json(signed);
+            }else{
+                throw new Error('Request not found'); 
+            }
+
+            
         } catch (error) {
             console.error(error)
             res.json({ message: error });

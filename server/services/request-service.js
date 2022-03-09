@@ -39,3 +39,30 @@ exports.createRequest = async function (userId, type, data) {
 
 
 }
+
+exports.getRequest = async function (uuid) {
+
+    let request = await UserRequest.findOne({
+        where: { uuid: uuid },
+    });
+    return request;
+}
+
+exports.getDiplomaValues = async function (uuid) {
+    let request = await getRequest(uuid);
+    if (request) {
+        return {
+            familyName: request.data.familyName,
+            givenName: request.data.givenName,
+            'issuedBy.logo': 'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
+            'issuedBy.name': 'University',
+            'issuedBy.address': 'Athens',
+            'hasCredential.title': request.data.credentialTitle,
+            'hasCredential.description': request.data.credentialDescription,
+            'birthDate': request.data.birthDate
+
+        }
+    } else {
+        return null;
+    }
+}
