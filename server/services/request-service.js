@@ -26,7 +26,8 @@ const logger = createLogger({
 exports.createRequest = async function (userId, type, data) {
     logger.debug(data);
 
-    let uuid = crypto.randomUUID();
+    let uuid = await crypto.randomUUID();
+    uuid= "urn:uuid:"+uuid;
     let userRequest = await UserRequest.create({
         userId: userId,
         type: type,
@@ -49,20 +50,22 @@ exports.getRequest = async function (uuid) {
 }
 
 exports.getDiplomaValues = async function (uuid) {
-    let request = await getRequest(uuid);
-    if (request) {
-        return {
-            familyName: request.data.familyName,
-            givenName: request.data.givenName,
-            'issuedBy.logo': 'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
-            'issuedBy.name': 'University',
-            'issuedBy.address': 'Athens',
-            'hasCredential.title': request.data.credentialTitle,
-            'hasCredential.description': request.data.credentialDescription,
-            'birthDate': request.data.birthDate
+    let request = await this.getRequest(uuid);
 
-        }
-    } else {
-        return null;
-    }
+    if (!request) {
+       return null;
+    } 
+    logger.debug(request)
+    logger.debug("WTF?");
+    return {
+        familyName: request.data.familyName,
+        givenName: request.data.givenName,
+        'issuedBy.logo': 'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
+        'issuedBy.name': 'University',
+        'issuedBy.address': 'Athens',
+        'hasCredential.title': request.data.credentialTitle,
+        'hasCredential.description': request.data.credentialDescription,
+        'birthDate': request.data.birthDate
+
+    };
 }

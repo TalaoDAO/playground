@@ -81,63 +81,67 @@ exports.discount_offer_post = function(req, res) {
     
 }
 
-exports.learning_get = function(req, res) {
+exports.learning_get = async function(req, res) {
     logger.debug(req.url);
     logger.debug(req.body);
     logger.debug(req.params.uuid);
-    (async() =>{
-        try {
-            let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
-            let offer=await JSON.parse(rawdata);
-            let learningGenerator = new LearningGenerator();
-           
-            let values=await requestService.getDiplomaValues(req.params.uuid);
-            if(values){
-                await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-                logger.debug(JSON.stringify(offer));
-                res.json(offer);
-            }else{
-                throw new Error('Request not found'); 
-            }
-            
-        } catch (error) {
-            console.error(error)
-            res.json({ message: error });
-        }
 
-    })();
+    try {
+        let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
+        let offer=await JSON.parse(rawdata);
+        let learningGenerator = new LearningGenerator();
+        
+        let values=await requestService.getDiplomaValues(req.params.uuid);
+        
+        logger.debug(values)
+        if(values){
+            logger.debug("VALUES:"+JSON.stringify(values))
+            await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+            logger.debug(JSON.stringify(offer));
+            res.json(offer);
+        }else{
+            throw new Error('Request not found'); 
+        }
+        
+    } catch (error) {
+        console.error(error)
+        res.json({ message: error });
+    }
+
     
 }
 
-exports.learning_post = function(req, res) {
+exports.learning_post = async function(req, res) {
     logger.debug(req.url);
     logger.debug(req.body);
     logger.debug(req.params.uuid);
-    (async() =>{
-        try {
-            logger.debug(req.body);
-            let senderId=req.body['subject_id'];
+    try {
+        logger.debug(req.body);
+        let senderId=req.body['subject_id'];
 
-            let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
-            let offer=await JSON.parse(rawdata);
-            let learningGenerator = new LearningGenerator();
-            let values=await requestService.getDiplomaValues(req.params.uuid);
-            if(values){
-                await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
-                let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
-                logger.debug(signed);
-                res.json(signed);
-            }else{
-                throw new Error('Request not found'); 
-            }
-
-            
-        } catch (error) {
-            console.error(error)
-            res.json({ message: error });
+        let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
+        let offer=await JSON.parse(rawdata);
+        let learningGenerator = await new LearningGenerator();
+        let values=await requestService.getDiplomaValues(req.params.uuid);
+        logger.debug(values)
+        if(values!=null){
+            logger.debug("VALUES:"+JSON.stringify(values))
+            await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
+            let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
+            logger.debug(signed);
+            res.json(signed);
+        }else{
+            throw new Error('Request not found'); 
         }
 
-    })();
+        
+    } catch (error) {
+        console.error(error)
+        res.json({ message: error });
+    }
+
+    
+
     
 }
 

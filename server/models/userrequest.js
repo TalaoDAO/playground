@@ -14,13 +14,20 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       // define association here
-      UserRequest.belongsTo(models.User);
+      UserRequest.belongsTo(models.User,{ foreignKey: 'user_id', targetKey: 'id' });
     }
   }
   UserRequest.init({
     type: DataTypes.STRING,
     uuid: DataTypes.STRING,
-    data: DataTypes.JSON
+    data: DataTypes.JSON,
+    user_id: {
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'User',
+        key: 'id'
+      }
+    }
   }, {
     sequelize,
     modelName: 'UserRequest',
