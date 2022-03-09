@@ -1,15 +1,9 @@
 var express = require('express');
 var router = express.Router();
-const multer  = require('multer')
+
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, prettyPrint, errors  } = format;
 const requestService = require("./services/request-service");
-
-const app = express();
-const upload = multer()
-app.use(express.json()) ;
-app.use(express.urlencoded({extended: true}));
-
 
 const logger =  createLogger({
     level: 'debug',
@@ -42,14 +36,14 @@ router.get("/qr-url", (req, res) => {
 
 });
 
-router.post('/login', upload.none(), (req, res) => {
+router.post('/login', (req, res) => {
     //TODO: implement JWK generation
     res.send({
         token: 'test123'
       });
 });
 
-router.post('/create-diploma', upload.none(), (req, res) => {
+router.post('/create-diploma', (req, res) => {
     logger.debug(req.body);
 
     (async() =>{
