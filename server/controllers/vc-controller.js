@@ -83,6 +83,7 @@ exports.discount_offer_post = function(req, res) {
 
 exports.learning_get = function(req, res) {
     logger.debug(req.url);
+    logger.debug(req.body);
     (async() =>{
         try {
             let rawdata = fs.readFileSync(process.env.LEARNING_TEMPLATE);
