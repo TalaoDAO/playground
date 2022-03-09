@@ -30,6 +30,23 @@ router.get("/", (req, res) => {
 
 });
 
+router.get("/user/:email", (req, res) => {
+
+  (async () => {
+
+    let user = await userService.getUser(req.params.email);
+    res.json(user.toJSON());
+
+
+
+  })().catch((error) => {
+    logger.debug(`async error: ${util.inspect(error, { depth: null })}`);
+    res.json({ message: error });
+  });
+
+
+});
+
 router.get("/qr-url", (req, res) => {
   logger.debug(req.url);
 
@@ -84,16 +101,16 @@ router.post('/create-user', (req, res) => {
       }
 
       let user = await userService.getUser(email)
-      if(user && user.active){
-          logger.error("User already exists");
-          res.send({
-            active:1,
-            challenge:user.challenge,
-            error: "User already exists"
-          });
-          return;
-    
-      }else{
+      if (user && user.active) {
+        logger.error("User already exists");
+        res.send({
+          active: 1,
+          challenge: user.challenge,
+          error: "User already exists"
+        });
+        return;
+
+      } else {
         if (!user) {
           user = await userService.createUser(email, req.body.givenName, req.body.familyName);
           logger.debug('generated user id=' + user.id)
@@ -103,7 +120,7 @@ router.post('/create-user', (req, res) => {
         });
         return;
       }
-      
+
     } catch (error) {
       logger.error(error);
       res.send({
@@ -138,7 +155,7 @@ router.post('/validate-user', (req, res) => {
         });
         return;
       }
-      let userFound = await userService.validateUser(email,req.body.code);
+      let userFound = await userService.validateUser(email, req.body.code);
 
       if (!userFound) {
         logger.error("User does not exist or code doesn't match.");
@@ -148,7 +165,7 @@ router.post('/validate-user', (req, res) => {
         return;
       }
 
-      userFound.active=true;
+      userFound.active = true;
       userFound.save();
 
       logger.debug('activated user id=' + userFound.id)
