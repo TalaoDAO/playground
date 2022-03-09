@@ -49,8 +49,7 @@ router.post('/create-diploma', (req, res) => {
     (async() =>{
       try {
           let uuid= await requestService.createRequest(1,'diploma',req.body);
-          uuid='urn:uuid:'+uuid;
-
+          
           logger.debug('generated uuid='+uuid)
 
           res.send({
