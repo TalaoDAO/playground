@@ -1,6 +1,5 @@
 var express = require('express');
 var router = express.Router();
-const cors = require('cors');
 const multer  = require('multer')
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, prettyPrint, errors  } = format;
@@ -10,8 +9,6 @@ const app = express();
 const upload = multer()
 app.use(express.json()) ;
 app.use(express.urlencoded({extended: true}));
-app.use(cors())
-
 
 
 const logger =  createLogger({
