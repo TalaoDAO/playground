@@ -1,5 +1,15 @@
 const sqlite3 = require('sqlite3').verbose();
-const { Sequelize } = require('sequelize');
+const Sequelize = require('sequelize');
+const env = process.env.NODE_ENV || 'development';
+const config = require('./config/config.json')[env];
+
+let sequelize;
+if (config.use_env_variable) {
+  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+} else {
+  sequelize = new Sequelize(config.database, config.username, config.password, config);
+}
+
 
 
 exports.create = async function (callback) {
@@ -34,11 +44,7 @@ exports.create = async function (callback) {
 exports.getConnection = async function () {
 
     try {
-        const sequelize = new Sequelize({
-            dialect: 'sqlite',
-            storage: process.env.DB_FILE
-            });
-
+        
             await sequelize.authenticate();
             console.log('Connection has been established successfully.');
 

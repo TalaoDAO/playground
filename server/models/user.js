@@ -21,7 +21,9 @@ module.exports = (sequelize, DataTypes) => {
     email: {
       type: DataTypes.STRING,
       allowNull: false
-    }
+    },
+    code: DataTypes.INTEGER,
+    active: DataTypes.BOOLEAN
   }, {
     sequelize,
     modelName: 'User',

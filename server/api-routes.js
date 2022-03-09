@@ -2,65 +2,154 @@ var express = require('express');
 var router = express.Router();
 
 const { createLogger, format, transports } = require('winston');
-const { combine, timestamp, label, prettyPrint, errors  } = format;
+const { combine, timestamp, label, prettyPrint, errors } = format;
 const requestService = require("./services/request-service");
+const userService = require("./services/user-service");
 
-const logger =  createLogger({
-    level: 'debug',
-    format: combine(
-        errors({ stack: true }),
-        timestamp(),
-        prettyPrint()
-    ),
-    transports: [
-      //
-      // - Write all logs with importance level of `error` or less to `error.log`
-      // - Write all logs with importance level of `info` or less to `combined.log`
-      //
-      new transports.File({ filename: 'error.log', level: 'error'}),
-      new transports.File({ filename: 'combined.log'}),
-    ],
-  });
+const logger = createLogger({
+  level: 'debug',
+  format: combine(
+    errors({ stack: true }),
+    timestamp(),
+    prettyPrint()
+  ),
+  transports: [
+    //
+    // - Write all logs with importance level of `error` or less to `error.log`
+    // - Write all logs with importance level of `info` or less to `combined.log`
+    //
+    new transports.File({ filename: 'error.log', level: 'error' }),
+    new transports.File({ filename: 'combined.log' }),
+  ],
+});
 
 router.get("/", (req, res) => {
-    logger.debug(req.url);
+  logger.debug(req.url);
 
-    res.json({ message: "Hello World from server!" });
+  res.json({ message: "Hello World from server!" });
 
 });
 
 router.get("/qr-url", (req, res) => {
-    logger.debug(req.url);
+  logger.debug(req.url);
 
-    res.json({ url: "random_challenge" });
+  res.json({ url: "random_challenge" });
 
 });
 
 router.post('/login', (req, res) => {
-    //TODO: implement JWK generation
-    res.send({
-        token: 'test123'
-      });
+  //TODO: implement JWK generation
+  res.send({
+    token: 'test123'
+  });
 });
 
 router.post('/create-diploma', (req, res) => {
-    logger.debug(req.body);
+  logger.debug(req.body);
 
-    (async() =>{
-      try {
-          let uuid= await requestService.createRequest(1,'diploma',req.body);
-          
-          logger.debug('generated uuid='+uuid)
+  (async () => {
+    try {
+      let uuid = await requestService.createRequest(1, 'diploma', req.body);
 
-          res.send({
-            url: uuid+'?issuer=did%3Aethr%3A0xee09654eedaa79429f8d216fa51a129db0f72250'
-          });
-      } catch (error) {
-        logger.error(error);
+      logger.debug('generated uuid=' + uuid)
+
+      res.send({
+        url: uuid + '?issuer=did%3Aethr%3A0xee09654eedaa79429f8d216fa51a129db0f72250'
+      });
+    } catch (error) {
+      logger.error(error);
+      res.send({
+        error: error.message
+      });
+    }
+
+  })();
+
+});
+
+
+router.post('/create-user', (req, res) => {
+  logger.debug(req.body);
+
+  (async () => {
+    try {
+      let email = req.body.email;
+      if (!email) {
+        logger.error("Email not provided");
         res.send({
-          error: error.message
+          error: "Email not provided"
         });
       }
+
+      let existing = await userService.getUser(email)
+      if (existing) {
+        logger.error("User already exists");
+        res.send({
+          error: "User already exists"
+        });
+      }
+      let newUser = await userService.createUser(email, req.body.givenName, req.body.familyName);
+
+
+      logger.debug('generated user id=' + newUser.id)
+
+      res.send({
+        user_id: newUser.id
+      });
+    } catch (error) {
+      logger.error(error);
+      res.send({
+        error: error.message
+      });
+    }
+
+  })();
+
+});
+
+router.post('/validate-user', (req, res) => {
+  logger.debug(req.body);
+
+  (async () => {
+    try {
+      let email = req.body.email;
+      if (!email) {
+        logger.error("Email not provided");
+        res.send({
+          error: "Email not provided"
+        });
+      }
+
+      let existing = await userService.getUser(email)
+      if (!existing) {
+        logger.error("User does not exist");
+        res.send({
+          error: "User does not exist"
+        });
+      }
+      let userFound = await userService.validateUser(email,req.body.code);
+
+      if (!userFound) {
+        logger.error("User does not exist or code is false.");
+        res.send({
+          error: "User does not exist or code is false."
+        });
+      }
+
+      userFound.active=true;
+      userFound.save();
+
+      logger.debug('activated user id=' + userFound.id)
+
+      res.send({
+        user_id: userFound.id
+      });
+    } catch (error) {
+      logger.error(error);
+      res.send({
+        error: error.message
+      });
+    }
 
   })();
 

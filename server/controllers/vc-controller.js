@@ -100,7 +100,8 @@ exports.learning_get = async function(req, res) {
             logger.debug(JSON.stringify(offer));
             res.json(offer);
         }else{
-            throw new Error('Request not found'); 
+            console.error("Request not found.")
+            res.json({ message: "Request not found." });
         }
         
     } catch (error) {
@@ -124,14 +125,15 @@ exports.learning_post = async function(req, res) {
         let learningGenerator = await new LearningGenerator();
         let values=await requestService.getDiplomaValues(req.params.uuid);
         logger.debug(values)
-        if(values!=null){
+        if(valuesl){
             logger.debug("VALUES:"+JSON.stringify(values))
             await learningGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
             let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
             logger.debug(signed);
             res.json(signed);
         }else{
-            throw new Error('Request not found'); 
+            console.error("Request not found.")
+            res.json({ message: "Request not found." });
         }
 
         

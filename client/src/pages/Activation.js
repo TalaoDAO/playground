@@ -62,7 +62,7 @@ function Activation() {
               </Row>
               <Row className='p-5'>
                 <Col>
-                  <Button variant="btn btn-info btn-lg ">Start Demo</Button>
+                  <Button variant="btn btn-info btn-lg " href="/pass-activation">Start Demo</Button>
                 </Col>
               </Row>
               <Row className="p-3">
@@ -164,7 +164,7 @@ function Activation() {
           <div className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center ">
           <Row>
             <Col xs={12} md={12} lg={{ span: 6, offset: 3 }}>
-              <Button variant="btn btn-info btn-lg btn-demo">Start Demo</Button>
+              <Button variant="btn btn-info btn-lg btn-demo" href="/pass-activation">Start Demo</Button>
             </Col>
           </Row>
           <Row>

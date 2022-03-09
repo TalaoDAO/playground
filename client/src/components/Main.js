@@ -16,6 +16,7 @@ import University from '../pages/University';
 import UniversityAccount from '../pages/UniversityAccount';
 import EmployerHome from '../pages/EmployerHome';
 import EmployerAccount from '../pages/EmployerAccount';
+import ActivationProcess from '../pages/ActivationProcess';
 
 const Main = () => {
 
@@ -36,6 +37,7 @@ const Main = () => {
         <Route exact path='/company' element={<EmployerHome/>}></Route>
         <Route exact path='/com-account' element={<EmployerAccount/>}></Route>
         <Route exact path='/discount-demo' element={<DiscountDemo/>}></Route>
+        <Route exact path='/pass-activation' element={<ActivationProcess/>}></Route>
     </Routes>
   );
 }

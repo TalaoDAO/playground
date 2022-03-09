@@ -56,7 +56,6 @@ exports.getDiplomaValues = async function (uuid) {
        return null;
     } 
     logger.debug(request)
-    logger.debug("WTF?");
     return {
         familyName: request.data.familyName,
         givenName: request.data.givenName,
