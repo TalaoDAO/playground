@@ -3,18 +3,23 @@ const util = require('util');
 const mydidkit = require("../vc/didkit-handler.js");
 const fs = require('fs');
 const VoucherGenerator=require('../vc/voucher-generator');
-const https = require('https');
 const didkit= require('../vc/didkit-handler');
 const LearningGenerator = require("../vc/learning-generator");
 const EmploymentGenerator = require("../vc/employment-generator");
 const StudentGenerator = require("../vc/student-generator");
 const EmailGenerator = require("../vc/email-generator");
 const { createLogger, format, transports } = require('winston');
-const { combine, timestamp, label, prettyPrint } = format;
+const { combine, timestamp, label, prettyPrint, errors } = format;
+const requestService = require("../services/request-service");
+
+
+require('dotenv').config()
+
 
 const logger =  createLogger({
     level: 'debug',
     format: combine(
+        errors({ stack: true }),
         timestamp(),
         prettyPrint()
     ),
@@ -55,9 +60,6 @@ exports.discount_offer_post = function(req, res) {
         try {
             
             logger.debug(req.body);
-
-            
-
             let senderId=req.body['subject_id'];
 
             let rawdata = fs.readFileSync(process.env.DISCOUNT_COUPON_TEMPLATE);

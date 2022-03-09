@@ -31,7 +31,7 @@ exports.create = async function (callback) {
     }
 };
 
-exports.getConnection = async function (callback) {
+exports.getConnection = async function () {
 
     try {
         const sequelize = new Sequelize({
@@ -42,12 +42,12 @@ exports.getConnection = async function (callback) {
             await sequelize.authenticate();
             console.log('Connection has been established successfully.');
 
-            callback(sequelize);
+           return sequelize;
 
     } catch (error) {
         console.log("error");
         console.error(error)
-        callback(null);
+        return null;
     } 
 
 };
