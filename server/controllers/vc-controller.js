@@ -149,25 +149,26 @@ exports.learning_post = async function(req, res) {
 
 exports.employment_get = function(req, res) {
     logger.debug(req.url);
+    logger.debug(req.body);
+    logger.debug(req.params.uuid);
     (async() =>{
         try {
             let rawdata = fs.readFileSync(process.env.EMPLOYMENT_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let employmentGenerator = new EmploymentGenerator();
-            let values={
-                'familyName':'Doe',
-                'givenName':'Jane',
-                'workFor.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
-                'workFor.name':'Talao',
-                'workFor.address':'16 rue de Wattignies, 75012 Paris, France',
-                'employmentType':"Open ended contract",
-                'baseSalary':"65000 euros",
-                'startDate':"2021-03-01",
-                'jobTitle':'Engineer'
-            };
-            await employmentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            logger.debug(JSON.stringify(offer));
-            res.json(offer);
+            
+            let values=await requestService.getEmployerValues(req.params.uuid);
+            if(values){
+                await employmentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                logger.debug(JSON.stringify(offer));
+                res.json(offer);
+                return;
+            }else{
+                console.error("Request not found.")
+                res.json({ message: "Request not found." });
+                return;
+            }
+            
         } catch (error) {
             console.error(error)
             res.json({ message: error });
@@ -180,6 +181,7 @@ exports.employment_get = function(req, res) {
 exports.employment_post = function(req, res) {
     logger.debug(req.url);
     logger.debug(req.body);
+    logger.debug(req.params.uuid);
     (async() =>{
         try {
             logger.debug(req.body);
@@ -188,21 +190,21 @@ exports.employment_post = function(req, res) {
             let rawdata = fs.readFileSync(process.env.EMPLOYMENT_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let employmentGenerator = new EmploymentGenerator();
-            let values={
-                'familyName':'Doe',
-                'givenName':'Jane',
-                'workFor.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
-                'workFor.name':'Talao',
-                'workFor.address':'16 rue de Wattignies, 75012 Paris, France',
-                'employmentType':"Open ended contract",
-                'baseSalary':"65000 euros",
-                'startDate':"2001-03-01",
-                'jobTitle':'Engineer'
-            };
-            await employmentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
-            logger.debug(signed);
-            res.json(signed);
+
+            let values=await requestService.getEmployerValues(req.params.uuid);
+            if(values){
+                await employmentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
+                logger.debug(signed);
+                res.json(signed);
+                return;
+            }else{
+                console.error("Request not found.")
+                res.json({ message: "Request not found." });
+                return;
+            }
+            
+           
         } catch (error) {
             console.error(error)
             res.json({ message: error });
@@ -215,25 +217,25 @@ exports.employment_post = function(req, res) {
 
 exports.student_get = function(req, res) {
     logger.debug(req.url);
+    logger.debug(req.body);
+    logger.debug(req.params.uuid);
     (async() =>{
         try {
             let rawdata = fs.readFileSync(process.env.STUDENT_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let studentGenerator = new StudentGenerator();
-            let values={
-                'recipient.familyName':'Doe',
-                'recipient.givenName':'Jane',
-                'recipient.birthDate':"2001-03-01",
-                'recipient.image':'https://gateway.pinata.cloud/ipfs/QmSSJooT2JFraZFNHavVLQzzxwSpg3ithJL4ztGYY9MpBY',
-                'recipient.signatureLines.image':'https://gateway.pinata.cloud/ipfs/QmeMfck3z6K5p8xmCqQpjH3R7s3YddR5DsMNLewWvzQrFS',
-                'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
-                'issuedBy.name':'Talao CFA',
-                'issuedBy.address':'16 rue de Wattignies, 75012 Paris, France',
-                'issuedBy.directorName':'Nicolas Muller'
-            };
-            await studentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            logger.debug(JSON.stringify(offer));
-            res.json(offer);
+            let values=await requestService.getStudentValues(req.params.uuid);
+            if(values){
+                await studentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                logger.debug(JSON.stringify(offer));
+                res.json(offer);
+                return;
+            }else{
+                console.error("Request not found.")
+                res.json({ message: "Request not found." });
+                return;
+            }
+            
         } catch (error) {
             console.error(error)
             res.json({ message: error });
@@ -246,6 +248,7 @@ exports.student_get = function(req, res) {
 exports.student_post = function(req, res) {
     logger.debug(req.url);
     logger.debug(req.body);
+    logger.debug(req.params.uuid);
     (async() =>{
         try {
             logger.debug(req.body);
@@ -254,22 +257,20 @@ exports.student_post = function(req, res) {
             let rawdata = fs.readFileSync(process.env.STUDENT_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let studentGenerator = new StudentGenerator();
-            let values={
-                'recipient.familyName':'Doe',
-                'recipient.givenName':'Jane',
-                'recipient.birthDate':"2001-03-01",
-                'recipient.image':'https://gateway.pinata.cloud/ipfs/QmSSJooT2JFraZFNHavVLQzzxwSpg3ithJL4ztGYY9MpBY',
-                'recipient.signatureLines.image':'https://gateway.pinata.cloud/ipfs/QmeMfck3z6K5p8xmCqQpjH3R7s3YddR5DsMNLewWvzQrFS',
-                'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
-                'issuedBy.name':'Talao CFA',
-                'issuedBy.address':'16 rue de Wattignies, 75012 Paris, France',
-                'issuedBy.directorName':'Nicolas Muller'
-            };
-            await studentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
-            logger.debug(offer);
-            let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
-            logger.debug(signed);
-            res.json(signed);
+           
+            let values=await requestService.getStudentValues(req.params.uuid);
+            if(values){
+                await studentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
+                logger.debug(signed);
+                res.json(signed);
+                return;
+            }else{
+                console.error("Request not found.")
+                res.json({ message: "Request not found." });
+                return;
+            }
+            
         } catch (error) {
             console.trace(error)
             res.json({ message: error });

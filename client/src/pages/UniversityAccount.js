@@ -46,6 +46,7 @@ import uni_std_3 from './img/university/university-students@3x.png';
 import { Link } from 'react-router-dom';
 import QRCode from "react-qr-code";
 import DiplomaForm from "../components/DiplomaForm";
+import StudentForm from "../components/StudentForm";
 
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
@@ -125,7 +126,7 @@ function UniversityAccount() {
                                                                 <Modal.Title>Download my student card</Modal.Title>
                                                             </Modal.Header>
                                                             <Modal.Body>
-                                                                <QRCode value={REACT_APP_QR_URL + "/student"} size={128} />
+                                                                <StudentForm />
                                                             </Modal.Body>
 
                                                         </Modal>

@@ -84,3 +84,42 @@ exports.getEmailValues = async function (uuid) {
 
     };
 }
+
+exports.getStudentValues = async function (uuid) {
+    let request = await this.getRequest(uuid);
+
+    if (!request) {
+       return null;
+    } 
+    return {
+        'recipient.familyName':request.data.familyName,
+        'recipient.givenName':request.data.givenName,
+        'recipient.birthDate':request.data.birthDate,
+        'recipient.image':'https://gateway.pinata.cloud/ipfs/QmSSJooT2JFraZFNHavVLQzzxwSpg3ithJL4ztGYY9MpBY',
+        'recipient.signatureLines.image':'https://gateway.pinata.cloud/ipfs/QmeMfck3z6K5p8xmCqQpjH3R7s3YddR5DsMNLewWvzQrFS',
+        'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
+        'issuedBy.name':'Talao CFA',
+        'issuedBy.address':'16 rue de Wattignies, 75012 Paris, France',
+        'issuedBy.directorName':request.data.directorName
+
+    };
+}
+
+exports.getEmployerValues = async function (uuid) {
+    let request = await this.getRequest(uuid);
+
+    if (!request) {
+       return null;
+    } 
+    return {
+        'familyName':request.data.familyName,
+        'givenName':request.data.givenNam,
+        'workFor.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
+        'workFor.name':'Talao',
+        'workFor.address':'16 rue de Wattignies, 75012 Paris, France',
+        'employmentType':request.data.employmentType,
+        'baseSalary':request.data.baseSalary,
+        'startDate':request.data.startDate,
+        'jobTitle':request.data.jobTitle
+    };;
+}

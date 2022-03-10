@@ -69,6 +69,56 @@ router.post('/create-diploma', (req, res) => {
 });
 
 
+router.post('/create-student', (req, res) => {
+  logger.debug(req.body);
+
+  (async () => {
+    try {
+      let uuid = await requestService.createRequest(1, 'student', req.body);
+
+      logger.debug('generated uuid=' + uuid)
+
+      res.send({
+        url: uuid + '?issuer=did%3Aethr%3A0xee09654eedaa79429f8d216fa51a129db0f72250'
+      });
+      return;
+    } catch (error) {
+      logger.error(error);
+      res.send({
+        error: error.message
+      });
+    }
+
+  })();
+
+});
+
+router.post('/create-employer', (req, res) => {
+  logger.debug(req.body);
+
+  (async () => {
+    try {
+      let uuid = await requestService.createRequest(1, 'employer', req.body);
+
+      logger.debug('generated uuid=' + uuid)
+
+      res.send({
+        url: uuid + '?issuer=did%3Aethr%3A0xee09654eedaa79429f8d216fa51a129db0f72250'
+      });
+      return;
+    } catch (error) {
+      logger.error(error);
+      res.send({
+        error: error.message
+      });
+    }
+
+  })();
+
+});
+
+
+
 router.post('/create-user', (req, res) => {
   logger.debug(req.body);
 

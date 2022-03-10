@@ -42,6 +42,7 @@ import uni_std_3 from './img/employer/company-users@3x.png';
 
 import { Link } from 'react-router-dom';
 import QRCode from "react-qr-code";
+import EmployerForm from "../components/EmployerForm";
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -97,7 +98,7 @@ function EmployerAccount() {
                                                                 <Modal.Title>Download employer certificate</Modal.Title>
                                                             </Modal.Header>
                                                             <Modal.Body>
-                                                                <QRCode value={REACT_APP_QR_URL + "/employment"} size={128} />
+                                                                <EmployerForm />
                                                             </Modal.Body>
 
                                                         </Modal>
