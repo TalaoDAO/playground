@@ -15,7 +15,7 @@ const upload = multer()
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 router.use(cors({
-    origin: 'http://localhost:3000'
+    origin: 'http://localhost:3000','https://playground.talao.co/'
   }));
 
 
@@ -31,6 +31,8 @@ router.get("/student/:uuid", vc_controller.student_get);
 router.post("/student/:uuid", upload.none(), vc_controller.student_post);
 router.get("/email/:uuid", vc_controller.email_get);
 router.post("/email/:uuid", upload.none(), vc_controller.email_post);
+router.get("/authentication/:uuid", vc_controller.authentication_get);
+router.post("/authentication/:uuid", upload.none(), vc_controller.authentication_post);
 
 
 router.get("/user/:email", (req, res) => {

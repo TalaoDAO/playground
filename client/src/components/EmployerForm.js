@@ -22,6 +22,17 @@ async function submitEmployer(values) {
         .then(data => data.json())
 }
 
+async function issueLoginChallenge() {
+    return fetch(REACT_APP_NODE_LOCAL + '/api/create-authentication', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({})
+    })
+        .then(data => data.json())
+}
+
 
 class EmployerForm extends React.Component {
     constructor(props) {
@@ -34,8 +45,12 @@ class EmployerForm extends React.Component {
             baseSalary: 'Open ended contract',
             employmentType: '65000 euros',
             result: null,
-            phase:0
+            phase:0,
+            loginChallenge:null,
+            email:null
         };
+
+        this.handleLoginChallenge();
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -46,6 +61,21 @@ class EmployerForm extends React.Component {
         this.setState({
             [event.target.name]: event.target.value
         });
+    }
+
+    async handleLoginChallenge(){
+
+        const res = await issueLoginChallenge();
+
+        if(res.error){
+            alert('Error while issuing login challenge: '+res.error);
+        }else if(res.url){
+            this.setState({ loginChallenge:res.url });
+            this.setupWebhook(res.url);
+
+        }else{
+            alert('Something went wrong while submitting data, please try again later');
+        }
     }
 
     async handleSubmit(event) {
@@ -89,68 +119,82 @@ class EmployerForm extends React.Component {
 
 
     render() {
-        if (this.state.phase == 0) {
-            return (
+        if(email==null){
+            if(loginChallenge==null){
+                return(
+                    <div id="employer-form">
+                        <span className='Description-TAGUI_L-dark '>Loading...</span>
+                    </div>   
+                );
+            }else{
                 <div id="employer-form">
-                        <Form onSubmit={this.handleSubmit} >
-                            <p>{this.state.props}</p>
-                            <Form.Group className="mb-3" controlId="formGivenName">
-                                <Form.Label>Given Name</Form.Label>
-                                <Form.Control type="text" name="givenName" value={this.state.givenName} onChange={this.handleChange} />
+                    <QRCode value={REACT_APP_QR_URL + "/authentication/" + this.state.loginChallenge} size={128} />
+                </div>                
+            }
+        }else{
+            if (this.state.phase == 0) {
+                return (
+                    <div id="employer-form">
+                            <Form onSubmit={this.handleSubmit} >
+                                <p>{this.state.props}</p>
+                                <Form.Group className="mb-3" controlId="formGivenName">
+                                    <Form.Label>Given Name</Form.Label>
+                                    <Form.Control type="text" name="givenName" value={this.state.givenName} onChange={this.handleChange} />
 
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formFamilyName">
-                                <Form.Label>Family Name</Form.Label>
-                                <Form.Control type="text" name="familyName" value={this.state.familyName} onChange={this.handleChange} />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formFamilyName">
+                                    <Form.Label>Family Name</Form.Label>
+                                    <Form.Control type="text" name="familyName" value={this.state.familyName} onChange={this.handleChange} />
 
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formType">
-                                <Form.Label>Employment Type</Form.Label>
-                                <Form.Control type="text" name="employmentType" value={this.state.employmentType} onChange={this.handleChange} />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formType">
+                                    <Form.Label>Employment Type</Form.Label>
+                                    <Form.Control type="text" name="employmentType" value={this.state.employmentType} onChange={this.handleChange} />
 
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formBaseSalary">
-                                <Form.Label>Base Salary</Form.Label>
-                                <Form.Control type="text" name="baseSalary" value={this.state.baseSalary} onChange={this.handleChange} />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formBaseSalary">
+                                    <Form.Label>Base Salary</Form.Label>
+                                    <Form.Control type="text" name="baseSalary" value={this.state.baseSalary} onChange={this.handleChange} />
 
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formJobTitle">
-                                <Form.Label>Job Title</Form.Label>
-                                <Form.Control type="text" name="jobTitle" value={this.state.jobTitle} onChange={this.handleChange} />
+                                </Form.Group>
+                                <Form.Group className="mb-3" controlId="formJobTitle">
+                                    <Form.Label>Job Title</Form.Label>
+                                    <Form.Control type="text" name="jobTitle" value={this.state.jobTitle} onChange={this.handleChange} />
 
-                            </Form.Group>
-                            <Button className="mb-3" variant="primary" type="submit">
-                                Submit
-                            </Button>
+                                </Form.Group>
+                                <Button className="mb-3" variant="primary" type="submit">
+                                    Submit
+                                </Button>
 
-                        </Form>
+                            </Form>
+                        </div>
+        );
+            } else if (this.state.phase == 1) {
+                return (
+                    <div id="employer-form">
+                        <QRCode value={REACT_APP_QR_URL + "/employer/" + this.state.result} size={128} />
                     </div>
-    );
-        } else if (this.state.phase == 1) {
-            return (
-                <div id="employer-form">
-                     <QRCode value={REACT_APP_QR_URL + "/employer/" + this.state.result} size={128} />
-                </div>
-            );
-        } else if (this.state.phase == 2) {
-            return (
-                <div id="diplemployeroma-form">
-                    
-                    <span className="Title-TAGH2">The certificate was added succesfully</span>
-                    <Image src={sucess_img}  fluid ></Image>
-                </div>
-            );
-        } else if (this.state.phase == 3) {
-            return (
-                <div id="employer-form">
-                    Error while submitting the certificate
-                </div>
-            );
-        } else {
-            return (
-                <div id="employer-form">Invalid form status: {this.state.phase}</div>
-            );
+                );
+            } else if (this.state.phase == 2) {
+                return (
+                    <div id="diplemployeroma-form">
+                        
+                        <span className="Title-TAGH2">The certificate was added succesfully</span>
+                        <Image src={sucess_img}  fluid ></Image>
+                    </div>
+                );
+            } else if (this.state.phase == 3) {
+                return (
+                    <div id="employer-form">
+                        Error while submitting the certificate
+                    </div>
+                );
+            } else {
+                return (
+                    <div id="employer-form">Invalid form status: {this.state.phase}</div>
+                );
 
+            }
         }
     }
 }

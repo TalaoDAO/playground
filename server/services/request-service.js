@@ -123,3 +123,32 @@ exports.getEmployerValues = async function (uuid) {
         'jobTitle':request.data.jobTitle
     };;
 }
+
+exports.getAuthenticationRequest = async function (uuid) {
+    let request = await this.getRequest(uuid);
+
+    if (!request) {
+       return null;
+    } 
+
+    return request;
+}
+
+exports.validateCredentials = async function (receivedCredentials){
+
+
+    let creds=receivedCredentials.presentation.verifiableCredential;
+
+    if(!creds || length(creds)==0){
+        return null;
+    }
+
+    await creds.foreach(cred=> {
+        if(cred.credentialSubject.type==='EmailPass'){
+            return cred.credentialSubject.email;
+        }
+    });
+
+    return null;
+
+}

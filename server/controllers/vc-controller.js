@@ -11,6 +11,7 @@ const EmailGenerator = require("../vc/email-generator");
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, prettyPrint, errors } = format;
 const requestService = require("../services/request-service");
+const userService = require("../services/user-service");
 
 const websockets = require('../websockets');
 
@@ -43,7 +44,7 @@ async function send(uuid, message){
         if (!message)
             message = "Hello World from NodeJS server!";
         websockets.send(uuid, message);
-        res.json("send");
+        
         return;
     }
 
@@ -379,6 +380,94 @@ exports.email_post = function(req, res) {
 
     })();
     
+}
+
+exports.authentication_get = function(req,res) {
+    logger.debug(req.url);
+    logger.debug(req.body);
+    logger.debug(req.params.uuid);
+    (async() =>{
+        try {
+            var presentation= {
+                "challenge": "",
+                "domain": "",
+                "query": [
+                    {
+                        "credentialQuery": [
+                            {
+                                "example": {
+                                    "type": "VerifiableCredential"
+                                }
+                            }
+                        ],
+                        "type": "QueryByExample"
+                    }
+                ],
+                "type": "VerifiablePresentationRequest"
+            };
+            let request=await requestService.getAuthenticationRequest(req.params.uuid);
+            if(request){
+                res.json(presentation);
+                return;
+            }else{
+                console.error("Request not found.")
+                res.json({ message: "Request not found." });
+                return;
+            }
+    
+            
+        } catch (error) {
+            console.error(error)
+            res.json({ message: error });
+        }
+
+    })();
+    
+    
+}
+
+
+exports.authentication_post = function(req,res) {
+    logger.debug(req.url);
+    logger.debug(req.body);
+    logger.debug(req.params.uuid);
+
+    (async() =>{
+ 
+        try {
+            let request=await requestService.getAuthenticationRequest(req.params.uuid);
+            if(request){
+                let email=await requestService.validateCredentials(req.params.body);
+                let user = await userService.getUser(email);
+                if(user) {
+
+                    res.json({message:'success', user:'email'});
+                    return;
+            
+                }else{
+                    console.error("User not found.")
+                    res.json({ message: "User not found." });
+                    return;
+                }
+                return;
+            }else{
+                console.error("Request not found.")
+                res.json({ message: "Request not found." });
+                return;
+            }
+            
+           
+        } catch (error) {
+            console.error(error)
+            res.json({ message: error });
+        }
+
+        
+    })().catch((error)=>{
+		logger.debug(`async error: ${util.inspect(error, {depth: null})}`);
+		res.json({ message: error });
+	});
+    return;
 }
 
 
