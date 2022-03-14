@@ -12,6 +12,8 @@ const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, prettyPrint, errors } = format;
 const requestService = require("../services/request-service");
 
+const websockets = require('../websockets');
+
 
 require('dotenv').config()
 
@@ -33,6 +35,20 @@ const logger =  createLogger({
     ],
   });
 
+  
+
+async function send(uuid, message){
+
+    if (uuid) {
+        if (!message)
+            message = "Hello World from NodeJS server!";
+        websockets.send(uuid, message);
+        res.json("send");
+        return;
+    }
+
+}
+
 exports.discount_offer_get = function(req, res) {
     logger.debug(req.url);
     (async() =>{
@@ -44,6 +60,7 @@ exports.discount_offer_get = function(req, res) {
             await voucherGenerator.generate(process.env.DEFAULT_JWK,offer,values);
             logger.debug(JSON.stringify(offer));
             res.json(offer);
+            return;
         } catch (error) {
             console.error(error)
             res.json({ message: error });
@@ -72,9 +89,13 @@ exports.discount_offer_post = function(req, res) {
             logger.debug(signed);
 
             res.json(signed);
+            
+            send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}));
+            return;
         } catch (error) {
             console.error(error)
             res.json({ message: error });
+            send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
         }
 
     })();
@@ -128,10 +149,12 @@ exports.learning_post = async function(req, res) {
             let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
             logger.debug(signed);
             res.json(signed);
+            send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}));
             return;
         }else{
             console.error("Request not found.")
             res.json({ message: "Request not found." });
+            send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
             return;
         }
 
@@ -139,6 +162,7 @@ exports.learning_post = async function(req, res) {
     } catch (error) {
         console.error(error)
         res.json({ message: error });
+        send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
     }
 
     
@@ -197,10 +221,12 @@ exports.employment_post = function(req, res) {
                 let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
                 logger.debug(signed);
                 res.json(signed);
+                send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}));
                 return;
             }else{
                 console.error("Request not found.")
                 res.json({ message: "Request not found." });
+                send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
                 return;
             }
             
@@ -208,6 +234,7 @@ exports.employment_post = function(req, res) {
         } catch (error) {
             console.error(error)
             res.json({ message: error });
+            send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
         }
 
     })();
@@ -264,16 +291,19 @@ exports.student_post = function(req, res) {
                 let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
                 logger.debug(signed);
                 res.json(signed);
+                send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}));
                 return;
             }else{
                 console.error("Request not found.")
                 res.json({ message: "Request not found." });
+                send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
                 return;
             }
             
         } catch (error) {
             console.trace(error)
             res.json({ message: error });
+            send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
         }
 
     })();
@@ -331,10 +361,12 @@ exports.email_post = function(req, res) {
                 let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
                 logger.debug(signed);
                 res.json(signed);
+                send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}))
                 return;
             }else{
                 console.error("Request not found.")
                 res.json({ message: "Request not found." });
+                send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
                 return;
             }
     
@@ -342,6 +374,7 @@ exports.email_post = function(req, res) {
         } catch (error) {
             console.error(error)
             res.json({ message: error });
+            send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
         }
 
     })();

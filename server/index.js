@@ -5,11 +5,14 @@ const cors = require('cors');
 var vcRoutes = require('./vc-routes.js');
 var apiRoutes = require('./api-routes.js');
 const winston = require('winston')
+const websockets = require('./websockets');
+const queryString = require("query-string");
+
 
 require('dotenv').config()
 const PORT = process.env.PORT || 3001;
 
-const logger =  winston.createLogger({
+const logger = winston.createLogger({
   level: 'debug',
   format: winston.format.json(),
   transports: [
@@ -21,19 +24,16 @@ const logger =  winston.createLogger({
     new winston.transports.File({ filename: 'combined.log' }),
   ],
 });
-const app = express();
 var router = express.Router();
-
-app.use(express.json()) ;
-app.use(express.urlencoded({extended: true}));
-
-app.use(cors())
+const app = express();
 
 app.use('/nodejs', vcRoutes);
 app.use('/api', apiRoutes);
+app.use(cors());
 
-
-
-app.listen(PORT, () => {
+const server = app.listen(PORT, () => {
   logger.info(`Server listening on ${PORT}`)
-});
+})
+
+websockets(server)
+

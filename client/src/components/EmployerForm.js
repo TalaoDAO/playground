@@ -1,12 +1,15 @@
 import React from 'react';
 
 import {
-    Container, Form, Button
+    Container, Form, Button, Image
 } from 'react-bootstrap';
 
 import QRCode from "react-qr-code";
+import sucess_img from '../pages/img/success.png';
 
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
+var W3CWebSocket = require('websocket').w3cwebsocket;
+
+const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = process.env;
 
 async function submitEmployer(values) {
     return fetch(REACT_APP_NODE_LOCAL + '/api/create-employer', {
@@ -30,7 +33,8 @@ class EmployerForm extends React.Component {
             jobTitle: 'Engineer',
             baseSalary: 'Open ended contract',
             employmentType: '65000 euros',
-            result: null
+            result: null,
+            phase:0
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -51,7 +55,8 @@ class EmployerForm extends React.Component {
         if(res.error){
             alert('Error while submitting employer certificate data: '+res.error);
         }else if(res.url){
-            this.setState({ result: res.url });
+            this.setState({ result: res.url, phase:1 });
+            this.setupWebhook(res.url);
 
         }else{
             alert('Something went wrong while submitting data, please try again later');
@@ -61,14 +66,32 @@ class EmployerForm extends React.Component {
     }
 
 
+    async setupWebhook(url) {
+        const [uuid, params] = url?.split("?");
+  
+        this.client=new W3CWebSocket(REACT_APP_WEBSOCKET_SERVER+"?challenge="+uuid);
+        console.log("connecting to: "+REACT_APP_WEBSOCKET_SERVER+"?challenge="+uuid);
+        this.client.onopen =  () => {
+            console.log('WebSocket Client Connected');
+            this.client.send(JSON.stringify({message:"handshake"}));
+        };
+        this.client.onmessage = (message) => {
+            if(message.data.includes("success")){
+                this.setState({phase:2});
+            }else if(message.data.includes("failure")){
+                this.setState({phase:3});
+            }
+            console.log(message);
+        };
+    }
+
 
 
 
     render() {
-        return (
-            <div id="employer-form-qr">
-                {!this.state.result ?
-                    <div id="employer-form">
+        if (this.state.phase == 0) {
+            return (
+                <div id="employer-form">
                         <Form onSubmit={this.handleSubmit} >
                             <p>{this.state.props}</p>
                             <Form.Group className="mb-3" controlId="formGivenName">
@@ -102,11 +125,33 @@ class EmployerForm extends React.Component {
 
                         </Form>
                     </div>
-                    :
-                    <QRCode value={REACT_APP_QR_URL + "/employer/" + this.state.result} size={128} />
-                }
-            </div>
-        );
+    );
+        } else if (this.state.phase == 1) {
+            return (
+                <div id="employer-form">
+                     <QRCode value={REACT_APP_QR_URL + "/employer/" + this.state.result} size={128} />
+                </div>
+            );
+        } else if (this.state.phase == 2) {
+            return (
+                <div id="diplemployeroma-form">
+                    
+                    <span className="Title-TAGH2">The certificate was added succesfully</span>
+                    <Image src={sucess_img}  fluid ></Image>
+                </div>
+            );
+        } else if (this.state.phase == 3) {
+            return (
+                <div id="employer-form">
+                    Error while submitting the certificate
+                </div>
+            );
+        } else {
+            return (
+                <div id="employer-form">Invalid form status: {this.state.phase}</div>
+            );
+
+        }
     }
 }
 export default EmployerForm;

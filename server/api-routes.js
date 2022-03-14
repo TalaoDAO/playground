@@ -1,5 +1,8 @@
 var express = require('express');
 var router = express.Router();
+const WebSocket=require("ws");
+const cors = require('cors');
+const multer = require('multer')
 
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, prettyPrint, errors } = format;
@@ -23,6 +26,14 @@ const logger = createLogger({
   ],
 });
 
+const upload = multer()
+router.use(cors({
+  origin: 'http://localhost:3000'
+}));
+router.use(express.json());
+router.use(express.urlencoded({ extended: true }));
+
+
 router.get("/", (req, res) => {
   logger.debug(req.url);
 
@@ -37,14 +48,14 @@ router.get("/qr-url", (req, res) => {
 
 });
 
-router.post('/login', (req, res) => {
+router.post('/login', upload.none(), (req, res) => {
   //TODO: implement JWK generation
   res.send({
     token: 'test123'
   });
 });
 
-router.post('/create-diploma', (req, res) => {
+router.post('/create-diploma', upload.none(), (req, res) => {
   logger.debug(req.body);
 
   (async () => {
@@ -69,7 +80,7 @@ router.post('/create-diploma', (req, res) => {
 });
 
 
-router.post('/create-student', (req, res) => {
+router.post('/create-student', upload.none(), (req, res) => {
   logger.debug(req.body);
 
   (async () => {
@@ -93,7 +104,7 @@ router.post('/create-student', (req, res) => {
 
 });
 
-router.post('/create-employer', (req, res) => {
+router.post('/create-employer', upload.none(), (req, res) => {
   logger.debug(req.body);
 
   (async () => {
@@ -119,7 +130,7 @@ router.post('/create-employer', (req, res) => {
 
 
 
-router.post('/create-user', (req, res) => {
+router.post('/create-user', upload.none(), (req, res) => {
   logger.debug(req.body);
 
   (async () => {
@@ -166,7 +177,7 @@ router.post('/create-user', (req, res) => {
 
 });
 
-router.post('/validate-user', (req, res) => {
+router.post('/validate-user', upload.none(), (req, res) => {
   logger.debug(req.body);
 
   (async () => {

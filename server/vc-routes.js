@@ -1,18 +1,24 @@
 var express = require('express');
 const cors = require('cors');
 
-const multer  = require('multer')
+const multer = require('multer')
 
 var vc_controller = require('./controllers/vc-controller.js');
 
 const userService = require("./services/user-service");
+const websockets = require('./websockets');
+const queryString = require("query-string");
+
 
 var router = express.Router();
-const app = express();
 const upload = multer()
-app.use(express.json()) ;
-app.use(express.urlencoded({extended: true}));
-app.use(cors())
+router.use(express.json());
+router.use(express.urlencoded({ extended: true }));
+router.use(cors({
+    origin: 'http://localhost:3000'
+  }));
+
+
 
 router.get("/test", vc_controller.test);
 router.get("/discount-offer", vc_controller.discount_offer_get);
@@ -30,15 +36,15 @@ router.post("/email/:uuid", upload.none(), vc_controller.email_post);
 router.get("/user/:email", (req, res) => {
 
     (async () => {
-  
-        try{
+
+        try {
             let user = await userService.getUser(req.params.email);
 
-            if(user){
+            if (user) {
 
                 res.json(user.toJSON());
                 return;
-            }else{
+            } else {
                 res.json({ message: 'User does not exist' });
                 return;
             }
@@ -46,10 +52,27 @@ router.get("/user/:email", (req, res) => {
             logger.error(error);
             res.json({ message: error });
         }
-  
-  })();
+
+    })();
 });
-  
+
+
+router.get("/wssend", (req, res) => {
+    const [_path, params] = req.url?.split("?");
+    const queryParams = queryString.parse(params);
+    const challenge = queryParams.challenge;
+    var message = queryParams.message;
+
+    if (challenge) {
+        if (!message)
+            message = "Hello World from NodeJS server!";
+        websockets.send(challenge, message);
+        res.json("send");
+        return;
+
+    }
+
+});
 
 
 module.exports = router

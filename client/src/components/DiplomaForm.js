@@ -1,12 +1,15 @@
 import React from 'react';
 
 import {
-    Container, Form, Button
+    Container, Form, Button, Image
 } from 'react-bootstrap';
 
+import sucess_img from '../pages/img/success.png';
 import QRCode from "react-qr-code";
 
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
+var W3CWebSocket = require('websocket').w3cwebsocket;
+
+const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = process.env;
 
 async function submitDiploma(values) {
     return fetch(REACT_APP_NODE_LOCAL + '/api/create-diploma', {
@@ -29,7 +32,8 @@ class DiplomaForm extends React.Component {
             birthDate: '1991-12-10T12:02:55.268Z',
             credentialTitle: 'Master of Science',
             credentialDescription: 'Physics',
-            result: null
+            result: null,
+            phase: 0
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -47,12 +51,13 @@ class DiplomaForm extends React.Component {
         event.preventDefault();
         const res = await submitDiploma(this.state);
 
-        if(res.error){
-            alert('Error while submitting diploma data: '+res.error);
-        }else if(res.url){
-            this.setState({ result: res.url });
+        if (res.error) {
+            alert('Error while submitting diploma data: ' + res.error);
+        } else if (res.url) {
+            this.setState({ result: res.url, phase: 1 });
+            this.setupWebhook(res.url);
 
-        }else{
+        } else {
             alert('Something went wrong while submitting data, please try again later');
         }
 
@@ -61,41 +66,83 @@ class DiplomaForm extends React.Component {
 
 
 
+    async setupWebhook(url) {
+        const [uuid, params] = url?.split("?");
+
+        this.client = new W3CWebSocket(REACT_APP_WEBSOCKET_SERVER + "?challenge=" + uuid);
+        console.log("connecting to: " + REACT_APP_WEBSOCKET_SERVER + "?challenge=" + uuid);
+        this.client.onopen = () => {
+            console.log('WebSocket Client Connected');
+            this.client.send(JSON.stringify({ message: "handshake" }));
+        };
+        this.client.onmessage = (message) => {
+            if (message.data.includes("success")) {
+                this.setState({ phase: 2 });
+            } else if (message.data.includes("failure")) {
+                this.setState({ phase: 3 });
+            }
+            console.log(message);
+        };
+    }
+
+
 
 
     render() {
-        return (
-            <div id="diploma-form-qr">
-                {!this.state.result ?
-                    <div id="diploma-form">
-                        <Form onSubmit={this.handleSubmit} >
-                            <p>{this.state.props}</p>
-                            <Form.Group className="mb-3" controlId="formGivenName">
-                                <Form.Label>Given Name</Form.Label>
-                                <Form.Control type="text" name="givenName" value={this.state.givenName} onChange={this.handleChange} />
+        if (this.state.phase == 0) {
+            return (
+                <div id="diploma-form">
+                    <Form onSubmit={this.handleSubmit} >
+                        <p>{this.state.props}</p>
+                        <Form.Group className="mb-3" controlId="formGivenName">
+                            <Form.Label>Given Name</Form.Label>
+                            <Form.Control type="text" name="givenName" value={this.state.givenName} onChange={this.handleChange} />
 
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formFamilyName">
-                                <Form.Label>Family Name</Form.Label>
-                                <Form.Control type="text" name="familyName" value={this.state.familyName} onChange={this.handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formFamilyName">
+                            <Form.Label>Family Name</Form.Label>
+                            <Form.Control type="text" name="familyName" value={this.state.familyName} onChange={this.handleChange} />
 
-                            </Form.Group>
-                            <Form.Group className="mb-3" controlId="formCredTitle">
-                                <Form.Label>Credential Title</Form.Label>
-                                <Form.Control type="text" name="credentialTitle" value={this.state.credentialTitle} onChange={this.handleChange} />
+                        </Form.Group>
+                        <Form.Group className="mb-3" controlId="formCredTitle">
+                            <Form.Label>Credential Title</Form.Label>
+                            <Form.Control type="text" name="credentialTitle" value={this.state.credentialTitle} onChange={this.handleChange} />
 
-                            </Form.Group>
-                            <Button className="mb-3" variant="primary" type="submit">
-                                Submit
-                            </Button>
+                        </Form.Group>
+                        <Button className="mb-3" variant="primary" type="submit">
+                            Submit
+                        </Button>
 
-                        </Form>
-                    </div>
-                    :
+                    </Form>
+                </div>
+            );
+        } else if (this.state.phase == 1) {
+            return (
+                <div id="diploma-form">
                     <QRCode value={REACT_APP_QR_URL + "/learning/" + this.state.result} size={128} />
-                }
-            </div>
-        );
+                </div>
+            );
+        } else if (this.state.phase == 2) {
+            return (
+                <div id="diplemployeroma-form">
+                    
+                    <span className="Title-TAGH2">The certificate was added succesfully</span>
+                    <Image src={sucess_img}  fluid ></Image>
+                </div>
+            );
+        } else if (this.state.phase == 3) {
+            return (
+                <div id="diploma-form">
+                    Error while submitting the certificate
+                </div>
+            );
+        } else {
+            return (
+                <div id="diploma-form">Invalid form status: {this.state.phase}</div>
+            );
+
+        }
+
     }
 }
 export default DiplomaForm;
