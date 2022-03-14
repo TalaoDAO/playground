@@ -12,7 +12,7 @@ var W3CWebSocket = require('websocket').w3cwebsocket;
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = process.env;
 
 async function submitDiploma(values) {
-    return fetch(REACT_APP_NODE_LOCAL + '/api/create-diploma', {
+    return fetch(REACT_APP_NODE_LOCAL + '/create-diploma', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

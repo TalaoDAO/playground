@@ -7,7 +7,7 @@ var openWebSockets={}; //{challenge: websocket}
 module.exports =  (expressServer) => {
   const websocketServer = new WebSocket.Server({
     noServer: true,
-    path: "/websockets",
+    path: "/nodejs/websockets",
   });
 
   expressServer.on("upgrade", (request, socket, head) => {
