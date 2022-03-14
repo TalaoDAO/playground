@@ -7,6 +7,7 @@ import {
 import sucess_img from '../pages/img/success.png';
 
 import QRCode from "react-qr-code";
+const fetch = require("cross-fetch");
 var W3CWebSocket = require('websocket').w3cwebsocket;
 
 
