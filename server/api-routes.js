@@ -28,7 +28,7 @@ const logger = createLogger({
 
 const upload = multer()
 router.use(cors({
-  origin: 'http://localhost:3000','https://playground.talao.co/'
+  origin: ['http://localhost:3000','https://playground.talao.co/']
 }));
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));

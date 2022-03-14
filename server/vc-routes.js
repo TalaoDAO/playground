@@ -15,7 +15,7 @@ const upload = multer()
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 router.use(cors({
-    origin: 'http://localhost:3000','https://playground.talao.co/'
+    origin: ['http://localhost:3000','https://playground.talao.co/']
   }));
 
 
