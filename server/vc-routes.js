@@ -14,7 +14,7 @@ var router = express.Router();
 const upload = multer()
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
-var allowedOrigins = ['http://localhost:3000','https://playground.talao.co/'];
+var allowedOrigins = ['http://localhost:3000','https://playground.talao.co'];
 router.use(cors({
     origin: function(origin, callback){
       // allow requests with no origin 
