@@ -5,7 +5,7 @@
   },
   "test": {
     "dialect": "sqlite",
-    "storage": "./test.sqlite3"
+    "storage": "/home/vivi/test.sqlite3"
   },
   "production": {
     "dialect": "sqlite",
