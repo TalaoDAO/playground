@@ -35,8 +35,7 @@ router.use(cors({
       } else {
         callback(new Error("Not allowed by CORS"))
       }
-    },
-    credentials: true,
+    }
   }));
 
 router.use(express.json());
