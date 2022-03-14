@@ -35,5 +35,5 @@ const server = app.listen(PORT, () => {
   logger.info(`Server listening on ${PORT}`)
 })
 
-websockets(server)
+websockets()
 

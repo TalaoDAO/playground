@@ -4,16 +4,10 @@ const queryString=require("query-string");
 var openWebSockets={}; //{challenge: websocket}
 
 
-module.exports =  (expressServer) => {
+module.exports =  () => {
   const websocketServer = new WebSocket.Server({
-    noServer: true,
-    path: "/nodejs/websockets",
-  });
-
-  expressServer.on("upgrade", (request, socket, head) => {
-    websocketServer.handleUpgrade(request, socket, head, (websocket) => {
-      websocketServer.emit("connection", websocket, request);
-    });
+    path: "/websockets",
+    port: 9001
   });
 
 
