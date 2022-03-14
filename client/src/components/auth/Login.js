@@ -8,7 +8,7 @@ import {
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
 async function loginUser(credentials) {
-  return fetch(REACT_APP_NODE_LOCAL + '/api/login', {
+  return fetch(REACT_APP_NODE_LOCAL + '/login', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'

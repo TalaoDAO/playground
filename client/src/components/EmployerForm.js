@@ -12,7 +12,7 @@ var W3CWebSocket = require('websocket').w3cwebsocket;
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = process.env;
 
 async function submitEmployer(values) {
-    return fetch(REACT_APP_NODE_LOCAL + '/api/create-employer', {
+    return fetch(REACT_APP_NODE_LOCAL + '/create-employer', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ async function submitEmployer(values) {
 }
 
 async function issueLoginChallenge() {
-    return fetch(REACT_APP_NODE_LOCAL + '/api/create-authentication', {
+    return fetch(REACT_APP_NODE_LOCAL + '/create-authentication', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

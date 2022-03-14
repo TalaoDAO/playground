@@ -24,7 +24,7 @@ function DiscountDemo() {
 
 
   React.useEffect(() => {
-    fetch(REACT_APP_NODE_LOCAL + "/api/qr-url")
+    fetch(REACT_APP_NODE_LOCAL + "/qr-url")
       .then((res) => res.json())
       .then((qr) => setQr(qr.url));
   }, []);

@@ -26,7 +26,7 @@ function Generate() {
     const [data, setData] = React.useState(null);
 
     React.useEffect(() => {
-        fetch(REACT_APP_NODE_LOCAL + "/api")
+        fetch(REACT_APP_NODE_LOCAL)
             .then((res) => res.json())
             .then((data) => setData(data.message));
     }, []);

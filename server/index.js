@@ -28,7 +28,7 @@ var router = express.Router();
 const app = express();
 
 app.use('/nodejs', vcRoutes);
-app.use('/api', apiRoutes);
+app.use('/nodejs', apiRoutes);
 app.use(cors());
 
 const server = app.listen(PORT, () => {

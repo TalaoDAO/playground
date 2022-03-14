@@ -11,7 +11,7 @@ var W3CWebSocket = require('websocket').w3cwebsocket;
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = process.env;
 
 async function submitStudent(values) {
-    return fetch(REACT_APP_NODE_LOCAL + '/api/create-student', {
+    return fetch(REACT_APP_NODE_LOCAL + '/create-student', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
