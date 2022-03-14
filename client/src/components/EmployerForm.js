@@ -119,17 +119,19 @@ class EmployerForm extends React.Component {
 
 
     render() {
-        if(email==null){
-            if(loginChallenge==null){
+        if(this.state.email==null){
+            if(this.state.loginChallenge==null){
                 return(
                     <div id="employer-form">
                         <span className='Description-TAGUI_L-dark '>Loading...</span>
                     </div>   
                 );
             }else{
+                return(
                 <div id="employer-form">
                     <QRCode value={REACT_APP_QR_URL + "/authentication/" + this.state.loginChallenge} size={128} />
-                </div>                
+                </div>   
+                );             
             }
         }else{
             if (this.state.phase == 0) {
