@@ -26,15 +26,33 @@ async function submitDiploma(values) {
 class DiplomaForm extends React.Component {
     constructor(props) {
         super(props);
+
+        //decide on initial values
+        let givenName='Jane';
+        let familyName='Doe';
+        let email='Doe';
+        if(props && props.state){
+            if( props.state.givenName){
+                givenName=props.state.givenName;
+            }
+            if( props.state.familyName){
+                familyName=props.state.familyName;
+            }
+            if( props.state.email){
+                email=props.email;
+            }
+        }
+
         this.state = {
-            givenName: 'Jane',
-            familyName: 'Doe',
+            givenName: givenName,
+            familyName:  familyName,
             birthDate: '1991-12-10T12:02:55.268Z',
             credentialTitle: 'Master of Science',
             credentialDescription: 'Physics',
             result: null,
             phase: 0
         };
+
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);

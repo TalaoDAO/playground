@@ -47,6 +47,7 @@ import { Link } from 'react-router-dom';
 import QRCode from "react-qr-code";
 import DiplomaForm from "../components/DiplomaForm";
 import StudentForm from "../components/StudentForm";
+import {useLocation} from 'react-router-dom';
 
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
@@ -65,6 +66,8 @@ function UniversityAccount() {
     const handleCloseStudent = () => setShowStudent(false);
     const handleShowStudent = () => setShowStudent(true);
 
+    const location = useLocation();
+    console.log(location.state);
 
     React.useEffect(() => {
         fetch(REACT_APP_NODE_LOCAL + "/qr-url")
@@ -110,7 +113,7 @@ function UniversityAccount() {
                                                                 <Modal.Title>Download my diploma</Modal.Title>
                                                             </Modal.Header>
                                                             <Modal.Body>
-                                                                <DiplomaForm prop="666"/>
+                                                                <DiplomaForm state={location.state}/>
                                                             </Modal.Body>
 
                                                         </Modal>
@@ -126,7 +129,7 @@ function UniversityAccount() {
                                                                 <Modal.Title>Download my student card</Modal.Title>
                                                             </Modal.Header>
                                                             <Modal.Body>
-                                                                <StudentForm />
+                                                                <StudentForm state={location.state}/>
                                                             </Modal.Body>
 
                                                         </Modal>

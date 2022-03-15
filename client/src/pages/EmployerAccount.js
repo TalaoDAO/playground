@@ -72,11 +72,6 @@ function EmployerAccount(props) {
                 <Container>
 
                     <div className="turquoise-container p-5">
-                        <Row>
-                            
-                            <Col>This is a test
-                            <span>{JSON.stringify(props)}</span></Col>
-                             </Row>
                     <Row className="turquoise-container">
                         <Col xs={8} md={8} lg={8} style={{ textAlign: "left" }} className="p-4 turquoise-container">
 
@@ -114,7 +109,7 @@ function EmployerAccount(props) {
 
 
                                                 </Row>
-                                                
+                                                    
                                                 <Row>
                                                     <Col className="p-2">
                                                         <Button className="btn" disabled>Inventore Veritatis</Button>

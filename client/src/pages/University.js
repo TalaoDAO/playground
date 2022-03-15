@@ -3,7 +3,7 @@ import "../App.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-  Container, Button, Row, Col, Card, Image
+  Container, Button, Row, Col, Card, Image, Modal
 } from 'react-bootstrap';
 
 import uni_logo_1 from './img/university/university-logo.png';
@@ -16,13 +16,17 @@ import uni_banner_3 from './img/university/university-banner@3x.png';
 
 
 import { Link } from 'react-router-dom';
+import LoginForm from "../components/LoginForm";
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
 
 
 function University() {
+  const [show, setShow] = React.useState(false);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   return (
     <div className="University">
@@ -37,7 +41,16 @@ function University() {
 
               </Col>
               <Col style={{ textAlign: "right" }} xs={4} md={4} lg={4} className="p-4 azure-container" >
-                <Link to="/uni-account" className="btn btn-danger " >My Account</Link>
+                <Button variant="btn btn-danger" onClick={handleShow}>My Account</Button>
+                <Modal show={show} onHide={handleClose} className="p-4 align-items-center justify-content-center text-center">
+
+                  <Modal.Body>
+                      <span className="Title-TAGH2">Scan with your mobile wallet</span>
+                      <LoginForm next="/uni-account"/>
+
+                  </Modal.Body>
+
+              </Modal>
 
               </Col>
             </Row>
