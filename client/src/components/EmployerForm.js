@@ -16,16 +16,14 @@ const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = p
 
 
 function EmployerForm(props) {
-    const [state, setState] = React.useState({
-        givenName: 'Jane',
-        familyName: 'Doe',
-        startDate: '1991-12-10T12:02:55.268Z',
-        jobTitle: 'Engineer',
-        baseSalary: 'Open ended contract',
-        employmentType: '65000 euros',
-        phase:0,
-        email:null
-    });
+    const [givenName, setGivenName] = React.useState(props.state.givenName?props.state.givenName:'Jane');
+    const [familyName, setFamilyName] = React.useState(props.state.familyName?props.state.familyName:'Doe');
+    const [email, setEmail] = React.useState(props.state.email?props.state.email:null);
+    const [startDate, setStartDate] = React.useState('1991-12-10T12:02:55.268Z');
+    const [jobTitle, setJobTitle] = React.useState('Engineer');
+    const [baseSalary, setBaseSalary] = React.useState('65000 euros');
+    const [employmentType, setEmploymentType] = React.useState('Open ended contract');
+    const [phase, setPhase] = React.useState(0);
     const [res,_setRes] = React.useState(null);
     const [challenge,setChallenge] = React.useState(null);
 
@@ -34,7 +32,7 @@ function EmployerForm(props) {
         handleResult(res);
     };
 
-
+    console.log(props);
 
     function setupWebhook(url) {
         const [uuid, params] = url?.split("?");
@@ -47,20 +45,27 @@ function EmployerForm(props) {
         };
         client.onmessage = (message) => {
             if (message.data.includes("success")) {
-                setState({ phase: 2 });
+                setPhase(2);
             } else if (message.data.includes("failure")) {
-                setState({ phase: 3 });
+                setPhase(3);
             }
             console.log(message);
         };
     }
 
-    const handleChange = (e) => {
-        console.log();
-        setState({
-            [e.target.name]: e.target.value
-        });
+    function getValues(){
+        return {
+            giveName:givenName,
+            familyName:familyName,
+            email:email,
+            startDate:startDate,
+            jobTitle:jobTitle,
+            baseSalary:baseSalary,
+            employmentType:employmentType
+
+        }
     }
+
 
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -69,7 +74,7 @@ function EmployerForm(props) {
             headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(state)
+            body: JSON.stringify(getValues())
         })
         .then(data => data.json())
         .then(json=>setRes(json));
@@ -82,7 +87,7 @@ function EmployerForm(props) {
             alert('Error while submitting employer certificate data: ' + result.error);
         } else if (result.url) {
             setChallenge(result.url);
-            setState({ phase: 1 });
+            setPhase(1);
             setupWebhook(result.url);
 
         } else {
@@ -93,34 +98,33 @@ function EmployerForm(props) {
     }
 
 
-    if (state.phase == 0) {
+    if (phase == 0) {
         return (
             <div id="employer-form">
                 <Form onSubmit={e => {handleSubmit(e)}} >
-                    <p>{state.props}</p>
                     <Form.Group className="mb-3" controlId="formGivenName">
                         <Form.Label>Given Name</Form.Label>
-                        <Form.Control type="text" name="givenName" value={state.givenName} onChange={e => {handleChange(e)}} />
+                        <Form.Control type="text" name="givenName" value={givenName} onChange={e => {setGivenName(e.target.value)}} />
 
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formFamilyName">
                         <Form.Label>Family Name</Form.Label>
-                        <Form.Control type="text" name="familyName" value={state.familyName} onChange={e => {handleChange(e)}}/>
+                        <Form.Control type="text" name="familyName" value={familyName} onChange={e => {setFamilyName(e.target.value)}}/>
 
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formType">
                         <Form.Label>Employment Type</Form.Label>
-                        <Form.Control type="text" name="employmentType" value={state.employmentType} onChange={e => {handleChange(e)}} />
+                        <Form.Control type="text" name="employmentType" value={employmentType} onChange={e => {setEmploymentType(e.target.value)}} />
 
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBaseSalary">
                         <Form.Label>Base Salary</Form.Label>
-                        <Form.Control type="text" name="baseSalary" value={state.baseSalary} onChange={e => {handleChange(e)}} />
+                        <Form.Control type="text" name="baseSalary" value={baseSalary} onChange={e => {setBaseSalary(e.target.value)}} />
 
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formJobTitle">
                         <Form.Label>Job Title</Form.Label>
-                        <Form.Control type="text" name="jobTitle" value={state.jobTitle} onChange={e => {handleChange(e)}} />
+                        <Form.Control type="text" name="jobTitle" value={jobTitle} onChange={e => {setJobTitle(e.target.value)}} />
 
                     </Form.Group>
                     <Button className="mb-3" variant="primary" type="submit">
@@ -130,13 +134,13 @@ function EmployerForm(props) {
                 </Form>
             </div>
         );
-    } else if (state.phase == 1) {
+    } else if (phase == 1) {
         return (
             <div id="employer-form">
                 <QRCode value={REACT_APP_QR_URL + "/employment/" + challenge} size={128} />
             </div>
         );
-    } else if (state.phase == 2) {
+    } else if (phase == 2) {
         return (
             <div id="diplemployeroma-form">
 
@@ -144,7 +148,7 @@ function EmployerForm(props) {
                 <Image src={sucess_img} fluid ></Image>
             </div>
         );
-    } else if (state.phase == 3) {
+    } else if (phase == 3) {
         return (
             <div id="employer-form">
                 Error while submitting the certificate
@@ -152,7 +156,7 @@ function EmployerForm(props) {
         );
     } else {
         return (
-            <div id="employer-form">Invalid form status: {state.phase}</div>
+            <div id="employer-form">Invalid form status: {phase}</div>
         );
 
     }

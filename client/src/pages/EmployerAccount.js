@@ -43,6 +43,7 @@ import uni_std_3 from './img/employer/company-users@3x.png';
 import { Link } from 'react-router-dom';
 import QRCode from "react-qr-code";
 import EmployerForm from "../components/EmployerForm";
+import {useLocation} from 'react-router-dom';
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -55,6 +56,8 @@ function EmployerAccount(props) {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
+    const location = useLocation();
+    console.log(location.state);
 
     React.useEffect(() => {
         fetch(REACT_APP_NODE_LOCAL + "/qr-url")
@@ -103,7 +106,7 @@ function EmployerAccount(props) {
                                                                 <Modal.Title>Download employer certificate</Modal.Title>
                                                             </Modal.Header>
                                                             <Modal.Body>
-                                                                <EmployerForm />
+                                                                <EmployerForm state={location.state}/>
                                                             </Modal.Body>
 
                                                         </Modal>
