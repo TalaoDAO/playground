@@ -71,7 +71,7 @@ class EmployerForm extends React.Component {
             alert('Error while issuing login challenge: '+res.error);
         }else if(res.url){
             this.setState({ loginChallenge:res.url });
-            this.setupWebhook(res.url);
+            this.setupLoginWebhook(res.url);
 
         }else{
             alert('Something went wrong while submitting data, please try again later');
@@ -114,6 +114,26 @@ class EmployerForm extends React.Component {
             console.log(message);
         };
     }
+
+    async setupLoginWebhook(url) {
+        const [uuid, params] = url?.split("?");
+  
+        this.client=new W3CWebSocket(REACT_APP_WEBSOCKET_SERVER+"?challenge="+uuid);
+        console.log("connecting to: "+REACT_APP_WEBSOCKET_SERVER+"?challenge="+uuid);
+        this.client.onopen =  () => {
+            console.log('WebSocket Client Connected');
+            this.client.send(JSON.stringify({message:"handshake"}));
+        };
+        this.client.onmessage = (message) => {
+            if(message.data.includes("success")){
+                this.setState({email:message.data.email, familyName:message.data.familyName, givenName:message.data.givenName});
+            }else if(message.data.includes("failure")){
+                this.setState({phase:3});
+            }
+            console.log(message);
+        };
+    }
+
 
 
 
