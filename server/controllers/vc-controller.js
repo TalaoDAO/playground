@@ -437,7 +437,7 @@ exports.authentication_post = function(req,res) {
         try {
             let request=await requestService.getAuthenticationRequest(req.params.uuid);
             if(request){
-                let email=await requestService.validateCredentials(req.body);
+                let email=await requestService.validateCredentials(req.body['presentation']);
                 let user = await userService.getUser(email);
                 if(user) {
 
