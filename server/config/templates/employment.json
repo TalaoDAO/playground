@@ -42,19 +42,7 @@
 			"CertificateOfEmployment"
 		],
 		"credentialSubject": {
-			"id": "",
-			"familyName": "",
-			"jobTitle": "",
-			"employmentType": "",
-			"startDate": "",
-			"type": "CertificateOfEmployment",
-			"givenName": "",
-			"workFor": {
-				"address": "",
-				"logo": "",
-				"name": ""
-			},
-			"baseSalary": ""
+			
 		},
 		"issuer": "",
 		"description": [

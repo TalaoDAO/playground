@@ -3,6 +3,7 @@ var router = express.Router();
 const WebSocket=require("ws");
 const cors = require('cors');
 const multer = require('multer')
+const didkit= require('./vc/didkit-handler');
 
 const { createLogger, format, transports } = require('winston');
 const { combine, timestamp, label, prettyPrint, errors } = format;
@@ -72,8 +73,10 @@ router.post('/create-diploma', upload.none(), (req, res) => {
 
       logger.debug('generated uuid=' + uuid)
 
+      var did=await didkit.getdid(process.env.DEFAULT_JWK);
+
       res.send({
-        url: uuid + '?issuer=did%3Aethr%3A0xee09654eedaa79429f8d216fa51a129db0f72250'
+        url: uuid + '?issuer='+did
       });
       return;
     } catch (error) {
@@ -96,9 +99,10 @@ router.post('/create-student', upload.none(), (req, res) => {
       let uuid = await requestService.createRequest(1, 'student', req.body);
 
       logger.debug('generated uuid=' + uuid)
+      var did=await didkit.getdid(process.env.DEFAULT_JWK);
 
       res.send({
-        url: uuid + '?issuer=did%3Aethr%3A0xee09654eedaa79429f8d216fa51a129db0f72250'
+        url: uuid + '?issuer='+did
       });
       return;
     } catch (error) {
@@ -118,11 +122,12 @@ router.post('/create-employer', upload.none(), (req, res) => {
   (async () => {
     try {
       let uuid = await requestService.createRequest(1, 'employer', req.body);
+      var did=await didkit.getdid(process.env.DEFAULT_JWK);
 
       logger.debug('generated uuid=' + uuid)
 
       res.send({
-        url: uuid + '?issuer=did%3Aethr%3A0xee09654eedaa79429f8d216fa51a129db0f72250'
+        url: uuid + '?issuer='+did
       });
       return;
     } catch (error) {
@@ -143,11 +148,12 @@ router.post('/create-authentication', upload.none(), (req, res) => {
   (async () => {
     try {
       let uuid = await requestService.createRequest(1, 'authentication', req.body);
+      var did=await didkit.getdid(process.env.DEFAULT_JWK);
 
       logger.debug('generated uuid=' + uuid)
 
       res.send({
-        url: uuid + '?issuer=did%3Aethr%3A0xee09654eedaa79429f8d216fa51a129db0f72250'
+        url: uuid + '?issuer='+did
       });
       return;
     } catch (error) {

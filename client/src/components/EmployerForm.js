@@ -16,9 +16,26 @@ const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = p
 
 
 function EmployerForm(props) {
-    const [givenName, setGivenName] = React.useState('Jane');
-    const [familyName, setFamilyName] = React.useState('Doe');
-    const [email, setEmail] = React.useState(null);
+
+    let initGivenName='Jane';
+    let initFamilynName='Doe';
+    let initEmail=null;
+    if(props && props.state){
+        if( props.state.givenName){
+            initGivenName=props.state.givenName;
+        }
+        if( props.state.familyName){
+            initFamilynName=props.state.familyName;
+        }
+        if( props.state.email){
+            initEmail=props.state.email;
+        }
+    }
+
+    
+    const [givenName, setGivenName] = React.useState(initGivenName);
+    const [familyName, setFamilyName] = React.useState(initFamilynName);
+    const [email, setEmail] = React.useState(initEmail);
     const [startDate, setStartDate] = React.useState('1991-12-10T12:02:55.268Z');
     const [jobTitle, setJobTitle] = React.useState('Engineer');
     const [baseSalary, setBaseSalary] = React.useState('65000 euros');
@@ -31,18 +48,6 @@ function EmployerForm(props) {
         _setRes(res);
         handleResult(res);
     };
-
-    if(props && props.state){
-        if( props.state.givenName){
-            setGivenName(props.givenName);
-        }
-        if( props.state.familyName){
-            setFamilyName(props.familyName);
-        }
-        if( props.state.email){
-            setEmail(props.email);
-        }
-    }
 
     console.log(props);
 

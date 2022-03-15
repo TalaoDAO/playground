@@ -53,9 +53,6 @@ function EmployerHome() {
 
 
                 <Card className=''>
-                  <Card.Header className="bg-white text-left">
-                    <h4>Documents</h4>
-                  </Card.Header>
                   <Card.Body>
                     <Row>
                       <Col className="align-items-center justify-content-center text-center">
