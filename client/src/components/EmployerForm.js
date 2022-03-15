@@ -196,7 +196,7 @@ class EmployerForm extends React.Component {
             } else if (this.state.phase == 1) {
                 return (
                     <div id="employer-form">
-                        <QRCode value={REACT_APP_QR_URL + "/employer/" + this.state.result} size={128} />
+                        <QRCode value={REACT_APP_QR_URL + "/employment/" + this.state.result} size={128} />
                     </div>
                 );
             } else if (this.state.phase == 2) {
