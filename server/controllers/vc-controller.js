@@ -439,13 +439,16 @@ exports.authentication_post = function(req,res) {
             if(request){
                 let email=await requestService.validateCredentials(req.body['presentation']);
                 let user = await userService.getUser(email);
+                var names=user.name.split(" ");
                 if(user) {
 
-                    res.json({message:'success', user:'email'});
+                    send(req.params.uuid,JSON.stringify({result:'success', email:user.email, givenName:names[0], familyName:names[0]}))
+                    res.json({result:'success', email:user.email, givenName:names[0], familyName:names[0]});
                     return;
             
                 }else{
                     console.error("User not found.")
+                    send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
                     res.json({ message: "User not found." });
                     return;
                 }
@@ -453,6 +456,7 @@ exports.authentication_post = function(req,res) {
             }else{
                 console.error("Request not found.")
                 res.json({ message: "Request not found." });
+                send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
                 return;
             }
             
@@ -460,6 +464,7 @@ exports.authentication_post = function(req,res) {
         } catch (error) {
             console.error(error)
             res.json({ message: error });
+            send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
         }
 
         
