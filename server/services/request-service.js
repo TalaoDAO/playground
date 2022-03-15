@@ -136,12 +136,13 @@ exports.getAuthenticationRequest = async function (uuid) {
 
 exports.validateCredentials = async function (receivedCredentials){
     logger.debug("receivedCredentials="+receivedCredentials);
-    logger.debug("receivedCredentials="+JSON.stringify(receivedCredentials));
 
-    let uuid=receivedCredentials.id;
+    let rc= await JSON.parse(receivedCredentials);
+
+    let uuid=rc.id;
     logger.debug("uuid="+uuid);
 
-    let creds=receivedCredentials.verifiableCredential;
+    let creds=rc.verifiableCredential;
 
     if(!creds || length(creds)==0){
         return null;
