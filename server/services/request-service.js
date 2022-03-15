@@ -143,8 +143,9 @@ exports.validateCredentials = async function (receivedCredentials){
     logger.debug("uuid="+uuid);
 
     let creds=rc.verifiableCredential;
+    logger.debug("creds="+creds);
 
-    if(!creds || length(creds)==0){
+    if(!creds || creds.length==0){
         return null;
     }
 
