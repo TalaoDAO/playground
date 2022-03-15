@@ -13,6 +13,10 @@ import "./playground.css";
 
 function App() {
 
+  React.useEffect(() => {
+    document.title = "Talao Playground"
+  }, [])
+
   return (
     <div className="App">
       <Header />

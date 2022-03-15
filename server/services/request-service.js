@@ -60,9 +60,9 @@ exports.getDiplomaValues = async function (uuid) {
     return {
         familyName: request.data.familyName,
         givenName: request.data.givenName,
-        'issuedBy.logo': 'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
-        'issuedBy.name': 'University',
-        'issuedBy.address': 'Athens',
+        'issuedBy.logo': process.env.DIPLOMA_LOGO_URL,
+        'issuedBy.name': 'University of Web Design',
+        'issuedBy.address': 'Paris',
         'hasCredential.title': request.data.credentialTitle,
         'hasCredential.description': request.data.credentialDescription,
         'birthDate': request.data.birthDate
@@ -79,7 +79,7 @@ exports.getEmailValues = async function (uuid) {
     logger.debug(JSON.stringify(user))
     return {
         email: user.email,
-        'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmNwbEEupT7jR2zmrA87FsN4hUS8eXnCxM8DsL9RXc25cu',
+        'issuedBy.logo':process.env.EMAIL_LOGO_URL,
         'issuedBy.name':'Talao'
 
     };
@@ -97,7 +97,7 @@ exports.getStudentValues = async function (uuid) {
         'recipient.birthDate':request.data.birthDate,
         'recipient.image':'https://gateway.pinata.cloud/ipfs/QmSSJooT2JFraZFNHavVLQzzxwSpg3ithJL4ztGYY9MpBY',
         'recipient.signatureLines.image':'https://gateway.pinata.cloud/ipfs/QmeMfck3z6K5p8xmCqQpjH3R7s3YddR5DsMNLewWvzQrFS',
-        'issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
+        'issuedBy.logo':process.env.STUDENT_LOGO_URL,
         'issuedBy.name':'Talao CFA',
         'issuedBy.address':'16 rue de Wattignies, 75012 Paris, France',
         'issuedBy.directorName':request.data.directorName
@@ -113,8 +113,8 @@ exports.getEmployerValues = async function (uuid) {
     } 
     return {
         'familyName':request.data.familyName,
-        'givenName':request.data.givenNam,
-        'workFor.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ',
+        'givenName':request.data.givenName,
+        'workFor.logo':process.env.EMPLOYER_LOGO_URL,
         'workFor.name':'Talao',
         'workFor.address':'16 rue de Wattignies, 75012 Paris, France',
         'employmentType':request.data.employmentType,
