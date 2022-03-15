@@ -136,7 +136,6 @@ exports.getAuthenticationRequest = async function (uuid) {
 
 exports.validateCredentials = async function (receivedCredentials){
 
-    logger.debug(JSON.stringify(receivedCredentials));
 
     let creds=receivedCredentials.presentation.verifiableCredential;
 
@@ -144,6 +143,7 @@ exports.validateCredentials = async function (receivedCredentials){
         return null;
     }
 
+    logger.debug(JSON.stringify(creds));
     await creds.foreach(cred=> {
         if(cred.credentialSubject.type==='EmailPass'){
             return cred.credentialSubject.email;
