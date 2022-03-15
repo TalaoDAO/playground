@@ -6,7 +6,6 @@ var openWebSockets={}; //{challenge: websocket}
 
 module.exports =  () => {
   const websocketServer = new WebSocket.Server({
-    path: "/websockets",
     port: 9001
   });
 
