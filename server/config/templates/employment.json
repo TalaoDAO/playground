@@ -42,7 +42,7 @@
 			"CertificateOfEmployment"
 		],
 		"credentialSubject": {
-
+			"type": "CertificateOfEmployment",
 			"workFor": {
 			}
 		},
