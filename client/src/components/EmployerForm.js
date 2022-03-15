@@ -126,7 +126,8 @@ class EmployerForm extends React.Component {
         };
         this.client.onmessage = (message) => {
             if(message.data.includes("success")){
-                this.setState({email:message.data.email, familyName:message.data.familyName, givenName:message.data.givenName});
+                console.log("succesfull login for="+message.data.email)
+                this.setState({email:message.data.email, familyName:message.data.familyName, givenName:message.data.givenName,phase:0});
             }else if(message.data.includes("failure")){
                 this.setState({phase:3});
             }
