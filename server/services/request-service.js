@@ -149,12 +149,12 @@ exports.validateCredentials = async function (receivedCredentials){
         return null;
     }
 
-    logger.debug(JSON.stringify(creds));
-    await creds.foreach(cred=> {
-        if(cred.credentialSubject.type==='EmailPass'){
-            return cred.credentialSubject.email;
+    for (var i = 0; i < creds.length; i++){
+        if(creds[i].credentialSubject.type==='EmailPass'){
+            return creds[i].credentialSubject.email;
         }
-    });
+        console.log(creds[i]);
+    }
 
     return null;
 
