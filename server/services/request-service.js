@@ -136,26 +136,36 @@ exports.getAuthenticationRequest = async function (uuid) {
 
 exports.validateCredentials = async function (receivedCredentials){
 
-
-    logger.debug("receivedCredentials="+receivedCredentials);
     let rc= await JSON.parse(receivedCredentials);
 
     let uuid=rc.id;
-    logger.debug("uuid="+uuid);
     let creds=rc.verifiableCredential;
 
-    if(!creds || creds.length==0){
+    if(!creds)
         return null;
-    }
 
-    logger.debug("creds="+JSON.stringify(creds));
-    for (var i = 0; i < creds.length; i++){
-        if(creds[i].credentialSubject.type==='EmailPass'){
-            logger.debug("email="+creds[i].credentialSubject.email);
-            return creds[i].credentialSubject.email;
+    if(Array.isArray(creds)) {
+        if(creds.length==0){
+            return null;
         }
-        console.log(creds[i]);
+
+        logger.debug("creds="+JSON.stringify(creds));
+        for (var i = 0; i < creds.length; i++){
+            if(creds[i].credentialSubject.type==='EmailPass'){
+                logger.debug("email="+creds[i].credentialSubject.email);
+                return creds[i].credentialSubject.email;
+            }
+            console.log(creds[i]);
+        }
+    }else{
+        if(creds.credentialSubject.type==='EmailPass'){
+            logger.debug("single email="+creds.credentialSubject.email);
+            return creds.credentialSubject.email;
+        }
     }
+    
+
+    
 
     return null;
 

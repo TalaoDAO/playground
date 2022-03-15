@@ -442,7 +442,7 @@ exports.authentication_post = function(req,res) {
                 var names=user.name.split(" ");
                 if(user) {
 
-                    send(req.params.uuid,JSON.stringify({result:'success', email:user.email, givenName:names[0], familyName:names[0]}))
+                    send(req.params.uuid,JSON.stringify({result:'success', email:user.email, givenName:names[0], familyName:names[1]}))
                     res.json({result:'success', email:user.email, givenName:names[0], familyName:names[1]});
                     return;
             
@@ -452,7 +452,6 @@ exports.authentication_post = function(req,res) {
                     res.json({ message: "User not found." });
                     return;
                 }
-                return;
             }else{
                 console.error("Request not found.")
                 res.json({ message: "Request not found." });
