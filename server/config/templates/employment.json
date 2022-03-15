@@ -42,7 +42,9 @@
 			"CertificateOfEmployment"
 		],
 		"credentialSubject": {
-			
+
+			"workFor": {
+			}
 		},
 		"issuer": "",
 		"description": [
