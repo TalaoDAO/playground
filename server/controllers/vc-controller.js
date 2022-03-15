@@ -443,7 +443,7 @@ exports.authentication_post = function(req,res) {
                 if(user) {
 
                     send(req.params.uuid,JSON.stringify({result:'success', email:user.email, givenName:names[0], familyName:names[0]}))
-                    res.json({result:'success', email:user.email, givenName:names[0], familyName:names[0]});
+                    res.json({result:'success', email:user.email, givenName:names[0], familyName:names[1]});
                     return;
             
                 }else{
