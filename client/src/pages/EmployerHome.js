@@ -21,6 +21,7 @@ import com_acc_2 from './img/employer/company-account@2x.png';
 import com_acc_3 from './img/employer/company-account@3x.png';
 
 import { Link } from 'react-router-dom';
+import LoginForm from "../components/LoginForm";
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -66,8 +67,17 @@ function EmployerHome() {
 
                     </Row>
                     <Row>
+                      <Col className="align-items-center justify-content-center text-center">
+
+                        <span className="Title-TAGH2-dark">My account</span>
+
+                      </Col>
+
+
+                    </Row>
+                    <Row>
                       <Col className="p-4">
-                        <Link to="/com-account" className="btn btn-primary" >My Account</Link>
+                        <LoginForm next="/com-account" />
 
                       </Col>
 
