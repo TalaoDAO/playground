@@ -9,11 +9,12 @@ const userService = require("./services/user-service");
 const websockets = require('./websockets');
 const queryString = require("query-string");
 
-
 var router = express.Router();
-const upload = multer()
-router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
+router.use(express.json());
+const upload = multer()
+router.use(upload.array());
+
 var allowedOrigins = ['http://localhost:3000','https://playground.talao.co'];
 router.use(cors({
     origin: function (origin, callback) {
