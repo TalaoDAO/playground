@@ -11,7 +11,7 @@ class VoucherGenerator extends VerifiedCredentialsGenerator{
     async getFieldsMap(){
         return {
             'offer.value' : 'credentialPreview.credentialSubject.offer.value',
-            'offer.currency' : 'credentialPreview.credentialSubject.offer.value',
+            'offer.currency' : 'credentialPreview.credentialSubject.offer.currency',
             'issuedBy.logo' : 'credentialPreview.credentialSubject.issuedBy.logo',
             'issuedBy.name' : 'credentialPreview.credentialSubject.issuedBy.name',
             'identifier' : 'credentialPreview.credentialSubject.identifier'
