@@ -218,7 +218,7 @@ exports.employment_post = function(req, res) {
 
             let values=await requestService.getEmployerValues(req.params.uuid);
             if(values){
-                await employmentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                await employmentGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
                 let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
                 logger.debug(signed);
                 res.json(signed);
@@ -288,7 +288,7 @@ exports.student_post = function(req, res) {
            
             let values=await requestService.getStudentValues(req.params.uuid);
             if(values){
-                await studentGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                await studentGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
                 let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
                 logger.debug(signed);
                 res.json(signed);
@@ -358,7 +358,7 @@ exports.email_post = function(req, res) {
             let emailGenerator = new EmailGenerator();
             let values=await requestService.getEmailValues(req.params.uuid);
             if(values){
-                await emailGenerator.generate(process.env.DEFAULT_JWK,offer,values);
+                await emailGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
                 let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
                 logger.debug(signed);
                 res.json(signed);
