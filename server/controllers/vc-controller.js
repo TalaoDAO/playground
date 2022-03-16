@@ -57,7 +57,7 @@ exports.discount_offer_get = function(req, res) {
             let rawdata = fs.readFileSync(process.env.DISCOUNT_COUPON_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let voucherGenerator = new VoucherGenerator();
-            let values={'offer.value':100,'offer.currency':'USD','issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ','issuedBy.name':'Tezotopia','identifier':'0123456'};
+            let values={'offer.value':"100",'offer.currency':'USD','issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ','issuedBy.name':'Tezotopia','identifier':'0123456'};
             console.log(JSON.stringify(values));
             await voucherGenerator.generate(process.env.DEFAULT_JWK,offer,values);
             logger.debug(JSON.stringify(offer));
@@ -84,7 +84,7 @@ exports.discount_offer_post = function(req, res) {
             let rawdata = fs.readFileSync(process.env.DISCOUNT_COUPON_TEMPLATE);
             let offer=await JSON.parse(rawdata);
             let voucherGenerator = new VoucherGenerator();
-            let values={'offer.value':100,'offer.currency':'USD','issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ','issuedBy.name':'Tezotopia','identifier':'0123456'};
+            let values={'offer.value':"100",'offer.currency':'USD','issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ','issuedBy.name':'Tezotopia','identifier':'0123456'};
             await voucherGenerator.generate(process.env.DEFAULT_JWK,offer,values,senderId);
             let signed=await didkit.sign(process.env.DEFAULT_JWK,offer['credentialPreview']);
 
