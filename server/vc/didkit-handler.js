@@ -14,6 +14,18 @@ exports.getdid = async function (privateKey) {
     
 };
 
+exports.getVersion = async function () {
+
+    try {
+        
+        return DIDKit.getVersion();
+    } catch (error) {
+        console.error(error)
+    }
+    return null;
+    
+};
+
 exports.sign = async function (privateKey,data) {
 
     try {

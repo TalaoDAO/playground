@@ -489,6 +489,8 @@ exports.test = function(req, res) {
                 res.json(user.toJSON());
         
             });
+            let version= await didkit.getVersion();
+            console.log(version);
         } catch (error) {
             console.error(error)
             res.json({ message: error });
