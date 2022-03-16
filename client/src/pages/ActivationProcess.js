@@ -28,8 +28,7 @@ function ActivationProcess() {
                 <br />
                 <span className="Title-TAGH1-dark">Download app</span>
                 <br />
-                <span className="Description-TAGUI_L-dark">Enter your information</span>
-                <br />
+                
 
               </Col>
 
