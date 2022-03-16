@@ -85,11 +85,29 @@ async function sendCode(user) {
     });
 
     transporter.verify().then(console.log).catch(console.error);
+
+    var html = `
+    <!DOCTYPE html>
+    <html>
+    <body>
+    <p><font size="+1">Hello <b>`+user.name+`</b></font></p>
+    <p><font size="+1">Thanks for registering and welcome to Talao Playground!</font></p>
+
+    <p><font size="+1">The validation code for your account is: <b>`+user.code+`</b></font></p>
+
+    <p><font size="+1">The Talao Team</font></p>
+    <img src="https://talao.mypinata.cloud/ipfs/QmNwbEEupT7jR2zmrA87FsN4hUS8eXnCxM8DsL9RXc25cu" height="150px"/>
+    
+    </body>
+    </html>
+
+    `;
+    
     var mailOptions = {
         from: EMAIL,
         to: user.email,
         subject: 'Validation code for playground.talao.co',
-        text: 'Validation Code: ' + user.code
+        html: html
     };
 
     await transporter.sendMail(mailOptions, function (error, info) {
