@@ -72,16 +72,19 @@ exports.createUser = async function (email, givenName, familyName) {
 
 const { EMAIL, PASSWORD } = process.env;
 
-var transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-        user: EMAIL,
-        pass: PASSWORD
-    }
-});
 
 
 async function sendCode(user) {
+    var transporter = nodemailer.createTransport({
+        host: 'smtp.gmail.com',
+        port: 587,
+        auth: {
+            user: EMAIL,
+            pass: PASSWORD
+        }
+    });
+
+    transporter.verify().then(console.log).catch(console.error);
     var mailOptions = {
         from: EMAIL,
         to: user.email,
