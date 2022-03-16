@@ -173,9 +173,17 @@ class ActivationForm extends React.Component {
         } else if (this.state.phase == 3) {
             return (
             <div id="diplemployeroma-form">
-                    
-                <span className="Title-TAGH2">The certificate was added succesfully</span>
-                <Image src={sucess_img}  fluid ></Image>
+                <Row>
+                    <Col>
+                        <span className="Title-TAGH2">The certificate was added succesfully</span>
+                    </Col>
+                </Row>    
+                <Row>
+                    <Col>
+                        <Image src={sucess_img}  fluid ></Image>
+                    </Col>
+                </Row>  
+                
             </div>
             );
         } else if (this.state.phase == 4) {

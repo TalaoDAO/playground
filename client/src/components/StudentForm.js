@@ -138,10 +138,18 @@ class StudentForm extends React.Component {
             );
         } else if (this.state.phase == 2) {
             return (
-            <div id="diplemployeroma-form">
+            <div id="diploma-form">
                     
-                <span className="Title-TAGH2">The certificate was added succesfully</span>
-                <Image src={sucess_img}  fluid ></Image>
+                    <Row>
+                    <Col>
+                        <span className="Title-TAGH2">The certificate was added succesfully</span>
+                    </Col>
+                </Row>    
+                <Row>
+                    <Col>
+                        <Image src={sucess_img}  fluid ></Image>
+                    </Col>
+                </Row>  
             </div>
             );
         } else if (this.state.phase == 3) {

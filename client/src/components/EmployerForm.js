@@ -159,10 +159,18 @@ function EmployerForm(props) {
         );
     } else if (phase == 2) {
         return (
-            <div id="diplemployeroma-form">
+            <div id="employer-form">
 
-                <span className="Title-TAGH2">The certificate was added succesfully</span>
-                <Image src={sucess_img} fluid ></Image>
+                <Row>
+                    <Col>
+                        <span className="Title-TAGH2">The certificate was added succesfully</span>
+                    </Col>
+                </Row>    
+                <Row>
+                    <Col>
+                        <Image src={sucess_img}  fluid ></Image>
+                    </Col>
+                </Row>  
             </div>
         );
     } else if (phase == 3) {
