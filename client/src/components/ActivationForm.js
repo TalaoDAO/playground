@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-    Container, Form, Button, Image
+    Container, Form, Button, Image, Row, Col
 } from 'react-bootstrap';
 
 import sucess_img from '../pages/img/success.png';

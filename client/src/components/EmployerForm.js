@@ -1,7 +1,7 @@
 import React from 'react';
 
 import {
-    Container, Form, Button, Image
+    Container, Form, Button, Image, Row, Col
 } from 'react-bootstrap';
 
 import QRCode from "react-qr-code";
