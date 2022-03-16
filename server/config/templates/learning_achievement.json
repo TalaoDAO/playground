@@ -65,18 +65,9 @@
 		],
 		"credentialSubject": {
 			"type": "LearningAchievement",
-			"id": "",
-			"familyName": "",
-			"givenName": "",
-			"birthDate": "",
 			"hasCredential": {
-				"title": "",
-				"description": ""
 			},
 			"issuedBy": {
-				"name": "",
-				"address": "",
-				"logo": ""
 			}
 		},
 		"evidence": {

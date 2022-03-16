@@ -77,14 +77,9 @@
 		"issuanceDate": "",
 		"credentialSubject": {
 			"type": "Voucher",
-			"identifier": "",
 			"offer": {
-				"value": "",
-				"currency": ""
 			},
 			"issuedBy": {
-				"logo": "",
-				"name": ""
 			}
 		}
 	},

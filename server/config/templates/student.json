@@ -65,22 +65,12 @@
 			"ProfessionalStudentCard"
 		],
 		"credentialSubject": {
-			"id": "",
 			"type": "ProfessionalStudentCard",
 			"recipient": {
-				"birthDate": "",
-				"familyName": "",
-				"givenName": "",
-				"image": "",
 				"signatureLines": {
-					"image": ""
 				}
 			},
 			"issuedBy": {
-				"address": "",
-				"directorName": "",
-				"logo": "",
-				"name": ""
 			}
 		},
 		"issuer": "",

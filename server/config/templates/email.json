@@ -36,12 +36,8 @@
 			"EmailPass"
 		],
 		"credentialSubject": {
-			"id": "",
 			"type": "EmailPass",
-			"email": "",
 			"issuedBy": {
-				"logo": "",
-				"name": ""
 			}
 		},
 		"issuer": "",
