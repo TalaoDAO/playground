@@ -136,6 +136,7 @@ exports.getAuthenticationRequest = async function (uuid) {
 
 exports.validateCredentials = async function (receivedCredentials){
 
+    console.log(receivedCredentials);
     let rc= await JSON.parse(receivedCredentials);
 
     let uuid=rc.id;

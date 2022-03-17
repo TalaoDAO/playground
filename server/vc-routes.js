@@ -13,7 +13,6 @@ var router = express.Router();
 router.use(express.urlencoded({ extended: true }));
 router.use(express.json());
 const upload = multer()
-router.use(upload.array());
 
 var allowedOrigins = ['http://localhost:3000','https://playground.talao.co'];
 router.use(cors({
