@@ -26,7 +26,7 @@ function ActivationProcess() {
         <Row>
               <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
                 <br />
-                <span className="Title-TAGH1-dark">Download app</span>
+                <span className="section-header-dark">Download app</span>
                 <br />
                 
 

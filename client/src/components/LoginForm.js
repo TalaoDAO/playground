@@ -118,7 +118,7 @@ function LoginForm(props) {
             if (loginChallenge == null) {
                 return (
                     <div id="login-form">
-                        <span className='Description-TAGUI_L-dark '>Loading...</span>
+                        <span className='subtitle-dark '>Loading...</span>
                         <p>{!res ? "No res..." : JSON.stringify(res)}</p>
                     </div>
                 );

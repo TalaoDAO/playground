@@ -1,10 +1,16 @@
 import React from 'react';
-import logo from '../images/talao-logo.png';
 import Logout from './auth/Logout';
 
 import {
   Container, Navbar, Nav, NavDropdown, Image
 } from 'react-bootstrap';
+
+
+import logo1 from '../pages/img/home/LogoTalao.webp';
+import logo2 from '../pages/img/home/LogoTalao@2x.webp';
+import logo3 from '../pages/img/home/LogoTalao@3x.webp';
+
+
 
 const AVATAR = 'https://www.gravatar.com/avatar/429e504af19fc3e1cfa5c4326ef3394c?s=240&d=mm&r=pg';
 
@@ -35,12 +41,12 @@ const Header = () => {
 
   return (
     <header>
-      <Container>
-        <Navbar bg="white" expand="lg">
-          <Navbar.Brand href="/home"><Image src={logo} className="fluid" height="50px"></Image></Navbar.Brand>
+      <Container fluid>
+        <Navbar bg="white" expand="lg md">
+          <Navbar.Brand href="/home"><Image src={logo1} srcSet={`${logo2} 2x, ${logo3} 3x`} fluid className='talao-logo'></Image></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
-            <Nav className="me-auto justify-content-end">
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav  className="ms-auto nav-menu">
               <Nav.Link href="/activation">Pass Activation</Nav.Link>
               <NavDropdown title="Use Cases" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/diploma">Download a diploma</NavDropdown.Item>

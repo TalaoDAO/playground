@@ -121,7 +121,7 @@ class ActivationForm extends React.Component {
         if (this.state.phase == 0) {
             return (
                 <div id="user-form">
-                   <p className="Description-TAGUI_L-dark">Enter your information</p>
+                   <p className="subtitle-dark">Enter your information</p>
                     
                     <Form onSubmit={this.handleSubmit} >
                         <p>{this.state.props}</p>
@@ -170,7 +170,7 @@ class ActivationForm extends React.Component {
         } else if (this.state.phase == 2) {
             return (
                 <div id="user-form">
-                    <p className="Description-TAGUI_L-dark">Scan the QR with your mobile wallet</p>
+                    <p className="subtitle-dark">Scan the QR with your mobile wallet</p>
                     <QRCode value={REACT_APP_QR_URL + "/email/" + this.state.challenge} size={128} />
                 </div>
             );
@@ -179,7 +179,7 @@ class ActivationForm extends React.Component {
             <div id="diplemployeroma-form">
                 <Row>
                     <Col>
-                        <span className="Title-TAGH2">The certificate was added succesfully</span>
+                        <span className="tag-h2">The certificate was added succesfully</span>
                     </Col>
                 </Row>    
                 <Row>

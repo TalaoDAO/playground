@@ -49,7 +49,7 @@ function Manage() {
 
                             <Row >
                                 <Col style={{ marginTop: "100px", marginBottom: "100px" }}>
-                                    <span className="Title-TAGH1 text-center">Manage Certificates</span>
+                                    <span className="tag-h1 text-center">Manage Certificates</span>
                                 </Col>
 
                             </Row>
@@ -70,7 +70,7 @@ function Manage() {
                                     <Card.Body className='border-0'>
                                         <Row>
                                             <Col>
-                                                <span className="Title-TAGH2-dark">My certificates</span>
+                                                <span className="tag-h2-dark">My certificates</span>
                                             </Col>
 
                                         </Row>
@@ -93,7 +93,7 @@ function Manage() {
                                     <Card.Body className='border-0'>
                                         <Row>
                                             <Col>
-                                                <span className="Title-TAGH2-dark">Setting</span>
+                                                <span className="tag-h2-dark">Setting</span>
                                             </Col>
 
                                         </Row>
@@ -119,7 +119,7 @@ function Manage() {
                                     <Card.Body className='border-0'>
                                         <Row>
                                             <Col>
-                                                <span className="Title-TAGH2-dark">Reset Wallet</span>
+                                                <span className="tag-h2-dark">Reset Wallet</span>
                                             </Col>
 
                                         </Row>
@@ -142,7 +142,7 @@ function Manage() {
                                     <Card.Body className='border-0'>
                                         <Row>
                                             <Col>
-                                                <span className="Title-TAGH2-dark">Delete Certificates</span>
+                                                <span className="tag-h2-dark">Delete Certificates</span>
                                             </Col>
 
                                         </Row>

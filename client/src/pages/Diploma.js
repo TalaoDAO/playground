@@ -59,13 +59,13 @@ function Diploma() {
 
               <Row>
                 <Col>
-                  <span className="Title-TAGH1 text-center p-3">Download a diploma</span>
+                  <span className="tag-h1 text-center p-3">Download a diploma</span>
                 </Col>
 
               </Row>
               <Row>
                 <Col xs={12} md={12} lg={{ span: 6, offset:3 }} className="justify-content-center">
-                  <span className="Title-TAGH3 text-center p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
+                  <span className="tag-h3 text-center p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
                 </Col>
               </Row>
               <Row>
@@ -85,7 +85,7 @@ function Diploma() {
 
           <div id="description" className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-white">
 
-          <Row><Col><span className="Title-TAGH1-dark text-center p-3">From your desktop</span></Col></Row>
+          <Row><Col><span className="section-header-dark text-center p-3">From your desktop</span></Col></Row>
             <Row className="position-relative overflow-hidden p-2 p-md-4 m-md-2">
               <Col xs={12} md={12} lg={{ span: 6 }}>
                 <Row >
@@ -93,7 +93,7 @@ function Diploma() {
                     <h1 className="text-muted">1.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="Title-TAGH2-dark"> Request access to your account</span>
+                    <span className="tag-h2-dark"> Request access to your account</span>
                   </Col>
                 </Row>
                 <Row>
@@ -111,7 +111,7 @@ function Diploma() {
                   </Col>
                   <Col className="text-start">
 
-                    <span className="Title-TAGH2-dark"> Scan the QR Code</span>
+                    <span className="tag-h2-dark"> Scan the QR Code</span>
                   </Col>
                 </Row>
                 <Row>
@@ -129,7 +129,7 @@ function Diploma() {
                     <h1 className="text-muted">3.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="Title-TAGH2-dark"> Request your diploma certificate</span>
+                    <span className="tag-h2-dark"> Request your diploma certificate</span>
                   </Col>
                 </Row>
                 <Row>
@@ -147,7 +147,7 @@ function Diploma() {
                   </Col>
                   <Col className="text-start">
 
-                    <span className="Title-TAGH2-dark"> Complete the form</span>
+                    <span className="tag-h2-dark"> Complete the form</span>
                   </Col>
                 </Row>
                 <Row>
@@ -165,7 +165,7 @@ function Diploma() {
                     <h1 className="text-muted">5.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="Title-TAGH2-dark"> Scan with your mobile wallet</span>
+                    <span className="tag-h2-dark"> Scan with your mobile wallet</span>
                   </Col>
 
                 </Row>
@@ -181,7 +181,7 @@ function Diploma() {
                     <h1 className="text-muted">6.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="Title-TAGH2-dark"> Accept your certificate</span>
+                    <span className="tag-h2-dark"> Accept your certificate</span>
                   </Col>
 
                 </Row>

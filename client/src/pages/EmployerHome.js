@@ -66,7 +66,7 @@ function EmployerHome() {
                     <Row>
                       <Col className="align-items-center justify-content-center text-center">
 
-                        <span className="Title-TAGH2-dark">My account</span>
+                        <span className="tag-h2-dark">My account</span>
 
                       </Col>
 

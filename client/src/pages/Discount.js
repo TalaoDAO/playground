@@ -40,7 +40,7 @@ function Discount() {
 
               <Row>
                 <Col>
-                  <span className="Title-TAGH1 text-center p-3">Get a discount coupon</span>
+                  <span className="tag-h1 text-center p-3">Get a discount coupon</span>
                 </Col>
               </Row>
               
@@ -61,7 +61,7 @@ function Discount() {
 
           <div id="description" className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-white">
 
-            <Row><Col><span className="Title-TAGH1-dark text-center p-3">From your desktop</span></Col></Row>
+            <Row><Col><span className="section-header-dark text-center p-3">From your desktop</span></Col></Row>
             
             
             
@@ -72,7 +72,7 @@ function Discount() {
                     <h1 className="text-muted">1.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="Title-TAGH2-dark"> Scan the QR Code</span>
+                    <span className="tag-h2-dark"> Scan the QR Code</span>
                   </Col>
 
                 </Row>
@@ -88,7 +88,7 @@ function Discount() {
                     <h1 className="text-muted">2.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="Title-TAGH2-dark"> Accept your certificate</span>
+                    <span className="tag-h2-dark"> Accept your certificate</span>
                   </Col>
 
                 </Row>

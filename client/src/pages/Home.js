@@ -11,30 +11,30 @@ import PassActivation from "../components/PassActivation";
 import { Link } from "react-router-dom";
 
 
-import bch01 from './img/background-cubes-hero.png';
-import bch02 from './img/background-cubes-hero@2x.png';
-import bch03 from './img/background-cubes-hero@3x.png';
-import phh03 from './img/Phone - home - hero@3x.png';
-import phh02 from './img/Phone - home - hero@2x.png';
-import phh01 from './img/Phone - home - hero.png';
-import gch01 from './img/Green cube hero - separation.png';
-import gch02 from './img/Green cube hero - separation@2x.png';
-import gch03 from './img/Green cube hero - separation@3x.png';
-import apl01 from './img/btn-mac-app-store.png';
-import apl02 from './img/btn-mac-app-store@2x.png';
-import apl03 from './img/btn-mac-app-store@3x.png';
-import goo01 from './img/btn-google-play.png';
-import goo02 from './img/btn-google-play@2x.png';
-import goo03 from './img/btn-google-play@3x.png';
-import dow01 from './img/Image phone - download app.png';
-import dow02 from './img/Image phone - download app@2x.png';
-import dow03 from './img/Image phone - download app@3x.png';
-import agn01 from './img/icon-how-to-generate-account.png';
-import agn02 from './img/icon-how-to-generate-account@2x.png';
-import agn03 from './img/icon-how-to-generate-account@3x.png';
-import are01 from './img/icon-how-to-recover-account.png';
-import are02 from './img/icon-how-to-recover-account@2x.png';
-import are03 from './img/icon-how-to-recover-account@3x.png';
+import bch01 from './img/home/background-cubes.webp';
+import bch02 from './img/home/background-cubes@2x.webp';
+import bch03 from './img/home/background-cubes@3x.webp';
+import phh03 from './img/home/phone-hero.svg';
+import phh02 from './img/home/phone-hero.svg';
+import phh01 from './img/home/phone-hero.svg';
+import gch01 from './img/home/green-hero.webp';
+import gch02 from './img/home/green-hero@2x.webp';
+import gch03 from './img/home/green-hero@3x.webp';
+import apl01 from './img/home/btn-mac-app-store.svg';
+import apl02 from './img/home/btn-mac-app-store.svg';
+import apl03 from './img/home/btn-mac-app-store.svg';
+import goo01 from './img/home/btn-google-play.svg';
+import goo02 from './img/home/btn-google-play.svg';
+import goo03 from './img/home/btn-google-play.svg';
+import dow01 from './img/home/phone-download.webp';
+import dow02 from './img/home/phone-download@2x.webp';
+import dow03 from './img/home/phone-download@3x.webp';
+import agn01 from './img/home/icon-how-to-generate-account.svg';
+import agn02 from './img/home/icon-how-to-generate-account.svg';
+import agn03 from './img/home/icon-how-to-generate-account.svg';
+import are01 from './img/home/icon-how-to-recover-account.svg';
+import are02 from './img/home/icon-how-to-recover-account.svg';
+import are03 from './img/home/icon-how-to-recover-account.svg';
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -42,82 +42,88 @@ function Home() {
   const [data, setData] = React.useState(null);
 
   React.useEffect(() => {
-    fetch(REACT_APP_NODE_LOCAL )
+    fetch(REACT_APP_NODE_LOCAL)
       .then((res) => res.json())
       .then((data) => setData(data.message));
   }, []);
 
   return (
     <div className="Home">
-      <main >
-        <Container >
-          <div className="position-relative p-3 p-md-5 m-md-3 align-items-center justify-content-center text-center Background-cubes---hero" >
+      <main>
+        <Container fluid className="position-relative" >
+          <div className="dark-blue-jumbo" >
 
-            <Row>
-              <Col lg={{ span: 6, offset: 2 }}>
-                <Row>
+            <Row className="text-left">
 
-                  <Col>
-                    <Image src={bch01} srcSet={`${bch02} 2x, ${bch03} 3x`} fluid className="img-banner"></Image>
-                    <span className="Title-TAGH1">Playground wallet</span>
-                  </Col>
-                </Row>
-                <Row>
-                  <Col>
-                    <span className="Description-TAGUI_L">Start a decentralized world journey</span>
-                  </Col>
-                </Row>
+              <Col sm={12} md={12} lg={12}>
+                <Image src={bch01} srcSet={`${bch02} 2x, ${bch03} 3x`} fluid className="img-banner p-2"></Image>
+                <span className="tag-h1">Playground wallet</span>
               </Col>
             </Row>
-            <Row className="align-items-center justify-content-center text-center Background-cubes---hero p-3">
-              <Col lg={{ span: 4, offset: 2 }}>
-                <p className="Title-TAGH2 ">Passport for a decentralized world</p>
-                <p className="Title-TAGH3" >Talao provides protocols, wallets and innovative decentralized tools to allow businesses to offer customers and avatars services based on their identity, their reputation, their community  and their digital assets.</p>
-
+            <Row>
+              <Col sm={12} md={12} lg={12}>
+                <span className="subtitle-colored">Start a decentralized world journey</span>
               </Col>
-              <Col xs={12} md={12} lg={{ span: 6 }} >
+            </Row>
+            <Row>
+              <Col sm={12} md={12} lg={6}>
+                <p className="tag-h2 paragraph">Passport for a decentralized world</p>
+                <p className="tag-h3" >Talao provides protocols, wallets and innovative decentralized tools to allow businesses to offer customers and avatars services based on their identity, their reputation, their community  and their digital assets.</p>
+              </Col>
+              
+            </Row>
+       
 
+
+          </div>
+          <div>
+          <Row >
+              <Col sm={12} md={12} lg={{ span: 4, offset: 4 }} className="text-center">
+
+                <Image src={gch01} srcSet={`${gch02} 2x, ${gch03} 3x`} className="title-separator" fluid></Image>
+              </Col>
+              <Col sm={12} md={12} lg={4} className="text-center">
                 <Image src={phh01} srcSet={`${phh02} 2x, ${phh03} 3x`} className="img-phone" fluid></Image>
 
               </Col>
+
             </Row>
             <Row >
-              <Col>
+              <Col sm={12} md={12} lg={12} className="text-center">
 
-                <Image src={gch01} srcSet={`${gch02} 2x, ${gch03} 3x`} className="img-separator" fluid></Image>
+                <Image src={gch01} srcSet={`${gch02} 2x, ${gch03} 3x`} className="title-separator-alt" fluid></Image>
               </Col>
-
             </Row>
-
           </div>
 
-          <div className="position-relative p-3 p-md-5 m-md-3 overflow-hidden align-items-center justify-content-center text-center after-separator">
+         
+
+          <div className="text-center">
             <Row>
               <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
                 <br />
-                <span className="Title-TAGH1-dark">Download app</span>
+                <span className="section-header-dark">Download app</span>
                 <br />
-                <span className="Description-TAGUI_L-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</span>
-                <br />
+               
 
               </Col>
 
             </Row>
           </div>
 
-          <div className="position-relative overflow-hidden align-items-center justify-content-center text-center">
+          <div className="text-center">
             <Row>
               <Col xs={12} md={12} lg={{ span: 2, offset: 4 }}>
-                <Image src={goo01} srcSet={`${goo02} 2x, ${goo03} 3x`} className="btn-google-play" fluid></Image>
+                <a target="_blank" href="https://play.google.com/store/apps/details?id=co.talao.wallet"><Image src={goo01} srcSet={`${goo02} 2x, ${goo03} 3x`} className="btn-google-play" fluid></Image></a>
               </Col>
               <Col xs={12} md={12} lg={{ span: 2 }}>
 
-                <Image src={apl01} srcSet={`${apl02} 2x, ${apl03} 3x`} className="btn-mac-app-store" fluid ></Image>
+                <a target="_blank" href="https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone"><Image src={apl01} srcSet={`${apl02} 2x, ${apl03} 3x`} className="btn-mac-app-store" fluid ></Image></a>
               </Col>
             </Row>
             <Row>
               <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
-                <Image src={dow01} srcSet={`${dow02} 2x, ${dow03} 3x`} className="Image-phone---download-app" fluid></Image>
+                <Image src={dow01} srcSet={`${dow02} 2x, ${dow03} 3x`} className="phone-download" fluid></Image>
               </Col>
             </Row>
             <Row>
@@ -138,7 +144,6 @@ function Home() {
           <PassActivation />
           <UseCases />
           <ManageStrip />
-          <p>{!data ? "Loading..." : data}</p>
         </Container>
 
       </main>

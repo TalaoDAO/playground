@@ -45,7 +45,7 @@ function University() {
                 <Modal show={show} onHide={handleClose} className="p-4 align-items-center justify-content-center text-center">
 
                   <Modal.Body>
-                      <span className="Title-TAGH2">Scan with your mobile wallet</span>
+                      <span className="tag-h2">Scan with your mobile wallet</span>
                       <LoginForm next="/uni-account"/>
 
                   </Modal.Body>
@@ -59,7 +59,7 @@ function University() {
                 <Image src={uni_banner_1} srcSet={`${uni_banner_2} 2x, ${uni_banner_3} 3x`} className="img-fit" fluid></Image>
               </Col>
               <Col xs={12} md={12} lg={6}>
-                <span className="Title-TAGH1 text-left p-3">University of Web Design</span>
+                <span className="tag-h1 text-left p-3">University of Web Design</span>
               </Col>
             </Row>
 

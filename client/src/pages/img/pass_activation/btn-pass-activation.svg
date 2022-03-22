@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="244" height="72" viewBox="0 0 244 72">
+    <g data-name="Area [DISPLAY_ELEMENTS:Label][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE1]" style="stroke:#fff;stroke-width:4px;fill:none">
+        <rect width="244" height="72" rx="10" style="stroke:none"/>
+        <rect x="2" y="2" width="240" height="68" rx="8" style="fill:none"/>
+    </g>
+    <path d="M13 3h-2v10h2zm4.83 2.17-1.42 1.42A6.92 6.92 0 0 1 19 12 7 7 0 1 1 7.58 6.58L6.17 5.17A8.992 8.992 0 1 0 21 12a8.932 8.932 0 0 0-3.17-6.83z" transform="translate(190 23)" style="fill:#fff"/>
+    <text transform="translate(31 42)" style="font-size:16px;font-family:NotoSans-Bold,Noto Sans;font-weight:700;fill:#fff"><tspan x="0" y="0">PASS ACTIVATION</tspan></text>
+</svg>

@@ -40,7 +40,7 @@ function Generate() {
 
                             <Row >
                                 <Col style={{ marginTop: "100px", marginBottom: "100px" }}>
-                                    <span className="Title-TAGH1 text-center">Generate your account</span>
+                                    <span className="tag-h1 text-center">Generate your account</span>
                                 </Col>
 
                             </Row>
@@ -59,13 +59,13 @@ function Generate() {
                             <Col xs={12} md={12} lg={{ span: 5 }} >
                                 <Row >
                                     <Col >
-                                        <span className="Title-TAGH2-dark">Reset Wallet</span>
+                                        <span className="tag-h2-dark">Reset Wallet</span>
                                     </Col>
 
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <span className="Description-TAGUI_L-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
+                                        <span className="subtitle-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
                                     </Col>
 
                                 </Row>
@@ -79,13 +79,13 @@ function Generate() {
                                     <Col xs={12} md={12} lg={{ span: 5, offset: 1 }} >
                                         <Row >
                                             <Col >
-                                                <span className="Title-TAGH2-dark">Save your phrase for recovery</span>
+                                                <span className="tag-h2-dark">Save your phrase for recovery</span>
                                             </Col>
 
                                         </Row>
                                         <Row>
                                             <Col>
-                                                <span className="Description-TAGUI_L-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
+                                                <span className="subtitle-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
                                             </Col>
 
                                         </Row>
@@ -107,13 +107,13 @@ function Generate() {
                             <Col xs={12} md={12} lg={{ span: 5 }} >
                                 <Row >
                                     <Col >
-                                        <span className="Title-TAGH2-dark">Start using your wallet</span>
+                                        <span className="tag-h2-dark">Start using your wallet</span>
                                     </Col>
 
                                 </Row>
                                 <Row>
                                     <Col>
-                                        <span className="Description-TAGUI_L-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
+                                        <span className="subtitle-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
                                     </Col>
 
                                 </Row>

@@ -1,69 +1,80 @@
 import React from 'react';
 
 import {
-    Container, Image, Row, Col, Button
+  Container, Image, Row, Col, Button
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 
 
-import gys01 from '../pages/img/Green + yellow cube -  separation.png';
-import gys02 from '../pages/img/Green + yellow cube -  separation@2x.png';
-import gys03 from '../pages/img/Green + yellow cube -  separation@3x.png';
-import pow01 from '../pages/img/icon-btn-learn-more-pass-activation.png';
-import pow02 from '../pages/img/icon-btn-learn-more-pass-activation@2x.png';
-import pow03 from '../pages/img/icon-btn-learn-more-pass-activation@3x.png';
-import aps01 from '../pages/img/Wallet - Activation pass section.png';
-import aps02 from '../pages/img/Wallet - Activation pass section@2x.png';
-import aps03 from '../pages/img/Wallet - Activation pass section@3x.png';
-import ycs01 from '../pages/img/Yellow cube small - separation.png';
-import ycs02 from '../pages/img/Yellow cube small - separation@2x.png';
-import ycs03 from '../pages/img/Yellow cube small - separation@3x.png';
+import gys01 from '../pages/img/pass_activation/green-yellow-separator.webp';
+import gys02 from '../pages/img/pass_activation/green-yellow-separator@2x.webp';
+import gys03 from '../pages/img/pass_activation/green-yellow-separator@3x.webp';
+import gch01 from '../pages/img/home/green-hero.webp';
+import gch02 from '../pages/img/home/green-hero@2x.webp';
+import gch03 from '../pages/img/home/green-hero@3x.webp';
+
+import btnpass from '../pages/img/pass_activation/btn-pass-activation.svg';
+
+import aps01 from '../pages/img/pass_activation/wallet-pass-activation.svg';
+import aps02 from '../pages/img/pass_activation/wallet-pass-activation.svg';
+import aps03 from '../pages/img/pass_activation/wallet-pass-activation.svg';
+import ycs01 from '../pages/img/pass_activation/yellow-separator.webp';
+import ycs02 from '../pages/img/pass_activation/yellow-separator@2x.webp';
+import ycs03 from '../pages/img/pass_activation/yellow-separator@3x.webp';
 
 
 const PassActivation = () => (
-    <div className="PassActivation p-3 mb-2">
-        <Container>
-            <Row className="align-items-center justify-content-center text-center ">
-              <Col xs md lg={{ span: 12 }}>
+  <div className="PassActivation">
+    <Container  fluid>
+      <Row className="text-center">
+        <Col xs={12} md={12} lg={12}>
+          <Image src={gys01} srcSet={`${gys02} 2x, ${gys03} 3x`} className="seperation-stripe" fluid></Image>
+        </Col>
+      </Row>
+      <Row className="text-center ">
+        <Col xs={12} md={12} lg={12}>
+          <Image src={gch01} srcSet={`${gch02} 2x, ${gch03} 3x`} className="seperation-stripe-alt" fluid></Image>
+        </Col>
+      </Row>
+      <Row className="dark-blue-section text-center">
+        <Col xs={12} md={12} lg={{ span: 6 }}>
+          <Image src={aps01} srcSet={`${aps02} 2x, ${aps03} 3x`} className="activation-pass-wallet" fluid></Image>
+        </Col>
+        <Col xs={12} md={12} lg={{ span: 6 }}>
+          <Row>
+            <Col xs={12} md={12} lg={12}>
 
-                <Image src={gys01} srcSet={`${gys02} 2x, ${gys03} 3x`} className="seperation-stripe" fluid></Image>
+              <div className="title-yellow-sec">Pass Activation</div>
+            </Col>
 
-              </Col>
-            </Row>
-            <Row className="Trac-141-row align-items-center justify-content-center text-center">
-              <Col xs md lg={{ span: 6 }}>
-                <Image src={aps01} srcSet={`${aps02} 2x, ${aps03} 3x`} className="Wallet---Activation-pass-section" fluid></Image>
-              </Col>
-              <Col xs md lg={{ span: 6 }}>
-                <Row>
-                  <span className="Title-yellow ">Pass Activation</span>
+          </Row>
+          <Row>
+            <Col xs={12} md={12} lg={12}>
+              <Image src={aps01} srcSet={`${aps02} 2x, ${aps03} 3x`} className="activation-pass-wallet-alt" fluid></Image>
+            </Col>
+          </Row>
 
-                </Row>
-                <Row>
-                  <span className="Title-TAGH3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
+          <Row className="shifting-content-location">
+            <Col xs={12} md={12} lg={12} >
+              <Link to="/activation" ><Image src={btnpass} className="btn-learn-more" fluid></Image></Link>
+            </Col>
 
-                </Row>
-                <Row style={{ paddingTop: "30px" }}>
-                  <div className="btn-learn-more">
-                    <Link to="/activation" className="white-label">LEARN MORE <Image  fluid src={pow01} srcSet={`${pow02} 2x, ${pow03} 3x`} className="icon-btn-learn-more"></Image>
-                  </Link>
-                  </div>
-                        
-                </Row>
-              </Col>
-            </Row>
-            <Row className="align-items-center justify-content-center text-center">
-              <Col xs md lg={{ span: 12 }}>
-                <Image src={ycs01} srcSet={`${ycs02} 2x, ${ycs03} 3x`} className="separator-bottom "  fluid></Image>
 
-              </Col>
-            </Row>
-            
+          </Row>
+        </Col>
+      </Row>
+      <Row className="text-center">
+        <Col xs={12} md={12} lg={12} >
+          <Image src={ycs01} srcSet={`${ycs02} 2x, ${ycs03} 3x`} className="separator-bottom" fluid></Image>
 
-        </Container>
+        </Col>
+      </Row>
 
-    </div>
+
+    </Container>
+
+  </div>
 );
 
 export default PassActivation;

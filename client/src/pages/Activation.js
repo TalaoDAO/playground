@@ -52,12 +52,12 @@ function Activation() {
 
               <Row>
                 <Col>
-                <span className="Title-TAGH1 text-center p-3">Activate your pass</span>
+                <span className="tag-h1 text-center p-3">Activate your pass</span>
                 </Col>
               </Row>
               <Row>
                 <Col>
-                <span className="Title-TAGH3 text-center p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
+                <span className="tag-h3 text-center p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
                 </Col>
               </Row>
               <Row className='p-5'>
@@ -77,7 +77,7 @@ function Activation() {
 
           <div id="description" className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-white">
 
-            <Row><Col><span className="Title-TAGH1-dark text-center p-3">From your desktop</span></Col></Row>
+            <Row><Col><span className="section-header-dark text-center p-3">From your desktop</span></Col></Row>
 
 
             <Row className="position-relative overflow-hidden p-2 p-md-4 m-md-2">
@@ -87,7 +87,7 @@ function Activation() {
                     <h1 className="text-muted">1.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="Title-TAGH2-dark"> Enter your information</span>
+                    <span className="tag-h2-dark"> Enter your information</span>
                   </Col>
                 </Row>
                 <Row>
@@ -109,7 +109,7 @@ function Activation() {
                   </Col>
                   <Col className="text-start">
 
-                    <span className="Title-TAGH2-dark"> Enter your code</span>
+                    <span className="tag-h2-dark"> Enter your code</span>
                   </Col>
                 </Row>
                 <Row>
@@ -132,7 +132,7 @@ function Activation() {
                     <h1 className="text-muted">3.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="Title-TAGH2-dark"> Scan with your mobile wallet</span>
+                    <span className="tag-h2-dark"> Scan with your mobile wallet</span>
                   </Col>
 
                 </Row>
@@ -148,7 +148,7 @@ function Activation() {
                     <h1 className="text-muted">4.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="Title-TAGH2-dark"> Accept your certificate</span>
+                    <span className="tag-h2-dark"> Accept your certificate</span>
                   </Col>
 
                 </Row>

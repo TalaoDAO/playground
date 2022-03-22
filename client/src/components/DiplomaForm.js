@@ -146,7 +146,7 @@ class DiplomaForm extends React.Component {
                     
                     <Row>
                     <Col>
-                        <span className="Title-TAGH2">The certificate was added succesfully</span>
+                        <span className="tag-h2">The certificate was added succesfully</span>
                     </Col>
                 </Row>    
                 <Row>

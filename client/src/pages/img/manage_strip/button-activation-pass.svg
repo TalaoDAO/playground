@@ -1,0 +1,8 @@
+<svg data-name="PLAY - Btn - Activatio pass" xmlns="http://www.w3.org/2000/svg" width="211" height="72" viewBox="0 0 211 72">
+    <g data-name="Area [DISPLAY_ELEMENTS:Label][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE1]" style="stroke:#fff;stroke-width:4px;fill:none">
+        <rect width="211" height="72" rx="10" style="stroke:none"/>
+        <rect x="2" y="2" width="207" height="68" rx="8" style="fill:none"/>
+    </g>
+    <text transform="translate(42 42)" style="font-size:16px;font-family:NotoSans-Bold,Noto Sans;font-weight:700;fill:#fff"><tspan x="0" y="0">LEARN MORE</tspan></text>
+    <path d="M12.638 8.634a4.166 4.166 0 0 0 0-1.184l1.275-1a.3.3 0 0 0 .073-.387l-1.208-2.09a.3.3 0 0 0-.369-.133l-1.5.6a4.414 4.414 0 0 0-1.021-.592l-.23-1.6A.3.3 0 0 0 9.357 2H6.941a.3.3 0 0 0-.3.254l-.23 1.6a4.642 4.642 0 0 0-1.021.592l-1.5-.6a.3.3 0 0 0-.369.133L2.313 6.066a.3.3 0 0 0 .073.387l1.275 1a4.791 4.791 0 0 0-.042.592 4.791 4.791 0 0 0 .042.592l-1.275 1a.3.3 0 0 0-.073.387l1.208 2.09a.3.3 0 0 0 .369.133l1.5-.6a4.414 4.414 0 0 0 1.021.592l.23 1.6a.3.3 0 0 0 .3.254h2.416a.3.3 0 0 0 .3-.254l.23-1.6a4.642 4.642 0 0 0 1.021-.592l1.5.6a.3.3 0 0 0 .369-.133l1.208-2.09a.3.3 0 0 0-.073-.387zm-4.489 1.522a2.115 2.115 0 1 1 2.115-2.115 2.117 2.117 0 0 1-2.115 2.115z" transform="translate(155.163 28.769)" style="fill:#fff"/>
+</svg>
