@@ -55,10 +55,10 @@ function Manage() {
                     </Col>
                 </Row>
                 <Row className="text-center">
-                <Col xs={12} md={12} lg={12} >
-                    <div className="vertical-line"></div>
+                    <Col xs={12} md={12} lg={12} >
+                        <div className="vertical-line"></div>
 
-                </Col>
+                    </Col>
                 </Row>
 
 
