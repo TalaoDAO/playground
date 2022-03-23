@@ -7,6 +7,7 @@ import {
 import sucess_img from '../pages/img/success.png';
 
 import QRCode from "react-qr-code";
+import { Link } from 'react-router-dom';
 const fetch = require("cross-fetch");
 var W3CWebSocket = require('websocket').w3cwebsocket;
 
@@ -158,7 +159,7 @@ class ActivationForm extends React.Component {
                             <Form.Control required type="text" name="code" value={this.state.code} onChange={this.handleChange} />
                         </Form.Group>
 
-                        <Button className="mb-3 btn-dark-submit" variant="primary" type="submit">
+                        <Button className="btn-dark-submit lower" variant="primary" type="submit">
                             Submit
                         </Button>
 
@@ -169,8 +170,14 @@ class ActivationForm extends React.Component {
         } else if (this.state.phase == 2) {
             return (
                 <div id="user-form">
-                    <p className="subtitle-dark">Scan the QR with your mobile wallet</p>
-                    <QRCode value={REACT_APP_QR_URL + "/email/" + this.state.challenge} size={128} />
+                    <div className='lg-only'>
+                        <p className="subtitle-dark">Scan the QR with your mobile wallet</p>
+                        <QRCode value={REACT_APP_QR_URL + "/email/" + this.state.challenge} size={128} />
+
+                    </div>
+                    <div className='sm-only'>
+                        <Button className="btn-dark-submit " variant="primary"  href={'https://talao.co/app/download?uri=' + encodeURIComponent(REACT_APP_QR_URL + "/email/" + this.state.challenge)}>Click to add to wallet</Button>
+                    </div>
                 </div>
             );
         } else if (this.state.phase == 3) {
