@@ -16,7 +16,7 @@ import news_rb from './img/news-right-bottom.png';
 import news_dis from './img/news-discount.png';
 
 
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
+const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WALLET_LINK } = process.env;
 
 function DiscountDemo() {
   const [qr, setQr] = React.useState(null);
@@ -58,7 +58,12 @@ function DiscountDemo() {
                 </Col>
 
                 <Col xs={12} md={12} lg={6} style={{ textAlign: "center" }}>
-                  <QRCode value={REACT_APP_QR_URL + "/discount-offer"} size={128} />
+                  <div className="lg-only">
+                      <QRCode value={REACT_APP_QR_URL + "/discount-offer"} size={128} />
+                    </div>
+                    <div className="sm-only">
+                        <Button className="btn-dark-submit " variant="primary"  href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/discount-offer")}>Click to add to wallet</Button>
+                    </div>
                 </Col>
               </Row>
               <Row>

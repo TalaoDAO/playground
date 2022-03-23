@@ -13,7 +13,7 @@ import {useNavigate} from 'react-router-dom';
 
 var W3CWebSocket = require('websocket').w3cwebsocket;
 
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = process.env;
+const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER,REACT_APP_WALLET_LINK } = process.env;
 
 
 async function issueLoginChallenge() {
@@ -125,7 +125,12 @@ function LoginForm(props) {
             } else {
                 return (
                     <div id="login-form">
-                        <QRCode value={REACT_APP_QR_URL + "/authentication/" + loginChallenge} size={128} />
+                        <div className="lg-only">
+                            <QRCode value={REACT_APP_QR_URL + "/authentication/" + loginChallenge} size={128} />
+                        </div>
+                        <div className="sm-only">
+                            <Button className="btn-dark-submit " variant="primary"  href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/authentication/" + loginChallenge)}>Click to login with wallet</Button>
+                        </div>
                     </div>
                 );
             }

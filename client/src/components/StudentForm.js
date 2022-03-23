@@ -8,7 +8,7 @@ import sucess_img from '../pages/img/success.png';
 import QRCode from "react-qr-code";
 var W3CWebSocket = require('websocket').w3cwebsocket;
 
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = process.env;
+const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER,REACT_APP_WALLET_LINK } = process.env;
 
 async function submitStudent(values) {
     return fetch(REACT_APP_NODE_LOCAL + '/create-student', {
@@ -133,7 +133,12 @@ class StudentForm extends React.Component {
         } else if (this.state.phase == 1) {
             return (
                 <div id="diploma-form">
-                    <QRCode value={REACT_APP_QR_URL + "/student/" + this.state.result} size={128} />
+                    <div className="lg-only">
+                        <QRCode value={REACT_APP_QR_URL + "/student/" + this.state.result} size={128} />
+                    </div>
+                    <div className="sm-only">
+                        <Button className="btn-dark-submit " variant="primary"  href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/student/" + this.state.result)}>Click to add to wallet</Button>
+                    </div>
                 </div>
             );
         } else if (this.state.phase == 2) {
