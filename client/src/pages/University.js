@@ -29,47 +29,46 @@ function University() {
   const handleShow = () => setShow(true);
 
   return (
-    <div className="University">
       <main >
-        <Container>
+        <Container fluid>
+          <Row className="">
+            <Col xs={{offset:1,span:10 }} md={{offset:1,span:10 }} lg={{offset:1,span:10 }} className="azure-container content-padded-uni">
+            <Row >
+              <Col xs={12} md={12} lg={10} className="text-left " >
 
-          <div className="azure-container p-3">
-            <Row className="azure-container">
-              <Col xs={8} md={8} lg={8} style={{ textAlign: "left" }} className="p-4 azure-container">
-
-                <Image src={uni_logo_1} srcSet={`${uni_logo_2} 2x, ${uni_logo_3} 3x`} className="img-scale" fluid></Image>
+                <Image src={uni_logo_1} srcSet={`${uni_logo_2} 2x, ${uni_logo_3} 3x`} className="img-scale " fluid></Image>
 
               </Col>
-              <Col style={{ textAlign: "right" }} xs={4} md={4} lg={4} className="p-4 azure-container" >
+              <Col xs={12} md={12} lg={2}  className="text-center">
                 <Button variant="btn btn-danger" onClick={handleShow}>My Account</Button>
-                <Modal show={show} onHide={handleClose} className="p-4 align-items-center justify-content-center text-center">
+                <Modal show={show} onHide={handleClose} className="text-center">
 
                   <Modal.Body>
-                      <span className="tag-h2">Scan with your mobile wallet</span>
+                      <div className="subtitle-dark">Scan with your mobile wallet</div>
                       <LoginForm next="/uni-account"/>
 
                   </Modal.Body>
 
               </Modal>
 
+
               </Col>
             </Row>
-            <Row className="p-5 align-items-center justify-content-left text-left azure-container" style={{padding:"200px"}}>
-              <Col xs={12} md={12} lg={6}>
-                <Image src={uni_banner_1} srcSet={`${uni_banner_2} 2x, ${uni_banner_3} 3x`} className="img-fit" fluid></Image>
+            <Row >
+              <Col xs={12} md={12} lg={6}  className="text-center lower">
+                <Image src={uni_banner_1} srcSet={`${uni_banner_2} 2x, ${uni_banner_3} 3x`}  fluid></Image>
               </Col>
-              <Col xs={12} md={12} lg={6}>
-                <span className="tag-h1 text-left p-3">University of Web Design</span>
+              <Col xs={12} md={12} lg={6} className="text-center lower">
+                <div className="title-white">University of Web Design</div>
               </Col>
             </Row>
+            </Col>
+          </Row>
 
-          </div>
-
-
+          
         </Container>
 
       </main>
-    </div>
   );
 }
 

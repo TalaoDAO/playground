@@ -3,9 +3,8 @@ import "../App.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-    Container, Button, Row, Col, Card, Image, Modal
+    Container, Button, Row, Col, Image, Modal, Accordion, ListGroup
 } from 'react-bootstrap';
-
 
 import uni_logo_1 from './img/university/university-logo.png';
 import uni_logo_2 from './img/university/university-logo@2x.png';
@@ -15,43 +14,23 @@ import acc_tools_1 from './img/university/account-tools.png';
 import acc_tools_2 from './img/university/account-tools@2x.png';
 import acc_tools_3 from './img/university/account-tools@3x.png';
 
-
-import acc_left_1 from './img/university/account-left.png';
-import acc_left_2 from './img/university/account-left@2x.png';
-import acc_left_3 from './img/university/account-left@3x.png';
-
-
-import uni_action_1 from './img/university/university-action.png';
-import uni_action_2 from './img/university/university-action@2x.png';
-import uni_action_3 from './img/university/university-action@3x.png';
-
-import uni_todo_1 from './img/university/university-todo.png';
-import uni_todo_2 from './img/university/university-todo@2x.png';
-import uni_todo_3 from './img/university/university-todo@3x.png';
+import icon_profile from './img/university/profile.svg';
+import icon_messages from './img/university/messages.svg';
+import icon_calendar from './img/university/calendar.svg';
+import icon_files from './img/university/files.svg';
+import icon_dashboard from './img/university/dashboard.svg';
+import icon_oval from './img/university/Oval.svg';
+import icon_arrow from './img/university/ic_arrow_forward_24px.svg';
 
 
-import uni_cal_1 from './img/university/university-calendar.png';
-import uni_cal_2 from './img/university/university-calendar@2x.png';
-import uni_cal_3 from './img/university/university-calendar@3x.png';
-
-
-import uni_msg_1 from './img/university/university-message.png';
-import uni_msg_2 from './img/university/university-message@2x.png';
-import uni_msg_3 from './img/university/university-message@3x.png';
-
-import uni_std_1 from './img/university/university-students.png';
-import uni_std_2 from './img/university/university-students@2x.png';
-import uni_std_3 from './img/university/university-students@3x.png';
-
-import { Link } from 'react-router-dom';
-import QRCode from "react-qr-code";
 import DiplomaForm from "../components/DiplomaForm";
 import StudentForm from "../components/StudentForm";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import Calendar from 'react-calendar';
+import 'react-calendar/dist/Calendar.css';
 
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
-
 
 
 function UniversityAccount() {
@@ -77,115 +56,529 @@ function UniversityAccount() {
 
 
     return (
-        <div className="UniversityAccount">
-            <main >
-                <Container>
+        <main >
+            <Container fluid>
+                <Row className="">
+                    <Col xs={{ offset: 1, span: 10 }} md={{ offset: 1, span: 10 }} lg={{ offset: 1, span: 10 }} className="azure-container content-padded-uni">
+                        <Row>
+                            <Col xs={12} md={12} lg={9} className="text-left">
 
-                    <div className="azure-container">
-                        <Row className="azure-container">
-                            <Col xs={8} md={8} lg={8} style={{ textAlign: "left" }} className="p-4 azure-container">
-
-                                <Image src={uni_logo_1}  srcSet={`${uni_logo_2} 2x, ${uni_logo_3} 3x`} className="img-scale" fluid></Image>
+                                <Image src={uni_logo_1} srcSet={`${uni_logo_2} 2x, ${uni_logo_3} 3x`} className="img-fit"  fluid></Image>
 
                             </Col>
-                            <Col style={{ textAlign: "right" }} xs={4} md={4} lg={4} className="p-4 azure-container" >
-                                <Image src={acc_tools_1} srcSet={`${acc_tools_2} 2x, ${acc_tools_3} 3x`}  className="img-scale" fluid></Image>
+                            <Col xs={12} md={12} lg={3} className="text-center">
+                                <Image src={acc_tools_1} srcSet={`${acc_tools_2} 2x, ${acc_tools_3} 3x`} className="img-fit" fluid></Image>
 
                             </Col>
                         </Row>
-                        <Row className="align-items-top justify-content-left text-left azure-container">
-                            <Col xs={12} md={12} lg={3}  >
-                                <Image src={acc_left_1}  srcSet={`${acc_left_2} 2x, ${acc_left_3} 3x`} className="img-scale" fluid></Image>
+                        <Row >
+                            <Col xs={12} md={12} lg={3} className="lower">
+                                <Accordion defaultActiveKey="0" flush className="lg-only">
+                                    <Accordion.Item eventKey="0" className="bg-white">
+                                        <Accordion.Header className="bg-white">
+                                        <Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp; {(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
+                                        </Accordion.Header>
+                                        <Accordion.Body className="accordion-double">
+                                            <ListGroup className="border-0" flush>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row>
+                                                        <Col xs md lg={12} className="text-left">
+                                                            <Image src={icon_dashboard} className="menu-icon" fluid></Image>&nbsp;
+                                                            Dashboard&nbsp;
+
+                                                        </Col>
+                                                    </Row>
+                                                    
+                                                    </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row className="text-left">
+                                                        <Col xs md lg={8} className="text-left">
+                                                            <Image src={icon_files} className="menu-icon" fluid></Image>&nbsp;
+                                                            Documents&nbsp;
+
+                                                        </Col>
+                                                        <Col xs md lg={{offset:1, span:3}} className="text-right">
+                                                            <Image src={icon_arrow} className="menu-icon text-right" fluid></Image>
+
+                                                        </Col>
+                                                    </Row>
+                                               
+                                                    </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row>
+                                                        <Col xs md lg={12} className="text-left">
+                                                            <Image src={icon_calendar} className="menu-icon" fluid></Image>&nbsp;
+                                                            Calendar&nbsp;
+
+                                                        </Col>
+                                                    </Row>
+                                                    </ListGroup.Item>
+                                                    <ListGroup.Item className="border-0">
+                                                    <Row>
+                                                        <Col xs md lg={12} className="text-left">
+                                                            <Image src={icon_messages} className="menu-icon" fluid></Image>&nbsp;
+                                                            Messages&nbsp;
+
+                                                        </Col>
+                                                    </Row>
+                                                    </ListGroup.Item>
+                                            </ListGroup>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
+                                <Accordion flush className="sm-only">
+                                    <Accordion.Item eventKey="0">
+                                    <Accordion.Header className="bg-white"><Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp;{(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}</Accordion.Header>
+                                        <Accordion.Body>
+                                        <ListGroup className="border-0" flush>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row>
+                                                        <Col xs md lg={12} className="text-left">
+                                                            <Image src={icon_dashboard} className="menu-icon" fluid></Image>&nbsp;
+                                                            Dashboard&nbsp;
+
+                                                        </Col>
+                                                    </Row>
+                                                    
+                                                    </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row className="text-left">
+                                                        <Col xs md lg={8} className="text-left">
+                                                            <Image src={icon_files} className="menu-icon" fluid></Image>&nbsp;
+                                                            Documents&nbsp;
+
+                                                        </Col>
+                                                        <Col xs md lg={{offset:1, span:3}} className="text-right">
+                                                            <Image src={icon_arrow} className="menu-icon text-right" fluid></Image>
+
+                                                        </Col>
+                                                    </Row>
+                                               
+                                                    </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row>
+                                                        <Col xs md lg={12} className="text-left">
+                                                            <Image src={icon_calendar} className="menu-icon" fluid></Image>&nbsp;
+                                                            Calendar&nbsp;
+
+                                                        </Col>
+                                                    </Row>
+                                                    </ListGroup.Item>
+                                                    <ListGroup.Item className="border-0">
+                                                    <Row>
+                                                        <Col xs md lg={12} className="text-left">
+                                                            <Image src={icon_messages} className="menu-icon" fluid></Image>&nbsp;
+                                                            Messages&nbsp;
+
+                                                        </Col>
+                                                    </Row>
+                                                    </ListGroup.Item>
+                                            </ListGroup>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
                             </Col>
-                            <Col xs={12} md={12} lg={3}>
-                            <Row>
-                                    <Col className="p-3" >
-                                        <Card className=''>
-                                            <Card.Header className="bg-white text-left">
-                                                <h4>Documents</h4>
-                                            </Card.Header>
-                                            <Card.Body>
-                                                <Row>
-                                                    <Col className="p-2align-items-center justify-content-center text-center">
-                                                        <Button variant="primary" onClick={handleShowDiploma}>Diploma</Button>
-                                                        <Modal show={showDiploma} onHide={handleCloseDiploma} className="align-items-center justify-content-center text-center">
-                                                            <Modal.Header closeButton>
-                                                                <Modal.Title>Download my diploma</Modal.Title>
-                                                            </Modal.Header>
-                                                            <Modal.Body>
-                                                                <DiplomaForm state={location.state}/>
-                                                            </Modal.Body>
-
-                                                        </Modal>
-                                                    </Col>
-
-
-                                                </Row>
-                                                <Row>
-                                                    <Col className="p-2">
-                                                        <Button variant="primary" onClick={handleShowStudent}>Student Card</Button>
-                                                        <Modal show={showStudent} onHide={handleCloseStudent} className="align-items-center justify-content-center text-center">
-                                                            <Modal.Header closeButton>
-                                                                <Modal.Title>Download my student card</Modal.Title>
-                                                            </Modal.Header>
-                                                            <Modal.Body>
-                                                                <StudentForm state={location.state}/>
-                                                            </Modal.Body>
-
-                                                        </Modal>
-                                                    </Col>
-
-                                                </Row>
-                                                <Row>
-                                                    <Col className="p-2">
-                                                        <Button className="btn" disabled>Inventore Veritatis</Button>
-                                                    </Col>
-
-                                                </Row>
-
-                                            </Card.Body>
-                                        </Card>
-
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col >
-                                        
-                                        <Image src={uni_todo_1}  srcSet={`${uni_todo_2} 2x, ${uni_todo_3} 3x`} className="img-scale" fluid></Image>
-                                    </Col>
-                                </Row>
-                            </Col>
-                            <Col xs={12} md={12} lg={3}>
-                                <Row>
-                                    <Col >
-                                        <Image src={uni_cal_1}  srcSet={`${uni_cal_2} 2x, ${uni_cal_3} 3x`} className="img-scale" fluid></Image>
-                                    </Col>
-                                </Row>
-                                <Row>
-                                    <Col >
-                                        
-                                        <Image src={uni_msg_1}  srcSet={`${uni_msg_2} 2x, ${uni_msg_3} 3x`} className="img-scale" fluid></Image>
-                                    </Col>
-                                </Row>
-                            </Col>
-                            <Col xs={12} md={12} lg={3} >
+                            <Col xs={12} md={12} lg={3} className="lower">
                                 <Row>
                                     <Col>
-                                        <Image src={uni_std_1}  srcSet={`${uni_std_2} 2x, ${uni_std_3} 3x`} className="img-scale" fluid></Image>
+                                        <Accordion defaultActiveKey="0" flush >
+                                            <Accordion.Item eventKey="0">
+                                                <Accordion.Header>Documents</Accordion.Header>
+                                                <Accordion.Body className="accordion-single">
+                                                    <Row className="lower">
+                                                        <Col className="text-center ">
+                                                            <Button variant="primary" className="action-button" onClick={handleShowDiploma}>Diploma</Button>
+                                                            <Modal show={showDiploma} onHide={handleCloseDiploma} className="align-items-center justify-content-center text-center">
+                                                                <Modal.Header closeButton>
+                                                                    <Modal.Title>Download my diploma</Modal.Title>
+                                                                </Modal.Header>
+                                                                <Modal.Body>
+                                                                    <DiplomaForm state={location.state} />
+                                                                </Modal.Body>
+
+                                                            </Modal>
+                                                        </Col>
+
+
+                                                    </Row>
+                                                    <Row className="lower">
+                                                        <Col>
+                                                            <Button variant="primary"  className="action-button"  onClick={handleShowStudent}>Student Card</Button>
+                                                            <Modal show={showStudent} onHide={handleCloseStudent} className="align-items-center justify-content-center text-center">
+                                                                <Modal.Header closeButton>
+                                                                    <Modal.Title>Download my student card</Modal.Title>
+                                                                </Modal.Header>
+                                                                <Modal.Body>
+                                                                    <StudentForm state={location.state} />
+                                                                </Modal.Body>
+
+                                                            </Modal>
+                                                        </Col>
+
+                                                    </Row>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
+                                    </Col>
+                                </Row>
+
+                                <Row className="lower">
+                                    <Col>
+                                        <Accordion defaultActiveKey="0" flush className="lg-only">
+                                            <Accordion.Item eventKey="0">
+                                                <Accordion.Header>To do list</Accordion.Header>
+                                                <Accordion.Body className="accordion-single">
+                                                    <ListGroup>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                    </ListGroup>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
+                                        <Accordion flush className="sm-only">
+                                            <Accordion.Item eventKey="0">
+                                                <Accordion.Header>To do list</Accordion.Header>
+                                                <Accordion.Body>
+                                                    <ListGroup>
+                                                    <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                    </ListGroup>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
                                     </Col>
                                 </Row>
                             </Col>
-                           
+                            <Col xs={12} md={12} lg={3} className="lower">
+                                <Row>
+                                    <Col>
+                                        <Accordion defaultActiveKey="0" flush className="lg-only">
+                                            <Accordion.Item eventKey="0">
+                                                <Accordion.Header>Calendar</Accordion.Header>
+                                                <Accordion.Body className="accordion-single"> 
+                                                    <Calendar/>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
+                                        <Accordion flush className="sm-only">
+                                            <Accordion.Item eventKey="0">
+                                                <Accordion.Header>Calendar</Accordion.Header>
+                                                <Accordion.Body>
+                                                    <Calendar className={['c1','c2']}/>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
+                                    </Col>
+                                </Row>
+                                <Row className="lower">
+                                    <Col>
+                                        <Accordion defaultActiveKey="0" flush className="lg-only">
+                                            <Accordion.Item eventKey="0">
+                                                <Accordion.Header>Messages</Accordion.Header>
+                                                <Accordion.Body className="accordion-single">
+                                                    <ListGroup>
+                                                    <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                    </ListGroup>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
+                                        <Accordion flush className="sm-only">
+                                            <Accordion.Item eventKey="0">
+                                                <Accordion.Header>Messages</Accordion.Header>
+                                                <Accordion.Body>
+                                                    <ListGroup>
+                                                    <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                        <ListGroup.Item className="border-0">
+                                                            <Row >
+                                                                <Col xs md lg={2}>
+                                                                    <div class="content-check-un"></div>
+                                                                </Col>
+                                                                <Col xs md lg={9}>
+                                                                    <div className="content-line"></div>
+                                                                </Col>
+                                                            </Row>
+                                                        </ListGroup.Item>
+                                                    </ListGroup>
+                                                </Accordion.Body>
+                                            </Accordion.Item>
+                                        </Accordion>
+                                    </Col>
+                                </Row>
+                                </Col>
+                            <Col xs={12} md={12} lg={3} className="lower">
+                                <Accordion defaultActiveKey="0" flush className="lg-only">
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header>Students</Accordion.Header>
+                                        <Accordion.Body className="accordion-double">
+                                            <ListGroup>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+
+                                            </ListGroup>
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
+                                <Accordion flush className="sm-only">
+                                    <Accordion.Item eventKey="0">
+                                        <Accordion.Header>Accordion Item #1</Accordion.Header>
+                                        <Accordion.Body>
+                                        <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs md lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs md lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+
+
+                                        </Accordion.Body>
+                                    </Accordion.Item>
+                                </Accordion>
+                            </Col>
                         </Row>
+                    </Col>
+                </Row>
 
-                    </div>
 
 
-                    <p>{!qr ? "Loading..." : qr}</p>
-                </Container>
+            </Container>
 
-            </main>
-        </div>
+        </main>
     );
 }
 
