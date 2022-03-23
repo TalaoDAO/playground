@@ -124,7 +124,6 @@ class ActivationForm extends React.Component {
                    <p className="subtitle-dark">Enter your information</p>
                     
                     <Form onSubmit={this.handleSubmit} >
-                        <p>{this.state.props}</p>
                         <Form.Group className="mb-3" controlId="formGivenName">
                             <Form.Label>Given Name</Form.Label>
                             <Form.Control required type="text" name="givenName" value={this.state.givenName} onChange={this.handleChange} />
@@ -140,8 +139,8 @@ class ActivationForm extends React.Component {
                             <Form.Control required type="text" name="email" value={this.state.email} onChange={this.handleChange} />
 
                         </Form.Group>
-                        <Button className="mb-3" variant="primary" type="submit">
-                            Submit
+                        <Button className="btn-dark-submit lower" variant="primary" type="submit">
+                            VALIDATE
                         </Button>
 
                     </Form>
@@ -159,7 +158,7 @@ class ActivationForm extends React.Component {
                             <Form.Control required type="text" name="code" value={this.state.code} onChange={this.handleChange} />
                         </Form.Group>
 
-                        <Button className="mb-3" variant="primary" type="submit">
+                        <Button className="mb-3 btn-dark-submit" variant="primary" type="submit">
                             Submit
                         </Button>
 

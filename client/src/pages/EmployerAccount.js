@@ -68,7 +68,7 @@ function EmployerAccount(props) {
                         </Row>
                         <Row >
                             <Col xs={12} md={12} lg={3} className="lower">
-                                <Accordion defaultActiveKey="0" flush className="lg-only">
+                                <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                     <Accordion.Item eventKey="0" className="bg-white">
                                         <Accordion.Header className="bg-white">
                                         <Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp; {(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
@@ -121,7 +121,7 @@ function EmployerAccount(props) {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>
-                                <Accordion flush className="sm-only">
+                                <Accordion flush className="sm-only shadow">
                                     <Accordion.Item eventKey="0">
                                     <Accordion.Header className="bg-white"><Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp;{(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}</Accordion.Header>
                                         <Accordion.Body>
@@ -176,7 +176,7 @@ function EmployerAccount(props) {
                             <Col xs={12} md={12} lg={3} className="lower">
                                 <Row>
                                     <Col>
-                                        <Accordion defaultActiveKey="0" flush >
+                                        <Accordion defaultActiveKey="0" flush className="shadow">
                                             <Accordion.Item eventKey="0">
                                                 <Accordion.Header>Documents</Accordion.Header>
                                                 <Accordion.Body className="accordion-single">
@@ -205,7 +205,7 @@ function EmployerAccount(props) {
 
                                 <Row className="lower">
                                     <Col>
-                                        <Accordion defaultActiveKey="0" flush className="lg-only">
+                                        <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                             <Accordion.Item eventKey="0">
                                                 <Accordion.Header>To do list</Accordion.Header>
                                                 <Accordion.Body className="accordion-single">
@@ -254,7 +254,7 @@ function EmployerAccount(props) {
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
-                                        <Accordion flush className="sm-only">
+                                        <Accordion flush className="sm-only shadow">
                                             <Accordion.Item eventKey="0">
                                                 <Accordion.Header>To do list</Accordion.Header>
                                                 <Accordion.Body>
@@ -309,7 +309,7 @@ function EmployerAccount(props) {
                             <Col xs={12} md={12} lg={3} className="lower">
                                 <Row>
                                     <Col>
-                                        <Accordion defaultActiveKey="0" flush className="lg-only">
+                                        <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                             <Accordion.Item eventKey="0">
                                                 <Accordion.Header>Calendar</Accordion.Header>
                                                 <Accordion.Body className="accordion-single"> 
@@ -317,7 +317,7 @@ function EmployerAccount(props) {
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
-                                        <Accordion flush className="sm-only">
+                                        <Accordion flush className="sm-only shadow">
                                             <Accordion.Item eventKey="0">
                                                 <Accordion.Header>Calendar</Accordion.Header>
                                                 <Accordion.Body>
@@ -329,7 +329,7 @@ function EmployerAccount(props) {
                                 </Row>
                                 <Row className="lower">
                                     <Col>
-                                        <Accordion defaultActiveKey="0" flush className="lg-only">
+                                        <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                             <Accordion.Item eventKey="0">
                                                 <Accordion.Header>Messages</Accordion.Header>
                                                 <Accordion.Body className="accordion-single">
@@ -378,7 +378,7 @@ function EmployerAccount(props) {
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
-                                        <Accordion flush className="sm-only">
+                                        <Accordion flush className="sm-only shadow">
                                             <Accordion.Item eventKey="0">
                                                 <Accordion.Header>Messages</Accordion.Header>
                                                 <Accordion.Body>
@@ -431,7 +431,7 @@ function EmployerAccount(props) {
                                 </Row>
                                 </Col>
                             <Col xs={12} md={12} lg={3} className="lower">
-                                <Accordion defaultActiveKey="0" flush className="lg-only">
+                                <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header>Users</Accordion.Header>
                                         <Accordion.Body className="accordion-double">
@@ -491,7 +491,7 @@ function EmployerAccount(props) {
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>
-                                <Accordion flush className="sm-only">
+                                <Accordion flush className="sm-only shadow">
                                     <Accordion.Item eventKey="0">
                                         <Accordion.Header>Accordion Item #1</Accordion.Header>
                                         <Accordion.Body>

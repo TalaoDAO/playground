@@ -21,27 +21,32 @@ function ActivationProcess() {
   return (
     <div className="PassActivation">
       <main >
-        <Container>
+        <Container fluid>
 
         <Row>
               <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
-                <br />
-                <span className="section-header-dark">Download app</span>
+                <Row>
+                  <Col>
+                    <div className="section-header-dark">Download app</div>
+                  </Col>
+                </Row>
+                
+                
                 <br />
                 
 
               </Col>
 
             </Row>
-            <Row className="  align-items-center justify-content-left text-left">
+            <Row className=" text-left">
 
-              <Col xs={12} md={12} lg={12}>
+              <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
 
 
-                <Card className=''>
+                <Card className='shadow'>
                   <Card.Body>
                     <Row>
-                      <Col className="align-items-center justify-content-center text-center">
+                      <Col className="text-center">
 
                         <ActivationForm />
 

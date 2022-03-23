@@ -360,6 +360,7 @@
 
   
   .uni-logo {
+    margin: 5px 5px 5px;
     height: 50px;
     object-fit: contain;
   }
@@ -369,7 +370,7 @@
     object-fit: contain;
   }
 
-  
+
   .content-padded-uni{
     padding: 10px;
 
@@ -731,6 +732,7 @@
 
   
   .uni-logo {
+    margin: 5px 5px 5px;
     height: 50px;
     object-fit: contain;
   }
@@ -1123,6 +1125,7 @@
   }
   
   .uni-logo {
+    margin: 5px 5px 5px;
     height: 50px;
     object-fit: contain;
   }
@@ -1510,6 +1513,7 @@
   }
 
   .uni-logo {
+    margin: 5px 5px 5px;
     height: 50px;
     object-fit: contain;
   }
@@ -1706,6 +1710,11 @@ img.follow-img {
   object-fit: contain;
 }
 
+.btn-dark-submit {  
+  width: 273px;
+  border-radius: 10px;
+  background-color: var(--dark-blue-grey);
+}
 
 /****************************************************/
 
