@@ -512,7 +512,7 @@ function UniversityAccount() {
                                 </Accordion>
                                 <Accordion flush className="sm-only shadow">
                                     <Accordion.Item eventKey="0">
-                                        <Accordion.Header>Accordion Item #1</Accordion.Header>
+                                        <Accordion.Header>Students</Accordion.Header>
                                         <Accordion.Body>
                                         <ListGroup.Item className="border-0">
                                                     <Row >

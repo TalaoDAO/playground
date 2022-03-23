@@ -493,7 +493,7 @@ function EmployerAccount(props) {
                                 </Accordion>
                                 <Accordion flush className="sm-only shadow">
                                     <Accordion.Item eventKey="0">
-                                        <Accordion.Header>Accordion Item #1</Accordion.Header>
+                                        <Accordion.Header>Users</Accordion.Header>
                                         <Accordion.Body>
                                         <ListGroup.Item className="border-0">
                                                     <Row >
