@@ -12,7 +12,7 @@ const fetch = require("cross-fetch");
 var W3CWebSocket = require('websocket').w3cwebsocket;
 
 
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER } = process.env;
+const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WEBSOCKET_SERVER, REACT_APP_WALLET_LINK } = process.env;
 
 async function submitUser(values) {
     return fetch(REACT_APP_NODE_LOCAL + '/create-user', {
@@ -176,7 +176,7 @@ class ActivationForm extends React.Component {
 
                     </div>
                     <div className='sm-only'>
-                        <Button className="btn-dark-submit " variant="primary"  href={'https://talao.co/app/download?uri=' + encodeURIComponent(REACT_APP_QR_URL + "/email/" + this.state.challenge)}>Click to add to wallet</Button>
+                        <Button className="btn-dark-submit " variant="primary"  href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/email/" + this.state.challenge)}>Click to add to wallet</Button>
                     </div>
                 </div>
             );
