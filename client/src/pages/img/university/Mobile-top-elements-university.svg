@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="139.955" height="37.01" viewBox="0 0 139.955 37.01">
+    <circle data-name="Ellipse 7" cx="18.505" cy="18.505" r="18.505" style="fill:#fff"/>
+    <path data-name="search" d="M466.633 1032.618a6.722 6.722 0 1 0-1.011-1.011l-7.313 7.313 1.011 1.01zm4.211-10.5a5.281 5.281 0 1 1-5.281 5.281 5.287 5.287 0 0 1 5.281-5.283z" transform="translate(-449.635 -1012.011)" style="fill:#d0dbe5"/>
+    <g transform="translate(51.473)">
+        <circle data-name="Ellipse 8" cx="18.505" cy="18.505" r="18.505" style="fill:#fff"/>
+        <path data-name="notifications" d="M731.2 1825.2v2.276a6 6 0 0 0-4.8 6.126v3.062a4.559 4.559 0 0 1-1.871 4.059l-1.474 1.235h6.175a2.717 2.717 0 0 0 5.414 0h6.176l-1.475-1.235a4.56 4.56 0 0 1-1.87-4.059v-3.062a6 6 0 0 0-4.8-6.126v-2.276zm.733 17.838a1.3 1.3 0 0 1-1.236-1.079h2.472a1.3 1.3 0 0 1-1.237 1.082zm4.07-9.435v3.062a5.853 5.853 0 0 0 1.162 3.886H726.7a5.853 5.853 0 0 0 1.162-3.886v-3.062c0-2.635 1.825-4.779 4.07-4.779s4.068 2.147 4.068 4.782z" transform="translate(-713.44 -1816.937)" style="fill:#52575d"/>
+        <circle data-name="Ellipse 10" cx="3.701" cy="3.701" r="3.701" transform="translate(9.284 9.623)" style="fill:#1bc167"/>
+    </g>
+    <g transform="translate(102.945)">
+        <circle data-name="Ellipse 9" cx="18.505" cy="18.505" r="18.505" style="fill:#fff"/>
+        <path data-name="profile" d="m0 16.284.122-.851c.478-3.277 3.922-5.748 8.02-5.748s7.546 2.472 8.02 5.749l.122.851zm1.834-1.491h12.617c-.8-2.113-3.339-3.618-6.309-3.618s-5.509 1.506-6.308 3.619zM3.575 4.522a4.567 4.567 0 0 1 9.134 0 4.567 4.567 0 0 1-9.134 0zm1.506 0A3.061 3.061 0 1 0 8.142 1.49a3.049 3.049 0 0 0-3.061 3.032z" transform="translate(10.411 10.41)" style="stroke:transparent;fill:#d0dbe5"/>
+    </g>
+</svg>

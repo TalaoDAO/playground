@@ -1,0 +1,9 @@
+<svg data-name="Logo university" xmlns="http://www.w3.org/2000/svg" width="405.067" height="41.531" viewBox="0 0 405.067 41.531">
+    <text data-name="University of web design" transform="translate(60.067 33.531)" style="font-size:28px;font-family:NotoSans-Bold,Noto Sans;font-weight:700;fill:#fff"><tspan x="0" y="0">University of web design</tspan></text>
+    <g data-name="Groupe 3021">
+        <path data-name="Tracé 9760" d="M3.015 0h21.1a3.015 3.015 0 0 1 3.015 3.015v20.5a3.015 3.015 0 0 1-3.015 3.015h-21.1A3.015 3.015 0 0 1 0 23.516V3.015A3.015 3.015 0 0 1 3.015 0z" transform="translate(0 12.837)" style="fill:#fff"/>
+        <path data-name="Tracé 9761" d="M3.015 0h21.1a3.015 3.015 0 0 1 3.015 3.015v20.5a3.015 3.015 0 0 1-3.015 3.015h-21.1A3.015 3.015 0 0 1 0 23.516V3.015A3.015 3.015 0 0 1 3.015 0z" transform="translate(17)" style="fill:#fff"/>
+        <path d="M13.391 12.649 10.422 9.68V7.32a2.227 2.227 0 1 0-1.484 0v2.36l-2.969 2.969H3v3.711h3.711V14.1l2.969-3.121 2.969 3.121v2.26h3.711v-3.711z" transform="translate(4.236 16.47)" style="fill:#3367b1"/>
+        <path d="M15.149 3H2.415A1.419 1.419 0 0 0 1 4.415V12.9a1.419 1.419 0 0 0 1.415 1.415h3.537v1.415h5.66v-1.411h3.537a1.413 1.413 0 0 0 1.408-1.419l.007-8.49A1.419 1.419 0 0 0 15.149 3zm0 9.9H2.415V4.415h12.734z" transform="translate(22.285 3.736)" style="fill:#3367b1"/>
+    </g>
+</svg>

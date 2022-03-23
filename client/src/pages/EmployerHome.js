@@ -7,18 +7,18 @@ import {
 } from 'react-bootstrap';
 
 
-import com_logo_1 from './img/employer/company-logo.png';
-import com_logo_2 from './img/employer/company-logo@2x.png';
-import com_logo_3 from './img/employer/company-logo@3x.png';
+import com_logo_1 from './img/employer/company-logo.svg';
+import com_logo_2 from './img/employer/company-logo.svg';
+import com_logo_3 from './img/employer/company-logo.svg';
 
-import com_tools_1 from './img/employer/account-tools.png';
-import com_tools_2 from './img/employer/account-tools@2x.png';
-import com_tools_3 from './img/employer/account-tools@3x.png';
+import com_tools_1 from './img/university/Mobile-top-elements-university.svg';
+import com_tools_2 from './img/university/Mobile-top-elements-university.svg';
+import com_tools_3 from './img/university/Mobile-top-elements-university.svg';
 
 
-import com_acc_1 from './img/employer/company-account.png';
-import com_acc_2 from './img/employer/company-account@2x.png';
-import com_acc_3 from './img/employer/company-account@3x.png';
+import com_acc_1 from './img/employer/ic_account_circle.svg';
+import com_acc_2 from './img/employer/ic_account_circle.svg';
+import com_acc_3 from './img/employer/ic_account_circle.svg';
 
 import { Link } from 'react-router-dom';
 import LoginForm from "../components/LoginForm";
@@ -31,31 +31,28 @@ function EmployerHome() {
 
 
   return (
-    <div className="EmployerHome">
-      <main >
-        <Container>
+    <main >
+      <Container fluid>
+        <Row className="">
+          <Col xs={{ offset: 1, span: 10 }} md={{ offset: 1, span: 10 }} lg={{ offset: 1, span: 10 }} className="turquoise-container content-padded-uni">
+            <Row>
+              <Col xs={12} md={12} lg={8} className="text-left">
 
-          <div className="turquoise-container p-5">
-            <Row className="turquoise-container">
-              <Col xs={8} md={8} lg={8} style={{ textAlign: "left" }} className="p-4 turquoise-container">
-
-                <Image src={com_logo_1} srcSet={`${com_logo_2} 2x, ${com_logo_3} 3x`} className="img-scale" fluid></Image>
+                <Image src={com_logo_1} srcSet={`${com_logo_2} 2x, ${com_logo_3} 3x`} className="uni-logo"  fluid></Image>
 
               </Col>
-              <Col style={{ textAlign: "right" }} xs={4} md={4} lg={4} className="p-4 turquoise-container" >
-                <Image src={com_tools_1} srcSet={`${com_tools_2} 2x, ${com_tools_3} 3x`} className="img-scale" fluid></Image>
+              <Col xs={12} md={12} lg={4} className="text-center">
+                <Image src={com_tools_1} srcSet={`${com_tools_2} 2x, ${com_tools_3} 3x`} className="uni-tools"  fluid></Image>
 
               </Col>
             </Row>
-            <Row className="  align-items-center justify-content-left text-left turquoise-container">
+            <Row className="text-left lower">
 
               <Col xs={12} md={12} lg={12}>
-
-
-                <Card className=''>
+                <Card >
                   <Card.Body>
-                    <Row>
-                      <Col className="align-items-center justify-content-center text-center">
+                    <Row className="lower" >
+                      <Col className="text-center">
 
                         <Image src={com_acc_1} srcSet={`${com_acc_2} 2x, ${com_acc_3} 3x`} className="img-fit" fluid></Image>
 
@@ -64,20 +61,24 @@ function EmployerHome() {
 
                     </Row>
                     <Row>
-                      <Col className="align-items-center justify-content-center text-center">
+                      <Col className="text-center">
 
-                        <span className="tag-h2-dark">My account</span>
+                        <div className="tag-h2-dark">My account</div>
 
                       </Col>
 
 
                     </Row>
                     <Row>
-                      <Col className="p-4">
+                      <Col className="text-center">
                         <LoginForm next="/com-account" />
 
                       </Col>
 
+                    </Row>
+                    <Row>
+                      <Col className="lower">
+                      </Col>
                     </Row>
 
                   </Card.Body>
@@ -85,14 +86,14 @@ function EmployerHome() {
 
               </Col>
             </Row>
+          </Col>
+        </Row>
 
-          </div>
 
 
-        </Container>
+      </Container>
 
-      </main>
-    </div>
+    </main>
   );
 }
 

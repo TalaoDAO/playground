@@ -6,13 +6,13 @@ import {
     Container, Button, Row, Col, Image, Modal, Accordion, ListGroup
 } from 'react-bootstrap';
 
-import uni_logo_1 from './img/university/university-logo.png';
-import uni_logo_2 from './img/university/university-logo@2x.png';
-import uni_logo_3 from './img/university/university-logo@3x.png';
+import uni_logo_1 from './img/university/university-logo.svg';
+import uni_logo_2 from './img/university/university-logo.svg';
+import uni_logo_3 from './img/university/university-logo.svg';
 
-import acc_tools_1 from './img/university/account-tools.png';
-import acc_tools_2 from './img/university/account-tools@2x.png';
-import acc_tools_3 from './img/university/account-tools@3x.png';
+import acc_tools_1 from './img/university/Mobile-top-elements-university.svg';
+import acc_tools_2 from './img/university/Mobile-top-elements-university.svg';
+import acc_tools_3 from './img/university/Mobile-top-elements-university.svg';
 
 import icon_profile from './img/university/profile.svg';
 import icon_messages from './img/university/messages.svg';
@@ -63,11 +63,11 @@ function UniversityAccount() {
                         <Row>
                             <Col xs={12} md={12} lg={9} className="text-left">
 
-                                <Image src={uni_logo_1} srcSet={`${uni_logo_2} 2x, ${uni_logo_3} 3x`} className="img-fit"  fluid></Image>
+                                <Image src={uni_logo_1} srcSet={`${uni_logo_2} 2x, ${uni_logo_3} 3x`} className="uni-logo" fluid></Image>
 
                             </Col>
                             <Col xs={12} md={12} lg={3} className="text-center">
-                                <Image src={acc_tools_1} srcSet={`${acc_tools_2} 2x, ${acc_tools_3} 3x`} className="img-fit" fluid></Image>
+                                <Image src={acc_tools_1} srcSet={`${acc_tools_2} 2x, ${acc_tools_3} 3x`} className="uni-tools" fluid></Image>
 
                             </Col>
                         </Row>

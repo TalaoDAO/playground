@@ -6,13 +6,13 @@ import {
   Container, Button, Row, Col, Card, Image, Modal
 } from 'react-bootstrap';
 
-import uni_logo_1 from './img/university/university-logo.png';
-import uni_logo_2 from './img/university/university-logo@2x.png';
-import uni_logo_3 from './img/university/university-logo@3x.png';
+import uni_logo_1 from './img/university/university-logo.svg';
+import uni_logo_2 from './img/university/university-logo.svg';
+import uni_logo_3 from './img/university/university-logo.svg';
 
-import uni_banner_1 from './img/university/university-banner.png';
-import uni_banner_2 from './img/university/university-banner@2x.png';
-import uni_banner_3 from './img/university/university-banner@3x.png';
+import uni_banner_1 from './img/university/university-banner.svg';
+import uni_banner_2 from './img/university/university-banner.svg';
+import uni_banner_3 from './img/university/university-banner.svg';
 
 
 import { Link } from 'react-router-dom';
@@ -36,7 +36,7 @@ function University() {
             <Row >
               <Col xs={12} md={12} lg={10} className="text-left " >
 
-                <Image src={uni_logo_1} srcSet={`${uni_logo_2} 2x, ${uni_logo_3} 3x`} className="img-scale " fluid></Image>
+                <Image src={uni_logo_1} srcSet={`${uni_logo_2} 2x, ${uni_logo_3} 3x`} className="uni-logo" fluid></Image>
 
               </Col>
               <Col xs={12} md={12} lg={2}  className="text-center">

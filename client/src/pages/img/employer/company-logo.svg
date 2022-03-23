@@ -1,0 +1,5 @@
+<svg data-name="Logo-my little compagny" xmlns="http://www.w3.org/2000/svg" width="302" height="50" viewBox="0 0 302 50">
+    <rect data-name="Rectangle 56" width="302" height="50" rx="20" style="fill:#508ff4"/>
+    <text data-name="My little company" transform="translate(68 34)" style="font-size:28px;font-family:Rajdhani-Bold,Rajdhani;font-weight:700;letter-spacing:-.01em;fill:#fff"><tspan x="0" y="0">My little company</tspan></text>
+    <path d="M20.961 4a11.406 11.406 0 1 0 11.406 11.406A11.4 11.4 0 0 0 20.961 4zm0 19.961a8.555 8.555 0 1 1 8.555-8.555 8.561 8.561 0 0 1-8.555 8.555zM3.852 15.406a8.541 8.541 0 0 1 5.7-8.056V4.371a11.4 11.4 0 0 0 0 22.071v-2.98a8.541 8.541 0 0 1-5.7-8.056z" transform="translate(17 10.188)" style="fill:#fff"/>
+</svg>

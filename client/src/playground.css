@@ -275,7 +275,7 @@
     object-fit: contain;
     margin-bottom: -85px;
   }
-  
+
   div.lower {
     margin-top:10%;
   }
@@ -357,6 +357,19 @@
   .azure-container {
     background-color: var(--azure);
   }
+
+  
+  .uni-logo {
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .uni-tools {  
+    height: 50px;
+    object-fit: contain;
+  }
+
+  
   .content-padded-uni{
     padding: 10px;
 
@@ -715,6 +728,18 @@
   .azure-container {
     background-color: var(--azure);
   }
+
+  
+  .uni-logo {
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .uni-tools {  
+    height: 50px;
+    object-fit: contain;
+  }
+
 
   .content-padded-uni{
     padding: 10px;
@@ -1096,6 +1121,18 @@
   .azure-container {
     background-color: var(--azure);
   }
+  
+  .uni-logo {
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .uni-tools {  
+    height: 50px;
+    object-fit: contain;
+  }
+
+
   .content-padded-uni{
     padding: 50px;
   }
@@ -1471,6 +1508,17 @@
   .azure-container {
     background-color: var(--azure);
   }
+
+  .uni-logo {
+    height: 50px;
+    object-fit: contain;
+  }
+
+  .uni-tools {  
+    height: 50px;
+    object-fit: contain;
+  }
+
   .content-padded-uni{
     padding: 50px;
 
@@ -1610,7 +1658,6 @@ img.follow-img {
   font-style: normal;
   line-height: 1.52;
   letter-spacing: normal;
-  text-align: left;
   color: var(--dark-blue-grey);
 }
 
@@ -1651,13 +1698,18 @@ img.follow-img {
 
 }
 
+.turquoise-container {
+  background-color: var(--light-turquoise-blue);
+}
+
+.img-fit {    
+  object-fit: contain;
+}
+
 
 /****************************************************/
 
-  .img-fit {
-    
-    object-fit: contain;
-  }
+ 
   .img-scale {
     width: auto;
     height: auto;
@@ -1761,10 +1813,7 @@ img.follow-img {
   @media only screen and (min-width: 1024px) {
 
 
-  
-  .turquoise-container {
-    background-color: var(--turquoise-blue);
-  }
+
 
   
   .col-fixed {
