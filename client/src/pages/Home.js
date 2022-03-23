@@ -133,7 +133,7 @@ function Home() {
               <Col xs={12} md={12} lg={{ span: 4 }}>
 
                 <Image src={are01} srcSet={`${are02} 2x, ${are03} 3x`} className="links-icon" fluid></Image>
-                <Link to="/generate" className="links-dark"> How to recover your account?</Link>
+                <Link to="/recover" className="links-dark"> How to recover your account?</Link>
               </Col>
             </Row>
 

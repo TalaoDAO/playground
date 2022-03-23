@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="468.68" height="743.412" viewBox="0 0 468.68 743.412">
+    <defs>
+        <filter id="b3is82cvia" x="0" y="0" width="468.68" height="743.412" filterUnits="userSpaceOnUse">
+            <feOffset dy="23"/>
+            <feGaussianBlur stdDeviation="33" result="blur"/>
+            <feFlood flood-color="#161f3d" flood-opacity=".306"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="z6mmdpmj2b" x="84.89" y="144.847" width="296.924" height="229.423" filterUnits="userSpaceOnUse">
+            <feOffset dy="13"/>
+            <feGaussianBlur stdDeviation="16" result="blur-2"/>
+            <feFlood flood-opacity=".141"/>
+            <feComposite operator="in" in2="blur-2"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Phone - wallet - setting">
+        <g style="filter:url(#b3is82cvia)">
+            <path data-name="Shape" d="M37.946 0h194.788a37.846 37.846 0 0 1 37.946 37.745v469.922a37.846 37.846 0 0 1-37.946 37.745H37.946A37.846 37.846 0 0 1 0 507.667V37.745A37.846 37.846 0 0 1 37.946 0z" transform="translate(98.998 76.003)" style="fill:#161f3d"/>
+        </g>
+        <path data-name="Shape" d="M37.946 0h194.788a37.846 37.846 0 0 1 37.946 37.745v469.922a37.846 37.846 0 0 1-37.946 37.745H37.946A37.846 37.846 0 0 1 0 507.667V37.745A37.846 37.846 0 0 1 37.946 0z" transform="translate(98.187 75.813)" style="fill:#161f3d"/>
+        <path data-name="Shape" d="M35.777 0h195.5a35.591 35.591 0 0 1 35.777 35.4v470.98a35.591 35.591 0 0 1-35.777 35.4h-195.5A35.591 35.591 0 0 1 0 506.382V35.4A35.591 35.591 0 0 1 35.777 0z" transform="translate(100.001 77.627)" style="fill:none"/>
+        <path data-name="Shape" d="M1.451 2.9A1.451 1.451 0 1 0 0 1.451 1.451 1.451 0 0 0 1.451 2.9z" transform="translate(204.176 87.421)" style="fill:#fff"/>
+        <path data-name="Shape" d="M2.418 4.837A2.418 2.418 0 1 0 0 2.418a2.418 2.418 0 0 0 2.418 2.419z" transform="translate(262.039 86.454)" style="fill:#fff"/>
+        <path data-name="Shape" d="M.967 0h16.2a.967.967 0 1 1 0 1.935H.967A.967.967 0 0 1 .967 0" transform="translate(224.629 87.905)" style="fill:#fff"/>
+        <path data-name="Shape" d="M0 .483A.539.539 0 0 1 .582 0h.869v12.575H.582A.539.539 0 0 1 0 12.092V.483z" transform="translate(96.978 118.376)" style="fill:#161f3d"/>
+        <path data-name="Shape" d="M24.586 0C11.007 0 0 10.616 0 23.711v477.676c0 13.1 11.008 23.711 24.586 23.711h202.282c13.579 0 24.586-10.616 24.586-23.711V23.711C251.455 10.615 240.447 0 226.868 0h-27.045v.009Q199.712 0 199.6 0a2.636 2.636 0 0 0-2.682 2.588V3.88c0 8.572-7.216 15.52-16.117 15.52H70.654c-8.9 0-16.117-6.947-16.117-15.52V2.588A2.636 2.636 0 0 0 51.855 0q-.113 0-.223.009V0z" transform="translate(107.861 85.607)" style="fill:#fff"/>
+        <g transform="translate(333.853 105.15)">
+            <g style="stroke:#000;stroke-miterlimit:10;opacity:.35;fill:none">
+                <rect width="15.371" height="7.919" rx="2.667" style="stroke:none"/>
+                <rect x=".5" y=".5" width="14.371" height="6.919" rx="2.167" style="fill:none"/>
+            </g>
+            <path d="M0 0v2.795A1.516 1.516 0 0 0 .928 1.4 1.516 1.516 0 0 0 0 0" transform="translate(16.07 2.562)" style="opacity:.4"/>
+            <rect width="12.577" height="5.124" rx="1.333" transform="translate(1.397 1.397)"/>
+        </g>
+        <path d="m324.846 112.769-1.4-1.413a.216.216 0 0 1-.065-.162.219.219 0 0 1 .072-.158 2.4 2.4 0 0 1 3.1 0 .22.22 0 0 1 .006.32l-1.4 1.413a.219.219 0 0 1-.311 0zm2.468-2.475a3.443 3.443 0 0 0-4.62 0 .218.218 0 0 1-.3 0l-.81-.818a.225.225 0 0 1 0-.321 5.026 5.026 0 0 1 6.84-.007.225.225 0 0 1 0 .321l-.81.818a.218.218 0 0 1-.3 0zm1.865-1.883a6.065 6.065 0 0 0-8.353 0 .215.215 0 0 1-.3 0l-.815-.82a.225.225 0 0 1 0-.319 7.649 7.649 0 0 1 10.579 0 .225.225 0 0 1 0 .319l-.811.817a.215.215 0 0 1-.3 0z"/>
+        <path data-name="Cellular Connection" d="M314.756 112.836a.7.7 0 0 1-.7-.7v-6.053a.7.7 0 0 1 .7-.7h.7a.7.7 0 0 1 .7.7v6.054a.7.7 0 0 1-.7.7zm-3.261 0a.7.7 0 0 1-.7-.7v-4.424a.7.7 0 0 1 .7-.7h.7a.7.7 0 0 1 .7.7v4.425a.7.7 0 0 1-.7.7zm-3.26 0a.7.7 0 0 1-.7-.7v-2.8a.7.7 0 0 1 .7-.7h.7a.7.7 0 0 1 .7.7v2.8a.7.7 0 0 1-.7.7zm-3.26 0a.7.7 0 0 1-.7-.7v-1.4a.7.7 0 0 1 .7-.7h.7a.7.7 0 0 1 .7.7v1.4a.7.7 0 0 1-.7.7z"/>
+        <path data-name="Bars/Status Bar/iPhone/x/Time - Light background" transform="translate(113.531 98.163)" style="fill:none" d="M0 0h37.73v14.673H0z"/>
+        <text transform="translate(131.614 111.054)" style="font-size:10px;font-family:NotoSans-Regular,Noto Sans;letter-spacing:-.02em"><tspan x="-9.62" y="0">9:41</tspan></text>
+        <path data-name="Rectangle 1656" transform="translate(108.197 120.583)" style="fill:#fff" d="M0 0h251v31H0z"/>
+        <path data-name="Rectangle 1657" transform="translate(108.197 558.583)" style="fill:#fff" d="M0 0h251v31H0z"/>
+    </g>
+    <g transform="translate(132.845 224.681)">
+        <g style="filter:url(#z6mmdpmj2b)">
+            <rect data-name="Rectangle 607" width="200.924" height="133.423" rx="10" transform="translate(.05 -44.83)" style="fill:#d8d8d8"/>
+        </g>
+        <path data-name="Tracé 9755" d="M5.4 0h190.12a5.4 5.4 0 0 1 5.4 5.4v122.619a5.4 5.4 0 0 1-5.4 5.4H5.4a5.4 5.4 0 0 1-5.4-5.4V5.4A5.4 5.4 0 0 1 5.4 0z" transform="translate(.045 -46.492)" style="fill:#f5f5f5"/>
+        <rect data-name="Rectangle 601" width="26.936" height="26.936" rx="5" transform="translate(10.582 -32.771)" style="fill:#161f3d"/>
+        <path data-name="Ligne 104" transform="translate(51.148 -28.695)" style="stroke:#161f3d;stroke-linecap:round;stroke-width:4px;fill:none" d="M0 0h86.581"/>
+        <path data-name="Ligne 107" transform="translate(10.669 69.43)" style="stroke:#161f3d;stroke-linecap:round;stroke-width:4px;fill:none" d="M0 0h127.06"/>
+        <path data-name="Ligne 108" transform="translate(165.144 69.43)" style="stroke:#161f3d;stroke-linecap:round;stroke-width:4px;fill:none" d="M0 0h17.799"/>
+        <path data-name="Ligne 105" transform="translate(51.148 -19.304)" style="stroke:#161f3d;stroke-linecap:round;stroke-width:4px;fill:none" d="M0 0h43.77"/>
+        <path data-name="Ligne 106" transform="translate(51.148 -9.913)" style="stroke:#161f3d;stroke-linecap:round;stroke-width:4px;fill:none" d="M0 0h43.77"/>
+        <path data-name="Rectangle 602" transform="translate(0 9.777)" style="opacity:.043;fill:#161f3d" d="M0 0h200.969v29.822H0z"/>
+    </g>
+</svg>

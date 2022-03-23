@@ -1,5 +1,6 @@
 :root {
   --turquoise-blue: #09a0c9  ;
+  --light-turquoise-blue: #e5f5fa  ;
   --dusk: #5b6483;
   --golden-yellow: #efcd26;
   --azure: #3367b1;
@@ -219,6 +220,32 @@
     color: white;
   }
 
+  .title-white-single {
+    margin-top:50%;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 43px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
+  .section-title-dark-single {
+    margin: 3%;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 43px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--dark-blue-grey);
+  }
+
   .separator-bottom {
     width: 150px;
     height: 150px;
@@ -303,6 +330,27 @@
   .step-image-mobile {  
     height: 400px;
     object-fit: contain;
+  }
+  
+  .light-blue-image {
+    height: 546px;
+    margin-bottom:20px;
+    object-fit: contain;
+  }
+
+  .light-blue-image-no-shadow {
+    height: 450px;
+    margin-bottom:20px;
+    object-fit: contain;
+  }
+
+  .phone-image {
+    height: 546px;
+    object-fit: contain;
+  }
+
+  .lg-only {
+    display: none;
   }
 }
 
@@ -506,6 +554,32 @@
     text-align: center;
     color: white;
   }
+  .title-white-single {
+    margin-top: 30%;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 43px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
+  .section-title-dark-single {
+    margin: 5%;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 43px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--dark-blue-grey);
+  }
+
 
   .separator-bottom {
     width: 150px;
@@ -595,6 +669,28 @@
     height: 400px;
     object-fit: contain;
   }
+
+  .light-blue-image {
+    height: 546px;
+    margin-bottom:20px;
+    object-fit: contain;
+  }
+
+  .light-blue-image-no-shadow {
+    height: 450px;
+    margin-bottom:20px;
+    object-fit: contain;
+  }
+
+  .phone-image {
+    height: 546px;
+    object-fit: contain;
+  }
+
+  .lg-only {
+    display: none;
+  }
+
 }
   
 
@@ -806,6 +902,34 @@
     color: white;
   }
 
+  .title-white-single {
+    margin-top: 30%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;    
+    line-height: 1.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
+  .section-title-dark-single {
+    margin-top: 30%;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 36px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;     
+    line-height: 1.22;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--dark-blue-grey);
+  }
+
+
+
   .separator-bottom {
     width: 150px;
     height: 150px;
@@ -896,7 +1020,30 @@
     height: 400px;
     object-fit: contain;
   }
+  .light-blue-image {
+    height: 546px;
+    margin-right: -500px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    object-fit: contain;
+  }
 
+  .light-blue-image-no-shadow {
+    height: 450px;
+    margin-right: -500px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    object-fit: contain;
+  }
+
+  .phone-image {
+    height: 546px;
+    object-fit: contain;
+  }
+
+  .sm-only {
+    display: none;
+  }
 }
 
 /*HUGE SCREEN*/
@@ -1106,6 +1253,33 @@
     color: white;
   }
 
+  .title-white-single {
+    margin-top: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;    
+    line-height: 1.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
+  .section-title-dark-single {
+    margin-top: 20%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;    
+    line-height: 1.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: var(--dark-blue-grey);
+  }
+
+
 
   .separator-bottom {
     width: 150px;
@@ -1200,7 +1374,31 @@
     object-fit: contain;
   }
 
+  .light-blue-image {
+    height: 546px;
+    margin-right: -900px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    object-fit: contain;
+  }
 
+  .light-blue-image-no-shadow {
+    height: 450px;
+    margin-right: -800px;
+    margin-top: 20px;
+    margin-bottom:20px;
+    object-fit: contain;
+  }
+
+
+  .phone-image {
+    height: 546px;
+    object-fit: contain;
+  }
+
+  .sm-only {
+    display: none;
+  }
 }
 
 /*COMMON*/
@@ -1309,6 +1507,29 @@ img.follow-img {
   height: 50px;
 }
 
+.tag-h2-dark {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 23px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.52;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--dark-blue-grey);
+}
+
+.manage-image {
+    
+  height: 546px;
+  object-fit: contain;
+}
+
+.light-blue-div {  
+  height: auto;
+  background-color: var(--light-turquoise-blue);
+}
+
 
 
 /****************************************************/
@@ -1352,17 +1573,7 @@ img.follow-img {
 
  
   
-  .tag-h2-dark {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 23px;
-    font-weight: bold;
-    font-stretch: normal;
-    font-style: normal;
-    line-height: 1.52;
-    letter-spacing: normal;
-    text-align: left;
-    color: var(--dark-blue-grey);
-  }
+
 
 
  
@@ -1431,42 +1642,20 @@ img.follow-img {
   
 
 
-  .manage-image {
-    
-    max-height: 546px;
-    object-fit: contain;
-  }
 
   
 
 
   
   @media only screen  and (max-width: 1024px) {
-    .light-blue-div {  
-      height: auto;
-      
-      background-color: var(--turquoise-blue);
-    }
-  
-    .light-blue-image {
-      width:100%;
-      object-fit: contain;
-    }
+
+
   
   }
   
     
   @media only screen and (min-width: 1024px) {
-    .light-blue-div {  
-      height: 546px;
-      background-color: var(--turquoise-blue);
-    }
-  
-  .light-blue-image {
-    max-height: 500px;
-    margin-right: -500px;
-    object-fit: contain;
-  }
+
 
   .azure-container {
     background-color: var(--azure);

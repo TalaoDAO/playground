@@ -2,21 +2,20 @@ import React from "react";
 import "../App.css";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-    Container, Image, Card, Row, Col
+    Container, Image, Row, Col
 } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 import UseCases from "../components/UseCases";
 import ManageStrip from "../components/ManageStrip";
 import PassActivation from "../components/PassActivation";
 
-import recovery_1 from '../pages/img/recover/recovery.png';
-import recovery_2 from '../pages/img/recover/recovery@2x.png';
-import recovery_3 from '../pages/img/recover/recovery@3x.png';
-import recover_1 from '../pages/img/recover/start.png';
-import recover_2 from '../pages/img/recover/start@2x.png';
-import recover_3 from '../pages/img/recover/start@3x.png';
+import recovery_1 from '../pages/img/recover/Image-phone-key-recovery.webp';
+import recovery_2 from '../pages/img/recover/Image-phone-key-recovery@2x.webp';
+import recovery_3 from '../pages/img/recover/Image-phone-key-recovery@3x.webp';
+import recover_1 from '../pages/img/recover/Image-phone-start-using-wallet.webp';
+import recover_2 from '../pages/img/recover/Image-phone-start-using-wallet@2x.webp';
+import recover_3 from '../pages/img/recover/Image-phone-start-using-wallet@3x.webp';
 
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
+const { REACT_APP_NODE_LOCAL } = process.env;
 
 function Recover() {
     const [data, setData] = React.useState(null);
@@ -28,84 +27,78 @@ function Recover() {
     }, []);
 
     return (
-        <div className="Manage">
-            <main>
-                <Container >
-                    <Row className="p-3 bg-playground text-white align-content-center">
-                        <Col xs={12} md={12} lg={{ span: 8, offset: 2 }} className="justify-content-center">
+        <main>
+            <Container fluid className="position-relative  px-0 overflow-hidden">
+                <Row className="dark-blue-section text-center">
+                    <Col xs={12} md={12} lg={{ span: 6, offset: 3 }} >
+                        <Row >
+                            <Col>
+                                <div className="title-white-single">Recover your account</div>
+                            </Col>
+                        </Row>
 
+                    </Col>
+                </Row>
+                <Row className="text-center">
+                <Col xs={12} md={12} lg={12} >
+                    <div className="vertical-line"></div>
+
+                </Col>
+                </Row>
+
+
+                <div id="description" className="text-center">
+                    <Row >
+                        <Col xs={12} md={12} lg={{ span: 5 }} >
+                            <Image src={recover_1} srcSet={`${recover_2} 2x, ${recover_3} 3x`} className="phone-image lg-only" fluid></Image>
+
+                        </Col>
+                        <Col xs={12} md={12} lg={{ span: 5 }} >
                             <Row >
-                                <Col style={{ marginTop: "100px", marginBottom: "100px" }}>
-                                    <span className="tag-h1 text-center">Recover your account</span>
+                                <Col >
+                                    <div className="section-title-dark-single">Recovery phrase</div>
                                 </Col>
 
+                            </Row>
+                        </Col>
+                        <Col xs={12} md={12} lg={{ span: 5 }} >
+                            <Image src={recover_1} srcSet={`${recover_2} 2x, ${recover_3} 3x`} className="phone-image sm-only" fluid></Image>
+
+                        </Col>
+                    </Row>
+
+                    <Row>
+                        <Col xs={12} md={12} lg={9}>
+                            <Row className="text-center light-blue-div" >
+
+                                <Col xs={12} md={12} lg={{ span: 5, offset: 1 }} >
+                                    <Row >
+                                        <Col >
+                                            <div className="section-title-dark-single">Start using your wallet</div>
+                                        </Col>
+
+                                    </Row>
+                                </Col>
+                                <Col xs={12} md={12} lg={{ span: 6 }} >
+                                    <Image src={recovery_1} srcSet={`${recovery_2} 2x, ${recovery_3} 3x`} className="light-blue-image" fluid></Image>
+
+                                </Col>
                             </Row>
 
                         </Col>
                     </Row>
 
+                   
 
-                    <div id="description" className="position-relative overflow-hidden p-3 p-md-5 m-md-3 justify-content-center align-middle bg-white">
+                </div>
 
-                        <Row className="  align-items-center justify-content-center text-left  p-3" >
-                            <Col xs={12} md={12} lg={{ span: 5 }} >
-                                <Image src={recover_1} srcSet={`${recover_2} 2x, ${recover_3} 3x`} className="manage-image" fluid></Image>
+                <PassActivation />
+                <UseCases />
+                <ManageStrip />
+                <p>{!data ? "Loading..." : data}</p>
 
-                            </Col>
-                            <Col xs={12} md={12} lg={{ span: 5 }} >
-                                <Row >
-                                    <Col >
-                                        <span className="tag-h2-dark">Recovery phrase</span>
-                                    </Col>
-
-                                </Row>
-                                <Row>
-                                    <Col>
-                                        <span className="subtitle-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
-                                    </Col>
-
-                                </Row>
-                            </Col>
-                        </Row>
-
-                        <Row>
-                            <Col xs={12} md={12} lg={10}>
-                                <Row className="  align-items-center justify-content-center text-center light-blue-div p-3" >
-
-                                    <Col xs={12} md={12} lg={{ span: 5, offset: 1 }} >
-                                        <Row >
-                                            <Col >
-                                                <span className="tag-h2-dark">Start using your wallet</span>
-                                            </Col>
-
-                                        </Row>
-                                        <Row>
-                                            <Col>
-                                                <span className="subtitle-dark">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. </span>
-                                            </Col>
-
-                                        </Row>
-                                    </Col>
-                                    <Col xs={12} md={12} lg={{ span: 6 }} >
-                                        <Image src={recovery_1} srcSet={`${recovery_2} 2x, ${recovery_3} 3x`} className="light-blue-image" fluid></Image>
-
-                                    </Col>
-                                </Row>
-
-                            </Col>
-                        </Row>
-
-                    
-                    </div>
-
-                    <PassActivation />
-                    <UseCases />
-                    <ManageStrip />
-                    <p>{!data ? "Loading..." : data}</p>
-
-                </Container>
-            </main>
-        </div>
+            </Container>
+        </main>
     );
 }
 
