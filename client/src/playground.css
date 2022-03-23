@@ -20,6 +20,7 @@
 /*SMALL SCREEN*/
 @media only screen  and (max-width: 512px) {
   img.talao-logo {
+    margin-left: 10px;
     height: 100%;
   }
   div.dark-blue-jumbo {
@@ -28,8 +29,8 @@
   }
 
   .img-phone {
-    width: 270.7px;
-    height: 545.4px;
+    height: 600px;
+    margin-left:10px;
     margin-top: -200px;
     object-fit: contain;
   }
@@ -150,7 +151,6 @@
 
   
   div.dark-blue-section {
-    width: 100%;
     height: 590.3px;
     background-color: var(--dark-blue-grey);
   }
@@ -205,6 +205,20 @@
     text-align: center;
     color: var(--golden-yellow);
   }
+
+  .title-white {
+    margin-top:50%;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 43px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
   .separator-bottom {
     width: 150px;
     height: 150px;
@@ -235,13 +249,68 @@
     margin-bottom: -85px;
   }
 
+  div.lower {
+    margin-top:10%;
+  }
+
+  div.high {
+    margin-bottom:10%;
+  }
+
+  div.higher {
+    margin-bottom:20%;
+  }
+
+  div.vertical-line {
+    width: 3px;
+    height: 120px;
+    margin-top: -80px;
+    margin-left:50%;
+    background-color:  var(--turquoise-blue); 
+    color: var(--turquoise-blue);
+  }
   
+  .step-title {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--dark-blue-grey);
+  }
+
+  .step-muted {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: right;
+    color: lightslategrey;
+  }
+
+  .step-image-desktop {
+    width: 100%;
+    object-fit: contain;
+  }
+  .step-image-mobile {  
+    height: 400px;
+    object-fit: contain;
+  }
 }
 
 
 /*MEDIUM SCREEN*/
 @media only screen and (min-width: 512px) and (max-width: 1024px) {
   img.talao-logo {
+    margin-left: 10px;
     height: 100%;
   }
   div.dark-blue-jumbo {
@@ -250,8 +319,9 @@
   }
 
   .img-phone {
-    width: 100%;
-    margin-top: -350px;
+    height: 600px;
+    margin-left:10px;
+    margin-top: -250px;
     object-fit: contain;
   }
 
@@ -369,7 +439,6 @@
 
   
   div.dark-blue-section {
-    width: 100%;
     height: 590.3px;
     background-color: var(--dark-blue-grey);
   }
@@ -412,7 +481,7 @@
   }
   
   .title-yellow {
-    margin-top:50%;
+    margin-top:30%;
     margin-bottom: 10%;
     font-family: 'Montserrat', sans-serif;  
     font-size: 30px;
@@ -423,6 +492,19 @@
     letter-spacing: normal;
     text-align: center;
     color: var(--golden-yellow);
+  }
+
+  .title-white {
+    margin-top:30%;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 43px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
   }
 
   .separator-bottom {
@@ -457,13 +539,69 @@
     margin-bottom: -85px;
   }
 
+  div.lower {
+    margin-top:5%;
+  }
+
+  div.high {
+    margin-bottom:10%;
+  }
+
+  div.higher {
+    margin-bottom:20%;
+  }
+
+  div.vertical-line {
+    width: 3px;
+    height: 120px;
+    margin-top: -80px;
+    margin-left:50%;
+    background-color:  var(--turquoise-blue); 
+    color: var(--turquoise-blue);
+  }
   
+  .step-title {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--dark-blue-grey);
+  }
+
+  .step-muted {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: right;
+    color: lightslategrey;
+  }
+  
+  .step-image-desktop {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .step-image-mobile {  
+    height: 400px;
+    object-fit: contain;
+  }
 }
   
 
 /*LARGE SCREEN*/
 @media only screen and (min-width: 1024px) and (max-width: 1920px) {
   img.talao-logo {
+    margin-left: 10px;
     height: 100%;
   }
 
@@ -475,7 +613,8 @@
 
 
   .img-phone {
-    width: 100%;
+    height:800px;
+    margin-left:10px;
     margin-top: -400px;
     object-fit: contain;
   }
@@ -597,7 +736,6 @@
     object-fit: contain;
   }
   div.dark-blue-section {
-    width: 100%;
     height: 590.3px;
     background-color: var(--dark-blue-grey);
   }
@@ -655,6 +793,19 @@
     color: var(--golden-yellow);
   }
 
+  .title-white {
+    margin: 24% 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;    
+    line-height: 1.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
   .separator-bottom {
     width: 150px;
     height: 150px;
@@ -689,11 +840,69 @@
     margin-bottom: -140px;
   }
 
+  div.lower {
+    margin-top:5%;
+  }
+
+  div.high {
+    margin-bottom:10%;
+  }
+
+  div.higher {
+    margin-bottom:20%;
+  }
+  
+  div.vertical-line {
+    width: 3px;
+    height: 120px;
+    margin-top: -70px;
+    margin-left:50%;
+    background-color:  var(--turquoise-blue); 
+    color: var(--turquoise-blue);
+  }
+  
+  .step-title {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--dark-blue-grey);
+  }
+
+  .step-muted {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: right;
+    color: lightslategrey;
+  }
+
+  .step-image-desktop {
+    height: 500px;
+    object-fit: contain;
+  }
+
+  .step-image-mobile { 
+    height: 400px;
+    object-fit: contain;
+  }
+
 }
 
 /*HUGE SCREEN*/
 @media only screen and (min-width: 1921px) {
   img.talao-logo {
+    margin-left: 10px;
     height: 100%;
   }
 
@@ -704,7 +913,8 @@
   }
 
   .img-phone {
-    width: 100%;
+    width: 800px;
+    margin-left:10px;
     margin-top: -500px;
     object-fit: contain;
   }
@@ -883,6 +1093,20 @@
     color: var(--golden-yellow);
   }
 
+  .title-white {
+    margin: 15% 0 5%;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;    
+    line-height: 1.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
+
   .separator-bottom {
     width: 150px;
     height: 150px;
@@ -917,6 +1141,66 @@
     object-fit: contain;
     margin-bottom: -140px;
   }
+
+  div.lower {
+    margin-top:5%;
+  }
+
+  div.high {
+    margin-bottom:20%;
+  }
+
+  div.higher {
+    margin-bottom:30%;
+  }
+
+  div.vertical-line {
+    width: 3px;
+    height: 120px;
+    margin-top: -80px;
+    margin-left:50%;
+    background-color:  var(--turquoise-blue); 
+    color: var(--turquoise-blue);
+  }
+
+  .step-title {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: left;
+    color: var(--dark-blue-grey);
+  }
+
+  .step-muted {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.32;
+    letter-spacing: normal;
+    text-align: right;
+    color: lightslategrey;
+  }
+
+
+  .step-image-desktop {
+    height: 500px;
+    object-fit: contain;
+  }
+
+  .step-image-mobile { 
+    height: 500px;
+    object-fit: contain;
+  }
+
+
 }
 
 /*COMMON*/
@@ -1016,6 +1300,14 @@ img.follow-img {
   object-fit: contain;
 }
 
+
+.btn-demo-hr {
+  margin-top:-25px;
+}
+
+.btn-demo {
+  height: 50px;
+}
 
 
 
@@ -1135,24 +1427,9 @@ img.follow-img {
       height: 500px;
   }
 
-  .step-image-desktop {
-    max-height: 270px;
-    object-fit: contain;
-  }
 
   
-  .step-image-mobile {  
-    max-height: 270px;
-    object-fit: contain;
-  }
 
-  .btn-demo-hr {
-    margin-top:-25px;
-  }
-
-  .btn-demo {
-    height: 50px;
-  }
 
   .manage-image {
     

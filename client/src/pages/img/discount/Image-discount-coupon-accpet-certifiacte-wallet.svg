@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="185.319" height="271.217" viewBox="0 0 185.319 271.217">
+    <defs>
+        <filter id="9ah7924kza" x="0" y="60.463" width="185.319" height="155.312" filterUnits="userSpaceOnUse">
+            <feOffset dy="13"/>
+            <feGaussianBlur stdDeviation="16" result="blur"/>
+            <feFlood flood-opacity=".184"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g data-name="Light / iPhone X">
+        <path d="M17.722 0h96.84a17.722 17.722 0 0 1 17.722 17.722v235.772a17.722 17.722 0 0 1-17.722 17.722h-96.84A17.722 17.722 0 0 1 0 253.494V17.722A17.722 17.722 0 0 1 17.722 0z" style="fill:#161f3d" transform="translate(24.506)"/>
+        <path data-name="Shape" d="M1.448 2.9A1.448 1.448 0 1 0 0 1.448 1.448 1.448 0 0 0 1.448 2.9z" transform="translate(75.315 9.773)" style="fill:#dedede"/>
+        <path data-name="Shape" d="M2.413 4.826A2.413 2.413 0 1 0 0 2.413a2.413 2.413 0 0 0 2.413 2.413z" transform="translate(103.564 8.808)" style="fill:#dedede"/>
+        <path data-name="Shape" d="M.965 0h16.168a.965.965 0 1 1 0 1.931H.965A.965.965 0 0 1 .965 0" transform="translate(81.703 10.256)" style="fill:#dedede"/>
+        <path data-name="Shape" d="M11.412 0A11.454 11.454 0 0 0 0 11.5v231.57a11.454 11.454 0 0 0 11.412 11.495h93.9a11.454 11.454 0 0 0 11.408-11.495V11.5A11.454 11.454 0 0 0 105.308 0H92.654a1.25 1.25 0 0 0-1.245 1.255v.626a7.5 7.5 0 0 1-7.481 7.524H32.8a7.5 7.5 0 0 1-7.481-7.524v-.626A1.25 1.25 0 0 0 24.07 0h-.1z" transform="translate(32.349 7.963)" style="fill:#fff"/>
+        <text data-name="My certificates" transform="translate(90.743 60.046)" style="font-size:9px;font-family:NotoSans-SemiBold,Noto Sans;font-weight:600;fill:#161f3d"><tspan x="-32.283" y="0">My certificates</tspan></text>
+    </g>
+    <g transform="translate(42.745 91.164)">
+        <g style="filter:url(#9ah7924kza)">
+            <rect data-name="Rectangle 607" width="89.319" height="59.312" rx="10" transform="translate(5.26 4.3)" style="fill:#aaa9a9"/>
+        </g>
+        <path data-name="Tracé 9755" d="M2.684 0H97.1a2.684 2.684 0 0 1 2.684 2.684v60.9a2.684 2.684 0 0 1-2.684 2.678H2.684A2.684 2.684 0 0 1 0 63.579V2.684A2.684 2.684 0 0 1 2.684 0z" transform="translate(.022)" style="fill:#f5f5f5"/>
+        <rect data-name="Rectangle 601" width="13.377" height="13.377" rx="2" transform="translate(5.255 6.814)" style="fill:#161f3d"/>
+        <path data-name="Ligne 104" transform="translate(25.402 8.838)" style="fill:none;stroke:#161f3d;stroke-linecap:round" d="M0 0h42.999"/>
+        <path data-name="Ligne 107" transform="translate(10.829 57.571)" style="fill:none;stroke:#161f3d;stroke-linecap:round" d="M0 0h57.572"/>
+        <path data-name="Ligne 108" transform="translate(82.016 57.571)" style="fill:none;stroke:#161f3d;stroke-linecap:round" d="M0 0h8.84"/>
+        <path data-name="Ligne 105" transform="translate(25.402 13.502)" style="fill:none;stroke:#161f3d;stroke-linecap:round" d="M0 0h21.737"/>
+        <path data-name="Ligne 106" transform="translate(25.402 18.166)" style="fill:none;stroke:#161f3d;stroke-linecap:round" d="M0 0h21.737"/>
+        <path data-name="Rectangle 602" transform="translate(0 27.945)" style="opacity:.043;fill:#161f3d" d="M0 0h99.808v14.811H0z"/>
+    </g>
+</svg>

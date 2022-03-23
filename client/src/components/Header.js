@@ -2,7 +2,7 @@ import React from 'react';
 import Logout from './auth/Logout';
 
 import {
-  Container, Navbar, Nav, NavDropdown, Image
+  Container, Navbar, Nav, NavDropdown, Image, Row, Col
 } from 'react-bootstrap';
 
 
@@ -41,7 +41,7 @@ const Header = () => {
 
   return (
     <header>
-      <Container fluid>
+      <Container fluid >
         <Navbar bg="white" expand="lg md">
           <Navbar.Brand href="/home"><Image src={logo1} srcSet={`${logo2} 2x, ${logo3} 3x`} fluid className='talao-logo'></Image></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

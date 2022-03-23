@@ -35,21 +35,20 @@ import { Link } from 'react-router-dom';
 
 
 const UseCases = () => (
-    <div className="UseCases p-5">
-        <Container fluid>
+    <div className="UseCases ">
 
             <div className="text-center">
                 <Row>
                     <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
                         <Row>
-                            <div className="section-header-dark">Use Cases</div>
+                            <div className="section-header-dark lower">Use Cases</div>
 
                         </Row>
                     </Col>
 
                 </Row>
             </div>
-            <div className=" text-center">
+            <div className=" text-center lower">
                 <Row >
                     <Col xs={12} md={12} lg={{ span: 5, offset: 1 }}>
                         <Card className='borderless-card'>
@@ -188,7 +187,6 @@ const UseCases = () => (
             </div>
 
 
-        </Container>
 
     </div>
 );

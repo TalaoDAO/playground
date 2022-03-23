@@ -17,8 +17,8 @@ const {REACT_APP_VERSION } = process.env;
 
 const Footer = () => (
   <footer>
-    <Container fluid>
-      <Row className="p-3">
+    <Container fluid >
+      <Row >
         <Col xs={12} md={12} lg={4}>
           <div className='footer-title'>
             Service

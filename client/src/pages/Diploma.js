@@ -1,34 +1,34 @@
 import React from "react";
 import "../App.css";
 
-import diploma011 from '../pages/img/Image-diploma-acces-to-your-account.png';
-import diploma012 from '../pages/img/Image-diploma-acces-to-your-account@2x.png';
-import diploma013 from '../pages/img/Image-diploma-acces-to-your-account@3x.png';
+import diploma011 from '../pages/img/diploma/Image-diploma-acces-to-your-account.webp';
+import diploma012 from '../pages/img/diploma/Image-diploma-acces-to-your-account@2x.webp';
+import diploma013 from '../pages/img/diploma/Image-diploma-acces-to-your-account@3x.webp';
 
 
-import diploma021 from '../pages/img/Image-diploma-Scan-the-qrcode-.png';
-import diploma022 from '../pages/img/Image-diploma-Scan-the-qrcode-@2x.png';
-import diploma023 from '../pages/img/Image-diploma-Scan-the-qrcode-@3x.png';
+import diploma021 from '../pages/img/diploma/Image-diploma-Scan-the-qrcode-.webp';
+import diploma022 from '../pages/img/diploma/Image-diploma-Scan-the-qrcode-@2x.webp';
+import diploma023 from '../pages/img/diploma/Image-diploma-Scan-the-qrcode-@3x.webp';
 
 
-import diploma031 from '../pages/img/Image-diploma-request-diploma-certificate.png';
-import diploma032 from '../pages/img/Image-diploma-request-diploma-certificate@2x.png';
-import diploma033 from '../pages/img/Image-diploma-request-diploma-certificate@3x.png';
+import diploma031 from '../pages/img/diploma/Image-diploma-request-diploma-certificate.webp';
+import diploma032 from '../pages/img/diploma/Image-diploma-request-diploma-certificate@2x.webp';
+import diploma033 from '../pages/img/diploma/Image-diploma-request-diploma-certificate@3x.webp';
 
 
-import diploma041 from '../pages/img/Image-diploma-compte-form.png';
-import diploma042 from '../pages/img/Image-diploma-compte-form@2x.png';
-import diploma043 from '../pages/img/Image-diploma-compte-form@3x.png';
+import diploma041 from '../pages/img/diploma/Image-diploma-compte-form.webp';
+import diploma042 from '../pages/img/diploma/Image-diploma-compte-form@2x.webp';
+import diploma043 from '../pages/img/diploma/Image-diploma-compte-form@3x.webp';
 
 
-import diploma051 from '../pages/img/Image-diploma-scan-qrcode.png';
-import diploma052 from '../pages/img/Image-diploma-scan-qrcode@2x.png';
-import diploma053 from '../pages/img/Image-diploma-scan-qrcode@3x.png';
+import diploma051 from '../pages/img/diploma/Image-diploma-scan-qrcode.webp';
+import diploma052 from '../pages/img/diploma/Image-diploma-scan-qrcode@2x.webp';
+import diploma053 from '../pages/img/diploma/Image-diploma-scan-qrcode@3x.webp';
 
 
-import diploma061 from '../pages/img/Image-diploma-accept-news-certificate.png';
-import diploma062 from '../pages/img/Image-diploma-accept-news-certificate@2x.png';
-import diploma063 from '../pages/img/Image-diploma-accept-news-certificate@3x.png';
+import diploma061 from '../pages/img/diploma/Image-diploma-accept-news-certificate.svg';
+import diploma062 from '../pages/img/diploma/Image-diploma-accept-news-certificate.svg';
+import diploma063 from '../pages/img/diploma/Image-diploma-accept-news-certificate.svg';
 
 
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -37,9 +37,8 @@ import {
 } from 'react-bootstrap';
 import UseCases from "../components/UseCases";
 import ManageStrip from "../components/ManageStrip";
-import { Link } from 'react-router-dom';
 
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
+const { REACT_APP_NODE_LOCAL } = process.env;
 
 function Diploma() {
   const [data, setData] = React.useState(null);
@@ -51,29 +50,23 @@ function Diploma() {
   }, []);
 
   return (
-    <div className="Diploma">
       <main >
-        <Container >
-          <Row className="p-3 bg-playground text-white align-content-center">
-            <Col xs={12} md={12} lg={{ span: 8, offset: 2 }} className="justify-content-center">
+        <Container fluid className="position-relative  px-0 overflow-hidden">
+          <Row className="dark-blue-section text-center">
+          <Col xs={12} md={12} lg={{ span: 6, offset: 3 }} >
 
               <Row>
                 <Col>
-                  <span className="tag-h1 text-center p-3">Download a diploma</span>
+                  <div className="title-white">Download a diploma</div>
                 </Col>
 
               </Row>
-              <Row>
-                <Col xs={12} md={12} lg={{ span: 6, offset:3 }} className="justify-content-center">
-                  <span className="tag-h3 text-center p-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</span>
-                </Col>
-              </Row>
-              <Row>
-                <Col className="justify-content-center p-5">
+              <Row className="lower">
+                <Col>
                   <Button href="/university" variant="btn btn-info btn-lg ">Start Demo</Button>
                 </Col>
               </Row>
-              <Row className="p-5">
+              <Row className="lower">
                 <Col>
                   <Button variant="outline-light " href="#description">How does it work?</Button>
                 </Col>
@@ -81,19 +74,25 @@ function Diploma() {
 
             </Col>
           </Row>
+          <Row className="text-center">
+            <Col xs={12} md={12} lg={12} >
+              <div className="vertical-line"></div>
+
+            </Col>
+          </Row>
 
 
-          <div id="description" className="position-relative overflow-hidden p-3 p-md-5 m-md-3 text-center bg-white">
+          <div id="description" className="text-center">
 
-          <Row><Col><span className="section-header-dark text-center p-3">From your desktop</span></Col></Row>
-            <Row className="position-relative overflow-hidden p-2 p-md-4 m-md-2">
+            <Row><Col><div className="section-header-dark lower">From your desktop</div></Col></Row>
+            <Row className="text-center">
               <Col xs={12} md={12} lg={{ span: 6 }}>
-                <Row >
-                  <Col className="text-end" xs={3} md={3} lg={{ span: 3 }}>
-                    <h1 className="text-muted">1.</h1>
+                <Row className="text-center lower">
+                  <Col className="text-end" xs={3} md={3} lg={{ span: 4 }}>
+                    <h1 className="step-muted">1.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="tag-h2-dark"> Request access to your account</span>
+                    <span className="step-title"> Request access to your account</span>
                   </Col>
                 </Row>
                 <Row>
@@ -105,31 +104,31 @@ function Diploma() {
 
               </Col>
               <Col xs={12} md={12} lg={{ span: 6 }}>
-                <Row>
-                  <Col className="text-end" xs={3} md={3} lg={{ span: 3 }}>
-                    <h1 className="text-muted">2.</h1>
+                <Row className="text-center lower">
+                  <Col className="text-end" xs={3} md={3} lg={{ span: 4 }}>
+                    <h1 className="step-muted">2.</h1>
                   </Col>
                   <Col className="text-start">
 
-                    <span className="tag-h2-dark"> Scan the QR Code</span>
+                    <span className="step-title"> Scan the QR Code</span>
                   </Col>
                 </Row>
                 <Row>
-                  <Col className="p-lg-10">
+                  <Col className="text-center">
                     <Image src={diploma021} srcSet={`${diploma022} 2x, ${diploma023} 3x`} className="step-image-desktop " fluid></Image>
 
                   </Col>
                 </Row>
               </Col>
             </Row>
-            <Row className="position-relative overflow-hidden p-2 p-md-4 m-md-2">
+            <Row className="text-center">
               <Col xs={12} md={12} lg={{ span: 6 }}>
-                <Row >
-                  <Col className="text-end" xs={3} md={3} lg={{ span: 3 }}>
-                    <h1 className="text-muted">3.</h1>
+                <Row className="text-center lower">
+                  <Col className="text-end" xs={3} md={3} lg={{ span: 4 }}>
+                    <h1 className="step-muted">3.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="tag-h2-dark"> Request your diploma certificate</span>
+                    <span className="step-title"> Request your diploma certificate</span>
                   </Col>
                 </Row>
                 <Row>
@@ -141,31 +140,32 @@ function Diploma() {
 
               </Col>
               <Col xs={12} md={12} lg={{ span: 6 }}>
-                <Row>
-                  <Col className="text-end" xs={3} md={3} lg={{ span: 3 }}>
-                    <h1 className="text-muted">4.</h1>
+                <Row className="text-center lower">
+
+                  <Col className="text-end" xs={3} md={3} lg={{ span: 4 }}>
+                    <h1 className="step-muted">4.</h1>
                   </Col>
                   <Col className="text-start">
 
-                    <span className="tag-h2-dark"> Complete the form</span>
+                    <span className="step-title"> Complete the form</span>
                   </Col>
                 </Row>
                 <Row>
-                  <Col className="p-lg-10">
+                  <Col >
                     <Image src={diploma041} srcSet={`${diploma042} 2x, ${diploma043} 3x`} className="step-image-desktop " fluid></Image>
 
                   </Col>
                 </Row>
               </Col>
             </Row>
-            <Row className="position-relative overflow-hidden p-2 p-md-4 m-md-2">
+            <Row className="text-center">
               <Col xs={12} md={12} lg={{ span: 6 }}>
-                <Row >
-                  <Col className="text-end" xs={3} md={3} lg={{ span: 3 }}>
-                    <h1 className="text-muted">5.</h1>
+                <Row className="text-center lower">
+                  <Col className="text-end" xs={3} md={3} lg={{ span: 4 }}>
+                    <h1 className="step-muted">5.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="tag-h2-dark"> Scan with your mobile wallet</span>
+                    <span className="step-title"> Scan with your mobile wallet</span>
                   </Col>
 
                 </Row>
@@ -176,17 +176,17 @@ function Diploma() {
                 </Row>
               </Col>
               <Col xs={12} md={12} lg={{ span: 6 }}>
-                <Row>
-                  <Col className="text-end" xs={3} md={3} lg={{ span: 3 }}>
-                    <h1 className="text-muted">6.</h1>
+                <Row className="text-center lower">
+                  <Col className="text-end" xs={3} md={3} lg={{ span: 4 }}>
+                    <h1 className="step-muted">6.</h1>
                   </Col>
                   <Col className="text-start">
-                    <span className="tag-h2-dark"> Accept your certificate</span>
+                    <span className="step-title"> Accept your certificate</span>
                   </Col>
 
                 </Row>
                 <Row>
-                  <Col className="p-lg-10">
+                  <Col>
                     <Image src={diploma061} srcSet={`${diploma062} 2x, ${diploma063} 3x`} className="step-image-mobile" fluid></Image>
                   </Col>
                 </Row>
@@ -194,26 +194,26 @@ function Diploma() {
             </Row>
           </div>
 
-          <Row>
-            <Col xs={12} md={12} lg={{ span: 6, offset: 3 }}>
-              <Link to="/university" variant="btn btn-info btn-lg ">Start Demo</Link>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} md={12} lg={{ span: 10, offset: 1 }}>
-              <hr className="btn-info btn-demo-hr" />
-            </Col>
-          </Row>
+          <div className="position-relative overflow-hidden text-center lower">
+            <Row>
+              <Col xs={12} md={12} lg={{ span: 6, offset: 3 }}>
+                <Button variant="btn btn-info btn-lg btn-demo" href="/university">Start Demo</Button>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} md={12} lg={{ span: 10, offset: 1 }}>
+                <hr className="btn-info btn-demo-hr" />
+              </Col>
+            </Row>
+          </div>
+
 
 
           <UseCases />
           <ManageStrip />
 
-          <p>{!data ? "Loading..." : data}</p>
-
         </Container>
       </main>
-    </div>
   );
 }
 

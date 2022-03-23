@@ -36,7 +36,7 @@ import are01 from './img/home/icon-how-to-recover-account.svg';
 import are02 from './img/home/icon-how-to-recover-account.svg';
 import are03 from './img/home/icon-how-to-recover-account.svg';
 
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
+const { REACT_APP_NODE_LOCAL } = process.env;
 
 function Home() {
   const [data, setData] = React.useState(null);
@@ -48,9 +48,8 @@ function Home() {
   }, []);
 
   return (
-    <div className="Home">
       <main>
-        <Container fluid className="position-relative" >
+        <Container fluid className="position-relative px-0 overflow-hidden" >
           <div className="dark-blue-jumbo" >
 
             <Row className="text-left">
@@ -147,7 +146,6 @@ function Home() {
         </Container>
 
       </main>
-    </div>
   );
 }
 

@@ -25,8 +25,7 @@ import ycs03 from '../pages/img/pass_activation/yellow-separator@3x.webp';
 
 
 const PassActivation = () => (
-  <div className="PassActivation">
-    <Container  fluid>
+  <div  className="position-relative">
       <Row className="text-center">
         <Col xs={12} md={12} lg={12}>
           <Image src={gys01} srcSet={`${gys02} 2x, ${gys03} 3x`} className="seperation-stripe" fluid></Image>
@@ -71,8 +70,6 @@ const PassActivation = () => (
         </Col>
       </Row>
 
-
-    </Container>
 
   </div>
 );

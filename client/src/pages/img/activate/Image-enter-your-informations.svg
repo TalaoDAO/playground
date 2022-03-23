@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="474" height="363" viewBox="0 0 474 363">
+    <defs>
+        <filter id="wjbq82sjwa" x="0" y="0" width="474" height="363" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="28" result="blur"/>
+            <feFlood flood-opacity=".129"/>
+            <feComposite operator="in" in2="blur"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+        <filter id="izh352ss5b" x="149.5" y="80.799" width="181" height="177" filterUnits="userSpaceOnUse">
+            <feOffset dy="3"/>
+            <feGaussianBlur stdDeviation="3.5" result="blur-2"/>
+            <feFlood flood-opacity=".129"/>
+            <feComposite operator="in" in2="blur-2"/>
+            <feComposite in="SourceGraphic"/>
+        </filter>
+    </defs>
+    <g style="filter:url(#wjbq82sjwa)">
+        <rect data-name="Rectangle 536" width="306" height="195" rx="10" transform="translate(83.998 81)" style="fill:#fff"/>
+    </g>
+    <g data-name="Light / Macbook">
+        <path transform="translate(37 58.298)" style="fill:none" d="M0 0h400v225H0z"/>
+        <path d="M9.4 0h305.34a9.4 9.4 0 0 1 9.4 9.4v204.128a9.4 9.4 0 0 1-9.4 9.4H9.4a9.4 9.4 0 0 1-9.4-9.4V9.4A9.4 9.4 0 0 1 9.4 0z" transform="translate(74.612 58)" style="fill:#dedede"/>
+        <path data-name="Shape" d="M8.541 0h305.345a8.541 8.541 0 0 1 8.541 8.541v204.133a8.542 8.542 0 0 1-8.541 8.541H8.541A8.541 8.541 0 0 1 0 212.674V8.541A8.541 8.541 0 0 1 8.541 0z" transform="translate(75.466 58.854)" style="fill:#fff"/>
+        <path data-name="Shape" d="M0 1.708A1.708 1.708 0 0 1 1.708 0h396.736a1.708 1.708 0 0 1 1.708 1.708v4.7H0v-4.7z" transform="translate(36.818 274.304)" style="fill:#dedede"/>
+        <path data-name="Shape" d="M0 .854A.854.854 0 0 1 .854 0h396.735a.854.854 0 0 1 .854.854V4.7H0V.854z" transform="translate(37.672 275.158)" style="fill:#fff"/>
+        <path data-name="Shape" d="M0 0h400.152l-1.7.905a21.358 21.358 0 0 1-10.049 2.511H11.744A21.363 21.363 0 0 1 1.7.905L0 0z" transform="translate(36.818 280.71)" style="fill:#dedede"/>
+        <path data-name="Shape" d="M0 0h397.589l-1.95.837a21.371 21.371 0 0 1-8.411 1.725H10.362A21.37 21.37 0 0 1 1.95.837L0 0z" transform="translate(38.099 280.71)" style="fill:#fff"/>
+        <path data-name="Shape" d="M0 0h57.439v.214a4.269 4.269 0 0 1-4.271 4.271H4.271A4.27 4.27 0 0 1 0 .214V0z" transform="translate(208.281 274.304)" style="fill:#dedede"/>
+        <path transform="translate(92.466 71.37)" style="fill:rgba(22,31,61,.2)" d="M0 0h290.481v192.176H0z"/>
+    </g>
+    <g data-name="Groupe 163">
+        <g style="filter:url(#izh352ss5b)">
+            <rect data-name="Rectangle 469" width="160" height="156" rx="5" transform="translate(159.997 88.302)" style="fill:#fff"/>
+        </g>
+        <g data-name="Groupe 192" transform="translate(162.217 87.912)">
+            <g data-name="Rectangle 470" transform="translate(16.783 81.387)" style="stroke:#c9ccd8;fill:#fff">
+                <rect width="123" height="22" rx="3" style="stroke:none"/>
+                <rect x=".5" y=".5" width="122" height="21" rx="2.5" style="fill:none"/>
+            </g>
+            <g data-name="Rectangle 507" transform="translate(16.783 48.387)" style="stroke:#c9ccd8;fill:#fff">
+                <rect width="123" height="22" rx="3" style="stroke:none"/>
+                <rect x=".5" y=".5" width="122" height="21" rx="2.5" style="fill:none"/>
+            </g>
+            <g data-name="Rectangle 546" transform="translate(16.783 16.387)" style="stroke:#c9ccd8;fill:#fff">
+                <rect width="123" height="22" rx="3" style="stroke:none"/>
+                <rect x=".5" y=".5" width="122" height="21" rx="2.5" style="fill:none"/>
+            </g>
+            <rect data-name="Rectangle 471" width="123" height="24" rx="5" transform="translate(16.783 117.387)" style="fill:#161f3d"/>
+            <text data-name="Email" transform="translate(27.783 88.387)" style="font-size:7px;font-family:NotoSans-Regular,Noto Sans;opacity:.653;fill:#161f3d"><tspan x="0" y="7">Email</tspan></text>
+            <text data-name="Last name" transform="translate(27.783 55.387)" style="font-size:7px;font-family:NotoSans-Regular,Noto Sans;opacity:.653;fill:#161f3d"><tspan x="0" y="7">Last name</tspan></text>
+            <text data-name="First name" transform="translate(27.783 23.387)" style="font-size:7px;font-family:NotoSans-Regular,Noto Sans;opacity:.653;fill:#161f3d"><tspan x=".612" y="7">First name</tspan></text>
+            <text transform="translate(76.783 132.387)" style="font-size:8px;font-family:NotoSans-Bold,Noto Sans;font-weight:700;fill:#fff"><tspan x="-18.932" y="0">VALIDATE</tspan></text>
+        </g>
+    </g>
+</svg>

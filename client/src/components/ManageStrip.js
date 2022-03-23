@@ -18,8 +18,7 @@ import ycs03 from '../pages/img/manage_strip/yellow-separator@3x.webp';
 
 
 const ManageStrip = () => (
-    <div className="ManageStrip">
-        <Container fluid>
+    <div  className="position-relative">
             <Row>
                 <Col xs={12} md={12} lg={12} className="text-center">
                     <Image src={gc01} srcSet={`${gc02} 2x, ${gc03} 3x`} fluid className="separator-top"></Image>
@@ -45,14 +44,13 @@ const ManageStrip = () => (
                     </Row>
                 </Col>
             </Row>
-            <Row className="align-items-center justify-content-center text-center">
+            <Row className="text-center">
               <Col xs={12} md={12} lg={{ span: 12 }}>
                 <Image src={ycs01} srcSet={`${ycs02} 2x, ${ycs03} 3x`} className="separator-bottom "  fluid></Image>
 
               </Col>
             </Row>
 
-        </Container>
 
     </div>
 );
