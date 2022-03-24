@@ -140,7 +140,7 @@ function DiscountDemo() {
                 </Col>
                 <Col className="text-center">
                   <div className="lg-only">
-                      <QRCode value={REACT_APP_QR_URL + "/discount-offer"} size={128} />
+                      <QRCode value={REACT_APP_QR_URL + "/discount-offer"+qr} size={128} />
                     </div>
                     <div className="sm-only">
                       <Button className="btn-dark-submit " variant="primary" href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/discount-offer" + qr)}>Click to add to wallet</Button>
