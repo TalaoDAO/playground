@@ -3,7 +3,6 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
 
-    console.log("running")
     try{
 
       var res=await queryInterface.bulkInsert('Users', [{
@@ -12,10 +11,9 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date()
       }], {});
-      console.log('res')
         return res;
     } catch (error) {
-      console.error(error)
+      logger.error(error)
       throw 'Somethings wrong!';
      
     }

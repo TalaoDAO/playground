@@ -46,7 +46,6 @@ function UniversityAccount() {
     const handleShowStudent = () => setShowStudent(true);
 
     const location = useLocation();
-    console.log(location.state);
 
     React.useEffect(() => {
         fetch(REACT_APP_NODE_LOCAL + "/qr-url")

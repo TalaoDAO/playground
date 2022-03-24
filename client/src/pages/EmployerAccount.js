@@ -41,7 +41,6 @@ function EmployerAccount(props) {
     const handleShow = () => setShow(true);
 
     const location = useLocation();
-    console.log(location.state);
 
     React.useEffect(() => {
         fetch(REACT_APP_NODE_LOCAL + "/qr-url")

@@ -57,7 +57,6 @@ class ActivationForm extends React.Component {
     }
 
     handleChange(event) {
-        console.log();
         this.setState({
             [event.target.name]: event.target.value
         });
@@ -77,13 +76,10 @@ class ActivationForm extends React.Component {
         } else {
             alert('Something went wrong while submitting data, please try again later');
         }
-
-        console.log('submission result in form=' + JSON.stringify(res));
     }
 
     async handleSubmitCode(event) {
         event.preventDefault();
-        console.log(this.state.phase);
         const res = await validateUser(this.state);
 
         if (res.error) {

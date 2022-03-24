@@ -19,7 +19,6 @@ exports.create = async function (callback) {
             if (err) {
                 throw new Error("Error connecting in database. " + err.message);
             }
-            console.log('Connected to the database.');
 
 
         });
@@ -30,13 +29,12 @@ exports.create = async function (callback) {
             if (err) {
                 throw new Error("Error closing the database. " + err.message);
             }
-            console.log('Close the database connection.');
         });
 
         callback(true);
 
     } catch (error) {
-        console.error(error)
+        logger.error(error)
         callback(false);
     }
 };
@@ -52,7 +50,7 @@ exports.getConnection = async function () {
 
     } catch (error) {
         console.log("error");
-        console.error(error)
+        logger.error(error)
         return null;
     } 
 

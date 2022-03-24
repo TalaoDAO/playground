@@ -19,13 +19,9 @@ module.exports =  () => {
       const challenge=connectionParams.challenge;
       openWebSockets[challenge]=websocketConnection;
 
-      // NOTE: connectParams are not used here but good to understand how to get
-      // to them if you need to pass data with the connection to identify it (e.g., a userId).
-      console.log(connectionParams);
-
       websocketConnection.on("message", (message) => {
         const parsedMessage = JSON.parse(message);
-        console.log(parsedMessage);
+        
         if(openWebSockets[challenge])
            openWebSockets[challenge].send("RECEIVED"+JSON.stringify(parsedMessage));
     
@@ -34,7 +30,6 @@ module.exports =  () => {
 
       websocketConnection.on('close', function () {
         delete openWebSockets[challenge]
-        console.log('deleted: ' + challenge)
       })
 
     }
@@ -46,9 +41,7 @@ module.exports =  () => {
 
 module.exports.send = async function(challenge,message){
 
-  console.log("for challenge:"+challenge);
   if(openWebSockets[challenge]){
-    console.log("SEnding..."+message);
     openWebSockets[challenge].send(message);
 
   }

@@ -56,7 +56,6 @@ class StudentForm extends React.Component {
     }
 
     handleChange(event) {
-        console.log();
         this.setState({
             [event.target.name]: event.target.value
         });
@@ -76,7 +75,6 @@ class StudentForm extends React.Component {
             alert('Something went wrong while submitting data, please try again later');
         }
 
-        console.log('submission result in form=' + JSON.stringify(res));
     }
 
 
@@ -85,9 +83,7 @@ class StudentForm extends React.Component {
         const [uuid, params] = url?.split("?");
   
         this.client=new W3CWebSocket(REACT_APP_WEBSOCKET_SERVER+"?challenge="+uuid);
-        console.log("connecting to: "+REACT_APP_WEBSOCKET_SERVER+"?challenge="+uuid);
         this.client.onopen =  () => {
-            console.log('WebSocket Client Connected');
             this.client.send(JSON.stringify({message:"handshake"}));
         };
         this.client.onmessage = (message) => {
@@ -96,7 +92,6 @@ class StudentForm extends React.Component {
             }else if(message.data.includes("failure")){
                 this.setState({phase:3});
             }
-            console.log(message);
         };
     }
 

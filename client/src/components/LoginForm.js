@@ -50,18 +50,12 @@ function LoginForm(props) {
         const [uuid, params] = url?.split("?");
 
         let client = new W3CWebSocket(REACT_APP_WEBSOCKET_SERVER + "?challenge=" + uuid);
-        console.log("connecting to: " + REACT_APP_WEBSOCKET_SERVER + "?challenge=" + uuid);
         client.onopen = () => {
-            console.log('WebSocket Client Connected');
             client.send(JSON.stringify({ message: "handshake" }));
         };
         client.onmessage = (message) => {
             if (message.data.includes("success")) {
                 let info = JSON.parse(message.data);
-                console.log("succesfull login for=" + info.email)
-                /*setFamilyName(info.familyName);
-                setGivenName(info.givenName);
-                setEmail(info.email);*/
                 navigate(next,{replact:true, state:{
                     email: info.email,
                     familyName: info.familyName,
@@ -72,7 +66,6 @@ function LoginForm(props) {
             } else if (message.data.includes("failure")) {
                 setInError(1);
             };
-            console.log(message);
         };
 
     }

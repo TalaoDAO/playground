@@ -95,7 +95,6 @@ function Recover() {
                 <PassActivation />
                 <UseCases />
                 <ManageStrip />
-                <p>{!data ? "Loading..." : data}</p>
 
             </Container>
         </main>

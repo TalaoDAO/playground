@@ -8,7 +8,7 @@ exports.getdid = async function (privateKey) {
         var did = DIDKit.keyToDID('ethr',privateKey);
         return did;
     } catch (error) {
-        console.error(error)
+        logger.error(error)
     }
     return null;
     
@@ -20,7 +20,7 @@ exports.getVersion = async function () {
         
         return DIDKit.getVersion();
     } catch (error) {
-        console.error(error)
+        logger.error(error)
     }
     return null;
     
@@ -41,7 +41,7 @@ exports.sign = async function (privateKey,data) {
 
         return res;
     } catch (error) {
-        console.error(error)
+        logger.error(error)
     }
 
     return null;

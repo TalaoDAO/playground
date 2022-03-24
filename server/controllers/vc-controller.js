@@ -58,13 +58,13 @@ exports.discount_offer_get = function(req, res) {
             let offer=await JSON.parse(rawdata);
             let voucherGenerator = new VoucherGenerator();
             let values={'offer.value':"100",'offer.currency':'USD','issuedBy.logo':'https://talao.mypinata.cloud/ipfs/QmZmdndUVRoxiVhUnjGrKnNPn8ah3jT8fxTCLMnAzRAFFZ','issuedBy.name':'Tezotopia','identifier':'0123456'};
-            console.log(JSON.stringify(values));
+
             await voucherGenerator.generate(process.env.DEFAULT_JWK,offer,values);
             logger.debug(JSON.stringify(offer));
             res.json(offer);
             return;
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
         }
 
@@ -95,7 +95,7 @@ exports.discount_offer_post = function(req, res) {
             send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}));
             return;
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
             send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
         }
@@ -122,13 +122,13 @@ exports.learning_get = async function(req, res) {
             res.json(offer);
             return;
         }else{
-            console.error("Request not found.")
+            logger.error("Request not found.")
             res.json({ message: "Request not found." });
             return;
         }
         
     } catch (error) {
-        console.error(error)
+        logger.error(error)
         res.json({ message: error });
     }
 
@@ -154,7 +154,7 @@ exports.learning_post = async function(req, res) {
             send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}));
             return;
         }else{
-            console.error("Request not found.")
+            logger.error("Request not found.")
             res.json({ message: "Request not found." });
             send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
             return;
@@ -162,7 +162,7 @@ exports.learning_post = async function(req, res) {
 
         
     } catch (error) {
-        console.error(error)
+        logger.error(error)
         res.json({ message: error });
         send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
     }
@@ -190,13 +190,13 @@ exports.employment_get = function(req, res) {
                 res.json(offer);
                 return;
             }else{
-                console.error("Request not found.")
+                logger.error("Request not found.")
                 res.json({ message: "Request not found." });
                 return;
             }
             
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
         }
 
@@ -226,7 +226,7 @@ exports.employment_post = function(req, res) {
                 send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}));
                 return;
             }else{
-                console.error("Request not found.")
+                logger.error("Request not found.")
                 res.json({ message: "Request not found." });
                 send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
                 return;
@@ -234,7 +234,7 @@ exports.employment_post = function(req, res) {
             
            
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
             send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
         }
@@ -260,13 +260,13 @@ exports.student_get = function(req, res) {
                 res.json(offer);
                 return;
             }else{
-                console.error("Request not found.")
+                logger.error("Request not found.")
                 res.json({ message: "Request not found." });
                 return;
             }
             
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
         }
 
@@ -296,14 +296,14 @@ exports.student_post = function(req, res) {
                 send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}));
                 return;
             }else{
-                console.error("Request not found.")
+                logger.error("Request not found.")
                 res.json({ message: "Request not found." });
                 send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
                 return;
             }
             
         } catch (error) {
-            console.trace(error)
+            logger.trace(error)
             res.json({ message: error });
             send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}));
         }
@@ -330,14 +330,14 @@ exports.email_get = function(req, res) {
                 res.json(offer);
                 return;
             }else{
-                console.error("Request not found.")
+                logger.error("Request not found.")
                 res.json({ message: "Request not found." });
                 return;
             }
     
             
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
         }
 
@@ -366,7 +366,7 @@ exports.email_post = function(req, res) {
                 send(req.params.uuid,JSON.stringify({result:"success",challenge:req.params.uuid}))
                 return;
             }else{
-                console.error("Request not found.")
+                logger.error("Request not found.")
                 res.json({ message: "Request not found." });
                 send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
                 return;
@@ -374,7 +374,7 @@ exports.email_post = function(req, res) {
     
            
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
             send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
         }
@@ -411,14 +411,14 @@ exports.authentication_get = function(req,res) {
                 res.json(presentation);
                 return;
             }else{
-                console.error("Request not found.")
+                logger.error("Request not found.")
                 res.json({ message: "Request not found." });
                 return;
             }
     
             
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
         }
 
@@ -448,13 +448,13 @@ exports.authentication_post = function(req,res) {
                     return;
             
                 }else{
-                    console.error("User not found.")
+                    logger.error("User not found.")
                     send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
                     res.json({ message: "User not found." });
                     return;
                 }
             }else{
-                console.error("Request not found.")
+                logger.error("Request not found.")
                 res.json({ message: "Request not found." });
                 send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
                 return;
@@ -462,7 +462,7 @@ exports.authentication_post = function(req,res) {
             
            
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
             send(req.params.uuid,JSON.stringify({result:"failure",challenge:req.params.uuid}))
         }
@@ -491,9 +491,10 @@ exports.test = function(req, res) {
         
             });
             let version= await didkit.getVersion();
+            logger.info(version);
             console.log(version);
         } catch (error) {
-            console.error(error)
+            logger.error(error)
             res.json({ message: error });
         }
 

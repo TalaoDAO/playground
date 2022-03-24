@@ -44,7 +44,6 @@ router.use(express.urlencoded({ extended: true }));
 
 
 router.get("/", (req, res) => {
-  logger.debug(req.url);
 
   res.json({ message: "Hello World from server!" });
 
@@ -52,9 +51,21 @@ router.get("/", (req, res) => {
 
 router.get("/qr-url", (req, res) => {
 
-  var did=await didkit.getdid(process.env.DEFAULT_JWK);
+  (async () => {
+    try {
+      var did=await didkit.getdid(process.env.DEFAULT_JWK);
 
-  res.json({ url: "?issuer="+did });
+      res.json({ url: "?issuer="+did });
+      return;
+    } catch (error) {
+      logger.error(error);
+      res.send({
+        error: error.message
+      });
+    }
+
+  })();
+  
 
 });
 

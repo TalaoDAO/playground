@@ -63,7 +63,7 @@ exports.createUser = async function (email, givenName, familyName) {
         return user;
     } catch (error) {
         await t.rollback();
-        console.error(error)
+        logger.error(error)
         return null;
     }
     
@@ -84,7 +84,7 @@ async function sendCode(user) {
         }
     });
 
-    transporter.verify().then(console.log).catch(console.error);
+    transporter.verify().then(console.log).catch(logger.error);
 
     var html = `
     <!DOCTYPE html>

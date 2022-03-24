@@ -136,7 +136,6 @@ exports.getAuthenticationRequest = async function (uuid) {
 
 exports.validateCredentials = async function (receivedCredentials){
 
-    console.log(receivedCredentials);
     let rc= await JSON.parse(receivedCredentials);
 
     let uuid=rc.id;
@@ -156,7 +155,6 @@ exports.validateCredentials = async function (receivedCredentials){
                 logger.debug("email="+creds[i].credentialSubject.email);
                 return creds[i].credentialSubject.email;
             }
-            console.log(creds[i]);
         }
     }else{
         if(creds.credentialSubject.type==='EmailPass'){

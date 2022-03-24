@@ -23,8 +23,6 @@ function isAuth() {
 function getSessionToken() {
   let tokenString = sessionStorage.getItem('token');
   if (typeof tokenString !== "undefined" && tokenString !== null && tokenString !== undefined && tokenString !== "undefined") {
-    console.log(tokenString);
-
     const userToken = tokenString ? JSON.parse(tokenString) : null;
     return userToken?.token
   }

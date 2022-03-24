@@ -49,15 +49,12 @@ function EmployerForm(props) {
         handleResult(res);
     };
 
-    console.log(props);
 
     function setupWebhook(url) {
         const [uuid, params] = url?.split("?");
 
         var client = new W3CWebSocket(REACT_APP_WEBSOCKET_SERVER + "?challenge=" + uuid);
-        console.log("connecting to: " + REACT_APP_WEBSOCKET_SERVER + "?challenge=" + uuid);
         client.onopen = () => {
-            console.log('WebSocket Client Connected');
             client.send(JSON.stringify({ message: "handshake" }));
         };
         client.onmessage = (message) => {
@@ -66,7 +63,6 @@ function EmployerForm(props) {
             } else if (message.data.includes("failure")) {
                 setPhase(3);
             }
-            console.log(message);
         };
     }
 
@@ -111,7 +107,6 @@ function EmployerForm(props) {
             alert('Something went wrong while submitting data, please try again later');
         }
 
-        console.log('submission result in form=' + JSON.stringify(result.url));
     }
 
 
