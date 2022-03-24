@@ -9,11 +9,26 @@ import {
 } from 'react-bootstrap';
 
 
-import news_lt from './img/news-left-top.png';
-import news_rt from './img/news-right-top.png';
-import news_l from './img/news-left.png';
-import news_rb from './img/news-right-bottom.png';
-import news_dis from './img/news-discount.png';
+
+
+import news_header from './img/article/header.png';
+import news_footer from './img/article/footer.png';
+import news_cats from './img/article/categories.png';
+
+import comment_icon from './img/article/union.svg';
+import eye_icon from './img/article/eye.svg';
+
+
+import art01 from './img/article/article.webp';
+import art02 from './img/article/article@2x.webp';
+import art03 from './img/article/article@3x.webp';
+
+
+
+import mon01 from './img/article/monkey-nft.webp';
+import mon02 from './img/article/monkey-nft@2x.webp';
+import mon03 from './img/article/monkey-nft@3x.webp';
+
 
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL, REACT_APP_WALLET_LINK } = process.env;
@@ -30,59 +45,140 @@ function DiscountDemo() {
   }, []);
 
   return (
-    <div className="DiscountDemo">
-      <main >
-        <Container>
-
-
-          <Row>
-            <Col xs={8} md={8} lg={8} style={{ textAlign: "right" }}>
-              <Image src={news_lt} className="img-fit" fluid></Image>
+    <main >
+      <Container className="shadow px-0 ">
+          <Row className="px-0">
+            <Col xs={12} md={12} lg={12}>
+              <Image src={news_header} className="img-fit" fluid></Image>
 
             </Col>
-            <Col style={{ textAlign: "right" }}>
-              <Image src={news_rt} className="img-fit" fluid></Image>
-
-            </Col>
+            
           </Row>
-          <Row>
-            <Col xs={12} md={12} lg={8} style={{ textAlign: "left" }}>
-              <Image src={news_l} className="img-scale" fluid></Image>
 
-            </Col>
-            <Col xs={12} md={12} lg={4} style={{ textAlign: "right" }}>
-              <Row className="p-5" style={{ borderColor: "var(--dark-blue-grey)" }}>
-                <Col xs={{ span: 6, offset: 3 }} md={{ span: 6, offset: 3 }} lg={{ span: 6, offset: 0 }} style={{ textAlign: "center" }}>
+        <div className="discount-box ">
 
-                  <Image src={news_dis} className="img-scale" fluid></Image>
+          
+
+          <Row className="text-center">
+            <Col xs={12} md={12} lg={{span:7}}>
+              <Row>
+                <Col>
+                  <div className="discount-title">Passport for a decentralized world</div>
+                </Col>
+              </Row>
+              <Row className="text-left">
+                <div className="discount-info">
+                  {new Date().toLocaleDateString()}
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  <Image src={comment_icon} className="discount-sub-icons" fluid></Image>
+                  &nbsp;
+                  01
+                  &nbsp;
+                  &nbsp;
+                  &nbsp;
+                  <Image src={eye_icon} className="discount-sub-icons" fluid></Image>
+                  &nbsp;
+                  301
+                </div>
+
+              </Row>
+              <Row className="discount-separation-top">
+                <Col>
+                  <Image src={art01} srcSet={`${art02} 2x, ${art03} 3x`} className="discount-article-img" fluid></Image>
+
+
                 </Col>
 
-                <Col xs={12} md={12} lg={6} style={{ textAlign: "center" }}>
+              </Row>
+              <Row className="discount-separation-top">
+                <Col className="discount-article">
+
+                  <p>
+                    The decentralized world of Web3 and open Metaverse is upsetting the relationship between platforms and their users. Platforms lose control of data and users are only recognized by their address on the local blockchain.
+
+                  </p>
+                  <p>
+                    The sovereign identity is then absent from the exchanges and it is the community which takes over, the community of a game or the Twitter community of the artist which proves the authenticity of the work linked to the NFT.
+
+                  </p>
+                  <p>
+
+                    But what happens if you leave your community, what happens if the tweet is deleted?
+
+                  </p>
+
+                  <p>
+                    For data it’s even worse, some try to put them in NFTs but not everything is moneyable and transferable. A certificate of professional experience or a loyalty card, whether attached to a user or to his avatar in a Metaverse, has nothing to do with a token.
+
+                  </p>
+
+                  <p>
+                    There is therefore a lack, an approach that allows us to reconstitute a support for what we need to keep with us in this new decentralized world.
+
+                  </p>
+
+                </Col>
+
+              </Row>
+            </Col>
+            <Col xs={12} md={12} lg={{span:4,offset:1}}>
+              <Row className="text-center">
+                <Col>
+                  <Row className="text-center">
+                    <Col>
+                      <div className="discount-perc">15%</div>
+                    </Col>
+                  </Row>
+                  <Row >
+                    <Col className="text-center">
+                      <div className="discount-perc-sub">Discount</div>
+                    </Col>
+                  </Row>
+
+                </Col>
+                <Col className="text-center">
                   <div className="lg-only">
                       <QRCode value={REACT_APP_QR_URL + "/discount-offer"} size={128} />
                     </div>
                     <div className="sm-only">
-                        <Button className="btn-dark-submit " variant="primary"  href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/discount-offer")}>Click to add to wallet</Button>
+                      <Button className="btn-dark-submit " variant="primary" href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/discount-offer" + qr)}>Click to add to wallet</Button>
                     </div>
                 </Col>
               </Row>
-              <Row>
-                <Col xs={12} md={12} lg={12} style={{ textAlign: "center" }}>
-                  <Image src={news_rb} className="img-scale"></Image>
+              <Row className="discount-separation-top">
+                <Col>
+                <Image src={mon01} srcSet={`${mon02} 2x, ${mon03} 3x`} className="discount-monkey-img" fluid></Image>
                 </Col>
               </Row>
 
+              <Row>
+              <Col xs={12} md={12} lg={12} className="discount-separation-top">
+                <Image src={news_cats} className="img-fit" fluid></Image>
+
+              </Col>
+              
+            </Row>
+
 
             </Col>
+          </Row>
+          
 
+
+        </div>
+        <Row className="p-0">
+            <Col xs={12} md={12} lg={12}>
+              <Image src={news_footer} className="img-fit" fluid></Image>
+
+            </Col>
+            
           </Row>
 
+      </Container>
 
-          <p>{!qr ? "Loading..." : qr}</p>
-        </Container>
-
-      </main>
-    </div>
+    </main>
   );
 }
 

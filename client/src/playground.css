@@ -386,6 +386,92 @@
     width: 100%;
   }
 
+  /*Discount use case*/
+
+.discount-box {
+  margin: 10% 5% 10%;
+}
+
+.discount-title {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--dark-blue-grey);
+}
+
+.discount-info {
+  -webkit-text-stroke: 1px rgba(202, 206, 213, 0.05);
+  font-family: 'Roboto', sans-serif;  
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3f434d;
+}
+
+.discount-perc {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 77px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #2f1e28;
+}
+
+.discount-perc-sub {
+    font-family: 'NotoSans', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #2f1e28;
+}
+
+.discount-article {
+  -webkit-text-stroke: 1px rgba(202, 206, 213, 0.05);
+  font-family: 'Roboto', sans-serif;  
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1f2024;
+
+}
+
+img.discount-article-img {
+  max-height:472px;
+  object-fit: contain;
+}
+
+img.discount-monkey-img {
+  max-height:673px;
+  object-fit: contain;
+}
+
+img.discount-sub-icons {
+  max-width: 13px;
+  max-height: 13px;
+}
+
+div.discount-separation-top {
+  margin-top: 5%;
+}
+
 }
 
 
@@ -764,6 +850,95 @@
     margin-right: 5px;
 
   }
+
+  /*Discount use case*/
+
+.discount-box {
+  margin: 10% 5% 10%;
+}
+
+.discount-title {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--dark-blue-grey);
+}
+
+.discount-info {
+  -webkit-text-stroke: 1px rgba(202, 206, 213, 0.05);
+  font-family: 'Roboto', sans-serif;  
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3f434d;
+}
+
+.discount-perc {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 77px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2f1e28;
+}
+
+.discount-perc-sub {
+    font-family: 'NotoSans', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2f1e28;
+}
+
+.discount-article {
+  -webkit-text-stroke: 1px rgba(202, 206, 213, 0.05);
+  font-family: 'Roboto', sans-serif;  
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1f2024;
+
+}
+
+img.discount-article-img {
+  max-height:472px;
+  object-fit: contain;
+}
+
+img.discount-monkey-img {
+  max-height:673px;
+  object-fit: contain;
+}
+
+img.discount-sub-icons {
+  max-width: 13px;
+  max-height: 13px;
+}
+
+div.discount-separation-top {
+  margin-top: 5%;
+}
+
 
 }
   
@@ -1149,6 +1324,96 @@
   .action-button {
     width: 100%;
   }
+
+
+/*Discount use case*/
+
+.discount-box {
+  margin: 10% 5% 10%;
+}
+
+.discount-title {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--dark-blue-grey);
+}
+
+.discount-info {
+  -webkit-text-stroke: 1px rgba(202, 206, 213, 0.05);
+  font-family: 'Roboto', sans-serif;  
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3f434d;
+}
+
+.discount-perc {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 77px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2f1e28;
+}
+
+.discount-perc-sub {
+    font-family: 'NotoSans', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2f1e28;
+}
+
+.discount-article {
+  -webkit-text-stroke: 1px rgba(202, 206, 213, 0.05);
+  font-family: 'Roboto', sans-serif;  
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1f2024;
+
+}
+
+img.discount-article-img {
+  max-height:472px;
+  object-fit: contain;
+}
+
+img.discount-monkey-img {
+  max-height:673px;
+  object-fit: contain;
+}
+
+img.discount-sub-icons {
+  max-width: 13px;
+  max-height: 13px;
+}
+
+div.discount-separation-top {
+  margin-top: 5%;
+}
+
 
 
 }
@@ -1545,6 +1810,95 @@
     object-fit: contain;
 
   }
+
+/*Discount use case*/
+
+.discount-box {
+  margin: 10% 5% 10%;
+}
+
+.discount-title {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.41;
+  letter-spacing: normal;
+  text-align: left;
+  color: var(--dark-blue-grey);
+}
+
+.discount-info {
+  -webkit-text-stroke: 1px rgba(202, 206, 213, 0.05);
+  font-family: 'Roboto', sans-serif;  
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #3f434d;
+}
+
+.discount-perc {
+  font-family: 'NotoSans', sans-serif;
+  font-size: 77px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2f1e28;
+}
+
+.discount-perc-sub {
+    font-family: 'NotoSans', sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #2f1e28;
+}
+
+.discount-article {
+  -webkit-text-stroke: 1px rgba(202, 206, 213, 0.05);
+  font-family: 'Roboto', sans-serif;  
+  font-size: 16px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.63;
+  letter-spacing: normal;
+  text-align: left;
+  color: #1f2024;
+
+}
+
+img.discount-article-img {
+  max-height:472px;
+  object-fit: contain;
+}
+
+img.discount-monkey-img {
+  max-height:673px;
+  object-fit: contain;
+}
+
+img.discount-sub-icons {
+  max-width: 13px;
+  max-height: 13px;
+}
+
+div.discount-separation-top {
+  margin-top: 5%;
+}
+
 
 }
 
