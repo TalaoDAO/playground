@@ -63,7 +63,7 @@ const Footer = () => (
               </div>
 
               <div className='footer-normal'>
-                © Talao 2021 Version: {REACT_APP_VERSION}
+                © Talao {new Date().getFullYear()} Version: {REACT_APP_VERSION}
               </div>
             </Col>
           </Row>
