@@ -87,13 +87,9 @@ function EmployerAccount(props) {
                                                     </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row className="text-left">
-                                                        <Col xs md lg={8} className="text-left">
+                                                        <Col xs md lg={12} className="text-left">
                                                             <Image src={icon_files} className="menu-icon" fluid></Image>&nbsp;
                                                             Documents&nbsp;
-
-                                                        </Col>
-                                                        <Col xs md lg={{offset:1, span:3}} className="text-right">
-                                                            <Image src={icon_arrow} className="menu-icon text-right" fluid></Image>
 
                                                         </Col>
                                                     </Row>
