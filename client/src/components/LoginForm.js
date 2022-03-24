@@ -119,7 +119,7 @@ function LoginForm(props) {
                 return (
                     <div id="login-form">
                         <span className='subtitle-dark '>Loading...</span>
-                        <p>{!res ? "No res..." : JSON.stringify(res)}</p>
+                        <p>{!res ? "Please wait..." : JSON.stringify(res)}</p>
                     </div>
                 );
             } else {
