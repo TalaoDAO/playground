@@ -39,7 +39,7 @@ const server = app.listen(PORT, () => {
 
 websockets()
 
-const job = nodeCron.schedule("* */10 * * * *", function jobToExecute() {
+const job = nodeCron.schedule("10 * * * * *", function jobToExecute() {
   console.log(new Date().toLocaleString());
   (async () => {
     try {

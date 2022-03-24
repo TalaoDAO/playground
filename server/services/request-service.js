@@ -58,7 +58,7 @@ exports.emptyRequests = async function () {
     let res = await UserRequest.destroy({
         where: {
             createdAt: {
-               [Op.lte] : (new Date() - 10 * 60 * 1000   )
+               [Op.lte] : (new Date() - 60 * 1000   )
             }
         }
     })
