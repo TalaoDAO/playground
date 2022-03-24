@@ -21,6 +21,7 @@ import ActivationProcess from '../pages/ActivationProcess';
 const Main = () => {
 
   return (
+    <div className='content-container'>
     <Routes> {/* The Routes decides which component to show based on the current URL.*/}
         <Route exact path='/' element={<Home/>}></Route>
         <Route exact path='/home' element={<Home/>}></Route>
@@ -39,6 +40,7 @@ const Main = () => {
         <Route exact path='/discount-demo' element={<DiscountDemo/>}></Route>
         <Route exact path='/pass-activation' element={<ActivationProcess/>}></Route>
     </Routes>
+    </div>
   );
 }
 

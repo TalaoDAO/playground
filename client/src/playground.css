@@ -1716,136 +1716,25 @@ img.follow-img {
   background-color: var(--dark-blue-grey);
 }
 
+.footer{
+  position: relative;
+  left: 0;
+  bottom: 0;
+  margin-left: 10px;
+  height: 50px;
+}
+
+.content-container {
+  min-height: calc(100vh - 350px);
+}
 /****************************************************/
 
- 
-  .img-scale {
-    width: auto;
-    height: auto;
-    max-width: 100%;
-    max-height: 100%;
-  }
 
-  .img-separator {
-
-    margin-top: -150px;
-    
-    object-fit: contain;
-  }
-.after-separator {
-  margin-top: 150px;
+.img-scale {
+  width: auto;
+  height: auto;
 }
- 
-
- 
 
 
 
- 
-
-
-
-
-
-
-  .Trac-141 {
-    width: 100%;
-    background-color: var(--dark-blue-grey);
-  }
-
-
-
-
-
-
-
-  .white-label {
-      height: 22px;
-      padding-right: 10px;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 16px;
-      font-weight: bold;
-      font-stretch: normal;
-      font-style: normal;
-      line-height: 1.38;
-      letter-spacing: normal;
-      text-align: left;
-      color: #fff;
-  }
-
- .icon-btn-learn-more {
-    width: 28px;
-    height: 18px;
-    padding-left: 10px;
-    object-fit: contain;
-  }
-
-
-
-
-  
-
-
-  
-  
-
-
-  
-
-
-
-  .bg-playground {
-    background-color: var(--dark-blue-grey);
-  }
-
-  .tall-element {
-      width: 100%;
-      height: 500px;
-  }
-
-
-  
-
-
-
-  
-
-
-  
-  @media only screen  and (max-width: 1024px) {
-
-
-  
-  }
-  
-    
-  @media only screen and (min-width: 1024px) {
-
-
-
-
-  
-  .col-fixed {
-    height: 306px;
-    
-  }
-
-  .col-fixed-2 {
-    height: 712px;
-    
-  }
-
-  .img-stack {
-    width: 35vw;
-    height: 35vh;
-    
-  }
-
-  .btn-over {
-    position:relative;
-    margin-top: 100px;
-    
-  }
-
-}
 

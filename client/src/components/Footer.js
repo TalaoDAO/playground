@@ -11,60 +11,66 @@ import linkedin from '../pages/img/home/icon-linkedin-footer.svg';
 import fb from '../pages/img/home/icon-facebook-footer.svg';
 
 
-const {REACT_APP_VERSION } = process.env;
+const { REACT_APP_VERSION } = process.env;
 
 
 
 const Footer = () => (
-  <footer>
+  <footer className="footer" >
     <Container fluid >
-      <Row >
-        <Col xs={12} md={12} lg={4}>
-          <div className='footer-title'>
-            Service
-          </div>
+      <Row>
+        <Col xs={12} md={12} lg={{offset:3,span:6}}>
+          <Row >
+            <Col xs={12} md={4} lg={4}>
+              <div className='footer-title'>
+                Service
+              </div>
 
-          <div className='footer-normal'>
-            Conseil 
-          </div>
-          
-          <div className='footer-normal'>
-            Développement
-          </div>
-        </Col>
+              <div className='footer-normal'>
+                Conseil
+              </div>
 
-        <Col xs={12} md={12} lg={4}>
-          <div className='footer-title'>
-            A propos
-          </div>
+              <div className='footer-normal'>
+                Développement
+              </div>
+            </Col>
 
-          <div className='footer-normal'>
-          Protection de la vie privée 
-          </div>
-          
-          <div className='footer-normal'>
-             CGU
-          </div>
-        </Col>
+            <Col xs={12} md={4} lg={4}>
+              <div className='footer-title'>
+                A propos
+              </div>
 
-        <Col xs={12} md={12} lg={4}>
-          <div className='footer-title'>
-            Follow
-          </div>
+              <div className='footer-normal'>
+                Protection de la vie privée
+              </div>
 
-          <div className='footer-normal'>
-          <Image src={twitter} className="footer-img p-1" fluid></Image>
+              <div className='footer-normal'>
+                CGU
+              </div>
+            </Col>
 
-          <Image src={linkedin} className="footer-img p-1" fluid></Image>
+            <Col xs={12} md={4} lg={4}>
+              <div className='footer-title'>
+                Follow
+              </div>
 
-          <Image src={fb} className="footer-img p-1" fluid></Image>
-          </div>
-          
-          <div className='footer-normal'>
-            © Talao 2021 Version: {REACT_APP_VERSION}
-          </div>
+              <div className='footer-normal'>
+                <Image src={twitter} className="footer-img p-1" fluid></Image>
+
+                <Image src={linkedin} className="footer-img p-1" fluid></Image>
+
+                <Image src={fb} className="footer-img p-1" fluid></Image>
+              </div>
+
+              <div className='footer-normal'>
+                © Talao 2021 Version: {REACT_APP_VERSION}
+              </div>
+            </Col>
+          </Row>
         </Col>
       </Row>
+
+
 
     </Container>
   </footer>
