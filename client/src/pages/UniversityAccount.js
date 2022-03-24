@@ -82,7 +82,7 @@ function UniversityAccount() {
                                             <ListGroup className="border-0" flush>
                                                 <ListGroup.Item className="border-0">
                                                     <Row>
-                                                        <Col xs md lg={12} className="text-left">
+                                                        <Col xs={12} md={12} lg={12} className="text-left">
                                                             <Image src={icon_dashboard} className="menu-icon" fluid></Image>&nbsp;
                                                             Dashboard&nbsp;
 
@@ -92,13 +92,9 @@ function UniversityAccount() {
                                                     </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row className="text-left">
-                                                        <Col xs md lg={8} className="text-left">
+                                                        <Col xs={12} md={12} lg={12} className="text-left">
                                                             <Image src={icon_files} className="menu-icon" fluid></Image>&nbsp;
                                                             Documents&nbsp;
-
-                                                        </Col>
-                                                        <Col xs md lg={{offset:1, span:3}} className="text-right">
-                                                            <Image src={icon_arrow} className="menu-icon text-right" fluid></Image>
 
                                                         </Col>
                                                     </Row>
@@ -106,7 +102,7 @@ function UniversityAccount() {
                                                     </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row>
-                                                        <Col xs md lg={12} className="text-left">
+                                                        <Col xs={12} md={12} lg={12} className="text-left">
                                                             <Image src={icon_calendar} className="menu-icon" fluid></Image>&nbsp;
                                                             Calendar&nbsp;
 
@@ -115,7 +111,7 @@ function UniversityAccount() {
                                                     </ListGroup.Item>
                                                     <ListGroup.Item className="border-0">
                                                     <Row>
-                                                        <Col xs md lg={12} className="text-left">
+                                                        <Col xs={12} md={12} lg={12} className="text-left">
                                                             <Image src={icon_messages} className="menu-icon" fluid></Image>&nbsp;
                                                             Messages&nbsp;
 
@@ -133,7 +129,7 @@ function UniversityAccount() {
                                         <ListGroup className="border-0" flush>
                                                 <ListGroup.Item className="border-0">
                                                     <Row>
-                                                        <Col xs md lg={12} className="text-left">
+                                                        <Col xs={12} md={12} lg={12} className="text-left">
                                                             <Image src={icon_dashboard} className="menu-icon" fluid></Image>&nbsp;
                                                             Dashboard&nbsp;
 
@@ -143,12 +139,12 @@ function UniversityAccount() {
                                                     </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row className="text-left">
-                                                        <Col xs md lg={8} className="text-left">
+                                                        <Col xs={12} md={12} lg={8} className="text-left">
                                                             <Image src={icon_files} className="menu-icon" fluid></Image>&nbsp;
                                                             Documents&nbsp;
 
                                                         </Col>
-                                                        <Col xs md lg={{offset:1, span:3}} className="text-right">
+                                                        <Col xs={12} md={12} lg={{offset:1, span:3}} className="text-right">
                                                             <Image src={icon_arrow} className="menu-icon text-right" fluid></Image>
 
                                                         </Col>
@@ -157,7 +153,7 @@ function UniversityAccount() {
                                                     </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row>
-                                                        <Col xs md lg={12} className="text-left">
+                                                        <Col xs={12} md={12} lg={12} className="text-left">
                                                             <Image src={icon_calendar} className="menu-icon" fluid></Image>&nbsp;
                                                             Calendar&nbsp;
 
@@ -166,7 +162,7 @@ function UniversityAccount() {
                                                     </ListGroup.Item>
                                                     <ListGroup.Item className="border-0">
                                                     <Row>
-                                                        <Col xs md lg={12} className="text-left">
+                                                        <Col xs={12} md={12} lg={12} className="text-left">
                                                             <Image src={icon_messages} className="menu-icon" fluid></Image>&nbsp;
                                                             Messages&nbsp;
 
@@ -231,40 +227,40 @@ function UniversityAccount() {
                                                     <ListGroup>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
@@ -280,40 +276,40 @@ function UniversityAccount() {
                                                     <ListGroup>
                                                     <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
@@ -355,40 +351,40 @@ function UniversityAccount() {
                                                     <ListGroup>
                                                     <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
@@ -404,40 +400,40 @@ function UniversityAccount() {
                                                     <ListGroup>
                                                     <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
                                                         </ListGroup.Item>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
-                                                                <Col xs md lg={2}>
+                                                                <Col xs={12} md={12} lg={2}>
                                                                     <div class="content-check-un"></div>
                                                                 </Col>
-                                                                <Col xs md lg={9}>
+                                                                <Col xs={12} md={12} lg={9}>
                                                                     <div className="content-line"></div>
                                                                 </Col>
                                                             </Row>
@@ -457,50 +453,50 @@ function UniversityAccount() {
                                             <ListGroup>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
@@ -516,50 +512,50 @@ function UniversityAccount() {
                                         <Accordion.Body>
                                         <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
                                                 </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
-                                                        <Col xs md lg={3}>
+                                                        <Col xs={12} md={12} lg={3}>
                                                             <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
                                                         </Col>
-                                                        <Col xs md lg={9}>
+                                                        <Col xs={12} md={12} lg={9}>
                                                             <div className="content-line"></div>
                                                         </Col>
                                                     </Row>
