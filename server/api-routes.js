@@ -51,9 +51,10 @@ router.get("/", (req, res) => {
 });
 
 router.get("/qr-url", (req, res) => {
-  logger.debug(req.url);
 
-  res.json({ url: "random_challenge" });
+  var did=await didkit.getdid(process.env.DEFAULT_JWK);
+
+  res.json({ url: "?issuer="+did });
 
 });
 

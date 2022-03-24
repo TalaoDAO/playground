@@ -42,26 +42,28 @@ const Header = () => {
   return (
     <header>
       <Container fluid >
+        <div className='header-position'>
+          
         <Navbar bg="white" expand="lg md">
           <Navbar.Brand href="/home"><Image src={logo1} srcSet={`${logo2} 2x, ${logo3} 3x`} fluid className='talao-logo'></Image></Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav  className="ms-auto nav-menu">
-              <Nav.Link href="/activation">Pass Activation</Nav.Link>
-              <NavDropdown title="Use Cases" id="basic-nav-dropdown">
+          <Navbar.Collapse id="basic-navbar-nav ">
+            <Nav  className="ms-auto">
+              <Nav.Link href="/activation" className="nav-menu px-3">Pass Activation</Nav.Link>
+              <NavDropdown  className="nav-menu px-3" title="Use Cases" id="basic-nav-dropdown"  >
                 <NavDropdown.Item href="/diploma">Download a diploma</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/student">Download your student card</NavDropdown.Item>
+                <NavDropdown.Item href="/student" >Download your student card</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/employer">Request a certificate of employment</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/discount">Get a discount coupon</NavDropdown.Item>
               </NavDropdown>
-              <Nav.Link href="/manage">Manage Certificates</Nav.Link>
-              {!token ? '' : <Logout setToken={setToken} />}
+              <Nav.Link href="/manage"  className="nav-menu px-3">Manage Certificates</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>
+        </div>
       </Container>
     </header>
   );

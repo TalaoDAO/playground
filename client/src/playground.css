@@ -1957,14 +1957,26 @@ div.discount-separation-top {
 
 .nav-menu {
   font-family: 'Noto Sans', sans-serif;  
-  font-size: 17px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 600;
   font-stretch: normal;
   font-style: normal;
   line-height: 3.29;
   letter-spacing: normal;
   text-align: right;
-  color: var(--dark-blue-grey);
+  color: var(--dark-blue-grey)!important;
+}
+
+.header-position {
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.nav-link, .dropdown-item {
+  color: var(--dark-blue-grey)!important;
+}
+.nav-link:hover, .dropdown-item:hover {
+  color: var(--azure)!important;
 }
 
 div.footer-normal {
