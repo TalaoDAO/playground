@@ -47,7 +47,8 @@ class ActivationForm extends React.Component {
             email: '',
             code: '',
             challenge: '',
-            phase: 0
+            phase: 0,
+            urlSuffix: ''
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -67,7 +68,7 @@ class ActivationForm extends React.Component {
         const res = await submitUser(this.state);
 
         if (res.active) {
-            this.setState({ phase: 2, challenge: res.challenge });
+            this.setState({ phase: 2, challenge: res.challenge, urlSuffix:res.url });
             this.setupWebhook(res.challenge);
         } else if (res.error) {
             alert('Error while submitting user data: ' + res.error);
@@ -88,21 +89,18 @@ class ActivationForm extends React.Component {
         if (res.error) {
             alert('Error while validating user: ' + res.error);
         } else if (res.user_id) {
-            this.setState({ phase: 2, challenge: res.challenge });
+            this.setState({ phase: 2, challenge: res.challenge, urlSuffix:res.url });
             this.setupWebhook(res.challenge);
         } else {
             alert('Something went wrong while validating the user, please try again later');
         }
 
-        console.log('validation result in form=' + JSON.stringify(res));
     }
 
 
     async setupWebhook(challenge) {
         this.client=new W3CWebSocket(REACT_APP_WEBSOCKET_SERVER+"?challenge="+challenge);
-        console.log("connecting to: "+REACT_APP_WEBSOCKET_SERVER+"?challenge="+challenge);
         this.client.onopen =  () => {
-            console.log('WebSocket Client Connected');
             this.client.send(JSON.stringify({message:"handshake"}));
         };
         this.client.onmessage = (message) => {
@@ -111,7 +109,6 @@ class ActivationForm extends React.Component {
             }else if(message.data.includes("failure")){
                 this.setState({phase:4});
             }
-            console.log(message);
         };
     }
 
@@ -172,11 +169,11 @@ class ActivationForm extends React.Component {
                 <div id="user-form">
                     <div className='lg-only'>
                         <p className="subtitle-dark">Scan the QR with your mobile wallet</p>
-                        <QRCode value={REACT_APP_QR_URL + "/email/" + this.state.challenge} size={128} />
+                        <QRCode value={REACT_APP_QR_URL + "/email/" + this.state.urlSuffix} size={128} />
 
                     </div>
                     <div className='sm-only'>
-                        <Button className="btn-dark-submit " variant="primary"  href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/email/" + this.state.challenge)}>Click to add to wallet</Button>
+                        <Button className="btn-dark-submit " variant="primary"  href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/email/" + this.state.urlSuffix)}>Click to add to wallet</Button>
                     </div>
                 </div>
             );

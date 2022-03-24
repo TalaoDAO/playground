@@ -186,11 +186,13 @@ router.post('/create-user', upload.none(), (req, res) => {
       }
 
       let user = await userService.getUser(email)
+      var did=await didkit.getdid(process.env.DEFAULT_JWK);
       if (user && user.active) {
         logger.error("User already exists");
         res.send({
           active: 1,
           challenge: user.challenge,
+          url: user.challenge + '?issuer='+did,
           error: "User already exists"
         });
         return;
@@ -201,7 +203,8 @@ router.post('/create-user', upload.none(), (req, res) => {
           logger.debug('generated user id=' + user.id)
         }
         res.send({
-          user_id: user.id
+          user_id: user.id,
+          url: user.challenge + '?issuer='+did
         });
         return;
       }
@@ -241,6 +244,7 @@ router.post('/validate-user', upload.none(), (req, res) => {
         return;
       }
       let userFound = await userService.validateUser(email, req.body.code);
+      
 
       if (!userFound) {
         logger.error("User does not exist or code doesn't match.");
@@ -252,12 +256,15 @@ router.post('/validate-user', upload.none(), (req, res) => {
 
       userFound.active = true;
       userFound.save();
+      var did=await didkit.getdid(process.env.DEFAULT_JWK);
+
 
       logger.debug('activated user id=' + userFound.id)
 
       res.send({
         user_id: userFound.id,
-        challenge: userFound.challenge
+        challenge: userFound.challenge,
+        url: userFound.challenge + '?issuer='+did
       });
       return;
     } catch (error) {
