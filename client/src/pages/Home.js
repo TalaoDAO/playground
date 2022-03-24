@@ -82,7 +82,7 @@ function Home() {
                 <Image src={gch01} srcSet={`${gch02} 2x, ${gch03} 3x`} className="title-separator" fluid></Image>
               </Col>
               <Col sm={12} md={12} lg={4} className="text-center">
-                <Image src={phh01} srcSet={`${phh02} 2x, ${phh03} 3x`} className="img-phone" fluid></Image>
+                <Image src={phh01} srcSet={`${phh02} 2x, ${phh03} 3x`} className="phone-home" fluid></Image>
 
               </Col>
 

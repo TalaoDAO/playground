@@ -68,7 +68,7 @@ function Manage() {
                             <Card className='borderless-card'>
                                 <Card.Header className='borderless-card'>
 
-                                    <Image src={icon_wallet_1} srcSet={`${icon_wallet_2} 2x, ${icon_wallet_3} 3x`} className="icon-use-case" fluid></Image>
+                                    <Image src={icon_wallet_1} srcSet={`${icon_wallet_2} 2x, ${icon_wallet_3} 3x`} className="icon-manage" fluid></Image>
                                 </Card.Header>
                                 <Card.Body >
                                     <Row>
@@ -91,7 +91,7 @@ function Manage() {
                             <Card className='borderless-card'>
                                 <Card.Header className='borderless-card'>
 
-                                    <Image src={icon_settings_1} srcSet={`${icon_settings_2} 2x, ${icon_settings_3} 3x`} className="icon-use-case" fluid></Image>
+                                    <Image src={icon_settings_1} srcSet={`${icon_settings_2} 2x, ${icon_settings_3} 3x`} className="icon-manage" fluid></Image>
                                 </Card.Header>
                                 <Card.Body >
                                     <Row>
@@ -117,7 +117,7 @@ function Manage() {
                             <Card className='borderless-card'>
                                 <Card.Header className='borderless-card'>
 
-                                    <Image src={icon_reset_1} srcSet={`${icon_reset_2} 2x, ${icon_reset_3} 3x`} className="icon-use-case" fluid></Image>
+                                    <Image src={icon_reset_1} srcSet={`${icon_reset_2} 2x, ${icon_reset_3} 3x`} className="icon-manage" fluid></Image>
                                 </Card.Header>
                                 <Card.Body >
                                     <Row>
@@ -140,7 +140,7 @@ function Manage() {
                             <Card className='borderless-card'>
                                 <Card.Header className='borderless-card'>
 
-                                    <Image src={icon_wallet_1} srcSet={`${icon_wallet_2} 2x, ${icon_wallet_3} 3x`} className="icon-use-case" fluid></Image>
+                                    <Image src={icon_wallet_1} srcSet={`${icon_wallet_2} 2x, ${icon_wallet_3} 3x`} className="icon-manage" fluid></Image>
                                 </Card.Header>
                                 <Card.Body>
                                     <Row>

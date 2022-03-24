@@ -36,7 +36,7 @@ function EmployerHome() {
         <Row className="">
           <Col xs={{ offset: 1, span: 10 }} md={{ offset: 1, span: 10 }} lg={{ offset: 1, span: 10 }} className="turquoise-container content-padded-uni">
             <Row>
-              <Col xs={12} md={12} lg={8} className="text-left">
+              <Col xs={12} md={12} lg={8} className="justify-diff">
 
                 <Image src={com_logo_1} srcSet={`${com_logo_2} 2x, ${com_logo_3} 3x`} className="uni-logo"  fluid></Image>
 
@@ -46,15 +46,15 @@ function EmployerHome() {
 
               </Col>
             </Row>
-            <Row className="text-left lower">
+            <Row className="justify-diff lower">
 
               <Col xs={12} md={12} lg={12}>
                 <Card >
-                  <Card.Body>
-                    <Row className="lower" >
+                  <Card.Body className="account-body text-center">
+                    <Row className="" >
                       <Col className="text-center">
 
-                        <Image src={com_acc_1} srcSet={`${com_acc_2} 2x, ${com_acc_3} 3x`} className="img-fit" fluid></Image>
+                        <Image src={com_acc_1} srcSet={`${com_acc_2} 2x, ${com_acc_3} 3x`} className="icon-account" fluid></Image>
 
                       </Col>
 
@@ -75,10 +75,6 @@ function EmployerHome() {
 
                       </Col>
 
-                    </Row>
-                    <Row>
-                      <Col className="lower">
-                      </Col>
                     </Row>
 
                   </Card.Body>

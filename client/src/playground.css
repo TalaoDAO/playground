@@ -29,8 +29,8 @@
     background-color: var(--dark-blue-grey);
   }
 
-  .img-phone {
-    height: 600px;
+  .phone-home {
+    height: 745px;
     margin-left:10px;
     margin-top: -200px;
     object-fit: contain;
@@ -137,15 +137,13 @@
   }
 
   img.btn-mac-app-store {
-    width: 234.2px;
-    height: 61.2px;
+    height: 62px;
     margin: 5px;
     object-fit: contain;
   }
   
   img.btn-google-play {  
-    width: 208px;
-    height: 61.2px;
+    height: 62px;
     margin: 5px;
     object-fit: contain;
   }
@@ -168,16 +166,12 @@
 
 
   img.activation-pass-wallet {
-    width: 100%;
-    height: 205.9px;
-    margin: 20% 0 29%;
+    max-width: 468px;
     object-fit: contain;
     display:none;
   }
   img.activation-pass-wallet-alt {
-    width: 100%;
-    height: 205.9px;
-    margin-top: 5%;
+    max-width: 468px;
     object-fit: contain;
   }
   .title-yellow-sec {
@@ -233,6 +227,19 @@
     color: white;
   }
 
+  .title-white-low {
+    margin-top:10%;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 43px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
   .section-title-dark-single {
     margin: 3%;
     font-family: 'Montserrat', sans-serif;  
@@ -265,7 +272,6 @@
   }
 
   .download-use-case {
-    width: 100%;
     object-fit: contain;
   }
 
@@ -324,11 +330,12 @@
   }
 
   .step-image-desktop {
-    width: 100%;
+    height: 363px;
+    
     object-fit: contain;
   }
   .step-image-mobile {  
-    height: 400px;
+    height: 363px;
     object-fit: contain;
   }
   
@@ -339,13 +346,13 @@
   }
 
   .light-blue-image-no-shadow {
-    height: 450px;
+    height: 546px;
     margin-bottom:20px;
     object-fit: contain;
   }
 
   .phone-image {
-    height: 546px;
+    height: 744px;
     object-fit: contain;
   }
 
@@ -472,6 +479,15 @@ div.discount-separation-top {
   margin-top: 5%;
 }
 
+.account-body {
+  margin-top:10%;
+  margin-bottom:10%;
+}
+
+.justify-diff{
+  text-align: center;
+}
+
 }
 
 
@@ -486,8 +502,8 @@ div.discount-separation-top {
     background-color: var(--dark-blue-grey);
   }
 
-  .img-phone {
-    height: 600px;
+  .phone-home {
+    height: 745px;
     margin-left:10px;
     margin-top: -250px;
     object-fit: contain;
@@ -622,16 +638,12 @@ div.discount-separation-top {
   }
 
   img.activation-pass-wallet {
-    width: 100%;
-    height: 205.9px;
-    margin: 20% 0 29%;
+    max-width: 468px;
     object-fit: contain;
     display:none;
   }
   img.activation-pass-wallet-alt {
-    width: 100%;
-    height: 205.9px;
-    margin-top: 5%;
+    max-width: 468px;
     object-fit: contain;
   }
   .title-yellow-sec {
@@ -687,6 +699,19 @@ div.discount-separation-top {
     color: white;
   }
 
+  .title-white-low {
+    margin-top:30%;
+    font-family: 'Montserrat', sans-serif;  
+    font-size: 43px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;  
+    line-height: 1.3;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
   .section-title-dark-single {
     margin: 5%;
     font-family: 'Montserrat', sans-serif;  
@@ -722,7 +747,7 @@ div.discount-separation-top {
 
 
   .download-use-case {
-    width: 100%;
+    
     object-fit: contain;
   }
 
@@ -781,12 +806,12 @@ div.discount-separation-top {
   }
   
   .step-image-desktop {
-    width: 100%;
+    height: 363px;
     object-fit: contain;
   }
 
-  .step-image-mobile {  
-    height: 400px;
+  .step-image-mobile { 
+    height: 363px; 
     object-fit: contain;
   }
 
@@ -797,13 +822,13 @@ div.discount-separation-top {
   }
 
   .light-blue-image-no-shadow {
-    height: 450px;
+    height: 546px;
     margin-bottom:20px;
     object-fit: contain;
   }
 
   .phone-image {
-    height: 546px;
+    height: 744px;
     object-fit: contain;
   }
 
@@ -939,6 +964,14 @@ div.discount-separation-top {
   margin-top: 5%;
 }
 
+.account-body {
+  margin-top:10%;
+  margin-bottom:10%;
+}
+
+  .justify-diff{
+    text-align: center;
+  }
 
 }
   
@@ -957,8 +990,8 @@ div.discount-separation-top {
   }
 
 
-  .img-phone {
-    height:800px;
+  .phone-home {
+    height: 745px;
     margin-left:10px;
     margin-top: -400px;
     object-fit: contain;
@@ -1098,15 +1131,13 @@ div.discount-separation-top {
   }
 
   img.activation-pass-wallet {
-    width: 100%;
-    height: 307.2px;
-    margin: 20% 0 29%;
+    width: 468px;
+    margin-top: 10%;
     object-fit: contain;
   }
   img.activation-pass-wallet-alt {
-    width: 100%;
-    height: 307.2px;
-    margin: 10px;
+    max-width: 468px;
+    margin-top: 10%;
     object-fit: contain;
     display: none;
   }
@@ -1164,6 +1195,18 @@ div.discount-separation-top {
     color: white;
   }
 
+  .title-white-low {
+    margin: 24% 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;    
+    line-height: 1.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
   .section-title-dark-single {
     margin-top: 30%;
     font-family: 'Montserrat', sans-serif;  
@@ -1202,7 +1245,8 @@ div.discount-separation-top {
   }
   
   .download-use-case {
-    width: 100%;
+    width: 477px;
+    height: 384px;
     object-fit: contain;
   }
   
@@ -1261,12 +1305,12 @@ div.discount-separation-top {
   }
 
   .step-image-desktop {
-    height: 500px;
+    height: 363px;
     object-fit: contain;
   }
 
   .step-image-mobile { 
-    height: 400px;
+    height: 363px;
     object-fit: contain;
   }
   .light-blue-image {
@@ -1278,7 +1322,7 @@ div.discount-separation-top {
   }
 
   .light-blue-image-no-shadow {
-    height: 450px;
+    height: 546px;
     margin-right: -500px;
     margin-top: 20px;
     margin-bottom:20px;
@@ -1286,7 +1330,7 @@ div.discount-separation-top {
   }
 
   .phone-image {
-    height: 546px;
+    height: 744px;
     object-fit: contain;
   }
 
@@ -1413,8 +1457,13 @@ img.discount-sub-icons {
 div.discount-separation-top {
   margin-top: 5%;
 }
-
-
+.account-body {
+  margin-top:10%;
+  margin-bottom:10%;
+}
+.justify-diff{
+  text-align: left;
+}
 
 }
 
@@ -1431,8 +1480,8 @@ div.discount-separation-top {
     background-color: var(--dark-blue-grey);
   }
 
-  .img-phone {
-    width: 800px;
+  .phone-home {
+    height: 745px;
     margin-left:10px;
     margin-top: -500px;
     object-fit: contain;
@@ -1573,15 +1622,12 @@ div.discount-separation-top {
   }
 
   img.activation-pass-wallet {
-    width: 100%;
-    height: 307.2px;
-    margin: 15% 0 5%;
+    width: 468px;
+    margin-top: 10%;
     object-fit: contain;
   }
   img.activation-pass-wallet-alt {
-    width: 100%;
-    height: 307.2px;
-    margin: 10px;
+    max-width: 468px;
     object-fit: contain;
     display: none;
   }
@@ -1638,6 +1684,19 @@ div.discount-separation-top {
     color: white;
   }
 
+  .title-white-low {
+    margin: 24% 0 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 60px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;    
+    line-height: 1.07;
+    letter-spacing: normal;
+    text-align: center;
+    color: white;
+  }
+
   .section-title-dark-single {
     margin-top: 20%;
     font-family: 'Montserrat', sans-serif;
@@ -1676,14 +1735,15 @@ div.discount-separation-top {
     margin-top: 100px;
   }
   .download-use-case {
-    width: 100%;
+    width: 477px;
+    height: 384px;
     object-fit: contain;
   }
   
 
   .separator-top {
-    width: 289px;
-    height: 289px;
+    max-width: 289px;
+    max-height: 289px;
     object-fit: contain;
     margin-bottom: -140px;
   }
@@ -1737,12 +1797,12 @@ div.discount-separation-top {
 
 
   .step-image-desktop {
-    height: 500px;
+    height: 363px;
     object-fit: contain;
   }
 
   .step-image-mobile { 
-    height: 500px;
+    height: 363px;
     object-fit: contain;
   }
 
@@ -1755,7 +1815,7 @@ div.discount-separation-top {
   }
 
   .light-blue-image-no-shadow {
-    height: 450px;
+    height: 546px;
     margin-right: -800px;
     margin-top: 20px;
     margin-bottom:20px;
@@ -1764,7 +1824,7 @@ div.discount-separation-top {
 
 
   .phone-image {
-    height: 546px;
+    height: 744px;
     object-fit: contain;
   }
 
@@ -1899,7 +1959,13 @@ div.discount-separation-top {
   margin-top: 5%;
 }
 
-
+.account-body {
+  margin-top:10%;
+  margin-bottom:10%;
+}
+.justify-diff{
+  text-align: left;
+}
 }
 
 /*COMMON*/
@@ -1934,8 +2000,7 @@ div.discount-separation-top {
 }
 
 .phone-download {
-  max-width: 427.5px;
-  max-height: 609px;
+  max-height: 797px;
   object-fit: contain;
 }
 
@@ -1950,9 +2015,28 @@ div.discount-separation-top {
 }
   
 .icon-use-case {  
-  width: 41.2px;
-  height: 45.8px;
+  width: 52px;
+  height: 49px;
   object-fit: contain;
+}
+
+.icon-manage {  
+  width: 43px;
+  height: 41px;
+  object-fit: contain;
+}
+
+.icon-account {
+  width: 89px;
+  height: 89px;
+  object-fit: contain;
+}
+
+.uni-banner {
+  width: 540px;
+  height: 539px;
+  object-fit: contain;
+  
 }
 
 .nav-menu {
@@ -2033,7 +2117,7 @@ img.follow-img {
 
 .manage-image {
     
-  height: 546px;
+  height: 744px;
   object-fit: contain;
 }
 

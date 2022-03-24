@@ -37,7 +37,7 @@ const PassActivation = () => (
         </Col>
       </Row>
       <Row className="dark-blue-section text-center">
-        <Col xs={12} md={12} lg={{ span: 6 }}>
+        <Col xs={12} md={12} lg={{ span: 6 }}  className="text-center">
           <Image src={aps01} srcSet={`${aps02} 2x, ${aps03} 3x`} className="activation-pass-wallet" fluid></Image>
         </Col>
         <Col xs={12} md={12} lg={{ span: 6 }}>
@@ -49,7 +49,7 @@ const PassActivation = () => (
 
           </Row>
           <Row>
-            <Col xs={12} md={12} lg={12}>
+            <Col xs={12} md={12} lg={12} className="text-center">
               <Image src={aps01} srcSet={`${aps02} 2x, ${aps03} 3x`} className="activation-pass-wallet-alt" fluid></Image>
             </Col>
           </Row>
