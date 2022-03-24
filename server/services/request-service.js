@@ -1,6 +1,7 @@
 const { User, UserRequest } = require("../models");
 const crypto = require('crypto');
 const userService = require("./user-service");
+const { Op } = require('@sequelize/core');
 
 
 const { createLogger, format, transports } = require('winston');
@@ -49,6 +50,19 @@ exports.getRequest = async function (uuid) {
         where: { uuid: uuid },
     });
     return request;
+}
+
+
+exports.emptyRequests = async function () {
+    //delete what was created in dates older than 10 mins
+    let res = await UserRequest.destroy({
+        where: {
+            createdAt: {
+               [Op.lte] : (new Date() - 10 * 60 * 1000   )
+            }
+        }
+    })
+    return ;
 }
 
 exports.getDiplomaValues = async function (uuid) {
@@ -133,6 +147,7 @@ exports.getAuthenticationRequest = async function (uuid) {
 
     return request;
 }
+
 
 exports.validateCredentials = async function (receivedCredentials){
 

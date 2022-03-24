@@ -7,6 +7,8 @@ var apiRoutes = require('./api-routes.js');
 const winston = require('winston')
 const websockets = require('./websockets');
 const queryString = require("query-string");
+const nodeCron = require("node-cron");
+const requestService = require("./services/request-service");
 
 
 require('dotenv').config()
@@ -28,7 +30,7 @@ var router = express.Router();
 const app = express();
 
 app.use('/nodejs', vcRoutes);
-app.use('/nodejs', apiRoutes);
+app.use('/api', apiRoutes);
 app.use(cors());
 
 const server = app.listen(PORT, () => {
@@ -36,4 +38,18 @@ const server = app.listen(PORT, () => {
 })
 
 websockets()
+
+const job = nodeCron.schedule("* */10 * * * *", function jobToExecute() {
+  console.log(new Date().toLocaleString());
+  (async () => {
+    try {
+      await requestService.emptyRequests();
+      return;
+    } catch (error) {
+      
+      console.trace(error);
+    }
+  })();
+
+});
 
