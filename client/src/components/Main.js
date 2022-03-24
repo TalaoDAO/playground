@@ -1,5 +1,8 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import {
+  useLocation
+} from 'react-router-dom'
 
 import Home from '../pages/Home';
 import Activation from '../pages/Activation';
@@ -9,7 +12,6 @@ import Employer from '../pages/Employer';
 import Discount from '../pages/Discount';
 import Manage from '../pages/Manage';
 import DiscountDemo from '../pages/DiscountDemo';
-import PrivateRoute from "./PrivateRoute";
 import Generate from '../pages/Generate';
 import Recover from '../pages/Recover';
 import University from '../pages/University';
@@ -18,10 +20,19 @@ import EmployerHome from '../pages/EmployerHome';
 import EmployerAccount from '../pages/EmployerAccount';
 import ActivationProcess from '../pages/ActivationProcess';
 
+function ScrollToTop() {
+  const location = useLocation();
+  React.useEffect(() => {
+    window.scrollTo(0,0);
+  }, [location]);
+  return (null)
+}
+
 const Main = () => {
 
   return (
     <div className='content-container'>
+    <ScrollToTop/>
     <Routes> {/* The Routes decides which component to show based on the current URL.*/}
         <Route exact path='/' element={<Home/>}></Route>
         <Route exact path='/home' element={<Home/>}></Route>

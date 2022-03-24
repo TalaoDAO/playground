@@ -1,7 +1,4 @@
 import React from 'react';
-import { Routes, Route } from 'react-router-dom';
-
-import DiscountDemo from '../pages/DiscountDemo';
 import Login from './auth/Login';
 
 function setSessionToken(userToken) {
