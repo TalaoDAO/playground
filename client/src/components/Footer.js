@@ -9,6 +9,7 @@ import { Route } from 'react-router-dom';
 import twitter from '../pages/img/home/icon-twitter-footer.svg';
 import linkedin from '../pages/img/home/icon-linkedin-footer.svg';
 import fb from '../pages/img/home/icon-facebook-footer.svg';
+import logoFooter from '../pages/img/home/Logo-footer.png';
 
 
 const { REACT_APP_VERSION } = process.env;
@@ -21,50 +22,33 @@ const Footer = () => (
       <Row>
         <Col xs={12} md={12} lg={{offset:3,span:6}}>
           <Row >
-            <Col xs={12} md={4} lg={4}>
-              <div className='footer-title'>
-                Service
-              </div>
+
+            <Col xs={12} md={8} lg={8}>
 
               <div className='footer-normal'>
-                Conseil
-              </div>
+              <Image src={logoFooter} className="footer-img p-1" fluid></Image>
 
-              <div className='footer-normal'>
-                Développement
-              </div>
-            </Col>
-
-            <Col xs={12} md={4} lg={4}>
-              <div className='footer-title'>
-                A propos
-              </div>
-
-              <div className='footer-normal'>
-                Protection de la vie privée
-              </div>
-
-              <div className='footer-normal'>
-                CGU
-              </div>
-            </Col>
-
-            <Col xs={12} md={4} lg={4}>
-              <div className='footer-title'>
-                Follow
-              </div>
-
-              <div className='footer-normal'>
-                <Image src={twitter} className="footer-img p-1" fluid></Image>
-
-                <Image src={linkedin} className="footer-img p-1" fluid></Image>
-
-                <Image src={fb} className="footer-img p-1" fluid></Image>
               </div>
 
               <div className='footer-normal'>
                 © Talao {new Date().getFullYear()} Version: {REACT_APP_VERSION}
               </div>
+            </Col>
+
+            <Col xs={12} md={4} lg={4}>
+              <div className='footer-title'>
+                Follow use
+              </div>
+
+              <div className='footer-normal'>
+                <Image src={twitter} className="footer-img p-1 footer-normal-img" fluid></Image>
+
+                <Image src={linkedin} className="footer-img p-1 footer-normal-img" fluid></Image>
+
+                <Image src={fb} className="footer-img p-1 footer-normal-img" fluid></Image>
+              </div>
+
+              
             </Col>
           </Row>
         </Col>
