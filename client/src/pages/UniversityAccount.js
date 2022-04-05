@@ -2,6 +2,8 @@ import React from "react";
 import "../App.css";
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "../playground.css";
+
 import {
     Container, Button, Row, Col, Image, Modal, Accordion, ListGroup
 } from 'react-bootstrap';
@@ -21,6 +23,7 @@ import icon_files from './img/university/files.svg';
 import icon_dashboard from './img/university/dashboard.svg';
 import icon_oval from './img/university/Oval.svg';
 import icon_arrow from './img/university/ic_arrow_forward_24px.svg';
+import logoutIcon from './img/university/logout.svg';
 
 
 import DiplomaForm from "../components/DiplomaForm";
@@ -74,10 +77,20 @@ function UniversityAccount() {
                             <Col xs={12} md={12} lg={3} className="lower">
                                 <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                     <Accordion.Item eventKey="0" className="bg-white">
-                                        <Accordion.Header className="bg-white">
-                                        <Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp; {(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
-                                        </Accordion.Header>
-                                        <Accordion.Body className="accordion-double">
+                                        <div className="bg-white ticketHeader">
+                                            <span>
+                                                <span className="avatarCircle">
+                                                    <Image src={icon_profile} className="avatar-icon" fluid></Image>
+                                                </span>
+                                                <span className="nameText">
+                                                    &nbsp; {(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
+                                                </span>
+                                            </span>
+                                            <span  className="connectedBtn">
+                                                Connected
+                                            </span>
+                                        </div>
+                                        <Accordion.Body className="accordion-double accordionBody">
                                             <ListGroup className="border-0" flush>
                                                 <ListGroup.Item className="border-0">
                                                     <Row>
@@ -118,6 +131,10 @@ function UniversityAccount() {
                                                     </Row>
                                                     </ListGroup.Item>
                                             </ListGroup>
+                                            <div className="logoutWrap">
+                                                <img className="logoutIcon" alt="logout icon" src={logoutIcon}/>
+                                                <span className="logoutText">Logout</span>
+                                            </div>
                                         </Accordion.Body>
                                     </Accordion.Item>
                                 </Accordion>
@@ -178,7 +195,7 @@ function UniversityAccount() {
                                     <Col>
                                         <Accordion defaultActiveKey="0" flush  className="shadow">
                                             <Accordion.Item eventKey="0">
-                                                <Accordion.Header>Documents</Accordion.Header>
+                                                <div className="bg-white ticketHeader">Documents</div>
                                                 <Accordion.Body className="accordion-single">
                                                     <Row className="lower">
                                                         <Col className="text-center ">
@@ -221,7 +238,7 @@ function UniversityAccount() {
                                     <Col>
                                         <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                             <Accordion.Item eventKey="0">
-                                                <Accordion.Header>To do list</Accordion.Header>
+                                                <div className="bg-white ticketHeader">To do list</div>
                                                 <Accordion.Body className="accordion-single">
                                                     <ListGroup>
                                                         <ListGroup.Item className="border-0">
@@ -325,7 +342,7 @@ function UniversityAccount() {
                                     <Col>
                                         <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                             <Accordion.Item eventKey="0">
-                                                <Accordion.Header>Calendar</Accordion.Header>
+                                                <div className="bg-white ticketHeader">Calendar</div>
                                                 <Accordion.Body className="accordion-single"> 
                                                     <Calendar/>
                                                 </Accordion.Body>
@@ -345,7 +362,7 @@ function UniversityAccount() {
                                     <Col>
                                         <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                             <Accordion.Item eventKey="0">
-                                                <Accordion.Header>Messages</Accordion.Header>
+                                                <div className="bg-white ticketHeader">Messages</div>
                                                 <Accordion.Body className="accordion-single">
                                                     <ListGroup>
                                                     <ListGroup.Item className="border-0">
@@ -447,7 +464,7 @@ function UniversityAccount() {
                             <Col xs={12} md={12} lg={3} className="lower">
                                 <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                     <Accordion.Item eventKey="0">
-                                        <Accordion.Header>Students</Accordion.Header>
+                                        <div className="bg-white ticketHeader">Students</div>
                                         <Accordion.Body className="accordion-double">
                                             <ListGroup>
                                                 <ListGroup.Item className="border-0">
