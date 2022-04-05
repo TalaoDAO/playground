@@ -24,6 +24,9 @@ import icon_dashboard from './img/university/dashboard.svg';
 import icon_oval from './img/university/Oval.svg';
 import icon_arrow from './img/university/ic_arrow_forward_24px.svg';
 import logoutIcon from './img/university/logout.svg';
+import infoIcon from './img/university/info.svg';
+import loadMoreIcon from './img/university/loadMore.svg';
+
 
 
 import DiplomaForm from "../components/DiplomaForm";
@@ -78,17 +81,17 @@ function UniversityAccount() {
                                 <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                     <Accordion.Item eventKey="0" className="bg-white">
                                         <div className="bg-white ticketHeader">
-                                            <span>
-                                                <span className="avatarCircle">
-                                                    <Image src={icon_profile} className="avatar-icon" fluid></Image>
+                                                <span>
+                                                    <span className="avatarCircle">
+                                                        <Image src={icon_profile} className="avatar-icon" fluid></Image>
+                                                    </span>
+                                                    <span className="nameText">
+                                                        &nbsp; {(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
+                                                    </span>
                                                 </span>
-                                                <span className="nameText">
-                                                    &nbsp; {(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
+                                                <span  className="connectedBtn">
+                                                    Connected
                                                 </span>
-                                            </span>
-                                            <span  className="connectedBtn">
-                                                Connected
-                                            </span>
                                         </div>
                                         <Accordion.Body className="accordion-double accordionBody">
                                             <ListGroup className="border-0" flush>
@@ -238,8 +241,13 @@ function UniversityAccount() {
                                     <Col>
                                         <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                             <Accordion.Item eventKey="0">
-                                                <div className="bg-white ticketHeader">To do list</div>
-                                                <Accordion.Body className="accordion-single">
+                                                <div className="bg-white ticketHeader">
+                                                    <span>To do list</span>
+                                                    <span className="">
+                                                        <Image src={infoIcon} className="infoIcon" fluid></Image>
+                                                    </span>
+                                                </div>
+                                                <Accordion.Body className="accordion-single accordionBody">
                                                     <ListGroup>
                                                         <ListGroup.Item className="border-0">
                                                             <Row >
@@ -282,6 +290,9 @@ function UniversityAccount() {
                                                             </Row>
                                                         </ListGroup.Item>
                                                     </ListGroup>
+                                                    <div className="showMore">
+                                                         <Image src={loadMoreIcon} className="" fluid></Image>   
+                                                    </div>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
@@ -342,7 +353,12 @@ function UniversityAccount() {
                                     <Col>
                                         <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                             <Accordion.Item eventKey="0">
-                                                <div className="bg-white ticketHeader">Calendar</div>
+                                                <div className="bg-white ticketHeader">
+                                                    <span>Calendar</span>
+                                                    <span className="">
+                                                        <Image src={infoIcon} className="infoIcon" fluid></Image>
+                                                    </span>
+                                                </div>
                                                 <Accordion.Body className="accordion-single"> 
                                                     <Calendar/>
                                                 </Accordion.Body>
@@ -362,8 +378,13 @@ function UniversityAccount() {
                                     <Col>
                                         <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                             <Accordion.Item eventKey="0">
-                                                <div className="bg-white ticketHeader">Messages</div>
-                                                <Accordion.Body className="accordion-single">
+                                                <div className="bg-white ticketHeader">
+                                                    <span>Messages</span>
+                                                    <span className="">
+                                                        <Image src={infoIcon} className="infoIcon" fluid></Image>
+                                                    </span>
+                                                </div>
+                                                <Accordion.Body className="accordion-single accordionBody">
                                                     <ListGroup>
                                                     <ListGroup.Item className="border-0">
                                                             <Row >
@@ -406,6 +427,9 @@ function UniversityAccount() {
                                                             </Row>
                                                         </ListGroup.Item>
                                                     </ListGroup>
+                                                    <div className="showMore">
+                                                         <Image src={loadMoreIcon} className="" fluid></Image>   
+                                                    </div>
                                                 </Accordion.Body>
                                             </Accordion.Item>
                                         </Accordion>
@@ -464,9 +488,54 @@ function UniversityAccount() {
                             <Col xs={12} md={12} lg={3} className="lower">
                                 <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                     <Accordion.Item eventKey="0">
-                                        <div className="bg-white ticketHeader">Students</div>
-                                        <Accordion.Body className="accordion-double">
+                                        <div className="bg-white ticketHeader">
+                                            <span>Students</span>
+                                            <span className="">
+                                                <Image src={infoIcon} className="infoIcon" fluid></Image>
+                                            </span>
+                                        </div>
+                                        <Accordion.Body className="accordion-double-2">
                                             <ListGroup>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs={12} md={12} lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs={12} md={12} lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs={12} md={12} lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs={12} md={12} lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs={12} md={12} lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs={12} md={12} lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
+                                                <ListGroup.Item className="border-0">
+                                                    <Row >
+                                                        <Col xs={12} md={12} lg={3}>
+                                                            <Image src={icon_oval} className="menu-icon" fluid></Image>&nbsp;
+                                                        </Col>
+                                                        <Col xs={12} md={12} lg={9}>
+                                                            <div className="content-line"></div>
+                                                        </Col>
+                                                    </Row>
+                                                </ListGroup.Item>
                                                 <ListGroup.Item className="border-0">
                                                     <Row >
                                                         <Col xs={12} md={12} lg={3}>

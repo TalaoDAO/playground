@@ -1380,7 +1380,10 @@ div.discount-separation-top {
     padding: 50px;
   }
   .accordion-double {
-    height:670px;
+    height:702px;
+  }
+  .accordion-double-2 {
+    height:706px;
   }
   .accordion-single {
     height:300px;
@@ -1874,7 +1877,7 @@ div.discount-separation-top {
 
   }
   .accordion-double {
-    height:670px;
+    height:701px;
   }
   .accordion-single {
     height:300px;
@@ -2241,6 +2244,7 @@ img.follow-img {
   color: #333;
 }
 
+
 .avatarCircle {
   border-radius: 20px;
   border: solid 1px #707070;
@@ -2282,6 +2286,18 @@ img.follow-img {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.showMore{
+  display: flex;
+  justify-content: center;
+}
+
+.showMoreIcon{
+  border: solid 2px #e3e9ef;
+  padding: 10px;
+  border-radius: 5px;
+  color: #b3b8bd;
 }
 
 /****bootstrap**/
