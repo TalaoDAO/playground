@@ -873,6 +873,27 @@ div.discount-separation-top {
     max-height: 19.8px;
     object-fit: contain;
     margin-right: 5px;
+    padding: 3px;
+    border: solid 1px #707070;
+    background-color: #fff;
+    border-radius: 20px;
+
+  }
+
+  .avatar-icon{
+    max-width: 19.8px;
+    max-height: 19.8px;
+    object-fit: contain;
+    margin-right: 5px;
+    padding: 3px;
+    border: solid 1px #707070;
+    background-color: #fff;
+    border-radius: 20px;
+
+  }
+
+  .accordion-button{
+    background-color: #fff;
 
   }
 
@@ -1359,7 +1380,10 @@ div.discount-separation-top {
     padding: 50px;
   }
   .accordion-double {
-    height:670px;
+    height:702px;
+  }
+  .accordion-double-2 {
+    height:706px;
   }
   .accordion-single {
     height:300px;
@@ -1853,7 +1877,7 @@ div.discount-separation-top {
 
   }
   .accordion-double {
-    height:670px;
+    height:701px;
   }
   .accordion-single {
     height:300px;
@@ -1861,14 +1885,6 @@ div.discount-separation-top {
 
   .action-button {
     width: 100%;
-  }
-
-  .menu-icon {
-    
-    max-width: 19.8px;
-    max-height: 19.8px;
-    object-fit: contain;
-
   }
 
 /*Discount use case*/
@@ -2056,6 +2072,10 @@ div.discount-separation-top {
   margin-right: 5%;
 }
 
+.header{
+  background-color: #3367b1;
+}
+
 .nav-link, .dropdown-item {
   color: var(--dark-blue-grey)!important;
 }
@@ -2076,14 +2096,18 @@ div.footer-normal {
 
 }
 
+img.footer-normal-img{
+  margin-right: 10px;
+  margin-top: 5px;
+}
+
 div.footer-title {
-  margin-top: 5%;
   font-family: 'Montserrat', sans-serif;
   font-size: 20px;
   font-weight: bold;
   font-stretch: normal;
   font-style: normal;
-  line-height: 4;
+  line-height: 1.3;
   letter-spacing: normal;
   text-align: left;
   color: var(--dark-blue-grey);
@@ -2171,6 +2195,7 @@ img.follow-img {
   left: 0;
   bottom: 0;
   margin-left: 10px;
+  margin-top: 50px;
   height: 50px;
 }
 
@@ -2185,6 +2210,124 @@ img.follow-img {
   height: auto;
 }
 
+/****UniversityAccount**/
 
+.connectedBtn {
+  border-radius: 8px;
+  background-color: #1bc167;
+  padding: 0px 8px;
+
+  font-size: 14px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.57;
+  letter-spacing: normal;
+  text-align: left;
+  color: #fff;
+}
+
+.ticketHeader {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px;
+  padding: 15px 0;
+  border-bottom: 2px solid #ebf2f7;
+
+  font-size: 22px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 0.91;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333;
+}
+
+
+.avatarCircle {
+  border-radius: 20px;
+  border: solid 1px #707070;
+  padding: 0px 8.5px 4.5px 8.5px;
+}
+
+.nameText{
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333 !important;
+}
+
+.logoutWrap {
+  padding-top: 15px;
+  border-top: 2px solid #ebf2f7;
+}
+
+.logoutIcon{
+  margin-right: 14.5px;
+}
+
+.logoutText{
+  font-size: 16px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: 1px;
+  text-align: left;
+  color: #52575d;
+}
+
+.accordionBody{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.showMore{
+  display: flex;
+  justify-content: center;
+}
+
+.showMoreIcon{
+  border: solid 2px #e3e9ef;
+  padding: 10px;
+  border-radius: 5px;
+  color: #b3b8bd;
+}
+
+/****bootstrap**/
+
+.accordion-button {
+  background-color: #fff !important;
+  border-radius: 20px 20px 0 0 !important;
+
+  font-size: 18px;
+  font-weight: bold;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.22;
+  letter-spacing: normal;
+  text-align: left;
+  color: #333 !important;
+}
+
+.accordion-item, .accordion-header {
+  border-radius: 20px !important;
+}
+
+.accordion-button::after{
+  display: none !important;
+}
+
+/****react-calendar**/
+
+.react-calendar{
+  border: none !important;
+}
 
 
