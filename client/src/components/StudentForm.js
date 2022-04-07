@@ -30,6 +30,7 @@ class StudentForm extends React.Component {
          let givenName='Jane';
          let familyName='Doe';
          let email='Doe';
+         let bod = new Date();
          if(props && props.state){
              if( props.state.givenName){
                  givenName=props.state.givenName;
@@ -40,12 +41,15 @@ class StudentForm extends React.Component {
              if( props.state.email){
                  email=props.email;
              }
+             if( props.state.birthDate){
+                bod=props.state.birthDate;
+             }
          }
 
         this.state = {
             givenName: givenName,
             familyName:  familyName,
-            birthDate: '1991-12-10T12:02:55.268Z',
+            bod: bod,
             directorName: 'Nicolas Muller',
             result: null,
             phase:0
@@ -113,9 +117,9 @@ class StudentForm extends React.Component {
                         <Form.Control type="text" name="familyName" value={this.state.familyName} onChange={this.handleChange} />
 
                     </Form.Group>
-                    <Form.Group className="mb-3" controlId="formDirName">
-                        <Form.Label>Director Name</Form.Label>
-                        <Form.Control type="text" name="directorName" value={this.state.directorName} onChange={this.handleChange} />
+                    <Form.Group className="mb-3" controlId="dob">
+                        <Form.Label>Date Of Birth</Form.Label>
+                        <Form.Control type="date" name="dob" placeholder="Date of Birth" value={this.state.birthDate} onChange={this.handleChange}/>
 
                     </Form.Group>
                     <Button className="mb-3" variant="primary" type="submit">
