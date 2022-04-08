@@ -22,7 +22,10 @@ async function submitUser(values) {
         },
         body: JSON.stringify(values)
     })
-        .then(data => data.json())
+        .then((data) => {
+            sessionStorage.setItem('user', JSON.stringify(values));
+            return data.json()
+        })
 }
 
 async function validateUser(values) {
