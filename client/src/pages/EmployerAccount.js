@@ -70,7 +70,7 @@ function EmployerAccount(props) {
                                 <Accordion defaultActiveKey="0" flush className="lg-only shadow">
                                     <Accordion.Item eventKey="0" className="bg-white">
                                         <Accordion.Header className="bg-white">
-                                        <Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp; {(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
+                                        <Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp; {(location.state && location.state.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
                                         </Accordion.Header>
                                         <Accordion.Body className="accordion-double">
                                             <ListGroup className="border-0" flush>
@@ -118,7 +118,7 @@ function EmployerAccount(props) {
                                 </Accordion>
                                 <Accordion flush className="sm-only shadow">
                                     <Accordion.Item eventKey="0">
-                                    <Accordion.Header className="bg-white"><Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp;{(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}</Accordion.Header>
+                                    <Accordion.Header className="bg-white"><Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp;{(location.state && location.state.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}</Accordion.Header>
                                         <Accordion.Body>
                                         <ListGroup className="border-0" flush>
                                                 <ListGroup.Item className="border-0">

@@ -59,7 +59,7 @@ function UniversityAccount() {
             .then((qr) => setQr(qr.url));
     }, []);
 
-
+console.log({location})
     return (
         <main >
             <Container fluid>
@@ -86,11 +86,11 @@ function UniversityAccount() {
                                                         <Image src={icon_profile} className="avatar-icon" fluid></Image>
                                                     </span>
                                                     <span className="nameText">
-                                                        &nbsp; {(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
+                                                        &nbsp; {(location.state && location.state.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}
                                                     </span>
                                                 </span>
                                                 <span  className="connectedBtn">
-                                                    Connected
+                                                    Connected 
                                                 </span>
                                         </div>
                                         <Accordion.Body className="accordion-double accordionBody">
@@ -143,7 +143,7 @@ function UniversityAccount() {
                                 </Accordion>
                                 <Accordion flush className="sm-only">
                                     <Accordion.Item eventKey="0">
-                                    <Accordion.Header className="bg-white"><Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp;{(location.state && location.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}</Accordion.Header>
+                                    <Accordion.Header className="bg-white"><Image src={icon_profile} className="menu-icon" fluid></Image>&nbsp;{(location.state && location.state.givenName)?(location.state.givenName+ ' '+ location.state.familyName):'Janie Doe'}</Accordion.Header>
                                         <Accordion.Body>
                                         <ListGroup className="border-0" flush>
                                                 <ListGroup.Item className="border-0">

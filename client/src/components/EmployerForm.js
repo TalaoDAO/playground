@@ -36,10 +36,10 @@ function EmployerForm(props) {
     const [givenName, setGivenName] = React.useState(initGivenName);
     const [familyName, setFamilyName] = React.useState(initFamilynName);
     const [email, setEmail] = React.useState(initEmail);
-    const [startDate, setStartDate] = React.useState('1991-12-10T12:02:55.268Z');
-    const [jobTitle, setJobTitle] = React.useState('Engineer');
-    const [baseSalary, setBaseSalary] = React.useState('65000 euros');
-    const [employmentType, setEmploymentType] = React.useState('Open ended contract');
+    const [startDate, setStartDate] = React.useState('');
+    const [jobTitle, setJobTitle] = React.useState('');
+    const [baseSalary, setBaseSalary] = React.useState('');
+    const [employmentType, setEmploymentType] = React.useState('');
     const [phase, setPhase] = React.useState(0);
     const [res,_setRes] = React.useState(null);
     const [challenge,setChallenge] = React.useState(null);
@@ -54,6 +54,7 @@ function EmployerForm(props) {
         const [uuid, params] = url?.split("?");
 
         var client = new W3CWebSocket(REACT_APP_WEBSOCKET_SERVER + "?challenge=" + uuid);
+
         client.onopen = () => {
             client.send(JSON.stringify({ message: "handshake" }));
         };
