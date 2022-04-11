@@ -47,7 +47,7 @@ function Manage() {
 
                         <Row >
                             <Col>
-                                <div className="title-white-single">Manage Certificates</div>
+                                <p className="title-white-single">Manage Certificates</p>
                             </Col>
 
                         </Row>

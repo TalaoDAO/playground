@@ -1204,18 +1204,22 @@ div.discount-separation-top {
   }
 
   .title-white-single {
-    margin-top: 30%;
-    font-family: 'Montserrat', sans-serif;
+    margin-top: 36%;
+    /* font-family: 'Montserrat', sans-serif; */
     font-size: 60px;
-    font-weight: bold;
+    font-weight: 800;
     font-stretch: normal;
     font-style: normal;    
     line-height: 1.07;
-    letter-spacing: normal;
-    text-align: center;
+    letter-spacing: 3px;
     color: white;
   }
 
+  .v-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
   .title-white-low {
     margin: 24% 0 0;
     font-family: 'Montserrat', sans-serif;
@@ -2129,13 +2133,13 @@ img.follow-img {
 }
 
 .tag-h2-dark {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 23px;
-  font-weight: bold;
+  /* font-family: 'Montserrat', sans-serif; */
+  font-size: 32px;
+  font-weight: 800;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.52;
-  letter-spacing: normal;
+  letter-spacing: 1px;
   color: var(--dark-blue-grey);
 }
 
