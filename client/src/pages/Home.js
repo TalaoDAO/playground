@@ -101,7 +101,7 @@ function Home() {
             <Row>
               <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
                 <br />
-                <span className="section-header-dark">Download app</span>
+               Hello dolly
                 <br />
                
 

@@ -27,7 +27,7 @@ function ActivationProcess() {
               <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
                 <Row>
                   <Col>
-                    <div className="section-header-dark">Download app</div>
+                    <div className="section-header-dark">Activate your email pass</div>
                   </Col>
                 </Row>
                 

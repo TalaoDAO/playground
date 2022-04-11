@@ -41,7 +41,7 @@ const Footer = () => (
               </div>
 
               <div className='footer-normal'>
-                <a href="https://twitter.com/Talao_io" target="_blank"><Image src={twitter} className="footer-img p-1 footer-normal-img" fluid></Image></a>
+              <a href="https://twitter.com/Talao_io" target="_blank"><Image src={twitter} className="footer-img p-1 footer-normal-img" fluid></Image></a>
 
                 <a href="https://www.linkedin.com/company/talao" target="_blank" ><Image src={linkedin} className="footer-img p-1 footer-normal-img" fluid></Image></a>
 

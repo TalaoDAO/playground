@@ -45,8 +45,8 @@ class ActivationForm extends React.Component {
         super(props);
         this.client = null;
         this.state = {
-            givenName: 'Jane',
-            familyName: 'Doe',
+            givenName: '',
+            familyName: '',
             email: '',
             code: '',
             challenge: '',
@@ -151,7 +151,7 @@ class ActivationForm extends React.Component {
                     <Form onSubmit={(e) => this.handleSubmitCode(e)} >
                         <p>{this.state.props}</p>
                         <Form.Group className="mb-3" controlId="formCode">
-                            <Form.Label>Enter 4-digit code: </Form.Label>
+                            <Form.Label>Enter the 4-digit code we just sent you by email: </Form.Label>
                             <Form.Control required type="text" name="code" value={this.state.code} onChange={this.handleChange} />
                         </Form.Group>
 
