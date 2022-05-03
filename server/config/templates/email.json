@@ -58,15 +58,15 @@
 		"name": [
 			{
 				"@language": "en",
-				"@value": "Email Proof"
+				"@value": "Email Pass"
 			},
 			{
 				"@language": "de",
-				"@value": "E-Mail-Beweis"
+				"@value": "E-Mail-Pass"
 			},
 			{
 				"@language": "fr",
-				"@value": "Preuve d'email"
+				"@value": "Laissez-passer e-mail"
 			}
 		]
 	},
