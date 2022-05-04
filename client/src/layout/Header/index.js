@@ -1,25 +1,14 @@
-import React from 'react';
-import Logout from '../../components/auth/Logout';
-
+import React, { useState, useEffect } from 'react';
 import {
-  Container, Navbar, Nav, NavDropdown, Image, Row, Col
+  Container,
+  Navbar,
+  Nav,
+  NavDropdown,
+  Image,
 } from 'react-bootstrap';
-
-import logoImg from '../../assets/images/logo.svg';
-
-import logo1 from '../../pages/img/home/LogoTalao.webp';
-import logo2 from '../../pages/img/home/LogoTalao@2x.webp';
-import logo3 from '../../pages/img/home/LogoTalao@3x.webp';
-import {ROUTES} from "../../constants/routes";
-
-
-const AVATAR = 'https://www.gravatar.com/avatar/429e504af19fc3e1cfa5c4326ef3394c?s=240&d=mm&r=pg';
-
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
-function isAuth() {
-  let token = sessionStorage.getItem('token');
-  return token ? true : false;
-}
+import { LogoImg } from '../../assets/images';
+import { ROUTES } from '../../constants/routes';
+import './styles.scss'
 
 function getSessionToken() {
   let tokenString = sessionStorage.getItem('token');
@@ -31,27 +20,26 @@ function getSessionToken() {
 }
 
 const Header = () => {
-  const [token, setToken] = React.useState(getSessionToken());
+  const [token, setToken] = useState(getSessionToken());
 
-  React.useEffect(() => {
+  useEffect(() => {
     sessionStorage.setItem('token', JSON.stringify(token));
-
   }, [token]);
 
   return (
-    <header>
+    <header className="app-header">
       <Container fluid >
         <div className='header-position'>
           <Navbar bg="white" expand="lg md">
             <Navbar.Brand href={ROUTES.HOME}>
-              <Image src={logoImg}  fluid className='talao-logo' />
+              <Image src={LogoImg}  fluid className='talao-logo' />
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
             <Navbar.Collapse id="basic-navbar-nav ">
               <Nav className="ms-auto">
-                <NavDropdown  className="nav-menu px-3" title="Play with talao wallet" id="basic-nav-dropdown"  >
+                <NavDropdown className="nav-menu px-3" title="Play with talao wallet" id="basic-nav-dropdown"  >
                   <NavDropdown.Item href={ROUTES.ACTIVATION}>Activate your email pass</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href={ROUTES.DIPLOMA}>Download a diploma</NavDropdown.Item>
@@ -62,7 +50,8 @@ const Header = () => {
                   <NavDropdown.Divider />
                   <NavDropdown.Item href={ROUTES.DISCOUNT}>Get a discount coupon</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href={ROUTES.MANAGE}  className="nav-menu px-3">Manage Certificates</Nav.Link>
+                {/*<Nav.Link href={ROUTES.MANAGE}  className="nav-menu px-3">Manage Certificates</Nav.Link>*/}
+                <Nav.Link href={'#'}  className="nav-menu px-3">How does it work?</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

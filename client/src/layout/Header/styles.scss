@@ -1,0 +1,8 @@
+@import "../../assets/scss/variables";
+
+.app-header {
+  height: 113px;
+  background: $color-white;
+  display: flex;
+  align-items: center;
+}
