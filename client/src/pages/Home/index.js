@@ -33,6 +33,7 @@ import agn03 from '../img/home/icon-how-to-generate-account.svg';
 import are01 from '../img/home/icon-how-to-recover-account.svg';
 import are02 from '../img/home/icon-how-to-recover-account.svg';
 import are03 from '../img/home/icon-how-to-recover-account.svg';
+import {ROUTES} from "../../constants/routes";
 
 const { REACT_APP_NODE_LOCAL } = process.env;
 
@@ -121,12 +122,12 @@ function Home() {
           <Row>
             <Col xs={12} md={12} lg={{ span: 4, offset: 2 }}>
               <Image src={agn01} srcSet={`${agn02} 2x, ${agn03} 3x`} className="links-icon" fluid></Image>
-              <Link to="/generate" className="links-dark"> How to generate your account?</Link>
+              <Link to={ROUTES.GENERATE} className="links-dark"> How to generate your account?</Link>
             </Col>
             <Col xs={12} md={12} lg={{ span: 4 }}>
 
               <Image src={are01} srcSet={`${are02} 2x, ${are03} 3x`} className="links-icon" fluid></Image>
-              <Link to="/recover" className="links-dark"> How to recover your account?</Link>
+              <Link to={ROUTES.RECOVER} className="links-dark"> How to recover your account?</Link>
             </Col>
           </Row>
 

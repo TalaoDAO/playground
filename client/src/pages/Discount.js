@@ -15,6 +15,7 @@ import step053 from '../pages/img/discount/Image-discount-coupon-scan-qrcode.web
 import step061 from '../pages/img/discount/Image-discount-coupon-accpet-certifiacte-wallet.svg';
 import step062 from '../pages/img/discount/Image-discount-coupon-accpet-certifiacte-wallet.svg';
 import step063 from '../pages/img/discount/Image-discount-coupon-accpet-certifiacte-wallet.svg';
+import {ROUTES} from "../constants/routes";
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -41,7 +42,7 @@ function Discount() {
               
               <Row className="lower">
                 <Col>
-                  <Button variant="btn btn-info btn-lg " href="/discount-demo">Start Demo</Button>
+                  <Button variant="btn btn-info btn-lg " href={ROUTES.DISCOUNT_DEMO}>Start Demo</Button>
                 </Col>
               </Row>
               <Row className="lower">
@@ -103,7 +104,7 @@ function Discount() {
 
           <Row>
             <Col xs={12} md={12} lg={{ span: 6, offset: 3 }}>
-              <Button variant="btn btn-info btn-lg btn-demo" href="/discount-demo">Start Demo</Button>
+              <Button variant="btn btn-info btn-lg btn-demo" href={ROUTES.DISCOUNT_DEMO}>Start Demo</Button>
             </Col>
           </Row>
           <Row>

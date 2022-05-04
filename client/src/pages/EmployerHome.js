@@ -22,6 +22,7 @@ import com_acc_3 from './img/employer/ic_account_circle.svg';
 
 import { Link } from 'react-router-dom';
 import LoginForm from "../components/LoginForm";
+import {ROUTES} from "../constants/routes";
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -71,7 +72,7 @@ function EmployerHome() {
                     </Row>
                     <Row>
                       <Col className="text-center">
-                        <LoginForm next="/com-account" />
+                        <LoginForm next={ROUTES.COMPANY_ACCOUNT} />
 
                       </Col>
 

@@ -17,7 +17,7 @@ import EmployerHome from "./pages/EmployerHome";
 import EmployerAccount from "./pages/EmployerAccount";
 import DiscountDemo from "./pages/DiscountDemo";
 import ActivationProcess from "./pages/ActivationProcess";
-
+import { ROUTES } from "./constants/routes";
 import "./App.css";
 import "./playground.css";
 
@@ -31,21 +31,21 @@ function App() {
     <div className="App">
       <MainLayout>
         <Routes>
-          <Route exact path='/' element={<Home/>} />
-          <Route exact path='/home' element={<Home/>} />
-          <Route exact path='/activation' element={<Activation/>} />
-          <Route exact path='/diploma' element={<Diploma/>} />
-          <Route exact path='/student' element={<Student/>} />
-          <Route exact path='/employer' element={<Employer/>} />
-          <Route exact path='/discount' element={<Discount/>} />
-          <Route exact path='/manage' element={<Manage/>} />
-          <Route exact path='/generate' element={<Generate/>} />
-          <Route exact path='/recover' element={<Recover/>} />
-          <Route exact path='/university' element={<University/>} />
-          <Route exact path='/uni-account' element={<UniversityAccount/>} />
-          <Route exact path='/company' element={<EmployerHome/>} />
-          <Route exact path='/com-account' element={<EmployerAccount/>} />
-          <Route exact path='/discount-demo' element={<DiscountDemo/>} />
+          <Route exact path={ROUTES.INDEX} element={<Home/>} />
+          <Route exact path={ROUTES.HOME} element={<Home/>} />
+          <Route exact path={ROUTES.ACTIVATION} element={<Activation/>} />
+          <Route exact path={ROUTES.DIPLOMA} element={<Diploma/>} />
+          <Route exact path={ROUTES.STUDENT} element={<Student/>} />
+          <Route exact path={ROUTES.EMPLOYER} element={<Employer/>} />
+          <Route exact path={ROUTES.DISCOUNT} element={<Discount/>} />
+          <Route exact path={ROUTES.MANAGE} element={<Manage/>} />
+          <Route exact path={ROUTES.GENERATE} element={<Generate/>} />
+          <Route exact path={ROUTES.RECOVER} element={<Recover/>} />
+          <Route exact path={ROUTES.UNIVERSITY} element={<University/>} />
+          <Route exact path={ROUTES.UNIVERSITY_ACCOUNT} element={<UniversityAccount/>} />
+          <Route exact path={ROUTES.COMPANY} element={<EmployerHome/>} />
+          <Route exact path={ROUTES.COMPANY_ACCOUNT} element={<EmployerAccount/>} />
+          <Route exact path={ROUTES.DISCOUNT_DEMO} element={<DiscountDemo/>} />
           <Route exact path='/pass-activation' element={<ActivationProcess/>} />
         </Routes>
       </MainLayout>

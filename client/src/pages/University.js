@@ -17,6 +17,7 @@ import uni_banner_3 from './img/university/university-banner.svg';
 
 import { Link } from 'react-router-dom';
 import LoginForm from "../components/LoginForm";
+import {ROUTES} from "../constants/routes";
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -45,7 +46,7 @@ function University() {
 
                   <Modal.Body>
                     <div className="subtitle-dark">Scan with your mobile wallet</div>
-                    <LoginForm next="/uni-account" />
+                    <LoginForm next={ROUTES.UNIVERSITY_ACCOUNT} />
 
                   </Modal.Body>
 

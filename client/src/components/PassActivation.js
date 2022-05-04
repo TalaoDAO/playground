@@ -22,6 +22,7 @@ import aps03 from '../pages/img/pass_activation/wallet-pass-activation.svg';
 import ycs01 from '../pages/img/pass_activation/yellow-separator.webp';
 import ycs02 from '../pages/img/pass_activation/yellow-separator@2x.webp';
 import ycs03 from '../pages/img/pass_activation/yellow-separator@3x.webp';
+import {ROUTES} from "../constants/routes";
 
 
 const PassActivation = () => (
@@ -56,7 +57,7 @@ const PassActivation = () => (
 
           <Row className="shifting-content-location">
             <Col xs={12} md={12} lg={12} >
-              <Link to="/activation" ><Image src={btnpass} className="btn-learn-more" fluid></Image></Link>
+              <Link to={ROUTES.ACTIVATION} ><Image src={btnpass} className="btn-learn-more" fluid></Image></Link>
             </Col>
 
 

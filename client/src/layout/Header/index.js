@@ -10,6 +10,7 @@ import logoImg from '../../assets/images/logo.svg';
 import logo1 from '../../pages/img/home/LogoTalao.webp';
 import logo2 from '../../pages/img/home/LogoTalao@2x.webp';
 import logo3 from '../../pages/img/home/LogoTalao@3x.webp';
+import {ROUTES} from "../../constants/routes";
 
 
 const AVATAR = 'https://www.gravatar.com/avatar/429e504af19fc3e1cfa5c4326ef3394c?s=240&d=mm&r=pg';
@@ -42,26 +43,26 @@ const Header = () => {
       <Container fluid >
         <div className='header-position'>
           <Navbar bg="white" expand="lg md">
-            <Navbar.Brand href="/home">
+            <Navbar.Brand href={ROUTES.HOME}>
               <Image src={logoImg}  fluid className='talao-logo' />
             </Navbar.Brand>
 
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
             <Navbar.Collapse id="basic-navbar-nav ">
-              <Nav  className="ms-auto">
+              <Nav className="ms-auto">
                 <NavDropdown  className="nav-menu px-3" title="Play with talao wallet" id="basic-nav-dropdown"  >
-                  <NavDropdown.Item href="/activation">Activate your email pass</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.ACTIVATION}>Activate your email pass</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/diploma">Download a diploma</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.DIPLOMA}>Download a diploma</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/student" >Download your student card</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.STUDENT} >Download your student card</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/employer">Request an employer certificate</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.EMPLOYER}>Request an employer certificate</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href="/discount">Get a discount coupon</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.DISCOUNT}>Get a discount coupon</NavDropdown.Item>
                 </NavDropdown>
-                <Nav.Link href="/manage"  className="nav-menu px-3">Manage Certificates</Nav.Link>
+                <Nav.Link href={ROUTES.MANAGE}  className="nav-menu px-3">Manage Certificates</Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Navbar>

@@ -36,6 +36,7 @@ import {
 } from 'react-bootstrap';
 import UseCases from "../components/UseCases";
 import ManageStrip from "../components/ManageStrip";
+import {ROUTES} from "../constants/routes";
 
 const { REACT_APP_NODE_LOCAL } = process.env;
 
@@ -62,7 +63,7 @@ function Student() {
               </Row>
               <Row className="lower">
                 <Col>
-                  <Button href="/university" variant="btn btn-info btn-lg ">Start Demo</Button>
+                  <Button href={ROUTES.UNIVERSITY} variant="btn btn-info btn-lg ">Start Demo</Button>
                 </Col>
               </Row>
               <Row className="lower">

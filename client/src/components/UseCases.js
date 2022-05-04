@@ -32,6 +32,7 @@ import {
     Container, Image, Card, Row, Col
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import {ROUTES} from "../constants/routes";
 
 
 const UseCases = () => (
@@ -71,7 +72,7 @@ const UseCases = () => (
                                 </Row>
                                 <Row>
                                     <Col xs={12} md={12} lg={12}>
-                                        <Link to="/diploma" className="links-light">LEARN MORE</Link>
+                                        <Link to={ROUTES.DIPLOMA} className="links-light">LEARN MORE</Link>
                                     </Col>
 
                                 </Row>
@@ -105,7 +106,7 @@ const UseCases = () => (
                                 </Row>
                                 <Row>
                                     <Col xs={12} md={12} lg={12}>
-                                        <Link to="/student" className="links-light ">LEARN MORE</Link>
+                                        <Link to={ROUTES.STUDENT} className="links-light ">LEARN MORE</Link>
                                     </Col>
 
                                 </Row>
@@ -141,7 +142,7 @@ const UseCases = () => (
                                 </Row>
                                 <Row>
                                     <Col xs={12} md={12} lg={12}>
-                                        <Link to="/employer" className="links-light">LEARN MORE</Link>
+                                        <Link to={ROUTES.EMPLOYER} className="links-light">LEARN MORE</Link>
                                     </Col>
 
                                 </Row>
@@ -175,7 +176,7 @@ const UseCases = () => (
                                 </Row>
                                 <Row>
                                     <Col xs={12} md={12} lg={12}>
-                                        <Link to="/discount" className="links-light">LEARN MORE</Link>
+                                        <Link to={ROUTES.DISCOUNT} className="links-light">LEARN MORE</Link>
                                     </Col>
 
                                 </Row>

@@ -11,6 +11,7 @@ import logo1 from '../images/logoUniversity.webp';
 import logo2 from '../images/logoUniversity@2x.webp';
 import logo3 from '../images/logoUniversity@3x.webp';
 import avatar from '../images/Avatar.svg';
+import {ROUTES} from "../constants/routes";
 
 const LogoText = styled.span`
     font-size: 28px;
@@ -77,7 +78,7 @@ const Header = () => {
       <Container fluid className='header'>
         <div className='header-position'>
             <Navbar bg="red" expand="lg md">
-            <Navbar.Brand href="/home">
+            <Navbar.Brand href={ROUTES.HOME}>
                 <Image src={logo1} srcSet={`${logo2} 2x, ${logo3} 3x`} fluid className='talao-logo'></Image>
                 <LogoText>University of web design</LogoText>
             </Navbar.Brand>
@@ -86,7 +87,7 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav ">
                 <Nav  className="ms-auto">
                     <MyAccount>
-                        <Nav.Link href="/uni-account" >
+                        <Nav.Link href={ROUTES.UNIVERSITY_ACCOUNT} >
                             <AvatarImg src={avatar} alt='avatar'></AvatarImg>
                             <MyAccountText>My account</MyAccountText>
                         </Nav.Link>
