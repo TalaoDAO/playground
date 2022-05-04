@@ -5,4 +5,53 @@
   background: $color-white;
   display: flex;
   align-items: center;
+
+  a {
+    outline: none;
+  }
+
+  .header-dropdown {
+    padding: 10px 0;
+    .dropdown-toggle {
+      &:hover {
+        color: $color-blue-light !important;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    .dropdown-menu {
+      padding: 2rem 2.25rem;
+
+      .dropdown-item {
+        padding: 0;
+
+        &:hover {
+          background: $color-white;
+        }
+
+        .menu-link {
+          display: block;
+        }
+      }
+
+      .dropdown-divider {
+        background: rgba(112, 112, 112, 0.13);
+        margin: 2rem 0;
+      }
+    }
+  }
+
+  .menu-link {
+    font-size: 17px;
+    line-height: 1.35;
+    color: $color-dark;
+    text-decoration: none;
+
+    &:hover {
+      color: $color-blue-light;
+    }
+  }
 }

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import {
   Container,
   Navbar,
@@ -28,34 +29,48 @@ const Header = () => {
 
   return (
     <header className="app-header">
-      <Container fluid >
-        <div className='header-position'>
-          <Navbar bg="white" expand="lg md">
-            <Navbar.Brand href={ROUTES.HOME}>
+      <Container>
+        <Navbar bg="white" expand="lg md">
+          <Navbar.Brand>
+            <Link to={ROUTES.HOME}>
               <Image src={LogoImg}  fluid className='talao-logo' />
-            </Navbar.Brand>
+            </Link>
+          </Navbar.Brand>
 
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-            <Navbar.Collapse id="basic-navbar-nav ">
-              <Nav className="ms-auto">
-                <NavDropdown className="nav-menu px-3" title="Play with talao wallet" id="basic-nav-dropdown"  >
-                  <NavDropdown.Item href={ROUTES.ACTIVATION}>Activate your email pass</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href={ROUTES.DIPLOMA}>Download a diploma</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href={ROUTES.STUDENT} >Download your student card</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href={ROUTES.EMPLOYER}>Request an employer certificate</NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href={ROUTES.DISCOUNT}>Get a discount coupon</NavDropdown.Item>
-                </NavDropdown>
-                {/*<Nav.Link href={ROUTES.MANAGE}  className="nav-menu px-3">Manage Certificates</Nav.Link>*/}
-                <Nav.Link href={'#'}  className="nav-menu px-3">How does it work?</Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </Navbar>
-        </div>
+          <Navbar.Collapse id="basic-navbar-nav ">
+            <Nav className="ms-auto d-flex align-items-center">
+              <NavDropdown className="nav-menu header-dropdown menu-link" title="Play with talao wallet" id="basic-nav-dropdown"  >
+                <NavDropdown.Item>
+                  <Link className="menu-link" to={ROUTES.ACTIVATION}>Activate your email pass</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item>
+                  <Link className="menu-link" to={ROUTES.DIPLOMA}>Download a diploma</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item>
+                  <Link className="menu-link" to={ROUTES.STUDENT}>Download your student card</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item>
+                  <Link className="menu-link" to={ROUTES.EMPLOYER}>Request an employer certificate</Link>
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item>
+                  <Link className="menu-link" to={ROUTES.DISCOUNT}>
+                    Get a discount coupon
+                  </Link>
+                </NavDropdown.Item>
+              </NavDropdown>
+              {/*<Nav.Link href={ROUTES.MANAGE}  className="nav-menu px-3">Manage Certificates</Nav.Link>*/}
+              <Nav.Item className="nav-menu d-flex align-items-center ml-25">
+                <Link className="menu-link" to={'#'}>How does it work?</Link>
+              </Nav.Item>
+            </Nav>
+          </Navbar.Collapse>
+        </Navbar>
       </Container>
     </header>
   );
