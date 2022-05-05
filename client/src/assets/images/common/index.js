@@ -4,6 +4,7 @@ import checkIcon from './check-icon.svg';
 import facebookIcon from './icon-facebook-footer.svg';
 import twitterIcon from './icon-twitter-footer.svg';
 import linkedinIcon from './icon-linkedin-footer.svg';
+import arrowSquareRightIcon from './arrow-square-right.svg';
 
 export {
   logoImg,
@@ -12,4 +13,5 @@ export {
   facebookIcon,
   twitterIcon,
   linkedinIcon,
+  arrowSquareRightIcon,
 }

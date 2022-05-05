@@ -14,5 +14,7 @@ export const ROUTES = {
   COMPANY: '/company',
   COMPANY_ACCOUNT: '/com-account',
   DISCOUNT_DEMO: '/discount-demo',
-  ACTIVATION_PROCESS: '/pass-activation'
+  PASS_ACTIVATION: '/pass-activation',
+  HOW_TO_WORK: '/how-to-work',
+
 }

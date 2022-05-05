@@ -67,7 +67,7 @@ const Header = () => {
               </NavDropdown>
               {/*<Nav.Link href={ROUTES.MANAGE}  className="nav-menu px-3">Manage Certificates</Nav.Link>*/}
               <Nav.Item className="nav-menu d-flex align-items-center ml-25">
-                <Link className="menu-link" to={'#'}>How does it work?</Link>
+                <Link className="menu-link" to={ROUTES.HOW_TO_WORK}>How does it work?</Link>
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
