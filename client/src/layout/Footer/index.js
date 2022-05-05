@@ -1,59 +1,45 @@
 import React from 'react';
-
-import {
-  Col,
-  Container, Row, Image
-} from 'react-bootstrap';
-import { Route } from 'react-router-dom';
-
-import twitter from '../../pages/img/home/icon-twitter-footer.svg';
-import linkedin from '../../pages/img/home/icon-linkedin-footer.svg';
-import fb from '../../pages/img/home/icon-facebook-footer.svg';
-import logoFooter from '../../pages/img/home/Logo-footer.png';
-
-
-const { REACT_APP_VERSION } = process.env;
+import { Link } from 'react-router-dom';
+import { Image } from 'react-bootstrap';
+import Container from '../../components/common/Container';
+import { logoWhiteImg, facebookIcon, twitterIcon, linkedinIcon } from '../../assets/images';
+import { REACT_APP_VERSION, ROUTES } from '../../constants';
+import './styles.scss';
 
 const Footer = () => (
-  <footer className="footer" >
-    <Container fluid >
-      <Row>
-        <Col xs={12} md={12} lg={{offset:3,span:6}}>
-          <Row >
+  <footer className="app-footer" >
+    <Container >
+      <div className="app-footer__content">
+        <div className="app-info">
+          <Link className="mb-7 d-flex" to={ROUTES.HOME}>
+            <Image src={logoWhiteImg} />
+          </Link>
 
-            <Col xs={12} md={8} lg={8}>
+          <p className="mb-0 text-grey">
+            © Talao {new Date().getFullYear()} Version: {REACT_APP_VERSION}
+          </p>
+        </div>
 
-              <div className='footer-normal'>
-                <Image src={logoFooter} className="footer-img p-1" fluid></Image>
+        <div className="app-socials">
+          <p className="text-white text-bold text-xl mb-4 text-center text-sm-start">
+            Follow use
+          </p>
 
-              </div>
+          <div className='footer-normal'>
+            <a href="https://twitter.com/Talao_io" target="_blank">
+              <Image src={twitterIcon} className="footer-img p-1 footer-normal-img" fluid />
+            </a>
 
-              <div className='footer-normal'>
-                © Talao {new Date().getFullYear()} Version: {REACT_APP_VERSION}
-              </div>
-            </Col>
+            <a href="https://www.linkedin.com/company/talao" target="_blank" >
+              <Image src={linkedinIcon} className="footer-img p-1 footer-normal-img" fluid />
+            </a>
 
-            <Col xs={12} md={4} lg={4}>
-              <div className='footer-title'>
-                Follow us
-              </div>
-
-              <div className='footer-normal'>
-                <a href="https://twitter.com/Talao_io" target="_blank"><Image src={twitter} className="footer-img p-1 footer-normal-img" fluid></Image></a>
-
-                <a href="https://www.linkedin.com/company/talao" target="_blank" ><Image src={linkedin} className="footer-img p-1 footer-normal-img" fluid></Image></a>
-
-                <a href="https://www.facebook.com/TalaoDAO/" target="_blank"><Image src={fb} className="footer-img p-1 footer-normal-img" fluid></Image></a>
-              </div>
-
-
-            </Col>
-          </Row>
-        </Col>
-      </Row>
-
-
-
+            <a href="https://www.facebook.com/TalaoDAO/" target="_blank">
+              <Image src={facebookIcon} className="footer-img p-1 footer-normal-img" fluid />
+            </a>
+          </div>
+        </div>
+      </div>
     </Container>
   </footer>
 );

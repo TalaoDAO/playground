@@ -28,7 +28,7 @@ const UseCases = () => {
         <div className="use-cases-list">
           <div className="use-cases-item">
             <Image src={diplomaCaseIcon} className="mb-10" />
-            <p className="text-lg text-bold mb-16">Download a diploma</p>
+            <p className="text-2xl text-bold mb-16">Download a diploma</p>
 
             <div className="use-case-card diploma-card">
               <div className="d-flex align-items-center">
@@ -56,7 +56,7 @@ const UseCases = () => {
 
           <div className="use-cases-item">
             <Image src={downloadStudentIcon} className="mb-10" />
-            <p className="text-lg text-bold mb-16">Download your student card</p>
+            <p className="text-2xl text-bold mb-16">Download your student card</p>
 
             <div className="use-case-card diploma-card">
               <div className="d-flex align-items-center">
@@ -84,7 +84,7 @@ const UseCases = () => {
 
           <div className="use-cases-item">
             <Image src={employerCaseIcon} className="mb-10" />
-            <p className="text-lg text-bold mb-16">Request an employer ceritifcate</p>
+            <p className="text-2xl text-bold mb-16">Request an employer ceritifcate</p>
 
             <div className="use-case-card certificate-card">
               <div className="d-flex align-items-start">
@@ -114,7 +114,7 @@ const UseCases = () => {
 
           <div className="use-cases-item">
             <Image src={discountCaseIcon} className="mb-10" />
-            <p className="text-lg text-bold mb-16">Use a discount coupon</p>
+            <p className="text-2xl text-bold mb-16">Use a discount coupon</p>
 
             <div className="use-case-card discount-card">
               <Image src={discountCardImg} className="discount-card-img" />
