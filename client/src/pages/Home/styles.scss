@@ -1,9 +1,14 @@
 @import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
 
 .home-page {
   .illustration-parts {
-    padding: 75px 0 200px 0;
+    padding: 75px 0 300px 0;
     position: relative;
+
+    @include breakpoint-up($md) {
+      padding-bottom: 200px;
+    }
 
     .illustration-wrapper {
       display: flex;
@@ -13,10 +18,24 @@
 
     .illustration-img-wrapper {
       padding: 0 85px 0 127px;
+      display: none;
+
+      @include breakpoint-up($lg) {
+        display: block;
+      }
     }
 
     .btn-app-store {
       height: 48px;
+
+      &.btn-google {
+        margin-bottom: 1rem;
+
+        @include breakpoint-up($sm) {
+          margin-right: 1.875rem;
+          margin-bottom: 0;
+        }
+      }
     }
 
     .step-section {

@@ -26,18 +26,17 @@ function Home() {
         <Container>
           <div className="d-flex">
             <div className="illustration-wrapper">
-              <div>
+              <div className="mb-18">
                 <h1 className="text-white text-heading1 mb-0">Playground wallet</h1>
                 <p className="text-md text-grey mb-0">
                   Talao provides protocols, wallets and innovative decentralized tools to allow businesses to offer customers and avatars services based on their identity, their reputation, their community  and their digital assets.
                 </p>
               </div>
 
-              <div className="d-flex align-items-center">
+              <div className="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-start">
                 <a target="_blank"
-                   className="mr-15"
                    href="https://play.google.com/store/apps/details?id=co.talao.wallet">
-                  <Image src={googlePlayImg} className="btn-app-store" />
+                  <Image src={googlePlayImg} className="btn-app-store btn-google" />
                 </a>
                 <a target="_blank"
                    href="https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone">

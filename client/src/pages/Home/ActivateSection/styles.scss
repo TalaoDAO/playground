@@ -1,8 +1,26 @@
 @import "src/assets/scss/variables";
+@import "src/assets/scss/mixins";
 
 .activate-account-section {
-  padding: 250px 0 207px;
+  padding: 300px 0 207px;
   position: relative;
+
+  @include breakpoint-up($md) {
+    padding-top: 250px;
+  }
+
+  .app-store-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include breakpoint-up($md) {
+      align-items: flex-start;
+      width: 50%;
+    }
+  }
 
   .activate-btn {
     text-transform: uppercase;
@@ -23,10 +41,27 @@
     }
   }
 
+  .activate-email-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+    @include breakpoint-up($md) {
+      align-items: flex-start;
+    }
+  }
+
   .activate-email-img-wrapper {
     width: 60%;
     flex-shrink: 0;
     margin-top: -50px;
+    display: none;
+
+    @include breakpoint-up($lg) {
+      display: block;
+    }
   }
 
   .activate-email-img {
@@ -40,5 +75,26 @@
     left: 50%;
     transform: translateX(-50%) translateY(50%);
     z-index: 2;
+  }
+
+  .btn-app-store {
+    height: 48px;
+
+    &.btn-google {
+      margin-bottom: 1rem;
+
+      @include breakpoint-up($sm) {
+        margin-right: 1.875rem;
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  .mobile-illustration-img {
+    display: none;
+
+    @include breakpoint-up($lg) {
+      display: block;
+    }
   }
 }
