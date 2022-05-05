@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import {
-  Container,
   Navbar,
   Nav,
   NavDropdown,
   Image,
 } from 'react-bootstrap';
+import Container from '../../components/common/Container';
 import { logoImg } from '../../assets/images/common';
 import { ROUTES } from '../../constants/routes';
 import './styles.scss'

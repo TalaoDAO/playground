@@ -1,18 +1,13 @@
-import React from "react";
-import {
-  Container, Button, Row, Col, Image
-} from 'react-bootstrap';
-
+import React from 'react';
+import { Image } from 'react-bootstrap';
 import {
   appstoreImg, googlePlayImg, talIllustrationImg,
-  mobileIllustrationImg, activateEmailImg, downloadImg, shieldImg,
 } from '../../assets/images';
-
 import StepIllustration from './StepIllustration';
 import ActivateSection from './ActivateSection';
 import UseCases from './UseCases';
-
 import { REACT_APP_NODE_LOCAL, } from '../../constants';
+import Container from "../../components/common/Container";
 import './styles.scss';
 
 
