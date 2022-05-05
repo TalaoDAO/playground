@@ -37,7 +37,7 @@ const ActivateSection = () => {
         </div>
 
         <div className="d-flex">
-          <div className="w-50">
+          <div className="flex-1">
             <Image src={shieldImg} className="mb-12" />
             <h3 className="text-blue-dark mb-3">Activate your email pass</h3>
             <Link
@@ -47,8 +47,8 @@ const ActivateSection = () => {
               Activate
             </Link>
           </div>
-          <div className="w-50">
-            <Image src={activateEmailImg} className="w-100 h-auto" />
+          <div className="activate-email-img-wrapper">
+            <Image src={activateEmailImg} className="activate-email-img" />
           </div>
         </div>
       </Container>

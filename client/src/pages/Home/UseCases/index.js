@@ -1,7 +1,18 @@
 import React from 'react';
 import { Container, Image } from 'react-bootstrap';
 import {
-  startPlayingImg, hatImg, pencilImg, caseCardIcon, diplomaCaseIcon, downloadStudentIcon, approveIcon,
+  startPlayingImg,
+  hatImg,
+  pencilImg,
+  caseCardIcon,
+  diplomaCaseIcon,
+  downloadStudentIcon,
+  approveIcon,
+  employerCaseIcon,
+  certificateIcon,
+  discountCaseIcon,
+  discountCardImg,
+  checkIcon,
 } from '../../../assets/images';
 import './styles.scss';
 
@@ -34,7 +45,9 @@ const UseCases = () => {
                 <Image src={caseCardIcon} />
 
                 <div className="approved-info">
-                  <Image src={approveIcon} className="mr-2 flex-shrink-0" />
+                  <div className="approve-icon-container mr-2 flex-shrink-0">
+                    <Image src={checkIcon} />
+                  </div>
                   <span className="approved-info__text">APPROVED</span>
                 </div>
               </div>
@@ -60,8 +73,60 @@ const UseCases = () => {
                 <Image src={caseCardIcon} />
 
                 <div className="approved-info">
-                  <Image src={approveIcon} className="mr-2 flex-shrink-0" />
+                  <div className="approve-icon-container mr-2 flex-shrink-0">
+                    <Image src={checkIcon} />
+                  </div>
                   <span className="approved-info__text">APPROVED</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="use-cases-item">
+            <Image src={employerCaseIcon} className="mb-10" />
+            <p className="text-lg text-bold mb-16">Request an employer ceritifcate</p>
+
+            <div className="use-case-card certificate-card">
+              <div className="d-flex align-items-start">
+                <div className="flex-1 mr-36">
+                  <p className="card-title">Employer certificate</p>
+                  <p className="card-description">
+                    This certificate is a document by which an employer certifies that his employee is well employed by his company
+                  </p>
+                </div>
+                <div className="flex-shrink-0">
+                  <Image className="flex-shrink-0 ml-20" src={certificateIcon} />
+                </div>
+              </div>
+
+              <div className="d-flex align-items-center justify-content-between">
+                <Image src={caseCardIcon} />
+
+                <div className="approved-info">
+                  <div className="approve-icon-container mr-2 flex-shrink-0">
+                    <Image src={checkIcon} />
+                  </div>
+                  <span className="approved-info__text">APPROVED</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="use-cases-item">
+            <Image src={discountCaseIcon} className="mb-10" />
+            <p className="text-lg text-bold mb-16">Use a discount coupon</p>
+
+            <div className="use-case-card discount-card">
+              <Image src={discountCardImg} className="discount-card-img" />
+
+              <div>
+                <p className="card-title">NFT MARKET PLACE</p>
+                <div className="d-flex align-items-start">
+                  <span className="discount-number">15</span>
+                  <div>
+                    <p className="discount-percent">%</p>
+                    <p className="discount-off">OFF</p>
+                  </div>
                 </div>
               </div>
             </div>

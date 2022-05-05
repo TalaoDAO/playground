@@ -23,6 +23,17 @@
     }
   }
 
+  .activate-email-img-wrapper {
+    width: 60%;
+    flex-shrink: 0;
+    margin-top: -50px;
+  }
+
+  .activate-email-img {
+    width: 100%;
+    height: auto;
+  }
+
   .cube-separation {
     position: absolute;
     bottom: 0;

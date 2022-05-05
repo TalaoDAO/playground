@@ -6,7 +6,7 @@ import activeMailImg from './ic-active-mail.svg';
 import downloadWalletImg from './ic-download.svg';
 import startPlayingImg from './ic-wallet.svg';
 import arrowRightImg from './arrow-right.svg';
-import activateEmailImg from './actvate-email.png';
+import activateEmailImg from './activate-email.png';
 import downloadImg from './vuesax-bulk-receive-square.svg';
 import shieldImg from './vuesax-bulk-shield-tick.svg';
 import cubeSeparationImg from './cube-hero-separation.svg';
@@ -16,6 +16,10 @@ import pencilImg from './pencil.svg';
 import caseCardIcon from './case-icon.svg';
 import downloadStudentIcon from './ic-download-student-card.svg';
 import diplomaCaseIcon from './icon-diploma-use-case.svg';
+import employerCaseIcon from './icon-employer-certificate-use-case.svg';
+import discountCaseIcon from './icon-discount-coupon-use-case.svg';
+import certificateIcon from './certificate-icon.svg';
+import discountCardImg from './discount-card.png';
 
 export {
   appstoreImg,
@@ -36,4 +40,8 @@ export {
   downloadStudentIcon,
   diplomaCaseIcon,
   cubeSeparationImg,
+  employerCaseIcon,
+  discountCaseIcon,
+  certificateIcon,
+  discountCardImg,
 }
