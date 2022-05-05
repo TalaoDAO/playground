@@ -31,8 +31,6 @@ import step061 from '../pages/img/employment/Image-employer-certificate-accept-c
 import step062 from '../pages/img/employment/Image-employer-certificate-accept-certificate-wallet.svg';
 import step063 from '../pages/img/employment/Image-employer-certificate-accept-certificate-wallet.svg';
 
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Container, Button, Row, Col, Image
 } from 'react-bootstrap';

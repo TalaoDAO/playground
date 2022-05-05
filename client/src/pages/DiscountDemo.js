@@ -3,7 +3,6 @@ import ddemo01 from '../images/discount-demo-01.png';
 import "../App.css";
 import QRCode from "react-qr-code";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Container, Button, Row, Col, Card, Image
 } from 'react-bootstrap';

@@ -1,0 +1,32 @@
+@import "src/assets/scss/variables";
+
+.home-page {
+  .illustration-parts {
+    padding: 75px 0 200px 0;
+    position: relative;
+
+    .illustration-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .illustration-img-wrapper {
+      padding: 0 85px 0 127px;
+    }
+
+    .btn-app-store {
+      height: 48px;
+    }
+
+    .step-section {
+      position: absolute;
+      bottom: 0;
+      transform: translateY(50%);
+      width: 100%;
+      z-index: 2;
+    }
+  }
+
+
+}

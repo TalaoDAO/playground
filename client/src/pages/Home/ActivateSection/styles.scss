@@ -1,0 +1,33 @@
+@import "src/assets/scss/variables";
+
+.activate-account-section {
+  padding: 250px 0 207px;
+  position: relative;
+
+  .activate-btn {
+    text-transform: uppercase;
+    background: $color-blue-light-2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-white;
+    font-size: 17px;
+    font-weight: 500;
+    width: 208px;
+    height: 69px;
+    border-radius: 10px;
+    text-decoration: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .cube-separation {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) translateY(50%);
+    z-index: 2;
+  }
+}

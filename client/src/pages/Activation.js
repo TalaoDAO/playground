@@ -18,8 +18,6 @@ import cert1 from '../pages/img/activate/Image-accept-your-certificate.svg';
 import cert2 from '../pages/img/activate/Image-accept-your-certificate.svg';
 import cert3 from '../pages/img/activate/Image-accept-your-certificate.svg';
 
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Container, Button, Row, Col, Image
 } from 'react-bootstrap';

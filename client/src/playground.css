@@ -141,14 +141,7 @@
     margin: 5px;
     object-fit: contain;
   }
-  
-  img.btn-google-play {  
-    height: 62px;
-    margin: 5px;
-    object-fit: contain;
-  }
 
-  
   div.dark-blue-section {
     height: 590.3px;
     background-color: var(--dark-blue-grey);
@@ -613,14 +606,6 @@ div.discount-separation-top {
     margin: 5px;
     object-fit: contain;
   }
-  
-  img.btn-google-play {  
-    width: 208px;
-    height: 61.2px;
-    margin: 5px;
-    object-fit: contain;
-  }
-
   
   div.dark-blue-section {
     height: 590.3px;
@@ -1127,13 +1112,7 @@ div.discount-separation-top {
     margin: 5px;
     object-fit: contain;
   }
-  
-  img.btn-google-play {  
-    width: 208px;
-    height: 61.2px;
-    margin: 5px;
-    object-fit: contain;
-  }
+
   div.dark-blue-section {
     height: 590.3px;
     background-color: var(--dark-blue-grey);
@@ -1624,13 +1603,7 @@ div.discount-separation-top {
     margin: 5px;
     object-fit: contain;
   }
-  
-  img.btn-google-play {  
-    width: 208px;
-    height: 61.2px;
-    margin: 5px;
-    object-fit: contain;
-  }
+
   div.dark-blue-section {
     width: 100%;
     height: 658px;

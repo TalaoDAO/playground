@@ -7,7 +7,7 @@ import {
   NavDropdown,
   Image,
 } from 'react-bootstrap';
-import { LogoImg } from '../../assets/images';
+import { logoImg } from '../../assets/images/common';
 import { ROUTES } from '../../constants/routes';
 import './styles.scss'
 
@@ -33,7 +33,7 @@ const Header = () => {
         <Navbar bg="white" expand="lg md">
           <Navbar.Brand>
             <Link to={ROUTES.HOME}>
-              <Image src={LogoImg}  fluid className='talao-logo' />
+              <Image src={logoImg}  fluid className='talao-logo' />
             </Link>
           </Navbar.Brand>
 

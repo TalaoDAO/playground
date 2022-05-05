@@ -2,7 +2,7 @@
   font-size: 16px;
 }
 
-@for $i from 0 through 40 {
+@for $i from 0 through 90 {
   .pl-#{$i}, .px-#{$i}, .p-#{$i} { padding-left: 0.125rem * $i !important; }
   .pr-#{$i}, .px-#{$i}, .p-#{$i} { padding-right: 0.125rem * $i !important; }
   .pt-#{$i}, .py-#{$i}, .p-#{$i} { padding-top: 0.125rem * $i !important; }

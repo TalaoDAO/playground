@@ -30,8 +30,6 @@ import diploma061 from '../pages/img/diploma/Image-diploma-accept-news-certifica
 import diploma062 from '../pages/img/diploma/Image-diploma-accept-news-certificate.svg';
 import diploma063 from '../pages/img/diploma/Image-diploma-accept-news-certificate.svg';
 
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Container, Button, Row, Col, Image
 } from 'react-bootstrap';

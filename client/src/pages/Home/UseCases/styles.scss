@@ -1,0 +1,56 @@
+@import "src/assets/scss/variables";
+
+.use-cases-container {
+  padding: 160px 0 214px;
+  background: $color-grey-light;
+
+  .use-cases-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-gap: 50px 112px;
+
+    .use-cases-item {
+      .use-case-card {
+        padding: 44px 26px 33px 24px;
+        border-radius: 20px;
+        height: 260px;
+
+        &.diploma-card {
+          background: linear-gradient(180deg, #3367B1, #215EB5);
+          box-shadow: 0 2px 0 #0A2F64;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .card-title {
+            font-size: 31px;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: $color-white;
+          }
+
+          .card-description {
+            font-size: 25px;
+            color: $color-blue-light-3;
+            margin-bottom: 0;
+          }
+
+          .approved-info {
+            border-radius: 20px;
+            padding: 1px;
+            background: $color-white;
+            color: $color-dark;
+            display: flex;
+            align-items: center;
+            width: 96px;
+
+            &__text {
+              font-size: 8px;
+              font-weight: bold;
+            }
+          }
+        }
+      }
+    }
+  }
+}

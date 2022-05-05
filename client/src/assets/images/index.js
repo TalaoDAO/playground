@@ -1,5 +1,2 @@
-import LogoImg from './source/logo.svg';
-
-export {
-  LogoImg,
-};
+export * from './common';
+export * from './pages';
