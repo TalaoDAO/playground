@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="133.258" height="273.211" viewBox="0 0 133.258 273.211">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.866" y1="-0.188" x2="0.036" y2="1.287" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset="1" stop-color="#eee"/>
+    </linearGradient>
+    <filter id="Rectangle_33" x="13.152" y="82.344" width="107" height="61" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-color="#ccc"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#3367b1"/>
+      <stop offset="1" stop-color="#215eb5"/>
+    </linearGradient>
+  </defs>
+  <g id="Group_3119" data-name="Group 3119" transform="translate(-588.348 -1049.5)">
+    <g id="Image-diploma-accept-news-certificate" transform="translate(588.348 1049.5)">
+      <g id="Light_iPhone_X" data-name="Light / iPhone X">
+        <path id="Shape" d="M17.853,0h97.553a17.853,17.853,0,0,1,17.853,17.853V255.359a17.853,17.853,0,0,1-17.853,17.853H17.853A17.853,17.853,0,0,1,0,255.359V17.853A17.853,17.853,0,0,1,17.853,0Z" fill="#161f3d"/>
+        <path id="Shape-2" data-name="Shape" d="M1.448,2.9A1.448,1.448,0,1,0,0,1.448,1.448,1.448,0,0,0,1.448,2.9Z" transform="translate(51.191 9.773)" fill="#dedede"/>
+        <path id="Shape-3" data-name="Shape" d="M2.413,4.826A2.413,2.413,0,1,0,0,2.413,2.413,2.413,0,0,0,2.413,4.826Z" transform="translate(79.662 8.808)" fill="#dedede"/>
+        <path id="Shape-4" data-name="Shape" d="M.965,0H17.133a.965.965,0,1,1,0,1.931H.965A.965.965,0,0,1,.965,0" transform="translate(57.684 10.256)" fill="#dedede"/>
+        <path id="Shape-5" data-name="Shape" d="M11.508,0A11.546,11.546,0,0,0,0,11.585v233.39A11.546,11.546,0,0,0,11.508,256.56h94.678a11.546,11.546,0,0,0,11.508-11.585V11.585A11.546,11.546,0,0,0,106.186,0H93.527V0q-.052,0-.1,0a1.26,1.26,0,0,0-1.255,1.265V1.9a7.564,7.564,0,0,1-7.543,7.583H33.07A7.563,7.563,0,0,1,25.526,1.9V1.265A1.26,1.26,0,0,0,24.271,0q-.053,0-.1,0V0Z" transform="translate(7.843 7.963)" fill="#fff"/>
+        <text id="My_certificates" data-name="My certificates" transform="translate(66.725 60.432)" fill="#161f3d" font-size="9" font-family="SegoeUI, Segoe UI"><tspan x="-28.716" y="0">My certificates</tspan></text>
+      </g>
+    </g>
+    <g id="wallet" transform="translate(463 945.344)">
+      <rect id="Rectangle_73" data-name="Rectangle 73" width="104" height="58" rx="5" transform="translate(140 187)" fill="url(#linear-gradient-2)"/>
+      <g id="Group_3021" data-name="Group 3021" transform="translate(150.292 229.738)">
+        <path id="Path_9760" data-name="Path 9760" d="M.55,0H4.4a.55.55,0,0,1,.55.55V4.292a.55.55,0,0,1-.55.55H.55A.55.55,0,0,1,0,4.292V.55A.55.55,0,0,1,.55,0Z" transform="translate(0 2.343)" fill="#fff"/>
+        <path id="Path_9761" data-name="Path 9761" d="M.55,0H4.4a.55.55,0,0,1,.55.55V4.292a.55.55,0,0,1-.55.55H.55A.55.55,0,0,1,0,4.292V.55A.55.55,0,0,1,.55,0Z" transform="translate(3.102 0)" fill="#fff"/>
+        <path id="ic_device_hub_24px" d="M4.9,4.761l-.542-.542V3.788a.406.406,0,1,0-.271,0v.431l-.542.542H3v.677h.677V5.025l.542-.569.542.569v.413h.677V4.761Z" transform="translate(-1.679 0.553)" fill="#3367b1"/>
+        <path id="ic_tv_24px" d="M3.582,3H1.258A.259.259,0,0,0,1,3.258V4.808a.259.259,0,0,0,.258.258H1.9v.258H2.937V5.066h.646a.258.258,0,0,0,.257-.258V3.258A.259.259,0,0,0,3.582,3Zm0,1.808H1.258V3.258H3.582Z" transform="translate(3.25 -1.771)" fill="#3367b1"/>
+      </g>
+      <g id="Group_3055" data-name="Group 3055" transform="translate(150.044 199.106)">
+        <text id="Diploma" transform="translate(-0.044 6.894)" fill="#fff" font-size="8" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Diploma</tspan></text>
+        <text id="University_of_web_design" data-name="University of web design" transform="translate(-0.044 13.894)" fill="#9dc5ff" font-size="4" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">University of web design</tspan></text>
+      </g>
+      <g id="Group_3057" data-name="Group 3057" transform="translate(210.769 199.393)">
+        <g id="Group_3049" data-name="Group 3049" transform="translate(0 0)">
+          <path id="path650" d="M284.9-304.445v5a3.459,3.459,0,0,0,2.039,2.841,10.88,10.88,0,0,0,9.843,0,3.457,3.457,0,0,0,2.038-2.842v-5H284.9" transform="translate(-279.666 312.034)" fill="#16253a"/>
+          <path id="path652" d="M258.718-302.338l-11.929-6.887v-.33h23.858v.33l-11.929,6.887" transform="translate(-246.789 316.443)" fill="#192c4b"/>
+          <path id="path654" d="M258.718-345.9l-11.929-6.887,11.929-6.888,11.929,6.888L258.718-345.9" transform="translate(-246.789 359.679)" fill="#223e73"/>
+        </g>
+        <path id="path656" d="M339.615-303.145H339.2v-4.242l-6.273-3.143.185-.369,6.5,3.257v4.5" transform="translate(-321.093 317.601)" fill="#fad517"/>
+        <path id="path658" d="M331.26-311.6c0,.228-.3.413-.68.413s-.681-.185-.681-.413.3-.413.681-.413.68.185.68.413" transform="translate(-318.479 318.564)" fill="#fad517"/>
+        <path id="path660" d="M377.641-256.855v-2.1a.479.479,0,0,0-.479-.48.479.479,0,0,0-.48.48v2.1h.959" transform="translate(-358.833 273.208)" fill="#f5f122"/>
+      </g>
+      <g id="APPROVED" transform="translate(213.274 231.381)">
+        <rect id="Rectangle_36" data-name="Rectangle 36" width="21.352" height="5.542" rx="2.771" transform="translate(0 0)" fill="#fff"/>
+        <text id="APPROVED-2" data-name="APPROVED" transform="translate(7.095 3.304)" fill="#262424" font-size="2" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">APPROVED</tspan></text>
+        <circle id="Ellipse_452" data-name="Ellipse 452" cx="2.282" cy="2.282" r="2.282" transform="translate(0.489 0.489)" fill="#56b113"/>
+        <path id="checkmark" d="M2.424,4.239l-.217-.217a.077.077,0,0,0-.108,0L.99,5.193.354,4.557a.078.078,0,0,0-.11,0l-.22.22a.078.078,0,0,0,0,.11l.9.925a.075.075,0,0,0,.064.021.076.076,0,0,0,.066-.021L2.424,4.347a.077.077,0,0,0,0-.109Z" transform="translate(1.57 -1.951)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>
