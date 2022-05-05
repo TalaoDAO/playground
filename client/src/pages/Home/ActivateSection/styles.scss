@@ -22,25 +22,6 @@
     }
   }
 
-  .activate-btn {
-    text-transform: uppercase;
-    background: $color-blue-light-2;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: $color-white;
-    font-size: 17px;
-    font-weight: 500;
-    width: 208px;
-    height: 69px;
-    border-radius: 10px;
-    text-decoration: none;
-
-    &:hover {
-      cursor: pointer;
-    }
-  }
-
   .activate-email-wrapper {
     display: flex;
     flex-direction: column;

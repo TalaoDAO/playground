@@ -41,7 +41,7 @@ const ActivateSection = () => {
             <Image src={shieldImg} className="mb-12" />
             <h3 className="text-blue-dark mb-3">Activate your email pass</h3>
             <Link
-              className="activate-btn"
+              className="link-btn"
               to={ROUTES.ACTIVATION}
             >
               Activate

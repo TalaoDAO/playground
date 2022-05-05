@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="474" height="363" viewBox="0 0 474 363">
+  <defs>
+    <filter id="Rectangle_536" x="0" y="0" width="474" height="363" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="28" result="blur"/>
+      <feFlood flood-opacity="0.129"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_469" x="149.5" y="80.799" width="181" height="177" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur-2"/>
+      <feFlood flood-opacity="0.129"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Image-enter-your-informations" transform="translate(36.818 58)">
+    <g transform="matrix(1, 0, 0, 1, -36.82, -58)" filter="url(#Rectangle_536)">
+      <rect id="Rectangle_536-2" data-name="Rectangle 536" width="306" height="195" rx="10" transform="translate(84 81)" fill="#fff"/>
+    </g>
+    <g id="Light_Macbook" data-name="Light / Macbook" transform="translate(-0.001)">
+      <rect id="Background" width="400" height="225" transform="translate(0.183 0.298)" fill="none"/>
+      <path id="Shape" d="M9.4,0H314.74a9.4,9.4,0,0,1,9.4,9.4V213.528a9.4,9.4,0,0,1-9.4,9.4H9.4a9.4,9.4,0,0,1-9.4-9.4V9.4A9.4,9.4,0,0,1,9.4,0Z" transform="translate(37.795)" fill="#dedede"/>
+      <path id="Shape-2" data-name="Shape" d="M8.541,0H313.886a8.541,8.541,0,0,1,8.541,8.541V212.674a8.542,8.542,0,0,1-8.541,8.541H8.541A8.541,8.541,0,0,1,0,212.674V8.541A8.541,8.541,0,0,1,8.541,0Z" transform="translate(38.649 0.854)" fill="#fff"/>
+      <path id="Shape-3" data-name="Shape" d="M0,1.708A1.708,1.708,0,0,1,1.708,0H398.444a1.708,1.708,0,0,1,1.708,1.708v4.7H0v-4.7Z" transform="translate(0.001 216.304)" fill="#dedede"/>
+      <path id="Shape-4" data-name="Shape" d="M0,.854A.854.854,0,0,1,.854,0H397.589a.854.854,0,0,1,.854.854V4.7H0V.854Z" transform="translate(0.855 217.158)" fill="#fff"/>
+      <path id="Shape-5" data-name="Shape" d="M0,0H400.152l-1.7.905a21.358,21.358,0,0,1-10.049,2.511H11.744A21.363,21.363,0,0,1,1.7.905L0,0Z" transform="translate(0.001 222.71)" fill="#dedede"/>
+      <path id="Shape-6" data-name="Shape" d="M0,0H397.589l-1.95.837a21.371,21.371,0,0,1-8.411,1.725H10.362A21.37,21.37,0,0,1,1.95.837L0,0Z" transform="translate(1.282 222.71)" fill="#fff"/>
+      <path id="Shape-7" data-name="Shape" d="M0,0H57.439V.214a4.269,4.269,0,0,1-4.271,4.271H4.271A4.27,4.27,0,0,1,0,.214V0Z" transform="translate(171.464 216.304)" fill="#dedede"/>
+      <rect id="Rectangle" width="290.481" height="192.176" transform="translate(55.649 13.37)" fill="rgba(22,31,61,0.2)"/>
+    </g>
+    <g id="Group_163" data-name="Group 163" transform="translate(123.399 29.912)">
+      <g transform="matrix(1, 0, 0, 1, -160.22, -87.91)" filter="url(#Rectangle_469)">
+        <rect id="Rectangle_469-2" data-name="Rectangle 469" width="160" height="156" rx="5" transform="translate(160 88.3)" fill="#fff"/>
+      </g>
+      <g id="Group_192" data-name="Group 192" transform="translate(2)">
+        <g id="Rectangle_470" data-name="Rectangle 470" transform="translate(16.783 81.387)" fill="#fff" stroke="#c9ccd8" stroke-width="1">
+          <rect width="123" height="22" rx="3" stroke="none"/>
+          <rect x="0.5" y="0.5" width="122" height="21" rx="2.5" fill="none"/>
+        </g>
+        <g id="Rectangle_507" data-name="Rectangle 507" transform="translate(16.783 48.387)" fill="#fff" stroke="#c9ccd8" stroke-width="1">
+          <rect width="123" height="22" rx="3" stroke="none"/>
+          <rect x="0.5" y="0.5" width="122" height="21" rx="2.5" fill="none"/>
+        </g>
+        <g id="Rectangle_546" data-name="Rectangle 546" transform="translate(16.783 16.387)" fill="#fff" stroke="#c9ccd8" stroke-width="1">
+          <rect width="123" height="22" rx="3" stroke="none"/>
+          <rect x="0.5" y="0.5" width="122" height="21" rx="2.5" fill="none"/>
+        </g>
+        <rect id="Rectangle_471" data-name="Rectangle 471" width="123" height="24" rx="5" transform="translate(16.783 117.387)" fill="#161f3d"/>
+        <text id="Email_" data-name="Email
+" transform="translate(27.783 88.387)" fill="#161f3d" font-size="7" font-family="SegoeUI, Segoe UI" opacity="0.653"><tspan x="0" y="8">Email</tspan></text>
+        <text id="Last_name" data-name="Last name" transform="translate(27.783 55.387)" fill="#161f3d" font-size="7" font-family="SegoeUI, Segoe UI" opacity="0.653"><tspan x="0" y="8">Last name</tspan></text>
+        <text id="First_name_" data-name="First name
+" transform="translate(27.783 23.387)" fill="#161f3d" font-size="7" font-family="SegoeUI, Segoe UI" opacity="0.653"><tspan x="1.99" y="8">First name</tspan></text>
+        <text id="VALIDATE" transform="translate(76.783 132.387)" fill="#fff" font-size="8" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="-18.48" y="0">VALIDATE</tspan></text>
+      </g>
+    </g>
+  </g>
+</svg>
