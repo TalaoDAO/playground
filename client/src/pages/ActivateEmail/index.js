@@ -11,19 +11,19 @@ import './styles.scss';
 const ActivateEmailSteps = [
   {
     img: enterInformationImg,
-    title: 'Enter information',
+    title: 'Enter <br/> information',
   },
   {
     img: enterCodeImg,
-    title: 'Enter your code',
+    title: 'Enter your <br/>  code',
   },
   {
     img: scanWalletImg,
-    title: 'Scan with your mobile wallet',
+    title: 'Scan with your mobile <br/>  wallet',
   },
   {
     img: acceptCertificateImg,
-    title: 'Accept your certificate',
+    title: 'Accept your <br/>  certificate',
   },
 ]
 

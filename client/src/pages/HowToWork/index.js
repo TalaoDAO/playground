@@ -21,7 +21,7 @@ const howToItems = [
   },
   {
     title: 'How to download a diploma ?',
-    link: '#',
+    link: ROUTES.DIPLOMA,
   },
   {
     title: 'How to download your student card ?',

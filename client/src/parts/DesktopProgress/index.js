@@ -19,7 +19,7 @@ const DesktopProgress = ({
               <div className="desktop-progress-step" key={index}>
                 <div className="desktop-progress-step__header">
                   <p className="step-index">{index + 1}.</p>
-                  <p className="step-label">{item.title}</p>
+                  <p className="step-label" dangerouslySetInnerHTML={{ __html: item.title }} />
                 </div>
 
                 <Image src={item.img} className="desktop-progress-step__img" />
