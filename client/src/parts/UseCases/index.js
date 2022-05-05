@@ -12,7 +12,7 @@ import {
   discountCaseIcon,
   discountCardImg,
   checkIcon,
-} from '../../../assets/images';
+} from '../../assets/images';
 import './styles.scss';
 
 const UseCases = () => {

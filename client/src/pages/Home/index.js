@@ -5,9 +5,9 @@ import {
 } from '../../assets/images';
 import StepIllustration from './StepIllustration';
 import ActivateSection from './ActivateSection';
-import UseCases from './UseCases';
+import UseCases from '../../parts/UseCases';
+import Container from '../../components/common/Container';
 import { REACT_APP_NODE_LOCAL, } from '../../constants';
-import Container from "../../components/common/Container";
 import './styles.scss';
 
 
