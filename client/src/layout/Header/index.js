@@ -8,7 +8,8 @@ import {
 } from 'react-bootstrap';
 import Container from '../../components/common/Container';
 import { logoImg } from '../../assets/images/common';
-import { ROUTES } from '../../constants/routes';
+import { ROUTES } from '../../constants';
+import Icon from '../../components/common/Icon';
 import './styles.scss'
 
 function getSessionToken() {
@@ -30,7 +31,7 @@ const Header = () => {
   return (
     <header className="app-header">
       <Container>
-        <Navbar bg="white" expand="lg md">
+        <Navbar bg="white">
           <Navbar.Brand>
             <Link to={ROUTES.HOME}>
               <Image src={logoImg}  fluid className='talao-logo' />
@@ -39,7 +40,7 @@ const Header = () => {
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-          <Navbar.Collapse id="basic-navbar-nav ">
+          <Navbar.Collapse id="basic-navbar-nav " className="header-navbar">
             <Nav className="ms-auto d-flex align-items-center">
               <NavDropdown className="nav-menu header-dropdown menu-link" title="Play with talao wallet" id="basic-nav-dropdown"  >
                 <NavDropdown.Item>
@@ -70,6 +71,10 @@ const Header = () => {
               </Nav.Item>
             </Nav>
           </Navbar.Collapse>
+
+          <span className="hamburger-btn">
+            <Icon name="hamburger-menu"/>
+          </span>
         </Navbar>
       </Container>
     </header>

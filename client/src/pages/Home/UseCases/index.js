@@ -7,7 +7,6 @@ import {
   caseCardIcon,
   diplomaCaseIcon,
   downloadStudentIcon,
-  approveIcon,
   employerCaseIcon,
   certificateIcon,
   discountCaseIcon,
@@ -31,7 +30,7 @@ const UseCases = () => {
             <p className="text-2xl text-bold mb-16">Download a diploma</p>
 
             <div className="use-case-card diploma-card">
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center justify-content-between mb-5">
                 <div className="flex-1">
                   <p className="card-title">Diploma</p>
                   <p className="card-description">University of web design</p>
@@ -59,7 +58,7 @@ const UseCases = () => {
             <p className="text-2xl text-bold mb-16">Download your student card</p>
 
             <div className="use-case-card diploma-card">
-              <div className="d-flex align-items-center">
+              <div className="d-flex align-items-center justify-content-between mb-5">
                 <div className="flex-1">
                   <p className="card-title">Student card</p>
                   <p className="card-description">University of web design</p>
@@ -84,11 +83,11 @@ const UseCases = () => {
 
           <div className="use-cases-item">
             <Image src={employerCaseIcon} className="mb-10" />
-            <p className="text-2xl text-bold mb-16">Request an employer ceritifcate</p>
+            <p className="text-2xl text-bold mb-16">Request an employer certificate</p>
 
             <div className="use-case-card certificate-card">
-              <div className="d-flex align-items-start">
-                <div className="flex-1 mr-36">
+              <div className="d-flex align-items-start justify-content-between mb-5">
+                <div className="flex-1 card-info">
                   <p className="card-title">Employer certificate</p>
                   <p className="card-description">
                     This certificate is a document by which an employer certifies that his employee is well employed by his company

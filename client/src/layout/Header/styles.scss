@@ -1,4 +1,5 @@
 @import "../../assets/scss/variables";
+@import "src/assets/scss/mixins";
 
 .app-header {
   height: 113px;
@@ -53,6 +54,28 @@
 
     &:hover {
       color: $color-blue-light;
+    }
+  }
+
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .header-navbar {
+    display: none !important;
+
+    @include breakpoint-up($md) {
+      display: flex !important;
+    }
+  }
+
+  .hamburger-btn {
+    display: block;
+
+    @include breakpoint-up($md) {
+      display: none;
     }
   }
 }
