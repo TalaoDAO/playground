@@ -7,7 +7,7 @@ import {
   Image,
 } from 'react-bootstrap';
 import Container from '../../components/common/Container';
-import { logoImg } from '../../assets/images/common';
+import { logoImg } from '../../assets/images';
 import { ROUTES } from '../../constants';
 import Icon from '../../components/common/Icon';
 import './styles.scss'

@@ -1,28 +1,14 @@
-import React from "react";
-import "../App.css";
+import React from 'react';
+import {Button, Col, Container, Image, Modal, Row} from "react-bootstrap";
+import uni_logo_1 from "../img/university/university-logo.svg";
+import uni_logo_2 from "../img/university/university-logo.svg";
+import uni_logo_3 from "../img/university/university-logo.svg";
+import LoginForm from "../../components/LoginForm";
+import uni_banner_1 from "../img/university/university-banner.svg";
+import uni_banner_2 from "../img/university/university-banner.svg";
+import uni_banner_3 from "../img/university/university-banner.svg";
 
-import 'bootstrap/dist/css/bootstrap.min.css';
-import {
-  Container, Button, Row, Col, Card, Image, Modal
-} from 'react-bootstrap';
-
-import uni_logo_1 from './img/university/university-logo.svg';
-import uni_logo_2 from './img/university/university-logo.svg';
-import uni_logo_3 from './img/university/university-logo.svg';
-
-import uni_banner_1 from './img/university/university-banner.svg';
-import uni_banner_2 from './img/university/university-banner.svg';
-import uni_banner_3 from './img/university/university-banner.svg';
-
-
-import { Link } from 'react-router-dom';
-import LoginForm from "../components/LoginForm";
-
-const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
-
-
-
-function University() {
+const University = () => {
   const [show, setShow] = React.useState(false);
 
   const handleClose = () => setShow(false);
@@ -81,6 +67,6 @@ function University() {
 
     </main>
   );
-}
+};
 
 export default University;
