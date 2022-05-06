@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="306" height="475.643" viewBox="0 0 306 475.643">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.866" y1="-0.188" x2="0.036" y2="1.287" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fafafa"/>
+      <stop offset="1" stop-color="#eee"/>
+    </linearGradient>
+    <filter id="Rectangle_33" x="100.499" y="173.613" width="105" height="59" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-color="#ccc"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_536" x="0" y="0" width="306" height="475.643" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="28" result="blur-2"/>
+      <feFlood flood-opacity="0.129"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#eaf2ff"/>
+      <stop offset="1" stop-color="#c0cfe8"/>
+    </linearGradient>
+    <clipPath id="clip-path">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_33)">
+        <rect id="Rectangle_33-2" data-name="Rectangle 33" width="102" height="56" rx="7" transform="translate(0 0.3)" fill="url(#linear-gradient)"/>
+      </g>
+    </clipPath>
+    <linearGradient id="linear-gradient-3" x1="0.737" y1="-0.089" x2="0.052" y2="1.187" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#fff"/>
+      <stop offset="1" stop-color="#e6e6e6"/>
+    </linearGradient>
+    <filter id="Rectangle_87" x="181.531" y="182.113" width="16" height="23" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur result="blur-3"/>
+      <feFlood flood-opacity="0.043"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Group_3122" data-name="Group 3122" transform="translate(-727 -1187.887)">
+    <g id="Group_3118" data-name="Group 3118">
+      <g id="Image-accept-your-certificate" transform="translate(805.017 1268.886)">
+        <g transform="matrix(1, 0, 0, 1, -78.02, -81)" filter="url(#Rectangle_536)">
+          <rect id="Rectangle_536-2" data-name="Rectangle 536" width="138" height="307.643" rx="10" transform="translate(84 81)" fill="#fff"/>
+        </g>
+        <g id="Light_iPhone_X" data-name="Light / iPhone X" transform="translate(-3.016 -2.01)">
+          <path id="Shape" d="M20.271,0H131.034A20.271,20.271,0,0,1,151.3,20.271v269.67a20.27,20.27,0,0,1-20.271,20.271H20.271A20.271,20.271,0,0,1,0,289.941V20.271A20.271,20.271,0,0,1,20.271,0Z" transform="translate(3.016 2.01)" fill="#161f3d"/>
+          <path id="Shape-2" data-name="Shape" d="M1.448,2.9A1.448,1.448,0,1,0,0,1.448,1.448,1.448,0,0,0,1.448,2.9Z" transform="translate(61.294 11.783)" fill="#dedede"/>
+          <path id="Shape-3" data-name="Shape" d="M2.413,4.826A2.413,2.413,0,1,0,0,2.413,2.413,2.413,0,0,0,2.413,4.826Z" transform="translate(93.872 10.818)" fill="#dedede"/>
+          <path id="Shape-4" data-name="Shape" d="M.965,0H17.133a.965.965,0,1,1,0,1.931H.965A.965.965,0,0,1,.965,0" transform="translate(69.74 12.266)" fill="#dedede"/>
+          <path id="Shape-5" data-name="Shape" d="M13.272,0A13.264,13.264,0,0,0,0,13.256V280.3A13.264,13.264,0,0,0,13.272,293.56h109.2A13.264,13.264,0,0,0,135.74,280.3V13.256A13.264,13.264,0,0,0,122.468,0h-14.6V0q-.06,0-.121,0A1.447,1.447,0,0,0,106.3,1.447v.722a8.689,8.689,0,0,1-8.7,8.677H38.14a8.688,8.688,0,0,1-8.7-8.677V1.447A1.447,1.447,0,0,0,27.992,0q-.061,0-.121,0V0Z" transform="translate(10.859 9.973)" fill="#f3f3f3"/>
+          <text id="My_certificates" data-name="My certificates" transform="translate(78.79 69.613)" fill="#161f3d" font-size="9" font-family="SegoeUI, Segoe UI"><tspan x="-28.716" y="0">My certificates</tspan></text>
+        </g>
+      </g>
+    </g>
+    <g id="wallet" transform="translate(688.902 1175.012)">
+      <rect id="Rectangle_73" data-name="Rectangle 73" width="102" height="56" rx="7" transform="translate(140.096 186.988)" fill="url(#linear-gradient-2)"/>
+      <rect id="Rectangle_35" data-name="Rectangle 35" transform="translate(165.096 218.988)" fill="#fff"/>
+      <g id="Group_3055" data-name="Group 3055" transform="translate(145.395 195.298)">
+        <g id="APPROVED" transform="translate(68.874 35.017)">
+          <rect id="Rectangle_36" data-name="Rectangle 36" width="20.89" height="5.422" rx="2.711" transform="translate(0)" fill="#fff"/>
+          <text id="APPROVED-2" data-name="APPROVED" transform="translate(6.9 3.402)" fill="#262424" font-size="2" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">APPROVED</tspan></text>
+          <circle id="Ellipse_452" data-name="Ellipse 452" cx="2.233" cy="2.233" r="2.233" transform="translate(0.478 0.478)" fill="#56b113"/>
+          <path id="checkmark" d="M2.372,4.234,2.16,4.021a.075.075,0,0,0-.106,0L.968,5.167.346,4.545a.076.076,0,0,0-.108,0L.024,4.76a.076.076,0,0,0,0,.108l.885.905a.074.074,0,0,0,.063.02.074.074,0,0,0,.065-.02L2.372,4.34a.075.075,0,0,0,0-.106Z" transform="translate(1.536 -1.995)" fill="#fff"/>
+        </g>
+        <text id="Employer_certificate" data-name="Employer certificate" transform="translate(1.701 6.69)" fill="#0650c6" font-size="6" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Employer certificate</tspan></text>
+        <text id="This_certificate_is_a_document_by_which_an_employer_certifies_that_his_employee_is_well_employed_by_his_company" data-name="This certificate is a document by
+which an employer certifies that his employee
+is well employed by his company" transform="translate(1.701 12.69)" fill="#3a465a" font-size="2" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">This certificate is a document by</tspan><tspan x="0" y="3">which an employer certifies that his employee</tspan><tspan x="0" y="6">is well employed by his company</tspan></text>
+      </g>
+      <g id="example_logo" data-name="example logo" transform="translate(147.398 231.728)">
+        <rect id="Rectangle_56" data-name="Rectangle 56" width="29" height="4" rx="2" transform="translate(-0.3 0.26)" fill="#508ff4"/>
+        <text id="My_little_company" data-name="My little company" transform="translate(4.701 3.26)" fill="#fff" font-size="3" font-family="SegoeUI-Bold, Segoe UI" font-weight="700" letter-spacing="-0.01em"><tspan x="0" y="0">My little company</tspan></text>
+        <path id="ic_toll_24px" d="M2.711,4a.978.978,0,1,0,.978.978A.977.977,0,0,0,2.711,4Zm0,1.711a.733.733,0,1,1,.733-.733A.734.734,0,0,1,2.711,5.711ZM1.244,4.978a.732.732,0,0,1,.489-.69V4.032a.977.977,0,0,0,0,1.892V5.668A.732.732,0,0,1,1.244,4.978Z" transform="translate(0.357 -2.717)" fill="#fff"/>
+      </g>
+      <g id="Group_3060" data-name="Group 3060" transform="translate(220.099 194.636)">
+        <g transform="matrix(1, 0, 0, 1, -182, -181.76)" filter="url(#Rectangle_87)">
+          <rect id="Rectangle_87-2" data-name="Rectangle 87" width="16" height="22" transform="translate(181.53 182.11)" fill="url(#linear-gradient-3)"/>
+        </g>
+        <path id="Path_9764" data-name="Path 9764" d="M19,51h2.393v5.184l-1.2-1.2-1.2,1.2Z" transform="translate(-16.666 -31.773)" fill="#e43535" fill-rule="evenodd"/>
+        <circle id="Ellipse_454" data-name="Ellipse 454" cx="2" cy="2" r="2" transform="translate(1.53 16.352)" fill="#ffaf40"/>
+        <line id="Line_10" data-name="Line 10" x2="9.642" transform="translate(3.009 5.918)" fill="none" stroke="#c4c4c4" stroke-linecap="round" stroke-width="1"/>
+        <line id="Line_11" data-name="Line 11" x2="9.642" transform="translate(3.009 7.703)" fill="none" stroke="#c4c4c4" stroke-linecap="round" stroke-width="1"/>
+        <line id="Line_12" data-name="Line 12" x2="9.642" transform="translate(3.009 9.489)" fill="none" stroke="#c4c4c4" stroke-linecap="round" stroke-width="1"/>
+        <line id="Line_13" data-name="Line 13" x2="9.642" transform="translate(3.009 11.274)" fill="none" stroke="#c4c4c4" stroke-linecap="round" stroke-width="1"/>
+        <line id="Line_14" data-name="Line 14" x2="4.999" transform="translate(3.009 13.06)" fill="none" stroke="#c4c4c4" stroke-linecap="round" stroke-width="1"/>
+        <path id="ic_check_24px" d="M4.085,6.868l-.5-.5-.172.17.675.675,1.45-1.45-.17-.17Z" transform="translate(-0.942 12.017)"/>
+      </g>
+    </g>
+  </g>
+</svg>

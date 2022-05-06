@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="306" height="475.643" viewBox="0 0 306 475.643">
+  <defs>
+    <linearGradient id="linear-gradient" x1="1.145" y1="-0.074" x2="0.036" y2="1.287" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#1eaadc"/>
+      <stop offset="1" stop-color="#1193c1"/>
+    </linearGradient>
+    <filter id="Rectangle_14" x="93.5" y="169.613" width="122" height="68" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur"/>
+      <feFlood flood-color="#0b7ba2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient-2" x1="0.783" y1="-0.06" x2="0.151" y2="1.132" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#161f3d"/>
+      <stop offset="1" stop-color="#172040"/>
+    </linearGradient>
+    <filter id="Rectangle_26" x="93.5" y="169.613" width="120" height="69" filterUnits="userSpaceOnUse">
+      <feOffset dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="0.5" result="blur-2"/>
+      <feFlood flood-color="#0b7ba2"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_536" x="0" y="0" width="306" height="475.643" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="28" result="blur-3"/>
+      <feFlood flood-opacity="0.129"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_14)">
+        <rect id="Rectangle_14-2" data-name="Rectangle 14" width="119" height="65" rx="5" transform="translate(0.41)" fill="url(#linear-gradient)"/>
+      </g>
+    </clipPath>
+    <clipPath id="clip-path-2">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Rectangle_26)">
+        <rect id="Rectangle_26-2" data-name="Rectangle 26" width="117" height="66" rx="5" transform="translate(0.41)" fill="url(#linear-gradient-2)"/>
+      </g>
+    </clipPath>
+    <linearGradient id="linear-gradient-4" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#646464"/>
+      <stop offset="1" stop-color="#323232"/>
+    </linearGradient>
+    <filter id="Ellipse_448" x="156.744" y="170.683" width="70.966" height="56.931" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="8" result="blur-4"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-4"/>
+    </filter>
+    <linearGradient id="linear-gradient-5" x1="0.5" y1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f4f4f4"/>
+      <stop offset="1" stop-color="#efefef"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-6" x1="0.16" y1="0.667" x2="1.151" y2="0.34" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f0f0f0"/>
+      <stop offset="1" stop-color="#dedede"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-7" x1="0.281" y1="0.352" x2="1.261" y2="0.657" xlink:href="#linear-gradient-6"/>
+  </defs>
+  <g id="Group_3118" data-name="Group 3118" transform="translate(-727 -1187.887)">
+    <g id="Image-accept-your-certificate" transform="translate(805.017 1268.886)">
+      <g transform="matrix(1, 0, 0, 1, -78.02, -81)" filter="url(#Rectangle_536)">
+        <rect id="Rectangle_536-2" data-name="Rectangle 536" width="138" height="307.643" rx="10" transform="translate(84 81)" fill="#fff"/>
+      </g>
+      <g id="Light_iPhone_X" data-name="Light / iPhone X" transform="translate(-3.016 -2.01)">
+        <path id="Shape" d="M20.271,0H131.034A20.271,20.271,0,0,1,151.3,20.271v269.67a20.27,20.27,0,0,1-20.271,20.271H20.271A20.271,20.271,0,0,1,0,289.941V20.271A20.271,20.271,0,0,1,20.271,0Z" transform="translate(3.016 2.01)" fill="#161f3d"/>
+        <path id="Shape-2" data-name="Shape" d="M1.448,2.9A1.448,1.448,0,1,0,0,1.448,1.448,1.448,0,0,0,1.448,2.9Z" transform="translate(61.294 11.783)" fill="#dedede"/>
+        <path id="Shape-3" data-name="Shape" d="M2.413,4.826A2.413,2.413,0,1,0,0,2.413,2.413,2.413,0,0,0,2.413,4.826Z" transform="translate(93.872 10.818)" fill="#dedede"/>
+        <path id="Shape-4" data-name="Shape" d="M.965,0H17.133a.965.965,0,1,1,0,1.931H.965A.965.965,0,0,1,.965,0" transform="translate(69.74 12.266)" fill="#dedede"/>
+        <path id="Shape-5" data-name="Shape" d="M13.272,0A13.264,13.264,0,0,0,0,13.256V280.3A13.264,13.264,0,0,0,13.272,293.56h109.2A13.264,13.264,0,0,0,135.74,280.3V13.256A13.264,13.264,0,0,0,122.468,0h-14.6V0q-.06,0-.121,0A1.447,1.447,0,0,0,106.3,1.447v.722a8.689,8.689,0,0,1-8.7,8.677H38.14a8.688,8.688,0,0,1-8.7-8.677V1.447A1.447,1.447,0,0,0,27.992,0q-.061,0-.121,0V0Z" transform="translate(10.859 9.973)" fill="#f3f3f3"/>
+        <text id="My_certificates" data-name="My certificates" transform="translate(78.79 69.613)" fill="#161f3d" font-size="9" font-family="SegoeUI, Segoe UI"><tspan x="-28.716" y="0">My certificates</tspan></text>
+      </g>
+    </g>
+    <g id="wallet" transform="translate(681.594 1171)">
+      <g id="Group_3068" data-name="Group 3068" transform="translate(140 187)">
+        <path id="Path_9809" data-name="Path 9809" d="M5,0H114a5,5,0,0,1,5,5V60a5,5,0,0,1-5,5H5a5,5,0,0,1-5-5V5A5,5,0,0,1,5,0Z" transform="translate(0.406)" fill="url(#linear-gradient)"/>
+        <g id="Group_1" data-name="Group 1" transform="translate(0)" opacity="0.197" clip-path="url(#clip-path)">
+          <g id="Group_2" data-name="Group 2" transform="translate(42.314 40.412)">
+            <path id="Path_2" data-name="Path 2" d="M290.925,348.806l-15.136-7.638V321.08l15.136,7.638Z" transform="translate(-275.79 -313.442)" fill="#ffdc05"/>
+            <path id="Path_3" data-name="Path 3" d="M301.64,348.806l15.136-7.638V321.08l-15.136,7.638Z" transform="translate(-286.504 -313.442)" fill="#d8b60f"/>
+            <path id="Path_4" data-name="Path 4" d="M290.925,308.035l-15.136,7.638,15.136,7.638,15.136-7.638Z" transform="translate(-275.79 -308.035)" fill="#efcd26"/>
+          </g>
+          <g id="Group_3" data-name="Group 3" transform="translate(125.265 -22.66)">
+            <path id="Path_5" data-name="Path 5" d="M286.914,271.585l-4.973-2.51v-6.6l4.973,2.51Z" transform="translate(-281.941 -259.965)" fill="#2eaf7e"/>
+            <path id="Path_6" data-name="Path 6" d="M301.64,271.585l4.973-2.51v-6.6l-4.973,2.51Z" transform="translate(-296.667 -259.965)" fill="#208e61"/>
+            <path id="Path_7" data-name="Path 7" d="M286.914,252.534l-4.973,2.51,4.973,2.51,4.973-2.51Z" transform="translate(-281.941 -252.534)" fill="#46c692"/>
+          </g>
+          <g id="Group_78" data-name="Group 78" transform="translate(-3.424 3.306)">
+            <path id="Path_5-2" data-name="Path 5" d="M281.941,271.585l4.973-2.51v-6.6l-4.973,2.51Z" transform="translate(-276.968 -259.965)" fill="#2eaf7e"/>
+            <path id="Path_6-2" data-name="Path 6" d="M306.613,271.585l-4.973-2.51v-6.6l4.973,2.51Z" transform="translate(-301.64 -259.965)" fill="#208e61"/>
+            <path id="Path_7-2" data-name="Path 7" d="M286.914,252.534l4.973,2.51-4.973,2.51-4.973-2.51Z" transform="translate(-281.941 -252.534)" fill="#46c692"/>
+          </g>
+        </g>
+        <g id="Mask_Group_2" data-name="Mask Group 2" transform="translate(0 0)" opacity="0.103" clip-path="url(#clip-path-2)">
+          <g id="Group_8" data-name="Group 8" transform="translate(68.346 5.087)">
+            <g id="Group_6" data-name="Group 6" transform="translate(0 0)">
+              <rect id="Rectangle_16" data-name="Rectangle 16" width="10.86" height="10.86" transform="translate(29.185 40.575)" fill="#1eaadc"/>
+              <rect id="Rectangle_18" data-name="Rectangle 18" width="16.29" height="16.29" transform="translate(15.611)" fill="#1eaadc"/>
+              <rect id="Rectangle_21" data-name="Rectangle 21" width="2.715" height="2.715" transform="translate(0 31.222)" fill="#ffdc05"/>
+              <rect id="Rectangle_22" data-name="Rectangle 22" width="5.43" height="5.43" transform="translate(37.33 21.719)" fill="#007d50"/>
+              <rect id="Rectangle_23" data-name="Rectangle 23" width="2.715" height="2.715" transform="translate(22.398 6.787)" fill="#1eaadc"/>
+              <rect id="Rectangle_25" data-name="Rectangle 25" width="10.86" height="10.86" transform="translate(34.615 2.715)" fill="#ffdc05"/>
+            </g>
+          </g>
+        </g>
+        <rect id="Rectangle_13" data-name="Rectangle 13" width="12" height="13" rx="1" transform="translate(6.406 47)" fill="#fdffff"/>
+        <g id="logo_talao" data-name="logo talao" transform="translate(8.492 49.635)">
+          <g id="Group_1-2" data-name="Group 1" transform="translate(0 0)">
+            <rect id="Rectangle_2" data-name="Rectangle 2" width="2.579" height="2.579" transform="translate(0 0)" fill="#232d55"/>
+            <path id="Path_1" data-name="Path 1" d="M202.5,112.009h-5.157v5.157h2.579v-2.579H202.5Z" transform="translate(-194.764 -112.009)" fill="#1eaadc"/>
+            <rect id="Rectangle_3" data-name="Rectangle 3" width="1.719" height="1.719" transform="translate(3.008 3.008)" fill="#0a4178"/>
+            <rect id="Rectangle_5" data-name="Rectangle 5" width="2.579" height="2.579" transform="translate(2.579 5.157)" fill="#0a4178"/>
+            <rect id="Rectangle_7" data-name="Rectangle 7" width="0.43" height="0.43" transform="translate(1.074 1.074)" fill="#007d50"/>
+            <rect id="Rectangle_8" data-name="Rectangle 8" width="0.43" height="0.43" transform="translate(1.074 3.653)" fill="#ffdc05"/>
+            <rect id="Rectangle_9" data-name="Rectangle 9" width="0.86" height="0.86" transform="translate(6.017 3.438)" fill="#007d50"/>
+            <rect id="Rectangle_10" data-name="Rectangle 10" width="0.43" height="0.43" transform="translate(3.653 6.232)" fill="#1eaadc"/>
+            <rect id="Rectangle_11" data-name="Rectangle 11" width="0.86" height="0.86" transform="translate(0.86 6.017)" fill="#919191"/>
+            <rect id="Rectangle_12" data-name="Rectangle 12" width="1.719" height="1.719" transform="translate(5.587 5.587)" fill="#ffdc05"/>
+          </g>
+        </g>
+        <g id="Group_80" data-name="Group 80" transform="translate(88.767 53.294)">
+          <g id="APPROVED" transform="translate(0 0)">
+            <rect id="Rectangle_36" data-name="Rectangle 36" width="22.764" height="6.342" rx="3.171" fill="#fff"/>
+            <text id="VERIFIED" transform="translate(7.528 3.492)" fill="#262424" font-size="2" font-family="Arial-BoldMT, Arial" font-weight="700"><tspan x="0" y="0">VERIFIED</tspan></text>
+            <circle id="Ellipse_452" data-name="Ellipse 452" cx="2.611" cy="2.611" r="2.611" transform="translate(0.56 0.56)" fill="#56b113"/>
+            <path id="checkmark" d="M2.774,4.273l-.248-.248a.088.088,0,0,0-.124,0l-1.27,1.34L.4,4.637a.089.089,0,0,0-.126,0l-.252.252a.089.089,0,0,0,0,.126L1.062,6.074a.086.086,0,0,0,.073.024.087.087,0,0,0,.076-.024L2.774,4.4A.088.088,0,0,0,2.774,4.273Z" transform="translate(1.797 -1.655)" fill="#fff"/>
+          </g>
+        </g>
+      </g>
+      <g id="Group_77" data-name="Group 77" transform="translate(223.539 198.15)">
+        <path id="Path_1539" data-name="Path 1539" d="M0,24.209,27.935,24.2,27.891,7.6,13.88,0,0,7.635Z" transform="translate(0.044 1.489)" fill="url(#linear-gradient-4)"/>
+        <circle id="Ellipse_447" data-name="Ellipse 447" cx="9.037" cy="9.037" r="9.037" transform="translate(4.951 0)" fill="#74eb1d"/>
+        <g transform="matrix(1, 0, 0, 1, -178.13, -181.26)" filter="url(#Ellipse_448)">
+          <ellipse id="Ellipse_448-2" data-name="Ellipse 448" cx="11.483" cy="4.466" rx="11.483" ry="4.466" transform="translate(180.74 191.68)" fill="#fff" opacity="0.996"/>
+        </g>
+        <path id="Path_1536" data-name="Path 1536" d="M0,7.879,14.017,0,27.985,7.878Z" transform="translate(0 17.819)" fill="url(#linear-gradient-5)"/>
+        <path id="Path_1538" data-name="Path 1538" d="M8.706,14.051,16.573,0H0Z" transform="translate(27.979 9.124) rotate(90)" fill="url(#linear-gradient-6)"/>
+        <path id="Path_1540" data-name="Path 1540" d="M8.706,0l7.868,14.051H0Z" transform="translate(14.095 9.124) rotate(90)" fill="url(#linear-gradient-7)"/>
+        <path id="checkmark-2" data-name="checkmark" d="M6.893,0,3.063,3.829,1.276,2.042,0,3.319,3.063,6.382,8.169,1.276Z" transform="translate(9.843 6.126)" fill="#191616"/>
+      </g>
+      <text id="Email_proof" data-name="Email proof" transform="translate(146.406 205)" fill="#fff" font-size="8" font-family="SegoeUI-Bold, Segoe UI" font-weight="700"><tspan x="0" y="0">Email proof</tspan></text>
+      <text id="This_signed_electronic_certificate_is_proof_that_you_are_the_owner_from_this_email_address" data-name="This signed electronic certificate is proof 
+that you are the owner from this email 
+address" transform="translate(146.406 215)" fill="#232d55" font-size="3" font-family="SegoeUI, Segoe UI"><tspan x="0" y="0">This signed electronic certificate is proof </tspan><tspan x="0" y="4">that you are the owner from this email </tspan><tspan x="0" y="8">address</tspan></text>
+    </g>
+  </g>
+</svg>

@@ -9,6 +9,7 @@ import diploma031 from '../img/diploma/Image-diploma-request-diploma-certificate
 import diploma041 from '../img/diploma/Image-diploma-compte-form.webp';
 import diploma051 from '../img/diploma/Image-diploma-scan-qrcode.webp';
 import diploma061 from '../img/diploma/Image-diploma-accept-news-certificate.svg';
+import { acceptStudentCertificate } from '../../assets/images';
 
 const downloadStudentSteps = [
   {
@@ -32,7 +33,7 @@ const downloadStudentSteps = [
     title: 'Scan <br/>  the QR Code',
   },
   {
-    img: diploma061,
+    img: acceptStudentCertificate,
     title: 'Accept the new <br/>  certificate',
   },
 ];

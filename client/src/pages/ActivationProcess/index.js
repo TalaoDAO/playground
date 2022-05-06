@@ -19,49 +19,50 @@ function ActivationProcess() {
   return (
     <div className="PassActivation">
       <main >
-        <Container fluid>
+        <div className="pt-10 pb-60">
+          <Container fluid>
 
-          <Row>
-            <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
-              <Row>
-                <Col>
-                  <div className="section-header-dark">Activate your email pass</div>
-                </Col>
-              </Row>
-
-
-              <br />
+            <Row>
+              <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
+                <Row>
+                  <Col>
+                    <div className="section-header-dark">Activate your email pass</div>
+                  </Col>
+                </Row>
 
 
-            </Col>
-
-          </Row>
-          <Row className=" text-left">
-
-            <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
+                <br />
 
 
-              <Card className='shadow'>
-                <Card.Body>
-                  <Row>
-                    <Col className="text-center">
+              </Col>
 
-                      <ActivationForm />
+            </Row>
+            <Row className=" text-left">
 
-                    </Col>
+              <Col xs={12} md={12} lg={{ span: 4, offset: 4 }}>
 
 
-                  </Row>
+                <Card className='shadow'>
+                  <Card.Body>
+                    <Row>
+                      <Col className="text-center">
 
-                </Card.Body>
-              </Card>
+                        <ActivationForm />
 
-            </Col>
-          </Row>
+                      </Col>
 
 
-        </Container>
+                    </Row>
 
+                  </Card.Body>
+                </Card>
+
+              </Col>
+            </Row>
+
+
+          </Container>
+        </div>
       </main>
     </div>
   );

@@ -5,6 +5,7 @@ import DesktopProgress from '../../parts/DesktopProgress';
 
 import step051 from '../img/discount/Image-discount-coupon-scan-qrcode.webp';
 import step061 from '../img/discount/Image-discount-coupon-accpet-certifiacte-wallet.svg';
+import { acceptDiscountCertificate } from '../../assets/images';
 
 const downloadSteps = [
   {
@@ -12,7 +13,7 @@ const downloadSteps = [
     title: 'Scan the <br/>  QR Code',
   },
   {
-    img: step061,
+    img: acceptDiscountCertificate,
     title: 'Accept the new <br/>  certificate',
   },
 ];

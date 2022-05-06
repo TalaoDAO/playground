@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  acceptCertificateImg, enterCodeImg, enterInformationImg, scanWalletImg,
+  acceptEmailCertificate, enterCodeImg, enterInformationImg, scanWalletImg,
 } from '../../assets/images';
 
 import DesktopProgress from '../../parts/DesktopProgress';
@@ -22,7 +22,7 @@ const ActivateEmailSteps = [
     title: 'Scan with your mobile <br/>  wallet',
   },
   {
-    img: acceptCertificateImg,
+    img: acceptEmailCertificate,
     title: 'Accept your <br/>  certificate',
   },
 ]

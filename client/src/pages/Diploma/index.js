@@ -1,7 +1,7 @@
 import React from 'react';
 import {
   diplomaAccessAccountImg, diplomaScanQrCodeImg1, diplomaRequestCertificateImg,
-  diplomaCompleteImg, diplomaScanQrCodeImg2, acceptCertificateImg,  diplomaCertificateImg
+  diplomaCompleteImg, diplomaScanQrCodeImg2, acceptCertificateImg,  acceptDiplomaCertificate
 } from '../../assets/images';
 import DesktopProgress from '../../parts/DesktopProgress';
 import UseCases from '../../parts/UseCases';
@@ -30,7 +30,7 @@ const downloadDiplomaSteps = [
     title: 'Scan <br/>  the QR Code',
   },
   {
-    img: acceptCertificateImg,
+    img: acceptDiplomaCertificate,
     title: 'Accept the new <br/>  certificate',
   },
 ]

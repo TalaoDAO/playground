@@ -9,6 +9,7 @@ import step031 from '../../pages/img/employment/Image-employer-certificate-reque
 import step041 from '../../pages/img/employment/Image-employer-certificate-complete-form.webp';
 import step051 from '../../pages/img/employment/Image-employer-certificate-scan-qrcode-request.webp';
 import step061 from '../../pages/img/employment/Image-employer-certificate-accept-certificate-wallet.svg';
+import { acceptEmployerCertificate } from '../../assets/images';
 
 const downloadSteps = [
   {
@@ -32,7 +33,7 @@ const downloadSteps = [
     title: 'Scan <br/>  the QR Code',
   },
   {
-    img: step061,
+    img: acceptEmployerCertificate,
     title: 'Accept the new <br/>  certificate',
   },
 ];
