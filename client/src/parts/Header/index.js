@@ -1,16 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import {
-  Navbar,
-  Nav,
-  NavDropdown,
-  Image,
-} from 'react-bootstrap';
-import Container from '../../components/common/Container';
+import React from 'react';
 import { logoImg } from '../../assets/images';
-import { ROUTES } from '../../constants';
-import Icon from '../../components/common/Icon';
-import './styles.scss'
+import {
+  Container, Navbar, Nav, NavDropdown, Image,
+} from 'react-bootstrap';
+import './styles.scss';
+import {ROUTES} from "../../constants";
+import {Link} from "react-router-dom";
 
 function getSessionToken() {
   let tokenString = sessionStorage.getItem('token');
@@ -22,60 +17,46 @@ function getSessionToken() {
 }
 
 const Header = () => {
-  const [token, setToken] = useState(getSessionToken());
+  const [token, setToken] = React.useState(getSessionToken());
 
-  useEffect(() => {
+  React.useEffect(() => {
     sessionStorage.setItem('token', JSON.stringify(token));
+
   }, [token]);
 
   return (
     <header className="app-header">
-      <Container>
-        <Navbar bg="white">
-          <Navbar.Brand>
-            <Link to={ROUTES.HOME}>
-              <Image src={logoImg}  fluid className='talao-logo' />
-            </Link>
-          </Navbar.Brand>
+      <Container fluid >
+        <div className='header-position'>
 
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar bg="white" expand="lg md">
+            <Navbar.Brand href="/home">
+              <Image src={logoImg} fluid className='talao-logo' />
+            </Navbar.Brand>
 
-          <Navbar.Collapse id="basic-navbar-nav " className="header-navbar">
-            <Nav className="ms-auto d-flex align-items-center">
-              <NavDropdown className="nav-menu header-dropdown menu-link" title="Play with talao wallet" id="basic-nav-dropdown"  >
-                <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.ACTIVATION}>Activate your email pass</Link>
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.DIPLOMA}>Download a diploma</Link>
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.STUDENT}>Download your student card</Link>
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.EMPLOYER}>Request an employer certificate</Link>
-                </NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.DISCOUNT}>
-                    Get a discount coupon
-                  </Link>
-                </NavDropdown.Item>
-              </NavDropdown>
-              {/*<Nav.Link href={ROUTES.MANAGE}  className="nav-menu px-3">Manage Certificates</Nav.Link>*/}
-              <Nav.Item className="nav-menu d-flex align-items-center ml-25">
-                <Link className="menu-link" to={ROUTES.HOW_TO_WORK}>How does it work?</Link>
-              </Nav.Item>
-            </Nav>
-          </Navbar.Collapse>
+            <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-          <span className="hamburger-btn">
-            <Icon name="hamburger-menu"/>
-          </span>
-        </Navbar>
+            <Navbar.Collapse id="basic-navbar-nav ">
+              <Nav className="ms-auto">
+                <NavDropdown  className="nav-menu" title="Play with talao wallet" id="basic-nav-dropdown"  >
+                  <NavDropdown.Item href={ROUTES.ACTIVATION}>Activate your email pass</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href={ROUTES.DIPLOMA}>Download a diploma</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href={ROUTES.STUDENT}>Download your student card</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href={ROUTES.EMPLOYER}>Request an employer certificate</NavDropdown.Item>
+                  <NavDropdown.Divider />
+                  <NavDropdown.Item href={ROUTES.DISCOUNT}>Get a discount coupon</NavDropdown.Item>
+                </NavDropdown>
+
+                <Nav.Item className="nav-menu how-nav-menu">
+                  <Link className="header-link" to={ROUTES.HOW_TO_WORK}>How does it work?</Link>
+                </Nav.Item>
+              </Nav>
+            </Navbar.Collapse>
+          </Navbar>
+        </div>
       </Container>
     </header>
   );
