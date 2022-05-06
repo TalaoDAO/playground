@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 
 import QRCode from "react-qr-code";
-import sucess_img from '../pages/img/success.png';
+import sucess_img from '../assets/images/v1/pages/success.png';
 
 var W3CWebSocket = require('websocket').w3cwebsocket;
 

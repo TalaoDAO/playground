@@ -5,18 +5,18 @@ import {
 } from 'react-bootstrap';
 
 
-import com_logo_1 from '../img/employer/company-logo.svg';
-import com_logo_2 from '../img/employer/company-logo.svg';
-import com_logo_3 from '../img/employer/company-logo.svg';
+import com_logo_1 from '../../assets/images/v1/pages/employer/company-logo.svg';
+import com_logo_2 from '../../assets/images/v1/pages/employer/company-logo.svg';
+import com_logo_3 from '../../assets/images/v1/pages/employer/company-logo.svg';
 
-import com_tools_1 from '../img/university/Mobile-top-elements-university.svg';
-import com_tools_2 from '../img/university/Mobile-top-elements-university.svg';
-import com_tools_3 from '../img/university/Mobile-top-elements-university.svg';
+import com_tools_1 from '../../assets/images/v1/pages/university/Mobile-top-elements-university.svg';
+import com_tools_2 from '../../assets/images/v1/pages/university/Mobile-top-elements-university.svg';
+import com_tools_3 from '../../assets/images/v1/pages/university/Mobile-top-elements-university.svg';
 
 
-import com_acc_1 from '../img/employer/ic_account_circle.svg';
-import com_acc_2 from '../img/employer/ic_account_circle.svg';
-import com_acc_3 from '../img/employer/ic_account_circle.svg';
+import com_acc_1 from '../../assets/images/v1/pages/employer/ic_account_circle.svg';
+import com_acc_2 from '../../assets/images/v1/pages/employer/ic_account_circle.svg';
+import com_acc_3 from '../../assets/images/v1/pages/employer/ic_account_circle.svg';
 
 import { Link } from 'react-router-dom';
 import LoginForm from "../../components/LoginForm";

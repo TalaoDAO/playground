@@ -4,7 +4,7 @@ import {
     Container, Form, Button, Image, Row, Col
 } from 'react-bootstrap';
 
-import sucess_img from '../pages/img/success.png';
+import sucess_img from '../assets/images/v1/pages/success.png';
 import QRCode from "react-qr-code";
 var W3CWebSocket = require('websocket').w3cwebsocket;
 

@@ -5,22 +5,22 @@ import {
 } from 'react-bootstrap';
 
 
-import com_logo_1 from '../img/employer/company-logo.svg';
-import com_logo_2 from '../img/employer/company-logo.svg';
-import com_logo_3 from '../img/employer/company-logo.svg';
+import com_logo_1 from '../../assets/images/v1/pages/employer/company-logo.svg';
+import com_logo_2 from '../../assets/images/v1/pages/employer/company-logo.svg';
+import com_logo_3 from '../../assets/images/v1/pages/employer/company-logo.svg';
 
-import com_tools_1 from '../img/university/Mobile-top-elements-university.svg';
-import com_tools_2 from '../img/university/Mobile-top-elements-university.svg';
-import com_tools_3 from '../img/university/Mobile-top-elements-university.svg';
+import com_tools_1 from '../../assets/images/v1/pages/university/Mobile-top-elements-university.svg';
+import com_tools_2 from '../../assets/images/v1/pages/university/Mobile-top-elements-university.svg';
+import com_tools_3 from '../../assets/images/v1/pages/university/Mobile-top-elements-university.svg';
 
 
-import icon_profile from '../img/university/profile.svg';
-import icon_messages from '../img/university/messages.svg';
-import icon_calendar from '../img/university/calendar.svg';
-import icon_files from '../img/university/files.svg';
-import icon_dashboard from '../img/university/dashboard.svg';
-import icon_oval from '../img/university/Oval.svg';
-import icon_arrow from '../img/university/ic_arrow_forward_24px.svg';
+import icon_profile from '../../assets/images/v1/pages/university/profile.svg';
+import icon_messages from '../../assets/images/v1/pages/university/messages.svg';
+import icon_calendar from '../../assets/images/v1/pages/university/calendar.svg';
+import icon_files from '../../assets/images/v1/pages/university/files.svg';
+import icon_dashboard from '../../assets/images/v1/pages/university/dashboard.svg';
+import icon_oval from '../../assets/images/v1/pages/university/Oval.svg';
+import icon_arrow from '../../assets/images/v1/pages/university/ic_arrow_forward_24px.svg';
 
 
 import EmployerForm from "../../components/EmployerForm";

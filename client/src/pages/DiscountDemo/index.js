@@ -8,23 +8,23 @@ import {
 
 
 
-import news_header from '../img/article/header.png';
-import news_footer from '../img/article/footer.png';
-import news_cats from '../img/article/categories.png';
+import news_header from '../../assets/images/v1/pages/article/header.png';
+import news_footer from '../../assets/images/v1/pages/article/footer.png';
+import news_cats from '../../assets/images/v1/pages/article/categories.png';
 
-import comment_icon from '../img/article/union.svg';
-import eye_icon from '../img/article/eye.svg';
-
-
-import art01 from '../img/article/article.webp';
-import art02 from '../img/article/article@2x.webp';
-import art03 from '../img/article/article@3x.webp';
+import comment_icon from '../../assets/images/v1/pages/article/union.svg';
+import eye_icon from '../../assets/images/v1/pages/article/eye.svg';
 
 
+import art01 from '../../assets/images/v1/pages/article/article.webp';
+import art02 from '../../assets/images/v1/pages/article/article@2x.webp';
+import art03 from '../../assets/images/v1/pages/article/article@3x.webp';
 
-import mon01 from '../img/article/monkey-nft.webp';
-import mon02 from '../img/article/monkey-nft@2x.webp';
-import mon03 from '../img/article/monkey-nft@3x.webp';
+
+
+import mon01 from '../../assets/images/v1/pages/article/monkey-nft.webp';
+import mon02 from '../../assets/images/v1/pages/article/monkey-nft@2x.webp';
+import mon03 from '../../assets/images/v1/pages/article/monkey-nft@3x.webp';
 
 
 

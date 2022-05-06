@@ -4,12 +4,12 @@ import {
 } from 'react-bootstrap';
 import UseCases from '../../parts/UseCases';
 
-import recovery_1 from '../img/recover/Image-phone-key-recovery.webp';
-import recovery_2 from '../img/recover/Image-phone-key-recovery@2x.webp';
-import recovery_3 from '../img/recover/Image-phone-key-recovery@3x.webp';
-import recover_1 from '../img/recover/Image-phone-start-using-wallet.webp';
-import recover_2 from '../img/recover/Image-phone-start-using-wallet@2x.webp';
-import recover_3 from '../img/recover/Image-phone-start-using-wallet@3x.webp';
+import recovery_1 from '../../assets/images/v1/pages/recover/Image-phone-key-recovery.webp';
+import recovery_2 from '../../assets/images/v1/pages/recover/Image-phone-key-recovery@2x.webp';
+import recovery_3 from '../../assets/images/v1/pages/recover/Image-phone-key-recovery@3x.webp';
+import recover_1 from '../../assets/images/v1/pages/recover/Image-phone-start-using-wallet.webp';
+import recover_2 from '../../assets/images/v1/pages/recover/Image-phone-start-using-wallet@2x.webp';
+import recover_3 from '../../assets/images/v1/pages/recover/Image-phone-start-using-wallet@3x.webp';
 
 import { REACT_APP_NODE_LOCAL } from '../../constants';
 

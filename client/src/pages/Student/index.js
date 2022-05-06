@@ -3,12 +3,12 @@ import UseCases from '../../parts/UseCases';
 import DesktopProgress from '../../parts/DesktopProgress';
 import { ROUTES, REACT_APP_NODE_LOCAL } from '../../constants';
 
-import diploma011 from '../img/diploma/Image-diploma-acces-to-your-account.webp';
-import diploma021 from '../img/diploma/Image-diploma-Scan-the-qrcode-.webp';
-import diploma031 from '../img/diploma/Image-diploma-request-diploma-certificate.webp';
-import diploma041 from '../img/diploma/Image-diploma-compte-form.webp';
-import diploma051 from '../img/diploma/Image-diploma-scan-qrcode.webp';
-import diploma061 from '../img/diploma/Image-diploma-accept-news-certificate.svg';
+import diploma011 from '../../assets/images/v1/pages/diploma/Image-diploma-acces-to-your-account.webp';
+import diploma021 from '../../assets/images/v1/pages/diploma/Image-diploma-Scan-the-qrcode-.webp';
+import diploma031 from '../../assets/images/v1/pages/diploma/Image-diploma-request-diploma-certificate.webp';
+import diploma041 from '../../assets/images/v1/pages/diploma/Image-diploma-compte-form.webp';
+import diploma051 from '../../assets/images/v1/pages/diploma/Image-diploma-scan-qrcode.webp';
+import diploma061 from '../../assets/images/v1/pages/diploma/Image-diploma-accept-news-certificate.svg';
 import { acceptStudentCertificate } from '../../assets/images';
 
 const downloadStudentSteps = [

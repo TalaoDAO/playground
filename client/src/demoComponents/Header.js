@@ -7,10 +7,10 @@ import {
 } from 'react-bootstrap';
 
 
-import logo1 from '../images/logoUniversity.webp';
-import logo2 from '../images/logoUniversity@2x.webp';
-import logo3 from '../images/logoUniversity@3x.webp';
-import avatar from '../images/Avatar.svg';
+import logo1 from '../assets/images/v1/demoImages/logoUniversity.webp';
+import logo2 from '../assets/images/v1/demoImages/logoUniversity@2x.webp';
+import logo3 from '../assets/images/v1/demoImages/logoUniversity@3x.webp';
+import avatar from '../assets/images/v1/demoImages/Avatar.svg';
 import {ROUTES} from "../constants/routes";
 
 const LogoText = styled.span`

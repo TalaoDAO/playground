@@ -5,9 +5,9 @@ import {
    Image, Row, Col
 } from 'react-bootstrap';
 
-import aps01 from '../pages/img/illustrationUniversityHome.webp';
-import aps02 from '../pages/img/illustrationUniversityHome@2x.webp';
-import aps03 from '../pages/img/illustrationUniversityHome@3x.webp';
+import aps01 from '../assets/images/v1/pages/illustrationUniversityHome.webp';
+import aps02 from '../assets/images/v1/pages/illustrationUniversityHome@2x.webp';
+import aps03 from '../assets/images/v1/pages/illustrationUniversityHome@3x.webp';
 
 const RightText = styled.div`
   font-size: 96px;

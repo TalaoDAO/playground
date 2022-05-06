@@ -4,15 +4,15 @@ import {
 } from 'react-bootstrap';
 import UseCases from '../../parts/UseCases';
 
-import create_1 from '../img/generate/Image-phone-icon-create-account.webp';
-import create_2 from '../img/generate/Image-phone-icon-create-account@2x.webp';
-import create_3 from '../img/generate/Image-phone-icon-create-account@3x.webp';
-import phrase_1 from '../img/generate/Image-phone-icon-save-phrase.webp';
-import phrase_2 from '../img/generate/Image-phone-icon-save-phrase@2x.webp';
-import phrase_3 from '../img/generate/Image-phone-icon-save-phrase@3x.webp';
-import start_1 from '../img/generate/Image-phone-start-using-wallet.webp';
-import start_2 from '../img/generate/Image-phone-start-using-wallet@2x.webp';
-import start_3 from '../img/generate/Image-phone-start-using-wallet@3x.webp';
+import create_1 from '../../assets/images/v1/pages/generate/Image-phone-icon-create-account.webp';
+import create_2 from '../../assets/images/v1/pages/generate/Image-phone-icon-create-account@2x.webp';
+import create_3 from '../../assets/images/v1/pages/generate/Image-phone-icon-create-account@3x.webp';
+import phrase_1 from '../../assets/images/v1/pages/generate/Image-phone-icon-save-phrase.webp';
+import phrase_2 from '../../assets/images/v1/pages/generate/Image-phone-icon-save-phrase@2x.webp';
+import phrase_3 from '../../assets/images/v1/pages/generate/Image-phone-icon-save-phrase@3x.webp';
+import start_1 from '../../assets/images/v1/pages/generate/Image-phone-start-using-wallet.webp';
+import start_2 from '../../assets/images/v1/pages/generate/Image-phone-start-using-wallet@2x.webp';
+import start_3 from '../../assets/images/v1/pages/generate/Image-phone-start-using-wallet@3x.webp';
 
 const { REACT_APP_NODE_LOCAL } = process.env;
 

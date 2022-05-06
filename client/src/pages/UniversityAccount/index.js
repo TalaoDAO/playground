@@ -3,24 +3,24 @@ import {
   Container, Button, Row, Col, Image, Modal, Accordion, ListGroup
 } from 'react-bootstrap';
 
-import uni_logo_1 from '../img/university/university-logo.svg';
-import uni_logo_2 from '../img/university/university-logo.svg';
-import uni_logo_3 from '../img/university/university-logo.svg';
+import uni_logo_1 from '../../assets/images/v1/pages/university/university-logo.svg';
+import uni_logo_2 from '../../assets/images/v1/pages/university/university-logo.svg';
+import uni_logo_3 from '../../assets/images/v1/pages/university/university-logo.svg';
 
-import acc_tools_1 from '../img/university/Mobile-top-elements-university.svg';
-import acc_tools_2 from '../img/university/Mobile-top-elements-university.svg';
-import acc_tools_3 from '../img/university/Mobile-top-elements-university.svg';
+import acc_tools_1 from '../../assets/images/v1/pages/university/Mobile-top-elements-university.svg';
+import acc_tools_2 from '../../assets/images/v1/pages/university/Mobile-top-elements-university.svg';
+import acc_tools_3 from '../../assets/images/v1/pages/university/Mobile-top-elements-university.svg';
 
-import icon_profile from '../img/university/profile.svg';
-import icon_messages from '../img/university/messages.svg';
-import icon_calendar from '../img/university/calendar.svg';
-import icon_files from '../img/university/files.svg';
-import icon_dashboard from '../img/university/dashboard.svg';
-import icon_oval from '../img/university/Oval.svg';
-import icon_arrow from '../img/university/ic_arrow_forward_24px.svg';
-import logoutIcon from '../img/university/logout.svg';
-import infoIcon from '../img/university/info.svg';
-import loadMoreIcon from '../img/university/loadMore.svg';
+import icon_profile from '../../assets/images/v1/pages/university/profile.svg';
+import icon_messages from '../../assets/images/v1/pages/university/messages.svg';
+import icon_calendar from '../../assets/images/v1/pages/university/calendar.svg';
+import icon_files from '../../assets/images/v1/pages/university/files.svg';
+import icon_dashboard from '../../assets/images/v1/pages/university/dashboard.svg';
+import icon_oval from '../../assets/images/v1/pages/university/Oval.svg';
+import icon_arrow from '../../assets/images/v1/pages/university/ic_arrow_forward_24px.svg';
+import logoutIcon from '../../assets/images/v1/pages/university/logout.svg';
+import infoIcon from '../../assets/images/v1/pages/university/info.svg';
+import loadMoreIcon from '../../assets/images/v1/pages/university/loadMore.svg';
 
 
 

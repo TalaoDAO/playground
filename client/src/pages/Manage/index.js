@@ -4,27 +4,27 @@ import {
 } from 'react-bootstrap';
 
 
-import my_certs_1 from '../img/manage/Image-phone-manage-my-certificate.svg';
-import my_certs_2 from '../img/manage/Image-phone-manage-my-certificate.svg';
-import my_certs_3 from '../img/manage/Image-phone-manage-my-certificate.svg';
-import delete_1 from '../img/manage/Image-phone-manage-my-certificate-delete.svg';
-import delete_2 from '../img/manage/Image-phone-manage-my-certificate-delete.svg';
-import delete_3 from '../img/manage/Image-phone-manage-my-certificate-delete.svg';
-import settings_1 from '../img/manage/phone-wallet-setting.webp';
-import settings_2 from '../img/manage/phone-wallet-setting@2x.webp';
-import settings_3 from '../img/manage/phone-wallet-setting@3x.webp';
-import reset_1 from '../img/manage/phone-wallet-reset.webp';
-import reset_2 from '../img/manage/phone-wallet-reset@2x.webp';
-import reset_3 from '../img/manage/phone-wallet-reset@3x.webp';
-import icon_reset_1 from '../img/manage/icon-reset-wallet.svg';
-import icon_reset_2 from '../img/manage/icon-reset-wallet.svg';
-import icon_reset_3 from '../img/manage/icon-reset-wallet.svg';
-import icon_settings_1 from '../img/manage/icon-setting.svg';
-import icon_settings_2 from '../img/manage/icon-setting.svg';
-import icon_settings_3 from '../img/manage/icon-setting.svg';
-import icon_wallet_1 from '../img/manage/icon-wallet-mycertificate.svg';
-import icon_wallet_2 from '../img/manage/icon-wallet-mycertificate.svg';
-import icon_wallet_3 from '../img/manage/icon-wallet-mycertificate.svg';
+import my_certs_1 from '../../assets/images/v1/pages/manage/Image-phone-manage-my-certificate.svg';
+import my_certs_2 from '../../assets/images/v1/pages/manage/Image-phone-manage-my-certificate.svg';
+import my_certs_3 from '../../assets/images/v1/pages/manage/Image-phone-manage-my-certificate.svg';
+import delete_1 from '../../assets/images/v1/pages/manage/Image-phone-manage-my-certificate-delete.svg';
+import delete_2 from '../../assets/images/v1/pages/manage/Image-phone-manage-my-certificate-delete.svg';
+import delete_3 from '../../assets/images/v1/pages/manage/Image-phone-manage-my-certificate-delete.svg';
+import settings_1 from '../../assets/images/v1/pages/manage/phone-wallet-setting.webp';
+import settings_2 from '../../assets/images/v1/pages/manage/phone-wallet-setting@2x.webp';
+import settings_3 from '../../assets/images/v1/pages/manage/phone-wallet-setting@3x.webp';
+import reset_1 from '../../assets/images/v1/pages/manage/phone-wallet-reset.webp';
+import reset_2 from '../../assets/images/v1/pages/manage/phone-wallet-reset@2x.webp';
+import reset_3 from '../../assets/images/v1/pages/manage/phone-wallet-reset@3x.webp';
+import icon_reset_1 from '../../assets/images/v1/pages/manage/icon-reset-wallet.svg';
+import icon_reset_2 from '../../assets/images/v1/pages/manage/icon-reset-wallet.svg';
+import icon_reset_3 from '../../assets/images/v1/pages/manage/icon-reset-wallet.svg';
+import icon_settings_1 from '../../assets/images/v1/pages/manage/icon-setting.svg';
+import icon_settings_2 from '../../assets/images/v1/pages/manage/icon-setting.svg';
+import icon_settings_3 from '../../assets/images/v1/pages/manage/icon-setting.svg';
+import icon_wallet_1 from '../../assets/images/v1/pages/manage/icon-wallet-mycertificate.svg';
+import icon_wallet_2 from '../../assets/images/v1/pages/manage/icon-wallet-mycertificate.svg';
+import icon_wallet_3 from '../../assets/images/v1/pages/manage/icon-wallet-mycertificate.svg';
 
 const { REACT_APP_NODE_LOCAL } = process.env;
 

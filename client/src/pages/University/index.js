@@ -1,12 +1,12 @@
 import React from 'react';
 import {Button, Col, Container, Image, Modal, Row} from "react-bootstrap";
-import uni_logo_1 from "../img/university/university-logo.svg";
-import uni_logo_2 from "../img/university/university-logo.svg";
-import uni_logo_3 from "../img/university/university-logo.svg";
+import uni_logo_1 from "../../assets/images/v1/pages/university/university-logo.svg";
+import uni_logo_2 from "../../assets/images/v1/pages/university/university-logo.svg";
+import uni_logo_3 from "../../assets/images/v1/pages/university/university-logo.svg";
 import LoginForm from "../../components/LoginForm";
-import uni_banner_1 from "../img/university/university-banner.svg";
-import uni_banner_2 from "../img/university/university-banner.svg";
-import uni_banner_3 from "../img/university/university-banner.svg";
+import uni_banner_1 from "../../assets/images/v1/pages/university/university-banner.svg";
+import uni_banner_2 from "../../assets/images/v1/pages/university/university-banner.svg";
+import uni_banner_3 from "../../assets/images/v1/pages/university/university-banner.svg";
 import './styles.scss';
 
 const University = () => {

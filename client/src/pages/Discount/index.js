@@ -3,8 +3,8 @@ import { REACT_APP_NODE_LOCAL, ROUTES } from '../../constants';
 import UseCases from '../../parts/UseCases';
 import DesktopProgress from '../../parts/DesktopProgress';
 
-import step051 from '../img/discount/Image-discount-coupon-scan-qrcode.webp';
-import step061 from '../img/discount/Image-discount-coupon-accpet-certifiacte-wallet.svg';
+import step051 from '../../assets/images/v1/pages/discount/Image-discount-coupon-scan-qrcode.webp';
+import step061 from '../../assets/images/v1/pages/discount/Image-discount-coupon-accpet-certifiacte-wallet.svg';
 import { acceptDiscountCertificate } from '../../assets/images';
 
 const downloadSteps = [
