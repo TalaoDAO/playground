@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 
 
-import com_logo_1 from '.../img/employer/company-logo.svg';
+import com_logo_1 from '../img/employer/company-logo.svg';
 import com_logo_2 from '../img/employer/company-logo.svg';
 import com_logo_3 from '../img/employer/company-logo.svg';
 

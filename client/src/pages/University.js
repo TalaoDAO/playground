@@ -1,20 +1,22 @@
 import React from "react";
+import "../App.css";
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
   Container, Button, Row, Col, Card, Image, Modal
 } from 'react-bootstrap';
 
-import uni_logo_1 from '../img/university/university-logo.svg';
-import uni_logo_2 from '../img/university/university-logo.svg';
-import uni_logo_3 from '../img/university/university-logo.svg';
+import uni_logo_1 from './img/university/university-logo.svg';
+import uni_logo_2 from './img/university/university-logo.svg';
+import uni_logo_3 from './img/university/university-logo.svg';
 
-import uni_banner_1 from '../img/university/university-banner.svg';
-import uni_banner_2 from '../img/university/university-banner.svg';
-import uni_banner_3 from '../img/university/university-banner.svg';
+import uni_banner_1 from './img/university/university-banner.svg';
+import uni_banner_2 from './img/university/university-banner.svg';
+import uni_banner_3 from './img/university/university-banner.svg';
 
 
 import { Link } from 'react-router-dom';
-import LoginForm from "../../components/LoginForm";
-import {ROUTES} from "../../constants";
+import LoginForm from "../components/LoginForm";
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -43,7 +45,7 @@ function University() {
 
                   <Modal.Body>
                     <div className="subtitle-dark">Scan with your mobile wallet</div>
-                    <LoginForm next={ROUTES.UNIVERSITY_ACCOUNT} />
+                    <LoginForm next="/uni-account" />
 
                   </Modal.Body>
 
@@ -56,17 +58,17 @@ function University() {
             <Row >
               <Col xs={12} md={12} lg={6} className="text-center">
 
-                <div class="lower lg-only"></div>
+                <div className="lower lg-only"></div>
                 <Image src={uni_banner_1} srcSet={`${uni_banner_2} 2x, ${uni_banner_3} 3x`} className="uni-banner" fluid></Image>
               </Col>
 
               <Col xs={12} md={12} lg={6} className="text-center">
 
-                <div class="lower lg-only"></div>
+                <div className="lower lg-only"></div>
                 <div className="title-white-low">University of Web Design</div>
               </Col>
             </Row>
-            <Row class="lower sm-only">
+            <Row className="lower sm-only">
               <Col>
                 &nbsp;
               </Col>

@@ -2,7 +2,7 @@ import React from "react";
 import {
   Container, Image, Row, Col
 } from 'react-bootstrap';
-import UseCases from '../parts/UseCases';
+import UseCases from '../../parts/UseCases';
 
 import create_1 from '../img/generate/Image-phone-icon-create-account.webp';
 import create_2 from '../img/generate/Image-phone-icon-create-account@2x.webp';
