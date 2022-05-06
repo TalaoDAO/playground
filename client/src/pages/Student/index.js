@@ -1,40 +1,39 @@
-import React from "react";
-import "../App.css";
+import React from 'react';
 
-import diploma011 from '../pages/img/diploma/Image-diploma-acces-to-your-account.webp';
-import diploma012 from '../pages/img/diploma/Image-diploma-acces-to-your-account@2x.webp';
-import diploma013 from '../pages/img/diploma/Image-diploma-acces-to-your-account@3x.webp';
-
-
-import diploma021 from '../pages/img/diploma/Image-diploma-Scan-the-qrcode-.webp';
-import diploma022 from '../pages/img/diploma/Image-diploma-Scan-the-qrcode-@2x.webp';
-import diploma023 from '../pages/img/diploma/Image-diploma-Scan-the-qrcode-@3x.webp';
+import diploma011 from '../img/diploma/Image-diploma-acces-to-your-account.webp';
+import diploma012 from '../img/diploma/Image-diploma-acces-to-your-account@2x.webp';
+import diploma013 from '../img/diploma/Image-diploma-acces-to-your-account@3x.webp';
 
 
-import diploma031 from '../pages/img/diploma/Image-diploma-request-diploma-certificate.webp';
-import diploma032 from '../pages/img/diploma/Image-diploma-request-diploma-certificate@2x.webp';
-import diploma033 from '../pages/img/diploma/Image-diploma-request-diploma-certificate@3x.webp';
+import diploma021 from '../img/diploma/Image-diploma-Scan-the-qrcode-.webp';
+import diploma022 from '../img/diploma/Image-diploma-Scan-the-qrcode-@2x.webp';
+import diploma023 from '../img/diploma/Image-diploma-Scan-the-qrcode-@3x.webp';
 
 
-import diploma041 from '../pages/img/diploma/Image-diploma-compte-form.webp';
-import diploma042 from '../pages/img/diploma/Image-diploma-compte-form@2x.webp';
-import diploma043 from '../pages/img/diploma/Image-diploma-compte-form@3x.webp';
+import diploma031 from '../img/diploma/Image-diploma-request-diploma-certificate.webp';
+import diploma032 from '../img/diploma/Image-diploma-request-diploma-certificate@2x.webp';
+import diploma033 from '../img/diploma/Image-diploma-request-diploma-certificate@3x.webp';
 
 
-import diploma051 from '../pages/img/diploma/Image-diploma-scan-qrcode.webp';
-import diploma052 from '../pages/img/diploma/Image-diploma-scan-qrcode@2x.webp';
-import diploma053 from '../pages/img/diploma/Image-diploma-scan-qrcode@3x.webp';
+import diploma041 from '../img/diploma/Image-diploma-compte-form.webp';
+import diploma042 from '../img/diploma/Image-diploma-compte-form@2x.webp';
+import diploma043 from '../img/diploma/Image-diploma-compte-form@3x.webp';
 
 
-import diploma061 from '../pages/img/diploma/Image-diploma-accept-news-certificate.svg';
-import diploma062 from '../pages/img/diploma/Image-diploma-accept-news-certificate.svg';
-import diploma063 from '../pages/img/diploma/Image-diploma-accept-news-certificate.svg';
+import diploma051 from '../img/diploma/Image-diploma-scan-qrcode.webp';
+import diploma052 from '../img/diploma/Image-diploma-scan-qrcode@2x.webp';
+import diploma053 from '../img/diploma/Image-diploma-scan-qrcode@3x.webp';
+
+
+import diploma061 from '../img/diploma/Image-diploma-accept-news-certificate.svg';
+import diploma062 from '../img/diploma/Image-diploma-accept-news-certificate.svg';
+import diploma063 from '../img/diploma/Image-diploma-accept-news-certificate.svg';
 import {
   Container, Button, Row, Col, Image
 } from 'react-bootstrap';
-import UseCases from "../components/UseCases";
-import ManageStrip from "../components/ManageStrip";
-import {ROUTES} from "../constants/routes";
+import UseCases from "../../components/UseCases";
+import ManageStrip from "../../components/ManageStrip";
+import {ROUTES} from "../../constants";
 
 const { REACT_APP_NODE_LOCAL } = process.env;
 
@@ -52,7 +51,7 @@ function Student() {
       <main>
         <Container fluid>
           <Row className="dark-blue-section text-center">
-          <Col xs={12} md={12} lg={{ span: 6, offset: 3 }} >
+            <Col xs={12} md={12} lg={{ span: 6, offset: 3 }} >
 
               <Row>
                 <Col>
@@ -82,7 +81,7 @@ function Student() {
 
           <div id="description" className="text-center">
 
-          <Row><Col><div className="section-header-dark lower">From your desktop</div></Col></Row>
+            <Row><Col><div className="section-header-dark lower">From your desktop</div></Col></Row>
             <Row className="text-center">
               <Col xs={12} md={12} lg={{ span: 6 }}>
                 <Row className="text-center lower">
@@ -192,16 +191,16 @@ function Student() {
           </div>
 
           <div className="position-relative overflow-hidden text-center lower">
-          <Row>
-            <Col xs={12} md={12} lg={{ span: 6, offset: 3 }}>
-              <Button variant="btn btn-info btn-lg btn-demo">Start Demo</Button>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} md={12} lg={{ span: 10, offset: 1 }}>
-              <hr className="btn-info btn-demo-hr" />
-            </Col>
-          </Row>
+            <Row>
+              <Col xs={12} md={12} lg={{ span: 6, offset: 3 }}>
+                <Button variant="btn btn-info btn-lg btn-demo">Start Demo</Button>
+              </Col>
+            </Row>
+            <Row>
+              <Col xs={12} md={12} lg={{ span: 10, offset: 1 }}>
+                <hr className="btn-info btn-demo-hr" />
+              </Col>
+            </Row>
           </div>
 
 

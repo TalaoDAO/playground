@@ -3,18 +3,18 @@ import {
   Container, Button, Row, Col, Card, Image, Modal
 } from 'react-bootstrap';
 
-import uni_logo_1 from './img/university/university-logo.svg';
-import uni_logo_2 from './img/university/university-logo.svg';
-import uni_logo_3 from './img/university/university-logo.svg';
+import uni_logo_1 from '../img/university/university-logo.svg';
+import uni_logo_2 from '../img/university/university-logo.svg';
+import uni_logo_3 from '../img/university/university-logo.svg';
 
-import uni_banner_1 from './img/university/university-banner.svg';
-import uni_banner_2 from './img/university/university-banner.svg';
-import uni_banner_3 from './img/university/university-banner.svg';
+import uni_banner_1 from '../img/university/university-banner.svg';
+import uni_banner_2 from '../img/university/university-banner.svg';
+import uni_banner_3 from '../img/university/university-banner.svg';
 
 
 import { Link } from 'react-router-dom';
-import LoginForm from "../components/LoginForm";
-import {ROUTES} from "../constants/routes";
+import LoginForm from "../../components/LoginForm";
+import {ROUTES} from "../../constants";
 
 const { REACT_APP_NODE_LOCAL, REACT_APP_QR_URL } = process.env;
 
@@ -52,7 +52,7 @@ function University() {
 
               </Col>
             </Row>
-            
+
             <Row >
               <Col xs={12} md={12} lg={6} className="text-center">
 

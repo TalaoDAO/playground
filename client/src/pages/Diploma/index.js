@@ -6,6 +6,7 @@ import {
 import DesktopProgress from '../../parts/DesktopProgress';
 import UseCases from '../../parts/UseCases';
 import './styles.scss';
+import {ROUTES} from "../../constants";
 
 const DownloadDiplomaSteps = [
   {
@@ -44,7 +45,7 @@ const Diploma = () => {
           </h1>
         </div>
 
-        <DesktopProgress progressItems={DownloadDiplomaSteps} />
+        <DesktopProgress progressItems={DownloadDiplomaSteps} link={ROUTES.UNIVERSITY} />
 
         <UseCases />
       </main>

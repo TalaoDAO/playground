@@ -1,42 +1,40 @@
 import React from "react";
-import "../App.css";
+
+import step011 from '../../pages/img/employment/Image-employer-certificate-acces-account.webp';
+import step012 from '../../pages/img/employment/Image-employer-certificate-acces-account@2x.webp';
+import step013 from '../../pages/img/employment/Image-employer-certificate-acces-account@3x.webp';
 
 
-import step011 from '../pages/img/employment/Image-employer-certificate-acces-account.webp';
-import step012 from '../pages/img/employment/Image-employer-certificate-acces-account@2x.webp';
-import step013 from '../pages/img/employment/Image-employer-certificate-acces-account@3x.webp';
+import step021 from '../../pages/img/employment/Image-employer-certificate-scan-qrcode.webp';
+import step022 from '../../pages/img/employment/Image-employer-certificate-scan-qrcode@2x.webp';
+import step023 from '../../pages/img/employment/Image-employer-certificate-scan-qrcode@3x.webp';
 
 
-import step021 from '../pages/img/employment/Image-employer-certificate-scan-qrcode.webp';
-import step022 from '../pages/img/employment/Image-employer-certificate-scan-qrcode@2x.webp';
-import step023 from '../pages/img/employment/Image-employer-certificate-scan-qrcode@3x.webp';
+import step031 from '../../pages/img/employment/Image-employer-certificate-request.webp';
+import step032 from '../../pages/img/employment/Image-employer-certificate-request@2x.webp';
+import step033 from '../../pages/img/employment/Image-employer-certificate-request@3x.webp';
 
 
-import step031 from '../pages/img/employment/Image-employer-certificate-request.webp';
-import step032 from '../pages/img/employment/Image-employer-certificate-request@2x.webp';
-import step033 from '../pages/img/employment/Image-employer-certificate-request@3x.webp';
+import step041 from '../../pages/img/employment/Image-employer-certificate-complete-form.webp';
+import step042 from '../../pages/img/employment/Image-employer-certificate-complete-form@2x.webp';
+import step043 from '../../pages/img/employment/Image-employer-certificate-complete-form@3x.webp';
 
 
-import step041 from '../pages/img/employment/Image-employer-certificate-complete-form.webp';
-import step042 from '../pages/img/employment/Image-employer-certificate-complete-form@2x.webp';
-import step043 from '../pages/img/employment/Image-employer-certificate-complete-form@3x.webp';
+import step051 from '../../pages/img/employment/Image-employer-certificate-scan-qrcode-request.webp';
+import step052 from '../../pages/img/employment/Image-employer-certificate-scan-qrcode-request@2x.webp';
+import step053 from '../../pages/img/employment/Image-employer-certificate-scan-qrcode-request@3x.webp';
 
 
-import step051 from '../pages/img/employment/Image-employer-certificate-scan-qrcode-request.webp';
-import step052 from '../pages/img/employment/Image-employer-certificate-scan-qrcode-request@2x.webp';
-import step053 from '../pages/img/employment/Image-employer-certificate-scan-qrcode-request@3x.webp';
-
-
-import step061 from '../pages/img/employment/Image-employer-certificate-accept-certificate-wallet.svg';
-import step062 from '../pages/img/employment/Image-employer-certificate-accept-certificate-wallet.svg';
-import step063 from '../pages/img/employment/Image-employer-certificate-accept-certificate-wallet.svg';
+import step061 from '../../pages/img/employment/Image-employer-certificate-accept-certificate-wallet.svg';
+import step062 from '../../pages/img/employment/Image-employer-certificate-accept-certificate-wallet.svg';
+import step063 from '../../pages/img/employment/Image-employer-certificate-accept-certificate-wallet.svg';
 
 import {
   Container, Button, Row, Col, Image
 } from 'react-bootstrap';
-import UseCases from "../components/UseCases";
-import ManageStrip from "../components/ManageStrip";
-import {ROUTES} from "../constants/routes";
+import UseCases from "../../components/UseCases";
+import ManageStrip from "../../components/ManageStrip";
+import {ROUTES} from "../../constants/routes";
 
 const { REACT_APP_NODE_LOCAL } = process.env;
 
@@ -54,7 +52,7 @@ function Employer() {
       <main >
         <Container fluid>
           <Row className="dark-blue-section text-center">
-          <Col xs={12} md={12} lg={{ span: 6, offset: 3 }} >
+            <Col xs={12} md={12} lg={{ span: 6, offset: 3 }} >
 
               <Row>
                 <Col>

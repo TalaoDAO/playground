@@ -1,6 +1,7 @@
 export const ROUTES = {
   INDEX: '/',
   HOME: '/home',
+  HOW_TO_WORK: '/how-to-work',
   ACTIVATION: '/activation',
   DIPLOMA: '/diploma',
   STUDENT: '/student',
@@ -15,6 +16,4 @@ export const ROUTES = {
   COMPANY_ACCOUNT: '/com-account',
   DISCOUNT_DEMO: '/discount-demo',
   PASS_ACTIVATION: '/pass-activation',
-  HOW_TO_WORK: '/how-to-work',
-
 }

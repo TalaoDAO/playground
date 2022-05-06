@@ -13,11 +13,11 @@ const howToItems = [
   },
   {
     title: 'How to generate your account ?',
-    link: '#',
+    link: ROUTES.GENERATE,
   },
   {
     title: 'How to recover your account ?',
-    link: '#',
+    link: ROUTES.RECOVER,
   },
   {
     title: 'How to download a diploma ?',
@@ -25,23 +25,23 @@ const howToItems = [
   },
   {
     title: 'How to download your student card ?',
-    link: '#',
+    link: ROUTES.STUDENT,
   },
   {
     title: 'How request an employer certificate ?',
-    link: '#',
+    link: ROUTES.EMPLOYER,
   },
   {
     title: 'How to get a discount coupon ?',
-    link: '#',
+    link: ROUTES.DISCOUNT,
   },
   {
     title: 'How to manage your certificates ?',
-    link: '#',
+    link: ROUTES.MANAGE,
   },
   {
     title: 'How to activate your email pass ?',
-    link: '#',
+    link: ROUTES.ACTIVATION
   },
 ]
 

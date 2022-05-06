@@ -1,6 +1,4 @@
 import React from "react";
-import ddemo01 from '../images/discount-demo-01.png';
-import "../App.css";
 import QRCode from "react-qr-code";
 
 import {
@@ -10,23 +8,23 @@ import {
 
 
 
-import news_header from './img/article/header.png';
-import news_footer from './img/article/footer.png';
-import news_cats from './img/article/categories.png';
+import news_header from '../img/article/header.png';
+import news_footer from '../img/article/footer.png';
+import news_cats from '../img/article/categories.png';
 
-import comment_icon from './img/article/union.svg';
-import eye_icon from './img/article/eye.svg';
-
-
-import art01 from './img/article/article.webp';
-import art02 from './img/article/article@2x.webp';
-import art03 from './img/article/article@3x.webp';
+import comment_icon from '../img/article/union.svg';
+import eye_icon from '../img/article/eye.svg';
 
 
+import art01 from '../img/article/article.webp';
+import art02 from '../img/article/article@2x.webp';
+import art03 from '../img/article/article@3x.webp';
 
-import mon01 from './img/article/monkey-nft.webp';
-import mon02 from './img/article/monkey-nft@2x.webp';
-import mon03 from './img/article/monkey-nft@3x.webp';
+
+
+import mon01 from '../img/article/monkey-nft.webp';
+import mon02 from '../img/article/monkey-nft@2x.webp';
+import mon03 from '../img/article/monkey-nft@3x.webp';
 
 
 
@@ -46,17 +44,17 @@ function DiscountDemo() {
   return (
     <main >
       <Container className="shadow px-0 ">
-          <Row className="px-0">
-            <Col xs={12} md={12} lg={12}>
-              <Image src={news_header} className="img-fit" fluid></Image>
+        <Row className="px-0">
+          <Col xs={12} md={12} lg={12}>
+            <Image src={news_header} className="img-fit" fluid></Image>
 
-            </Col>
-            
-          </Row>
+          </Col>
+
+        </Row>
 
         <div className="discount-box ">
 
-          
+
 
           <Row className="text-center">
             <Col xs={12} md={12} lg={{span:7}}>
@@ -139,41 +137,41 @@ function DiscountDemo() {
                 </Col>
                 <Col className="text-center">
                   <div className="lg-only">
-                      <QRCode value={REACT_APP_QR_URL + "/discount-offer"+qr} size={128} />
-                    </div>
-                    <div className="sm-only">
-                      <Button className="btn-dark-submit " variant="primary" href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/discount-offer" + qr)}>Click to add to wallet</Button>
-                    </div>
+                    <QRCode value={REACT_APP_QR_URL + "/discount-offer"+qr} size={128} />
+                  </div>
+                  <div className="sm-only">
+                    <Button className="btn-dark-submit " variant="primary" href={REACT_APP_WALLET_LINK + encodeURIComponent(REACT_APP_QR_URL + "/discount-offer" + qr)}>Click to add to wallet</Button>
+                  </div>
                 </Col>
               </Row>
               <Row className="discount-separation-top">
                 <Col>
-                <Image src={mon01} srcSet={`${mon02} 2x, ${mon03} 3x`} className="discount-monkey-img" fluid></Image>
+                  <Image src={mon01} srcSet={`${mon02} 2x, ${mon03} 3x`} className="discount-monkey-img" fluid></Image>
                 </Col>
               </Row>
 
               <Row>
-              <Col xs={12} md={12} lg={12} className="discount-separation-top">
-                <Image src={news_cats} className="img-fit" fluid></Image>
+                <Col xs={12} md={12} lg={12} className="discount-separation-top">
+                  <Image src={news_cats} className="img-fit" fluid></Image>
 
-              </Col>
-              
-            </Row>
+                </Col>
+
+              </Row>
 
 
             </Col>
           </Row>
-          
+
 
 
         </div>
         <Row className="p-0">
-            <Col xs={12} md={12} lg={12}>
-              <Image src={news_footer} className="img-fit" fluid></Image>
+          <Col xs={12} md={12} lg={12}>
+            <Image src={news_footer} className="img-fit" fluid></Image>
 
-            </Col>
-            
-          </Row>
+          </Col>
+
+        </Row>
 
       </Container>
 
