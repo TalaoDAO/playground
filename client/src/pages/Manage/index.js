@@ -39,26 +39,13 @@ function Manage() {
 
   return (
     <main>
+      <div className="bg-blue-dark py-47">
+        <h1 className="mb-0 text-center text-white">
+          Manage Certificates
+        </h1>
+      </div>
+
       <Container fluid className="position-relative  px-0 overflow-hidden">
-        <Row className="dark-blue-section text-center">
-          <Col xs={12} md={12} lg={{ span: 6, offset: 3 }} >
-
-            <Row >
-              <Col>
-                <p className="title-white-single">Manage Certificates</p>
-              </Col>
-
-            </Row>
-
-          </Col>
-        </Row>
-        <Row className="text-center">
-          <Col xs={12} md={12} lg={12} >
-            <div className="vertical-line"></div>
-
-          </Col>
-        </Row>
-
 
         <div id="description" className="text-center">
           <Row >

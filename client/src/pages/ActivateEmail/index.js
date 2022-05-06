@@ -5,7 +5,7 @@ import {
 
 import DesktopProgress from '../../parts/DesktopProgress';
 import UseCases from '../../parts/UseCases';
-import { REACT_APP_NODE_LOCAL } from '../../constants';
+import {REACT_APP_NODE_LOCAL, ROUTES} from '../../constants';
 import './styles.scss';
 
 const ActivateEmailSteps = [
@@ -45,7 +45,7 @@ function Activation() {
           </h1>
         </div>
 
-        <DesktopProgress progressItems={ActivateEmailSteps} />
+        <DesktopProgress progressItems={ActivateEmailSteps} link={ROUTES.PASS_ACTIVATION} />
 
         <UseCases />
       </main>

@@ -8,7 +8,7 @@ import UseCases from '../../parts/UseCases';
 import './styles.scss';
 import {ROUTES} from "../../constants";
 
-const DownloadDiplomaSteps = [
+const downloadDiplomaSteps = [
   {
     img: diplomaAccessAccountImg,
     title: 'Request access <br/> to your account',
@@ -45,7 +45,7 @@ const Diploma = () => {
           </h1>
         </div>
 
-        <DesktopProgress progressItems={DownloadDiplomaSteps} link={ROUTES.UNIVERSITY} />
+        <DesktopProgress progressItems={downloadDiplomaSteps} link={ROUTES.UNIVERSITY} />
 
         <UseCases />
       </main>
