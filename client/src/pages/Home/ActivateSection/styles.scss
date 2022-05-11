@@ -50,6 +50,23 @@
     height: auto;
   }
 
+
+  .activate-email-img-wrapper-hide {
+    width: 100%;
+    flex-shrink: 0;
+    margin-top: -50px;
+    display: block;
+
+    @include breakpoint-up($lg) {
+      display: none;
+    }
+  }
+
+  .activate-email-img-hide {
+    width: 100%;
+    height: auto;
+  }
+
   .cube-separation {
     position: absolute;
     bottom: 0;
@@ -76,6 +93,14 @@
 
     @include breakpoint-up($lg) {
       display: block;
+    }
+  }
+
+  .mobile-illustration-img-hide {
+    display: block;
+
+    @include breakpoint-up($lg) {
+      display: none;
     }
   }
 }
