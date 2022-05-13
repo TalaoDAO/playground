@@ -34,12 +34,12 @@ function Home() {
               </div>
 
               <div className="d-flex flex-column flex-sm-row align-items-center justify-content-center justify-content-sm-start">
-                <a target="_blank"
-                   href="https://play.google.com/store/apps/details?id=co.talao.wallet">
+                <a target="_blank" rel="noreferrer"
+                  href="https://play.google.com/store/apps/details?id=co.talao.wallet">
                   <Image src={googlePlayImg} className="btn-app-store btn-google" />
                 </a>
-                <a target="_blank"
-                   href="https://apps.apple.com/app/talao-wallet/id1582183266#?platform=iphone">
+                <a target="_blank" rel="noreferrer"
+                  href="https://apps.apple.com/app/talao-wallet/id1582183266?platform=iphone#83">
                   <Image src={appstoreImg} className="btn-app-store" />
                 </a>
               </div>
