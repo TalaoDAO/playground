@@ -28,7 +28,11 @@ const logger = createLogger({
 });
 
 const upload = multer()
-var allowedOrigins = ['http://localhost:3000','https://playground.talao.co'];
+var allowedOrigins = [
+    'http://localhost:3000',
+  'https://playground.talao.co',
+  'https://playground2.talao.co',
+];
 router.use(cors({
     origin: function (origin, callback) {
       if (!origin || allowedOrigins.indexOf(origin) !== -1) {
