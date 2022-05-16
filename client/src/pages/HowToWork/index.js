@@ -39,10 +39,6 @@ const howToItems = [
     title: 'How to manage your certificates ?',
     link: ROUTES.MANAGE,
   },
-  {
-    title: 'How to activate your email pass ?',
-    link: ROUTES.ACTIVATION
-  },
 ]
 
 const HowToWork = () => {
