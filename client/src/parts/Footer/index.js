@@ -22,7 +22,7 @@ const Footer = () => (
 
         <div className="app-socials">
           <p className="text-white text-bold text-xl mb-4 text-center text-sm-start">
-            Follow use
+            Follow us
           </p>
 
           <div className='footer-normal'>
