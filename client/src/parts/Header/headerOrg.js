@@ -44,7 +44,7 @@ const Header = () => {
             <Nav className="ms-auto d-flex align-items-center">
               <NavDropdown className="nav-menu header-dropdown menu-link" title="Play with talao wallet" id="basic-nav-dropdown"  >
                 <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.ACTIVATION}>Activate your email pass</Link>
+                  <Link className="menu-link" to={ROUTES.PASS_ACTIVATION}>Activate your email pass</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
@@ -56,11 +56,11 @@ const Header = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.EMPLOYER}>Request an employer certificate</Link>
+                  <Link className="menu-link" to={ROUTES.COMPANY}>Request an employer certificate</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.DISCOUNT}>
+                  <Link className="menu-link" to={ROUTES.DISCOUNT_DEMO}>
                     Get a discount coupon
                   </Link>
                 </NavDropdown.Item>

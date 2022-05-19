@@ -39,15 +39,15 @@ const Header = () => {
             <Navbar.Collapse id="basic-navbar-nav ">
               <Nav className="ms-auto">
                 <NavDropdown  className="nav-menu" title="Play with talao wallet" id="basic-nav-dropdown"  >
-                  <NavDropdown.Item href={ROUTES.ACTIVATION}>Activate your email pass</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.PASS_ACTIVATION}>Activate your email pass</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href={ROUTES.UNIVERSITY}>Download a diploma</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href={ROUTES.UNIVERSITY}>Download your student card</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href={ROUTES.EMPLOYER}>Request an employer certificate</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.COMPANY}>Request an employer certificate</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href={ROUTES.DISCOUNT}>Get a discount coupon</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.DISCOUNT_DEMO}>Get a discount coupon</NavDropdown.Item>
                 </NavDropdown>
 
                 <Nav.Item className="nav-menu how-nav-menu">
