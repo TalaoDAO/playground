@@ -41,9 +41,9 @@ const Header = () => {
                 <NavDropdown  className="nav-menu" title="Play with talao wallet" id="basic-nav-dropdown"  >
                   <NavDropdown.Item href={ROUTES.ACTIVATION}>Activate your email pass</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href={ROUTES.DIPLOMA}>Download a diploma</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.UNIVERSITY}>Download a diploma</NavDropdown.Item>
                   <NavDropdown.Divider />
-                  <NavDropdown.Item href={ROUTES.STUDENT}>Download your student card</NavDropdown.Item>
+                  <NavDropdown.Item href={ROUTES.UNIVERSITY}>Download your student card</NavDropdown.Item>
                   <NavDropdown.Divider />
                   <NavDropdown.Item href={ROUTES.EMPLOYER}>Request an employer certificate</NavDropdown.Item>
                   <NavDropdown.Divider />

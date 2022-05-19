@@ -3,7 +3,7 @@ export const ROUTES = {
   HOME: '/home',
   HOW_TO_WORK: '/how-to-work',
   ACTIVATION: '/pass-activation',
-  DIPLOMA: '/university',
+  DIPLOMA: '/diploma',
   STUDENT: '/student',
   EMPLOYER: '/company',
   DISCOUNT: '/discount-demo',

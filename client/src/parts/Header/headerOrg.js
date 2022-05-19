@@ -48,11 +48,11 @@ const Header = () => {
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.DIPLOMA}>Download a diploma</Link>
+                  <Link className="menu-link" to={ROUTES.UNIVERSITY}>Download a diploma</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
-                  <Link className="menu-link" to={ROUTES.DIPLOMA}>Download your student card</Link>
+                  <Link className="menu-link" to={ROUTES.UNIVERSITY}>Download your student card</Link>
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item>
