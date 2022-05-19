@@ -17,7 +17,7 @@ const StepIllustration = () => {
       <Image src={arrowRightImg} className="arrow-icon flex-shrink-0" />
       <div className="step-card">
         <Image src={activeMailImg} className="mb-5" />
-        <p className="mb-8 text-blue-dark text-bold">Active your email pass</p>
+        <p className="mb-8 text-blue-dark text-bold">Activate your email pass</p>
         <p className="text-grey mb-0">Step 2</p>
       </div>
       <Image src={arrowRightImg} className="arrow-icon flex-shrink-0" />
