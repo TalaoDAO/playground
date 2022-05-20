@@ -98,9 +98,10 @@
 
   .mobile-illustration-img-hide {
     display: block;
-
+    width: 70%;
     @include breakpoint-up($lg) {
       display: none;
     }
   }
 }
+
