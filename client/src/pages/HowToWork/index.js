@@ -58,9 +58,10 @@ const HowToWork = () => {
                 key={index}
                 className="link-container"
               >
-                <p className="link-label">{item.title}</p>
-                <Link to={item.link} className="link-indicator">
-                  <Image src={arrowSquareRightIcon} />
+                
+                <Link to={item.link} className="link-indicator noBorder">
+                <span className="link-label">{item.title}</span>
+                  <Image className="linkImage" src={arrowSquareRightIcon} />
                 </Link>
               </div>
             ))

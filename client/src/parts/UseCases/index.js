@@ -90,7 +90,7 @@ const UseCases = () => {
                 <div className="flex-1 card-info">
                   <p className="card-title">Employer certificate</p>
                   <p className="card-description">
-                    This certificate is a document by which an employer certifies that his employee is well employed by his company
+                  This certificate proves that the owner is employed by the company.
                   </p>
                 </div>
                 <div className="flex-shrink-0">
