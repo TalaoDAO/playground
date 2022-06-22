@@ -53,14 +53,14 @@
 		"issuanceDate": "",
 		"name": [
 			{
-				"@language": "fr",
-				"@value": "Diplome"
+				"@language": "en",
+				"@value": "Diploma"
 			}
 		],
 		"description": [
 			{
-				"@language": "fr",
-				"@value": "Diplome, qualification, etc...reconnu par l'état"
+				"@language": "en",
+				"@value": "Bachelor of Science"
 			}
 		],
 		"credentialSubject": {
