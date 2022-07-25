@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="45.763" height="45.763" viewBox="0 0 45.763 45.763">
+  <g id="vuesax_bulk_shield-tick" data-name="vuesax/bulk/shield-tick" transform="translate(-300 -188)">
+    <g id="shield-tick" transform="translate(300 188)">
+      <path id="Vector" d="M15,.306,3.867,4.346A6.265,6.265,0,0,0,0,9.779V25.664a6.442,6.442,0,0,0,2.389,4.628l11.137,8.06a6.485,6.485,0,0,0,7.148,0l11.137-8.06A6.478,6.478,0,0,0,34.2,25.664V9.779a6.238,6.238,0,0,0-3.867-5.413L19.2.326A7.1,7.1,0,0,0,15,.306Z" transform="translate(5.773 3.096)" fill="#ffdc05"/>
+      <path id="Vector-2" data-name="Vector" d="M3.834,9.428a1.206,1.206,0,0,1-.862-.358L.354,6.452A1.219,1.219,0,0,1,2.078,4.728L3.834,6.485,9.965.354a1.219,1.219,0,1,1,1.724,1.724L4.7,9.071A1.206,1.206,0,0,1,3.834,9.428Z" transform="translate(16.87 16.832)" fill="#161f3d"/>
+      <path id="Vector-3" data-name="Vector" d="M0,0H45.763V45.763H0Z" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

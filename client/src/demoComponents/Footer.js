@@ -6,10 +6,10 @@ import {
 } from 'react-bootstrap';
 import { Route } from 'react-router-dom';
 
-import twitter from '../pages/img/home/icon-twitter-footer.svg';
-import linkedin from '../pages/img/home/icon-linkedin-footer.svg';
-import fb from '../pages/img/home/icon-facebook-footer.svg';
-import logoFooter from '../pages/img/home/Logo-footer.png';
+import twitter from '../assets/images/v1/pages/home/icon-twitter-footer.svg';
+import linkedin from '../assets/images/v1/pages/home/icon-linkedin-footer.svg';
+import fb from '../assets/images/v1/pages/home/icon-facebook-footer.svg';
+import logoFooter from '../assets/images/v1/pages/home/Logo-footer.png';
 
 
 const { REACT_APP_VERSION } = process.env;

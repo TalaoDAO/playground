@@ -5,7 +5,7 @@ import {
 } from 'react-bootstrap';
 
 import QRCode from "react-qr-code";
-import sucess_img from '../pages/img/success.png';
+import sucess_img from '../assets/images/v1/pages/success.png';
 import { Link } from 'react-router-dom';
 import { createBrowserHistory } from "history";
 import { Navigate } from "react-router-dom";

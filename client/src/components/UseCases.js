@@ -1,37 +1,38 @@
 import React from 'react';
 
-import dipi01 from '../pages/img/use_cases/icon-diploma-use-case.svg';
-import dipi02 from '../pages/img/use_cases/icon-diploma-use-case.svg';
-import dipi03 from '../pages/img/use_cases/icon-diploma-use-case.svg';
-import dipd01 from '../pages/img/use_cases/image-download-a-diploma.webp';
-import dipd02 from '../pages/img/use_cases/image-download-a-diploma@2x.webp';
-import dipd03 from '../pages/img/use_cases/image-download-a-diploma@3x.webp';
+import dipi01 from '../assets/images/v1/pages/use_cases/icon-diploma-use-case.svg';
+import dipi02 from '../assets/images/v1/pages/use_cases/icon-diploma-use-case.svg';
+import dipi03 from '../assets/images/v1/pages/use_cases/icon-diploma-use-case.svg';
+import dipd01 from '../assets/images/v1/pages/use_cases/image-download-a-diploma.webp';
+import dipd02 from '../assets/images/v1/pages/use_cases/image-download-a-diploma@2x.webp';
+import dipd03 from '../assets/images/v1/pages/use_cases/image-download-a-diploma@3x.webp';
 
-import stci01 from '../pages/img/use_cases/icon-student-card-use-case.svg';
-import stci02 from '../pages/img/use_cases/icon-student-card-use-case.svg';
-import stci03 from '../pages/img/use_cases/icon-student-card-use-case.svg';
-import stcd01 from '../pages/img/use_cases/image-download-a-diploma.webp';
-import stcd02 from '../pages/img/use_cases/image-download-a-diploma@2x.webp';
-import stcd03 from '../pages/img/use_cases/image-download-a-diploma@3x.webp';
+import stci01 from '../assets/images/v1/pages/use_cases/icon-student-card-use-case.svg';
+import stci02 from '../assets/images/v1/pages/use_cases/icon-student-card-use-case.svg';
+import stci03 from '../assets/images/v1/pages/use_cases/icon-student-card-use-case.svg';
+import stcd01 from '../assets/images/v1/pages/use_cases/image-download-a-diploma.webp';
+import stcd02 from '../assets/images/v1/pages/use_cases/image-download-a-diploma@2x.webp';
+import stcd03 from '../assets/images/v1/pages/use_cases/image-download-a-diploma@3x.webp';
 
-import eci01 from '../pages/img/use_cases/icon-employer-certificate-use-case.svg';
-import eci02 from '../pages/img/use_cases/icon-employer-certificate-use-case.svg';
-import eci03 from '../pages/img/use_cases/icon-employer-certificate-use-case.svg';
-import ecd01 from '../pages/img/use_cases/image-employer-certificate-use-case.webp';
-import ecd02 from '../pages/img/use_cases/image-employer-certificate-use-case@2x.webp';
-import ecd03 from '../pages/img/use_cases/image-employer-certificate-use-case@3x.webp';
+import eci01 from '../assets/images/v1/pages/use_cases/icon-employer-certificate-use-case.svg';
+import eci02 from '../assets/images/v1/pages/use_cases/icon-employer-certificate-use-case.svg';
+import eci03 from '../assets/images/v1/pages/use_cases/icon-employer-certificate-use-case.svg';
+import ecd01 from '../assets/images/v1/pages/use_cases/image-employer-certificate-use-case.webp';
+import ecd02 from '../assets/images/v1/pages/use_cases/image-employer-certificate-use-case@2x.webp';
+import ecd03 from '../assets/images/v1/pages/use_cases/image-employer-certificate-use-case@3x.webp';
 
-import disi01 from '../pages/img/use_cases/icon-discount-coupon-use-case.svg';
-import disi02 from '../pages/img/use_cases/icon-discount-coupon-use-case.svg';
-import disi03 from '../pages/img/use_cases/icon-discount-coupon-use-case.svg';
-import disd01 from '../pages/img/use_cases/image-discount-coupon-use-case.webp';
-import disd02 from '../pages/img/use_cases/image-discount-coupon-use-case@2x.webp';
-import disd03 from '../pages/img/use_cases/image-discount-coupon-use-case@3x.webp';
+import disi01 from '../assets/images/v1/pages/use_cases/icon-discount-coupon-use-case.svg';
+import disi02 from '../assets/images/v1/pages/use_cases/icon-discount-coupon-use-case.svg';
+import disi03 from '../assets/images/v1/pages/use_cases/icon-discount-coupon-use-case.svg';
+import disd01 from '../assets/images/v1/pages/use_cases/image-discount-coupon-use-case.webp';
+import disd02 from '../assets/images/v1/pages/use_cases/image-discount-coupon-use-case@2x.webp';
+import disd03 from '../assets/images/v1/pages/use_cases/image-discount-coupon-use-case@3x.webp';
 
 import {
     Container, Image, Card, Row, Col
 } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import {ROUTES} from "../constants/routes";
 
 
 const UseCases = () => (
@@ -71,7 +72,7 @@ const UseCases = () => (
                                 </Row>
                                 <Row>
                                     <Col xs={12} md={12} lg={12}>
-                                        <Link to="/diploma" className="links-light">LEARN MORE</Link>
+                                        <Link to={ROUTES.DIPLOMA} className="links-light">LEARN MORE</Link>
                                     </Col>
 
                                 </Row>
@@ -105,7 +106,7 @@ const UseCases = () => (
                                 </Row>
                                 <Row>
                                     <Col xs={12} md={12} lg={12}>
-                                        <Link to="/student" className="links-light ">LEARN MORE</Link>
+                                        <Link to={ROUTES.STUDENT} className="links-light ">LEARN MORE</Link>
                                     </Col>
 
                                 </Row>
@@ -141,7 +142,7 @@ const UseCases = () => (
                                 </Row>
                                 <Row>
                                     <Col xs={12} md={12} lg={12}>
-                                        <Link to="/employer" className="links-light">LEARN MORE</Link>
+                                        <Link to={ROUTES.EMPLOYER} className="links-light">LEARN MORE</Link>
                                     </Col>
 
                                 </Row>
@@ -175,7 +176,7 @@ const UseCases = () => (
                                 </Row>
                                 <Row>
                                     <Col xs={12} md={12} lg={12}>
-                                        <Link to="/discount" className="links-light">LEARN MORE</Link>
+                                        <Link to={ROUTES.DISCOUNT} className="links-light">LEARN MORE</Link>
                                     </Col>
 
                                 </Row>

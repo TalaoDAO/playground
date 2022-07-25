@@ -1,0 +1,26 @@
+.link-btn {
+  text-transform: uppercase;
+  background: $color-blue-light-2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $color-white;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 0 68px;
+  height: 69px;
+  border-radius: 10px;
+  text-decoration: none;
+
+  &:hover {
+    cursor: pointer;
+    color: $color-white;
+    background: $color-blue-light-1;
+  }
+}
+
+.d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

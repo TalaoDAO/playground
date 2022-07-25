@@ -1,0 +1,12 @@
+import React from 'react';
+import { Container as BSContainer } from 'react-bootstrap';
+
+const Container = ({ children }) => {
+  return (
+    <BSContainer>
+      {children}
+    </BSContainer>
+  );
+};
+
+export default Container;

@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="20.675" height="20.675" viewBox="0 0 20.675 20.675">
+  <g id="Group_3122" data-name="Group 3122" transform="translate(-2.215 -2.215)">
+    <circle id="Ellipse_452" data-name="Ellipse 452" cx="10.337" cy="10.337" r="10.337" transform="translate(2.215 2.215)" fill="#56b113"/>
+    <path id="checkmark" d="M10.979,5.084,10,4.1a.347.347,0,0,0-.491,0L4.479,9.407,1.6,6.525a.352.352,0,0,0-.5,0l-1,1a.352.352,0,0,0,0,.5l4.1,4.192a.341.341,0,0,0,.29.093.345.345,0,0,0,.3-.093l6.186-6.636a.348.348,0,0,0,0-.492Z" transform="translate(7.118 5.281)" fill="#fff"/>
+  </g>
+</svg>

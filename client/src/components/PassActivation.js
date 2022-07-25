@@ -7,21 +7,22 @@ import { Link } from 'react-router-dom';
 
 
 
-import gys01 from '../pages/img/pass_activation/green-yellow-separator.webp';
-import gys02 from '../pages/img/pass_activation/green-yellow-separator@2x.webp';
-import gys03 from '../pages/img/pass_activation/green-yellow-separator@3x.webp';
-import gch01 from '../pages/img/home/green-hero.webp';
-import gch02 from '../pages/img/home/green-hero@2x.webp';
-import gch03 from '../pages/img/home/green-hero@3x.webp';
+import gys01 from '../assets/images/v1/pages/pass_activation/green-yellow-separator.webp';
+import gys02 from '../assets/images/v1/pages/pass_activation/green-yellow-separator@2x.webp';
+import gys03 from '../assets/images/v1/pages/pass_activation/green-yellow-separator@3x.webp';
+import gch01 from '../assets/images/v1/pages/home/green-hero.webp';
+import gch02 from '../assets/images/v1/pages/home/green-hero@2x.webp';
+import gch03 from '../assets/images/v1/pages/home/green-hero@3x.webp';
 
-import btnpass from '../pages/img/pass_activation/btn-pass-activation.svg';
+import btnpass from '../assets/images/v1/pages/pass_activation/btn-pass-activation.svg';
 
-import aps01 from '../pages/img/pass_activation/wallet-pass-activation.svg';
-import aps02 from '../pages/img/pass_activation/wallet-pass-activation.svg';
-import aps03 from '../pages/img/pass_activation/wallet-pass-activation.svg';
-import ycs01 from '../pages/img/pass_activation/yellow-separator.webp';
-import ycs02 from '../pages/img/pass_activation/yellow-separator@2x.webp';
-import ycs03 from '../pages/img/pass_activation/yellow-separator@3x.webp';
+import aps01 from '../assets/images/v1/pages/pass_activation/wallet-pass-activation.svg';
+import aps02 from '../assets/images/v1/pages/pass_activation/wallet-pass-activation.svg';
+import aps03 from '../assets/images/v1/pages/pass_activation/wallet-pass-activation.svg';
+import ycs01 from '../assets/images/v1/pages/pass_activation/yellow-separator.webp';
+import ycs02 from '../assets/images/v1/pages/pass_activation/yellow-separator@2x.webp';
+import ycs03 from '../assets/images/v1/pages/pass_activation/yellow-separator@3x.webp';
+import {ROUTES} from "../constants/routes";
 
 
 const PassActivation = () => (
@@ -56,7 +57,7 @@ const PassActivation = () => (
 
           <Row className="shifting-content-location">
             <Col xs={12} md={12} lg={12} >
-              <Link to="/activation" ><Image src={btnpass} className="btn-learn-more" fluid></Image></Link>
+              <Link to={ROUTES.ACTIVATION} ><Image src={btnpass} className="btn-learn-more" fluid></Image></Link>
             </Col>
 
 

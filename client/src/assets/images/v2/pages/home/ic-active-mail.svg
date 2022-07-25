@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="61.344" height="51.336" viewBox="0 0 61.344 51.336">
+  <g id="ic-active-mail" transform="translate(-172 -316)">
+    <g id="Group_3087" data-name="Group 3087">
+      <path id="Vector" d="M0,0H51.336V51.336H0Z" transform="translate(172 316)" fill="none" opacity="0"/>
+      <path id="Vector-2" data-name="Vector" d="M32.085,36.363H10.695C4.278,36.363,0,33.154,0,25.668V10.695C0,3.208,4.278,0,10.695,0h21.39C38.5,0,42.78,3.208,42.78,10.695V25.668C42.78,33.154,38.5,36.363,32.085,36.363Z" transform="translate(176.278 323.486)" fill="#161f3d"/>
+      <path id="Vector_Stroke_" data-name="Vector (Stroke)" d="M24.248.6A1.6,1.6,0,0,1,24,2.858L17.3,8.207a8.371,8.371,0,0,1-10.02,0l0,0L.6,2.856A1.6,1.6,0,0,1,2.607.352L9.279,5.7a5.176,5.176,0,0,0,6.02,0h0L21.993.351A1.6,1.6,0,0,1,24.248.6Z" transform="translate(185.369 333.647)" fill="#ffdc05"/>
+    </g>
+    <g id="shield-tick" transform="translate(213.344 338.177)">
+      <path id="Vector-3" data-name="Vector" d="M7,.138,1.8,1.961A2.833,2.833,0,0,0,0,4.411v7.166a2.876,2.876,0,0,0,1.115,2.088l5.2,3.636a3.113,3.113,0,0,0,3.335,0l5.2-3.636a2.892,2.892,0,0,0,1.115-2.088V4.411a2.821,2.821,0,0,0-1.8-2.442L8.956.147A3.423,3.423,0,0,0,7,.138Z" transform="translate(2.019 1.082)" fill="#ffdc05"/>
+      <path id="Vector-4" data-name="Vector" d="M1.837,4.517a.578.578,0,0,1-.413-.171L.169,3.091A.584.584,0,1,1,1,2.265l.841.841L4.774.169A.584.584,0,0,1,5.6,1L2.25,4.346A.578.578,0,0,1,1.837,4.517Z" transform="translate(7.12 7.128)" fill="#161f3d"/>
+      <path id="Vector-5" data-name="Vector" d="M0,0H20V20H0Z" fill="none" opacity="0"/>
+    </g>
+  </g>
+</svg>

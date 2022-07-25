@@ -1,0 +1,47 @@
+@import "../../assets/scss/variables";
+@import "../../assets/scss/mixins";
+
+.app-header {
+  .dropdown-toggle {
+    font-size: 17px;
+    font-weight: normal;
+    color: $color-dark;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .navbar {
+    padding: 21px 0;
+  }
+
+  .dropdown-menu {
+    padding: 20px 36px 20px;
+    min-width: 350px;
+
+    .dropdown-item {
+      font-size: 16px;
+      color: $color-dark !important;
+      font-weight: normal;
+      text-decoration: none;
+      padding: 0;
+
+      &:hover {
+        color: $color-blue-light !important;
+        background: transparent;
+      }
+    }
+  }
+
+  .how-nav-menu {
+    margin-left: 50px;
+  }
+
+  .header-link {
+    font-size: 17px;
+    color: $color-dark;
+    font-weight: normal;
+    text-decoration: none;
+  }
+}
