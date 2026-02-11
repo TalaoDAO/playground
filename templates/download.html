@@ -1,0 +1,78 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import step_card %}
+{% block content %}
+
+{% set eyebrow = "Step 1 of 3" %}
+{% set title = "Download the Talao Identity Wallet" %}
+{% set subtitle = "Install the wallet and make sure you’re ready for the EUDI Wallet Playground demo flow." %}
+{% set actions = [
+  {"label":"Go to talao.io", "href": config.TALAO_URL, "external": True, "class":"btn--primary"},
+  {"label":"Next: Configure", "href": url_for('configure'), "class":"btn--ghost"}
+] %}
+{% set highlight = {"title":"Recommended", "text":"Use a real mobile device for the full demo experience."} %}
+
+{% include "partials/hero.html" %}
+
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h2>Download checklist</h2>
+      <p>Replace these placeholders with the exact store links and your preferred wording later.</p>
+    </div>
+
+    <div class="steps">
+      {{ step_card("1", "Choose your platform",
+        "Open talao.io and select the appropriate download option (iOS / Android).",
+        bullets=["Prefer official stores.", "If you use a test build, note it clearly in the page."],
+        ctas=[{"label":"Open talao.io", "href": config.TALAO_URL, "external": True, "class":"btn--primary"}]
+      ) }}
+
+      {{ step_card("2", "Install and launch",
+        "Install the app, then open it once to complete any first-run setup.",
+        bullets=["Allow notifications only if your flow requires it.", "You can keep analytics disabled for demos."]
+      ) }}
+
+      {{ step_card("3", "Prepare for configuration",
+        "You’re ready to enable the Playground-specific settings in the next step.",
+        bullets=["Have your phone unlocked.", "Keep this guide open in a separate tab/window if possible."],
+        ctas=[{"label":"Next: Configure", "href": url_for('configure'), "class":"btn--primary"}]
+      ) }}
+    </div>
+
+    <div class="two-col two-col--gap">
+      <div>
+        <h3>Where screenshots go</h3>
+        <p>
+          Swap the placeholders with real wallet screenshots:
+          <span class="kbd">static/img/</span>.
+          The click-to-zoom modal is already wired.
+        </p>
+      </div>
+
+      <div class="gallery">
+        <figure class="shot" data-lightbox data-caption="App download screen (placeholder)">
+          <img src="{{ url_for('static', filename='img/screenshot-placeholder-1.svg') }}" alt="Download screen placeholder" />
+          <figcaption>App download screen (placeholder)</figcaption>
+        </figure>
+        <figure class="shot" data-lightbox data-caption="First launch (placeholder)">
+          <img src="{{ url_for('static', filename='img/screenshot-placeholder-2.svg') }}" alt="First launch placeholder" />
+          <figcaption>First launch (placeholder)</figcaption>
+        </figure>
+      </div>
+    </div>
+
+    <div class="callout callout--accent">
+      <div class="callout__badge">Copy</div>
+      <div class="callout__text">
+        Playground URL:
+        <button class="copy" data-copy="{{ config.PLAYGROUND_URL }}">
+          <span class="copy__text">{{ config.PLAYGROUND_URL }}</span>
+          <span class="copy__btn"><i class="bi bi-clipboard"></i> Copy</span>
+        </button>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

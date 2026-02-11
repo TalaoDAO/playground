@@ -1,0 +1,62 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% set eyebrow = "Help" %}
+{% set title = "FAQ & troubleshooting" %}
+{% set subtitle = "Quick fixes for common issues during installation, configuration, and Playground demos." %}
+{% set actions = [
+  {"label":"Back to overview", "href": url_for('index'), "class":"btn--primary"},
+  {"label":"Open Playground", "href": config.PLAYGROUND_URL, "external": True, "class":"btn--ghost"}
+] %}
+{% set highlight = {"title":"Demo-friendly", "text":"Keep this page open during showcases — it’s designed for fast scanning."} %}
+
+{% include "partials/hero.html" %}
+
+<section class="section">
+  <div class="container">
+    <div class="faq">
+
+      <details class="faq__item" open>
+        <summary>My camera can’t scan the QR code</summary>
+        <div class="faq__body">
+          <ul>
+            <li>Increase screen brightness on the display showing the QR.</li>
+            <li>Move the phone slightly farther away to help focus.</li>
+            <li>Check camera permission for the wallet in the OS settings.</li>
+          </ul>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>I don’t see the Playground / demo setting</summary>
+        <div class="faq__body">
+          <p>
+            Replace this answer later with your real instructions (menu path, version requirements, etc.).
+            You can also add a “minimum supported version” note here.
+          </p>
+        </div>
+      </details>
+
+      <details class="faq__item">
+        <summary>The Playground says “invalid request”</summary>
+        <div class="faq__body">
+          <ul>
+            <li>Make sure you selected the correct environment in the wallet.</li>
+            <li>Retry the flow with a fresh QR code (restart the scenario).</li>
+            <li>If you use test endpoints, confirm they are reachable.</li>
+          </ul>
+        </div>
+      </details>
+
+    </div>
+
+    <div class="callout callout--accent">
+      <div class="callout__badge">Support</div>
+      <div class="callout__text">
+        Add your preferred support contact or link here (email, form, docs), when you’re ready.
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% from "partials/macros.html" import step_card %}
+{% block content %}
+
+{% set eyebrow = "Step 3 of 3" %}
+{% set title = "Run the demo in the EUDI Wallet Playground" %}
+{% set subtitle = "Follow the Playground flow, scan the QR code when prompted, and complete issuance and presentation." %}
+{% set actions = [
+  {"label":"Open the Playground", "href": config.PLAYGROUND_URL, "external": True, "class":"btn--primary"},
+  {"label":"Back: Configure", "href": url_for('configure'), "class":"btn--ghost"}
+] %}
+{% set highlight = {"title":"Best practice", "text":"Keep the phone brightness high so QR codes scan instantly in public demos."} %}
+
+{% include "partials/hero.html" %}
+
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h2>Playground flow</h2>
+      <p>These steps are written as generic placeholders until you provide the final wording.</p>
+    </div>
+
+    <div class="steps">
+      {{ step_card("1", "Start a scenario in the Playground",
+        "Choose the relevant demo scenario (issuance, presentation, PID, etc.).",
+        bullets=["Mention the exact scenario name later.", "Add expected outcome for the user (what success looks like)."],
+        ctas=[{"label":"Open Playground", "href": config.PLAYGROUND_URL, "external": True, "class":"btn--primary"}]
+      ) }}
+
+      {{ step_card("2", "Scan the QR code (or open the deep link)",
+        "Use the wallet’s scan function to scan the QR code displayed by the Playground.",
+        bullets=["If the flow uses a universal link, explain how to open it.", "If camera permissions are needed, grant them."]
+      ) }}
+
+      {{ step_card("3", "Accept issuance / share presentation",
+        "Review what’s requested, then approve in the wallet.",
+        bullets=["Explain the consent screen briefly.", "Add a note if a PIN/biometric is required."]
+      ) }}
+
+      {{ step_card("4", "Verify the result",
+        "Back in the Playground, confirm the status shows success.",
+        bullets=["If the Playground shows logs, link to where to look.", "Add a screenshot of success state later."],
+        ctas=[{"label":"Troubleshooting", "href": url_for('faq'), "class":"btn--ghost"}]
+      ) }}
+    </div>
+
+    <div class="callout">
+      <div class="callout__badge">Reminder</div>
+      <div class="callout__text">
+        If scanning fails, move the phone slightly farther away and avoid reflections.
+      </div>
+    </div>
+
+    <div class="gallery gallery--wide">
+      <figure class="shot" data-lightbox data-caption="Scan QR screen (placeholder)">
+        <img src="{{ url_for('static', filename='img/screenshot-placeholder-5.svg') }}" alt="QR scan placeholder" />
+        <figcaption>Scan QR screen (placeholder)</figcaption>
+      </figure>
+      <figure class="shot" data-lightbox data-caption="Success state (placeholder)">
+        <img src="{{ url_for('static', filename='img/screenshot-placeholder-6.svg') }}" alt="Success placeholder" />
+        <figcaption>Success state (placeholder)</figcaption>
+      </figure>
+    </div>
+
+  </div>
+</section>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% macro step_card(num, title, text, bullets=None, ctas=None) -%}
+<div class="step">
+  <div class="step__num">{{ num }}</div>
+  <div class="step__body">
+    <div class="step__title">{{ title }}</div>
+    <div class="step__text">{{ text }}</div>
+
+    {% if bullets %}
+      <ul class="step__list">
+        {% for b in bullets %}
+          <li>{{ b }}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+
+    {% if ctas %}
+      <div class="step__ctas">
+        {% for c in ctas %}
+          <a class="btn btn--sm {{ c.get('class','') }}" href="{{ c.href }}" {% if c.get('external') %}target="_blank" rel="noreferrer"{% endif %}>
+            {{ c.label }}
+            {% if c.get('external') %}<i class="bi bi-box-arrow-up-right"></i>{% endif %}
+          </a>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</div>
+{%- endmacro %}

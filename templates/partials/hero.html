@@ -1,0 +1,45 @@
+<section class="hero">
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <div class="eyebrow">{{ eyebrow }}</div>
+      <h1 class="hero__title">{{ title }}</h1>
+      <p class="hero__subtitle">{{ subtitle }}</p>
+
+      <div class="hero__actions">
+        {% for action in actions %}
+          <a class="btn {{ action.get('class','') }}" href="{{ action.href }}" {% if action.external %}target="_blank" rel="noreferrer"{% endif %}>
+            {{ action.label }}
+            {% if action.external %}<i class="bi bi-box-arrow-up-right"></i>{% endif %}
+          </a>
+        {% endfor %}
+      </div>
+
+      {% if highlight %}
+        <div class="hero__highlight">
+          <i class="bi bi-shield-check"></i>
+          <div>
+            <div class="hero__highlightTitle">{{ highlight.title }}</div>
+            <div class="hero__highlightText">{{ highlight.text }}</div>
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <div class="hero__visual">
+      <div class="glass">
+        <div class="glass__badge">EUDI Wallet Playground</div>
+        <div class="glass__stat">
+          <div class="glass__statNum">3</div>
+          <div class="glass__statLabel">short sections</div>
+        </div>
+        <div class="glass__stat">
+          <div class="glass__statNum">~5</div>
+          <div class="glass__statLabel">minutes to set up</div>
+        </div>
+        <div class="glass__note">
+          Replace these placeholders with your final copy later.
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

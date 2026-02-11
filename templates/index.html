@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block content %}
+
+{% set eyebrow = "Talao × EUDI" %}
+{% set title = "Set up the Talao Identity Wallet for the EUDI Wallet Playground" %}
+{% set subtitle = "A clean, step-by-step guide with screenshots. This site is designed to be showcased inside the Playground." %}
+{% set actions = [
+  {"label":"Start with download", "href": url_for('download'), "class":"btn--primary"},
+  {"label":"Open talao.io", "href": config.TALAO_URL, "external": True, "class":"btn--ghost"}
+] %}
+{% set highlight = {"title":"Privacy-first", "text":"Only the minimum info needed for the demo — you stay in control."} %}
+
+{% include "partials/hero.html" %}
+
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h2>What you’ll do</h2>
+      <p>Three short sections: download, configure, then run the Playground flow.</p>
+    </div>
+
+    <div class="cards">
+      <a class="card card--link" href="{{ url_for('download') }}">
+        <div class="card__icon"><i class="bi bi-download"></i></div>
+        <div class="card__title">1. Download</div>
+        <div class="card__text">Get the wallet and confirm it’s the correct app.</div>
+        <div class="card__arrow"><i class="bi bi-arrow-right"></i></div>
+      </a>
+
+      <a class="card card--link" href="{{ url_for('configure') }}">
+        <div class="card__icon"><i class="bi bi-sliders2"></i></div>
+        <div class="card__title">2. Configure</div>
+        <div class="card__text">Enable demo settings needed for the EUDI Playground.</div>
+        <div class="card__arrow"><i class="bi bi-arrow-right"></i></div>
+      </a>
+
+      <a class="card card--link" href="{{ url_for('playground') }}">
+        <div class="card__icon"><i class="bi bi-controller"></i></div>
+        <div class="card__title">3. Use the Playground</div>
+        <div class="card__text">Run the issuance & presentation flows and verify results.</div>
+        <div class="card__arrow"><i class="bi bi-arrow-right"></i></div>
+      </a>
+    </div>
+
+    <div class="callout">
+      <div class="callout__badge">Tip</div>
+      <div class="callout__text">
+        Want to embed this site in the Playground? Keep the layout simple, responsive, and fast (no heavy frameworks).
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--muted">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <h2>Designed for screenshots</h2>
+        <p>
+          Each page includes screenshot tiles. Later, you’ll replace placeholder images with real wallet screens
+          (PNG/JPG/WebP). Clicking opens a lightweight modal preview.
+        </p>
+
+        <div class="pill-row">
+          <span class="pill"><i class="bi bi-phone"></i> Mobile-first</span>
+          <span class="pill"><i class="bi bi-lightning-charge"></i> Fast load</span>
+          <span class="pill"><i class="bi bi-brush"></i> On-brand</span>
+        </div>
+      </div>
+
+      <div class="gallery">
+        <figure class="shot" data-lightbox data-caption="Placeholder screenshot — replace later">
+          <img src="{{ url_for('static', filename='img/screenshot-placeholder-1.svg') }}" alt="Placeholder screenshot 1" />
+          <figcaption>Placeholder screenshot — replace later</figcaption>
+        </figure>
+        <figure class="shot" data-lightbox data-caption="Another placeholder screenshot">
+          <img src="{{ url_for('static', filename='img/screenshot-placeholder-2.svg') }}" alt="Placeholder screenshot 2" />
+          <figcaption>Another placeholder screenshot</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% endblock %}
