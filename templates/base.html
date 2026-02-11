@@ -28,11 +28,11 @@
 
     <nav class="nav-links" data-nav>
       <a href="/" class="{% if request.path=='/' %}active{% endif %}">Overview</a>
-      <a href="/download" class="{% if request.path.startswith('/download') %}active{% endif %}">Download</a>
-      <a href="/configure" class="{% if request.path.startswith('/configure') %}active{% endif %}">Configure</a>
-      <a href="/playground" class="{% if request.path.startswith('/playground') %}active{% endif %}">Playground</a>
-      <a href="/faq" class="{% if request.path.startswith('/faq') %}active{% endif %}">FAQ</a>
-      <a class="pill" href="{{ playground_url }}" target="_blank" rel="noreferrer">Open Playground</a>
+      <a href="/configure" class="{% if request.path.startswith('/configure') %} active{% endif %}">Configure</a>
+      <!--<a href="/faq" class="{% if request.path.startswith('/faq') %}active{% endif %}">FAQ</a> -->
+      <a href="https://qhf0siml406.typeform.com/to/PdULRDIV?typeform-source=www.talao.io" >Contact</a>
+
+      <a class="pill" href="https://doc.wallet-provider.io/welcome" target="_blank" rel="noreferrer">Full documentation</a>
     </nav>
   </div>
 </header>
