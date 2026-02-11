@@ -29,10 +29,10 @@
     <nav class="nav-links" data-nav>
       <a href="/" class="{% if request.path=='/' %}active{% endif %}">Overview</a>
       <a href="/configure" class="{% if request.path.startswith('/configure') %} active{% endif %}">Configure</a>
-      <!--<a href="/faq" class="{% if request.path.startswith('/faq') %}active{% endif %}">FAQ</a> -->
-      <a href="https://qhf0siml406.typeform.com/to/PdULRDIV?typeform-source=www.talao.io" >Contact</a>
-
-      <a class="pill" href="https://doc.wallet-provider.io/welcome" target="_blank" rel="noreferrer">Full documentation</a>
+      <a href="https://qhf0siml406.typeform.com/to/PdULRDIV?typeform-source=www.talao.io">Contact</a>
+      <a class="pill" href="https://doc.wallet-provider.io/welcome" target="_blank" rel="noreferrer">
+        Full documentation
+      </a>
     </nav>
   </div>
 </header>
@@ -41,19 +41,35 @@
   {% block content %}{% endblock %}
 </main>
 
-<footer class="footer">
-  <div class="container footer-content">
+<footer class="main-footer">
+  <div class="container footer-grid">
+
     <div class="footer-left">
       <div class="footer-title">Web3 Digital Wallet</div>
-      <div class="footer-subtitle">Educational guide for the EUDI Wallet Playground.</div>
+      <div class="footer-subtitle">
+        Educational guide for the EUDI Wallet Playground.
+      </div>
+      <div class="footer-meta">
+        © {{ year }} — Version 0.6.5
+      </div>
     </div>
-    <div class="footer-right">
-      <a href="https://talao.io" target="_blank" rel="noreferrer">talao.io</a>
-      <span class="dot" aria-hidden="true">•</span>
-      <span>© {{ year }}</span>
+
+
+    <div class="footer-social">
+      <a href="https://twitter.com/Talao_io" target="_blank">
+        <img src="{{ url_for('static', filename='img/twitter.png') }}" alt="Twitter">
+      </a>
+      <a href="https://www.linkedin.com/company/10175757/" target="_blank">
+        <img src="{{ url_for('static', filename='img/linkedin.png') }}" alt="LinkedIn">
+      </a>
+      <a href="mailto:contact@talao.io">
+        <img src="{{ url_for('static', filename='img/email.jpeg') }}" alt="Email">
+      </a>
     </div>
+
   </div>
 </footer>
+
 
 <div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast>
   <span data-toast-text>Copied</span>
