@@ -1,60 +1,53 @@
 {% extends "base.html" %}
 {% block content %}
 
-{% set eyebrow = "Help" %}
-{% set title = "FAQ & troubleshooting" %}
-{% set subtitle = "Quick fixes for common issues during installation, configuration, and Playground demos." %}
-{% set actions = [
-  {"label":"Back to overview", "href": url_for('index'), "class":"btn--primary"},
-  {"label":"Open Playground", "href": config.PLAYGROUND_URL, "external": True, "class":"btn--ghost"}
-] %}
-{% set highlight = {"title":"Demo-friendly", "text":"Keep this page open during showcases — it’s designed for fast scanning."} %}
+<section class="hero hero--compact">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">FAQ</div>
+      <h1>Common questions</h1>
+      <p class="lead">Short answers for common setup issues. Replace with your final support text later.</p>
+    </div>
 
-{% include "partials/hero.html" %}
+    <div class="hero-media">
+      <div class="media-card">
+        <div class="media-top">
+          <span class="chip chip--soft">Tip</span>
+          <span class="muted">Keep it simple</span>
+        </div>
+        <div class="copy-card">
+          <p class="muted small">
+            The Playground will be shown to users with varying levels of wallet experience. Prefer short steps,
+            big screenshots, and clear “what to tap” instructions.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container">
     <div class="faq">
-
-      <details class="faq__item" open>
-        <summary>My camera can’t scan the QR code</summary>
-        <div class="faq__body">
-          <ul>
-            <li>Increase screen brightness on the display showing the QR.</li>
-            <li>Move the phone slightly farther away to help focus.</li>
-            <li>Check camera permission for the wallet in the OS settings.</li>
-          </ul>
-        </div>
+      <details open>
+        <summary>Does this site require a backend?</summary>
+        <p>No — it’s a static guide. Flask is only used to serve pages and keep the project easy to host.</p>
       </details>
 
-      <details class="faq__item">
-        <summary>I don’t see the Playground / demo setting</summary>
-        <div class="faq__body">
-          <p>
-            Replace this answer later with your real instructions (menu path, version requirements, etc.).
-            You can also add a “minimum supported version” note here.
-          </p>
-        </div>
+      <details>
+        <summary>Where do I add real screenshots?</summary>
+        <p>Replace the files in <code>static/img/screenshots/</code> and update the image references inside the templates.</p>
       </details>
 
-      <details class="faq__item">
-        <summary>The Playground says “invalid request”</summary>
-        <div class="faq__body">
-          <ul>
-            <li>Make sure you selected the correct environment in the wallet.</li>
-            <li>Retry the flow with a fresh QR code (restart the scenario).</li>
-            <li>If you use test endpoints, confirm they are reachable.</li>
-          </ul>
-        </div>
+      <details>
+        <summary>Can I embed this in the Playground?</summary>
+        <p>Yes — it’s designed to be showcased from the Playground environment, using clean and responsive UI.</p>
       </details>
 
-    </div>
-
-    <div class="callout callout--accent">
-      <div class="callout__badge">Support</div>
-      <div class="callout__text">
-        Add your preferred support contact or link here (email, form, docs), when you’re ready.
-      </div>
+      <details>
+        <summary>How do I change the colors to match Talao?</summary>
+        <p>Edit the CSS variables at the top of <code>static/css/style.css</code>.</p>
+      </details>
     </div>
   </div>
 </section>

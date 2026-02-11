@@ -1,76 +1,94 @@
 {% extends "base.html" %}
-{% from "partials/macros.html" import step_card %}
 {% block content %}
 
-{% set eyebrow = "Step 2 of 3" %}
-{% set title = "Configure the wallet for the EUDI Wallet Playground" %}
-{% set subtitle = "Enable the required demo settings, then verify your wallet can handle the Playground’s issuance & presentation flows." %}
-{% set actions = [
-  {"label":"Next: Playground", "href": url_for('playground'), "class":"btn--primary"},
-  {"label":"Back: Download", "href": url_for('download'), "class":"btn--ghost"}
-] %}
-{% set highlight = {"title":"Keep it simple", "text":"Use clear labels and short steps — perfect for kiosk-style demos."} %}
+<section class="hero hero--compact">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">EUDI Wallet Playground</div>
+      <h1>Configure Talao Wallet for the Playground</h1>
+      <p class="lead">Show the exact settings required to use Talao Wallet inside the EUDI Wallet Playground (placeholder text for now).</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/configure">Next: Configure</a>
+        <a class="btn btn-ghost" href="{{ playground_url }}" target="_blank" rel="noreferrer">Open Playground</a>
+      </div>
+    </div>
 
-{% include "partials/hero.html" %}
+    <div class="hero-media">
+      <div class="media-card">
+        <div class="media-top">
+          <span class="chip">Screenshots</span>
+          <span class="muted">Replace placeholders later</span>
+        </div>
+        <img class="media-img" src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-2.svg') }}" alt="Talao Wallet screenshot">
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container">
-
-    <div class="section__header">
-      <h2>Configuration steps</h2>
-      <p>These are placeholders for your final instructions (settings names, toggles, network endpoints, etc.).</p>
+    <div class="section-head">
+      <h2>Steps</h2>
+      <p class="muted">Short placeholders for now — you’ll provide final text soon.</p>
     </div>
 
-    <div class="steps">
-      {{ step_card("1", "Open Settings",
-        "In the wallet, open the settings screen.",
-        bullets=["Look for a gear icon.", "If needed, add a hint about where settings are located."]
-      ) }}
+    <div class="cards">
 
-      {{ step_card("2", "Enable Playground mode (if applicable)",
-        "Turn on the demo / developer / test mode used by the EUDI Wallet Playground flow.",
-        bullets=["Use exact toggle names when you provide them.", "Explain what the mode changes (e.g., endpoints, QR scanning behavior)."]
-      ) }}
-
-      {{ step_card("3", "Set the correct environment",
-        "Select the right network / environment used by the Playground (testnet, demo issuer, etc.).",
-        bullets=["Add environment values later.", "Include a warning if selecting the wrong environment breaks the flow."]
-      ) }}
-
-      {{ step_card("4", "Verify readiness",
-        "Confirm the wallet can scan a QR code and accept a demo credential.",
-        bullets=["If your wallet uses deep links, mention it here.", "If a permission is required (camera), prompt it."],
-        ctas=[{"label":"Next: Use the Playground", "href": url_for('playground'), "class":"btn--primary"}]
-      ) }}
-    </div>
-
-    <div class="two-col two-col--gap">
-      <div>
-        <h3>Screenshot checklist</h3>
-        <ul class="checklist">
-          <li><i class="bi bi-check2-circle"></i> Settings entry point</li>
-          <li><i class="bi bi-check2-circle"></i> Playground / demo toggle</li>
-          <li><i class="bi bi-check2-circle"></i> Environment selector</li>
-          <li><i class="bi bi-check2-circle"></i> Confirmation screen</li>
-        </ul>
-        <p class="muted">
-          Replace the placeholder images below with the final screenshots.
-        </p>
+      <div class="card">
+        <div class="card-num">01</div>
+        <h3>Open Settings</h3>
+        <p>Navigate to the wallet settings screen.</p>
       </div>
 
-      <div class="gallery">
-        <figure class="shot" data-lightbox data-caption="Settings screen (placeholder)">
-          <img src="{{ url_for('static', filename='img/screenshot-placeholder-3.svg') }}" alt="Settings placeholder" />
-          <figcaption>Settings screen (placeholder)</figcaption>
-        </figure>
-        <figure class="shot" data-lightbox data-caption="Demo toggle (placeholder)">
-          <img src="{{ url_for('static', filename='img/screenshot-placeholder-4.svg') }}" alt="Demo toggle placeholder" />
-          <figcaption>Demo toggle (placeholder)</figcaption>
-        </figure>
+      <div class="card">
+        <div class="card-num">02</div>
+        <h3>Enable Playground mode</h3>
+        <p>Turn on the option(s) required for testing in the Playground.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-num">03</div>
+        <h3>Confirm configuration</h3>
+        <p>Return to the home screen and verify the wallet is ready.</p>
       </div>
     </div>
-
   </div>
 </section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Screenshots</h2>
+      <p class="muted">Click any screenshot to enlarge.</p>
+    </div>
+
+    <div class="shots">
+
+        <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-2.svg') }}" aria-label="Open screenshot">
+          <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-2.svg') }}" alt="Talao Wallet screenshot placeholder">
+        </button>
+
+        <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-3.svg') }}" aria-label="Open screenshot">
+          <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-3.svg') }}" alt="Talao Wallet screenshot placeholder">
+        </button>
+
+        <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-4.svg') }}" aria-label="Open screenshot">
+          <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-4.svg') }}" alt="Talao Wallet screenshot placeholder">
+        </button>
+
+        <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-1.svg') }}" aria-label="Open screenshot">
+          <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-1.svg') }}" alt="Talao Wallet screenshot placeholder">
+        </button>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" aria-hidden="true" data-lightbox-root>
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Screenshot">
+    <button class="lightbox-close" aria-label="Close" data-lightbox-close>✕</button>
+    <img class="lightbox-img" alt="Screenshot enlarged" data-lightbox-img>
+  </div>
+</div>
 
 {% endblock %}

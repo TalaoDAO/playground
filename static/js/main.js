@@ -1,80 +1,68 @@
-(() => {
-  const $ = (sel, root=document) => root.querySelector(sel);
-  const $$ = (sel, root=document) => Array.from(root.querySelectorAll(sel));
+(function () {
+  const toast = document.querySelector("[data-toast]");
+  const toastText = document.querySelector("[data-toast-text]");
 
-  // Mobile menu
-  const burger = $("[data-burger]");
-  const mobileNav = $("[data-mobile-nav]");
-  if (burger && mobileNav) {
-    burger.addEventListener("click", () => {
-      mobileNav.classList.toggle("is-open");
-    });
+  function showToast(msg) {
+    if (!toast) return;
+    toastText.textContent = msg || "Copied";
+    toast.classList.add("show");
+    window.clearTimeout(showToast._t);
+    showToast._t = window.setTimeout(() => toast.classList.remove("show"), 1200);
   }
 
-  // Copy-to-clipboard buttons
-  $$("[data-copy]").forEach((btn) => {
-    btn.addEventListener("click", async () => {
-      const text = btn.getAttribute("data-copy") || "";
+  // Copy buttons
+  document.addEventListener("click", async (e) => {
+    const btn = e.target.closest("[data-copy-btn]");
+    if (btn) {
+      const value = btn.getAttribute("data-copy-btn") || "";
       try {
-        await navigator.clipboard.writeText(text);
-        const old = btn.innerHTML;
-        btn.innerHTML = `<span class="copy__text">${escapeHtml(text)}</span><span class="copy__btn"><i class="bi bi-check2"></i> Copied</span>`;
-        setTimeout(() => (btn.innerHTML = old), 1400);
-      } catch (e) {
-        // Fallback: select text
-        window.prompt("Copy this URL:", text);
+        await navigator.clipboard.writeText(value);
+        showToast("Copied");
+      } catch {
+        showToast("Copy failed");
       }
-    });
+    }
   });
 
-  // Lightbox modal for screenshots
-  const modal = $("[data-modal]");
-  const modalImg = $("[data-modal-img]");
-  const modalCap = $("[data-modal-caption]");
-  const closeEls = $$("[data-modal-close]");
-  const openShots = $$("[data-lightbox]");
-
-  const openModal = (src, caption) => {
-    if (!modal || !modalImg) return;
-    modal.classList.add("is-open");
-    modal.setAttribute("aria-hidden", "false");
-    modalImg.src = src;
-    modalImg.alt = caption || "Screenshot preview";
-    if (modalCap) modalCap.textContent = caption || "";
-    document.body.style.overflow = "hidden";
-  };
-
-  const closeModal = () => {
-    if (!modal || !modalImg) return;
-    modal.classList.remove("is-open");
-    modal.setAttribute("aria-hidden", "true");
-    modalImg.src = "";
-    document.body.style.overflow = "";
-  };
-
-  openShots.forEach((fig) => {
-    fig.addEventListener("click", () => {
-      const img = $("img", fig);
-      if (!img) return;
-      const caption = fig.getAttribute("data-caption") || $("figcaption", fig)?.textContent || "";
-      openModal(img.getAttribute("src"), caption);
+  // Mobile nav
+  const toggle = document.querySelector("[data-nav-toggle]");
+  const nav = document.querySelector("[data-nav]");
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const isOpen = nav.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", String(isOpen));
     });
-    fig.addEventListener("keydown", (e) => {
-      if (e.key === "Enter" || e.key === " ") fig.click();
-    });
-    fig.setAttribute("tabindex", "0");
-    fig.setAttribute("role", "button");
-    fig.setAttribute("aria-label", "Open screenshot preview");
-  });
-
-  closeEls.forEach((el) => el.addEventListener("click", closeModal));
-  document.addEventListener("keydown", (e) => {
-    if (e.key === "Escape") closeModal();
-  });
-
-  function escapeHtml(s) {
-    return (s || "").replace(/[&<>"']/g, (c) => ({
-      "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;", "'":"&#039;"
-    }[c]));
   }
+
+  // Lightbox
+  const root = document.querySelector("[data-lightbox-root]");
+  const img = document.querySelector("[data-lightbox-img]");
+  function openLightbox(src) {
+    if (!root || !img) return;
+    img.src = src;
+    root.classList.add("open");
+    root.setAttribute("aria-hidden", "false");
+  }
+  function closeLightbox() {
+    if (!root || !img) return;
+    root.classList.remove("open");
+    root.setAttribute("aria-hidden", "true");
+    img.src = "";
+  }
+
+  document.addEventListener("click", (e) => {
+    const shot = e.target.closest("[data-lightbox]");
+    if (shot) {
+      openLightbox(shot.getAttribute("data-src"));
+      return;
+    }
+    if (e.target.closest("[data-lightbox-close]")) {
+      closeLightbox();
+      return;
+    }
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") closeLightbox();
+  });
 })();

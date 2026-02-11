@@ -1,101 +1,63 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{{ page_title }} · {{ config.SITE_NAME }}</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>{{ title or "Talao Wallet Guide" }}</title>
+  <meta name="description" content="Guide to download and configure Talao Wallet for the France Identité EUDI Wallet Playground." />
 
-    <!-- Fonts (swap later if you have a brand font) -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Lightweight icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+</head>
+<body>
 
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}" />
-    <script defer src="{{ url_for('static', filename='js/main.js') }}"></script>
+<header class="navbar">
+  <div class="container nav-content">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-text">Talao Wallet Guide</span>
+    </a>
 
-    {% block head %}{% endblock %}
-  </head>
-  <body>
-    <a class="skip-link" href="#content">Skip to content</a>
+    <button class="nav-toggle" aria-label="Open menu" aria-expanded="false" data-nav-toggle>
+      <span></span><span></span><span></span>
+    </button>
 
-    <header class="topbar">
-      <div class="container">
-        <a class="brand" href="{{ url_for('index') }}">
-          <img class="brand__mark" src="{{ url_for('static', filename='img/logo-mark.svg') }}" alt="" />
-          <span class="brand__name">Talao</span>
-          <span class="brand__divider">/</span>
-          <span class="brand__product">Wallet guide</span>
-        </a>
+    <nav class="nav-links" data-nav>
+      <a href="/" class="{% if request.path=='/' %}active{% endif %}">Overview</a>
+      <a href="/download" class="{% if request.path.startswith('/download') %}active{% endif %}">Download</a>
+      <a href="/configure" class="{% if request.path.startswith('/configure') %}active{% endif %}">Configure</a>
+      <a href="/playground" class="{% if request.path.startswith('/playground') %}active{% endif %}">Playground</a>
+      <a href="/faq" class="{% if request.path.startswith('/faq') %}active{% endif %}">FAQ</a>
+      <a class="pill" href="{{ playground_url }}" target="_blank" rel="noreferrer">Open Playground</a>
+    </nav>
+  </div>
+</header>
 
-        <nav class="nav">
-          <a class="nav__link {% if request.path=='/' %}is-active{% endif %}" href="{{ url_for('index') }}">Overview</a>
-          <a class="nav__link {% if request.path.startswith('/download') %}is-active{% endif %}" href="{{ url_for('download') }}">Download</a>
-          <a class="nav__link {% if request.path.startswith('/configure') %}is-active{% endif %}" href="{{ url_for('configure') }}">Configure</a>
-          <a class="nav__link {% if request.path.startswith('/playground') %}is-active{% endif %}" href="{{ url_for('playground') }}">Playground</a>
-          <a class="nav__link {% if request.path.startswith('/faq') %}is-active{% endif %}" href="{{ url_for('faq') }}">FAQ</a>
-        </nav>
+<main>
+  {% block content %}{% endblock %}
+</main>
 
-        <div class="topbar__cta">
-          <a class="btn btn--ghost" href="{{ config.PLAYGROUND_URL }}" target="_blank" rel="noreferrer">
-            Open Playground <i class="bi bi-box-arrow-up-right"></i>
-          </a>
-        </div>
-
-        <button class="burger" aria-label="Open menu" data-burger>
-          <span></span><span></span><span></span>
-        </button>
-      </div>
-
-      <div class="mobile-nav" data-mobile-nav>
-        <a href="{{ url_for('index') }}">Overview</a>
-        <a href="{{ url_for('download') }}">Download</a>
-        <a href="{{ url_for('configure') }}">Configure</a>
-        <a href="{{ url_for('playground') }}">Playground</a>
-        <a href="{{ url_for('faq') }}">FAQ</a>
-        <a href="{{ config.PLAYGROUND_URL }}" target="_blank" rel="noreferrer">Open Playground</a>
-      </div>
-    </header>
-
-    <main id="content">
-      {% block content %}{% endblock %}
-    </main>
-
-    <footer class="footer">
-      <div class="container footer__grid">
-        <div>
-          <div class="footer__brand">
-            <img src="{{ url_for('static', filename='img/logo-mark.svg') }}" alt="" />
-            <div>
-              <div class="footer__title">Talao Wallet Guide</div>
-              <div class="footer__subtitle">Documentation for the EUDI Wallet Playground showcase</div>
-            </div>
-          </div>
-          <p class="footer__small">
-            © 2026 Talao. Built with Flask. Replace this footer text anytime.
-          </p>
-        </div>
-
-        <div class="footer__links">
-          <a href="{{ config.TALAO_URL }}" target="_blank" rel="noreferrer">talao.io</a>
-          <a href="{{ config.PLAYGROUND_URL }}" target="_blank" rel="noreferrer">EUDI Wallet Playground</a>
-          <a href="{{ url_for('faq') }}">Troubleshooting</a>
-        </div>
-      </div>
-    </footer>
-
-    <!-- Simple modal for screenshots -->
-    <div class="modal" data-modal aria-hidden="true">
-      <div class="modal__backdrop" data-modal-close></div>
-      <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Screenshot preview">
-        <button class="modal__close" aria-label="Close" data-modal-close>
-          <i class="bi bi-x-lg"></i>
-        </button>
-        <img class="modal__img" data-modal-img alt="Screenshot preview" />
-        <div class="modal__caption" data-modal-caption></div>
-      </div>
+<footer class="footer">
+  <div class="container footer-content">
+    <div class="footer-left">
+      <div class="footer-title">Web3 Digital Wallet</div>
+      <div class="footer-subtitle">Educational guide for the EUDI Wallet Playground.</div>
     </div>
-  </body>
+    <div class="footer-right">
+      <a href="https://talao.io" target="_blank" rel="noreferrer">talao.io</a>
+      <span class="dot" aria-hidden="true">•</span>
+      <span>© {{ year }}</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" role="status" aria-live="polite" aria-atomic="true" data-toast>
+  <span data-toast-text>Copied</span>
+</div>
+
+</body>
 </html>

@@ -1,68 +1,91 @@
 {% extends "base.html" %}
-{% from "partials/macros.html" import step_card %}
 {% block content %}
 
-{% set eyebrow = "Step 3 of 3" %}
-{% set title = "Run the demo in the EUDI Wallet Playground" %}
-{% set subtitle = "Follow the Playground flow, scan the QR code when prompted, and complete issuance and presentation." %}
-{% set actions = [
-  {"label":"Open the Playground", "href": config.PLAYGROUND_URL, "external": True, "class":"btn--primary"},
-  {"label":"Back: Configure", "href": url_for('configure'), "class":"btn--ghost"}
-] %}
-{% set highlight = {"title":"Best practice", "text":"Keep the phone brightness high so QR codes scan instantly in public demos."} %}
+<section class="hero hero--compact">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">Walkthrough</div>
+      <h1>Use Talao Wallet in the Playground</h1>
+      <p class="lead">
+        This page is designed to be showcased from within the Playground.
+        Add the precise scenario steps (issuance, storage, presentation) once you provide them.
+      </p>
 
-{% include "partials/hero.html" %}
-
-<section class="section">
-  <div class="container">
-    <div class="section__header">
-      <h2>Playground flow</h2>
-      <p>These steps are written as generic placeholders until you provide the final wording.</p>
-    </div>
-
-    <div class="steps">
-      {{ step_card("1", "Start a scenario in the Playground",
-        "Choose the relevant demo scenario (issuance, presentation, PID, etc.).",
-        bullets=["Mention the exact scenario name later.", "Add expected outcome for the user (what success looks like)."],
-        ctas=[{"label":"Open Playground", "href": config.PLAYGROUND_URL, "external": True, "class":"btn--primary"}]
-      ) }}
-
-      {{ step_card("2", "Scan the QR code (or open the deep link)",
-        "Use the wallet’s scan function to scan the QR code displayed by the Playground.",
-        bullets=["If the flow uses a universal link, explain how to open it.", "If camera permissions are needed, grant them."]
-      ) }}
-
-      {{ step_card("3", "Accept issuance / share presentation",
-        "Review what’s requested, then approve in the wallet.",
-        bullets=["Explain the consent screen briefly.", "Add a note if a PIN/biometric is required."]
-      ) }}
-
-      {{ step_card("4", "Verify the result",
-        "Back in the Playground, confirm the status shows success.",
-        bullets=["If the Playground shows logs, link to where to look.", "Add a screenshot of success state later."],
-        ctas=[{"label":"Troubleshooting", "href": url_for('faq'), "class":"btn--ghost"}]
-      ) }}
-    </div>
-
-    <div class="callout">
-      <div class="callout__badge">Reminder</div>
-      <div class="callout__text">
-        If scanning fails, move the phone slightly farther away and avoid reflections.
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="{{ playground_url }}" target="_blank" rel="noreferrer">Open Playground</a>
+        <a class="btn btn-ghost" href="/faq">Common issues</a>
       </div>
     </div>
 
-    <div class="gallery gallery--wide">
-      <figure class="shot" data-lightbox data-caption="Scan QR screen (placeholder)">
-        <img src="{{ url_for('static', filename='img/screenshot-placeholder-5.svg') }}" alt="QR scan placeholder" />
-        <figcaption>Scan QR screen (placeholder)</figcaption>
-      </figure>
-      <figure class="shot" data-lightbox data-caption="Success state (placeholder)">
-        <img src="{{ url_for('static', filename='img/screenshot-placeholder-6.svg') }}" alt="Success placeholder" />
-        <figcaption>Success state (placeholder)</figcaption>
-      </figure>
-    </div>
+    <div class="hero-media">
+      <div class="media-card">
+        <div class="media-top">
+          <span class="chip">Playground</span>
+          <span class="muted">Copy link</span>
+        </div>
 
+        <div class="copy-card">
+          <div class="copy-row">
+            <code class="code" data-copy="{{ playground_url }}">{{ playground_url }}</code>
+            <button class="btn btn-small" data-copy-btn="{{ playground_url }}">Copy</button>
+          </div>
+          <p class="muted small">If the Playground opens on desktop, scan the QR code with your phone (add QR later).</p>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <h2>Typical flows</h2>
+      <p class="muted">Replace these placeholders with your exact, tested steps.</p>
+    </div>
+
+    <div class="split">
+      <div class="panel">
+        <h3>1) Issue a credential</h3>
+        <ol class="list">
+          <li>Open the Playground scenario.</li>
+          <li>Choose “Issue”.</li>
+          <li>Scan the QR with Talao Wallet.</li>
+          <li>Approve issuance in the wallet.</li>
+        </ol>
+      </div>
+
+      <div class="panel">
+        <h3>2) Present a credential</h3>
+        <ol class="list">
+          <li>Choose “Present”.</li>
+          <li>Scan the QR with Talao Wallet.</li>
+          <li>Select the requested credential.</li>
+          <li>Approve the presentation.</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="shots shots--wide">
+      <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-3.svg') }}" aria-label="Open screenshot">
+        <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-3.svg') }}" alt="Placeholder screenshot">
+      </button>
+      <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-4.svg') }}" aria-label="Open screenshot">
+        <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-4.svg') }}" alt="Placeholder screenshot">
+      </button>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" aria-hidden="true" data-lightbox-root>
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Screenshot">
+    <button class="lightbox-close" aria-label="Close" data-lightbox-close>✕</button>
+    <img class="lightbox-img" alt="Screenshot enlarged" data-lightbox-img>
+  </div>
+</div>
 
 {% endblock %}

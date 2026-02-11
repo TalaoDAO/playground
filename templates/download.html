@@ -1,78 +1,94 @@
 {% extends "base.html" %}
-{% from "partials/macros.html" import step_card %}
 {% block content %}
 
-{% set eyebrow = "Step 1 of 3" %}
-{% set title = "Download the Talao Identity Wallet" %}
-{% set subtitle = "Install the wallet and make sure you’re ready for the EUDI Wallet Playground demo flow." %}
-{% set actions = [
-  {"label":"Go to talao.io", "href": config.TALAO_URL, "external": True, "class":"btn--primary"},
-  {"label":"Next: Configure", "href": url_for('configure'), "class":"btn--ghost"}
-] %}
-{% set highlight = {"title":"Recommended", "text":"Use a real mobile device for the full demo experience."} %}
+<section class="hero hero--compact">
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="eyebrow">EUDI Wallet Playground</div>
+      <h1>Download Talao Wallet</h1>
+      <p class="lead">Explain where to download the Talao Identity Wallet and confirm it is installed on the user’s device.</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/configure">Next: Configure</a>
+        <a class="btn btn-ghost" href="{{ playground_url }}" target="_blank" rel="noreferrer">Open Playground</a>
+      </div>
+    </div>
 
-{% include "partials/hero.html" %}
+    <div class="hero-media">
+      <div class="media-card">
+        <div class="media-top">
+          <span class="chip">Screenshots</span>
+          <span class="muted">Replace placeholders later</span>
+        </div>
+        <img class="media-img" src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-1.svg') }}" alt="Talao Wallet screenshot">
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="section">
   <div class="container">
-    <div class="section__header">
-      <h2>Download checklist</h2>
-      <p>Replace these placeholders with the exact store links and your preferred wording later.</p>
+    <div class="section-head">
+      <h2>Steps</h2>
+      <p class="muted">Short placeholders for now — you’ll provide final text soon.</p>
     </div>
 
-    <div class="steps">
-      {{ step_card("1", "Choose your platform",
-        "Open talao.io and select the appropriate download option (iOS / Android).",
-        bullets=["Prefer official stores.", "If you use a test build, note it clearly in the page."],
-        ctas=[{"label":"Open talao.io", "href": config.TALAO_URL, "external": True, "class":"btn--primary"}]
-      ) }}
+    <div class="cards">
 
-      {{ step_card("2", "Install and launch",
-        "Install the app, then open it once to complete any first-run setup.",
-        bullets=["Allow notifications only if your flow requires it.", "You can keep analytics disabled for demos."]
-      ) }}
-
-      {{ step_card("3", "Prepare for configuration",
-        "You’re ready to enable the Playground-specific settings in the next step.",
-        bullets=["Have your phone unlocked.", "Keep this guide open in a separate tab/window if possible."],
-        ctas=[{"label":"Next: Configure", "href": url_for('configure'), "class":"btn--primary"}]
-      ) }}
-    </div>
-
-    <div class="two-col two-col--gap">
-      <div>
-        <h3>Where screenshots go</h3>
-        <p>
-          Swap the placeholders with real wallet screenshots:
-          <span class="kbd">static/img/</span>.
-          The click-to-zoom modal is already wired.
-        </p>
+      <div class="card">
+        <div class="card-num">01</div>
+        <h3>Choose your store</h3>
+        <p>Add links/buttons to the iOS App Store and Google Play Store.</p>
       </div>
 
-      <div class="gallery">
-        <figure class="shot" data-lightbox data-caption="App download screen (placeholder)">
-          <img src="{{ url_for('static', filename='img/screenshot-placeholder-1.svg') }}" alt="Download screen placeholder" />
-          <figcaption>App download screen (placeholder)</figcaption>
-        </figure>
-        <figure class="shot" data-lightbox data-caption="First launch (placeholder)">
-          <img src="{{ url_for('static', filename='img/screenshot-placeholder-2.svg') }}" alt="First launch placeholder" />
-          <figcaption>First launch (placeholder)</figcaption>
-        </figure>
+      <div class="card">
+        <div class="card-num">02</div>
+        <h3>Install the app</h3>
+        <p>Short explanation of permissions or first launch.</p>
+      </div>
+
+      <div class="card">
+        <div class="card-num">03</div>
+        <h3>Open Talao Wallet</h3>
+        <p>Confirm the app opens correctly and reaches the home screen.</p>
       </div>
     </div>
-
-    <div class="callout callout--accent">
-      <div class="callout__badge">Copy</div>
-      <div class="callout__text">
-        Playground URL:
-        <button class="copy" data-copy="{{ config.PLAYGROUND_URL }}">
-          <span class="copy__text">{{ config.PLAYGROUND_URL }}</span>
-          <span class="copy__btn"><i class="bi bi-clipboard"></i> Copy</span>
-        </button>
-      </div>
-    </div>
-
   </div>
 </section>
+
+<section class="section section--alt">
+  <div class="container">
+    <div class="section-head">
+      <h2>Screenshots</h2>
+      <p class="muted">Click any screenshot to enlarge.</p>
+    </div>
+
+    <div class="shots">
+
+        <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-1.svg') }}" aria-label="Open screenshot">
+          <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-1.svg') }}" alt="Talao Wallet screenshot placeholder">
+        </button>
+
+        <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-2.svg') }}" aria-label="Open screenshot">
+          <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-2.svg') }}" alt="Talao Wallet screenshot placeholder">
+        </button>
+
+        <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-3.svg') }}" aria-label="Open screenshot">
+          <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-3.svg') }}" alt="Talao Wallet screenshot placeholder">
+        </button>
+
+        <button class="shot" data-lightbox data-src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-4.svg') }}" aria-label="Open screenshot">
+          <img src="{{ url_for('static', filename='img/screenshots/screenshot-placeholder-4.svg') }}" alt="Talao Wallet screenshot placeholder">
+        </button>
+    </div>
+  </div>
+</section>
+
+<div class="lightbox" aria-hidden="true" data-lightbox-root>
+  <div class="lightbox-backdrop" data-lightbox-close></div>
+  <div class="lightbox-dialog" role="dialog" aria-modal="true" aria-label="Screenshot">
+    <button class="lightbox-close" aria-label="Close" data-lightbox-close>✕</button>
+    <img class="lightbox-img" alt="Screenshot enlarged" data-lightbox-img>
+  </div>
+</div>
 
 {% endblock %}
